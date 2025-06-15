@@ -1,0 +1,5 @@
+# robots.txt İHS Telekom tarafından oluşturuldu
+User-agent: *
+Disallow: 
+Disallow: /cgi-bin/
+Sitemap: https://cefudigital.com
