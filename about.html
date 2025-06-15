@@ -1,0 +1,1362 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hakkımızda - CefuDigital Dijital Pazarlama Ajansı</title>
+    <meta name="description" content="CefuDigital hakkında bilgi edinin. 2015'ten beri dijital pazarlama alanında faaliyet gösteren uzman ekibimiz ve başarı hikayelerimiz.">
+    <meta name="keywords" content="CefuDigital hakkında, dijital ajans, uzman ekip, başarı hikayeleri, deneyim">
+    <meta name="author" content="CefuDigital">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hakkımızda - CefuDigital">
+    <meta property="og:description" content="Dijital dünyada 8+ yıllık deneyim ve 500+ başarılı proje">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cefudigital.com/about">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #f8f9fa;
+            --secondary-color: #212529;
+            --accent-color: #c9a55c;
+            --text-dark: #333;
+            --text-light: #777;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            font-weight: 500;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 10px;
+            margin-left: 30px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--text-light);
+            color: var(--text-dark);
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 0;
+            font-size: 14px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/placeholder.svg?height=600&width=1920') center/cover no-repeat;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb span {
+            color: var(--accent-color);
+        }
+
+        /* About Section */
+        .about-section {
+            padding: 120px 0;
+            background: #fff;
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 120px;
+        }
+
+        .about-text h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .about-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .about-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .about-features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        .about-features li i {
+            color: var(--accent-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .about-image {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid var(--accent-color);
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .about-image:hover::before {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: 120px 0;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .member-image {
+            height: 300px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .team-member:hover .member-image img {
+            transform: scale(1.05);
+        }
+
+        .member-info {
+            padding: 30px 20px;
+        }
+
+        .member-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .member-role {
+            color: var(--accent-color);
+            font-weight: 500;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.9rem;
+        }
+
+        .member-bio {
+            color: var(--text-light);
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .member-social {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .social-link {
+            width: 35px;
+            height: 35px;
+            background: rgba(201, 165, 92, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            color: white;
+            transform: translateY(-3px);
+        }
+
+        /* Values Section */
+        .values-section {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .value-card {
+            text-align: center;
+            padding: 40px 30px;
+            background: #f8f9fa;
+            border-radius: 10px;
+            transition: var(--transition);
+        }
+
+        .value-card:hover {
+            background: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transform: translateY(-5px);
+        }
+
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            color: white;
+            font-size: 2rem;
+            transition: var(--transition);
+        }
+
+        .value-card:hover .value-icon {
+            transform: scale(1.1);
+        }
+
+        .value-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .value-card p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 80px 0;
+            background: var(--secondary-color);
+            color: white;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-family: var(--font-heading);
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 80px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            color: var(--accent-color);
+        }
+
+        .footer-section p {
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .footer-social-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+            text-align: center;
+            color: #aaa;
+        }
+
+        /* Mobile Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: white;
+            z-index: 1001;
+            padding: 80px 40px;
+            transition: var(--transition);
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+        }
+        
+        .mobile-nav-links li {
+            margin-bottom: 20px;
+        }
+        
+        .mobile-nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .mobile-nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .mobile-language-selector {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .about-text {
+                text-align: center;
+            }
+            
+            .about-text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .about-image {
+                order: -1;
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .page-header {
+                padding: 120px 0 60px;
+            }
+            
+            .about-section {
+                padding: 80px 0;
+            }
+            
+            .team-section {
+                padding: 80px 0;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .values-section {
+                padding: 80px 0;
+            }
+            
+            .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .stats-section {
+                padding: 60px 0;
+            }
+            
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu -->
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <button class="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" data-tr="nav.home">Ana Sayfa</a></li>
+            <li><a href="services.html" data-tr="nav.services">Hizmetler</a></li>
+            <li><a href="about.html" class="active" data-tr="nav.about">Hakkımızda</a></li>
+            <li><a href="projects.html" data-tr="nav.projects">Projeler</a></li>
+            <li><a href="contact.html" data-tr="nav.contact">İletişim</a></li>
+        </ul>
+        <div class="mobile-language-selector">
+            <button class="lang-btn active" data-lang="tr">TR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+    </div>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Cefu<span>Digital</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-tr="nav.home">Ana Sayfa</a></li>
+                <li><a href="services.html" data-tr="nav.services">Hizmetler</a></li>
+                <li><a href="about.html" class="active" data-tr="nav.about">Hakkımızda</a></li>
+                <li><a href="projects.html" data-tr="nav.projects">Projeler</a></li>
+                <li><a href="contact.html" data-tr="nav.contact">İletişim</a></li>
+                <li class="language-selector">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content" data-aos="fade-up">
+                    <h1 data-tr="page.title">Hakkımızda</h1>
+                    <p data-tr="page.subtitle">Dijital dünyada 8+ yıllık deneyim ve 500+ başarılı proje ile yanınızdayız</p>
+                    <div class="breadcrumb">
+                        <a href="index.html" data-tr="breadcrumb.home">Ana Sayfa</a>
+                        <span>/</span>
+                        <span data-tr="breadcrumb.about">Hakkımızda</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right">
+                        <h2 data-tr="about.story.title">Hikayemiz</h2>
+                        <p data-tr="about.story.desc1">2015 yılında kurulan CefuDigital, dijital pazarlama alanında yenilikçi çözümler sunma vizyonuyla yola çıktı. Türkiye'de başlayan yolculuğumuz, kısa sürede İngiltere ve BAE'ye kadar uzandı.</p>
+                        <p data-tr="about.story.desc2">Bugün 3 farklı ülkede faaliyet gösteren ekibimiz, 500'den fazla başarılı projeye imza atmış ve 200'ü aşkın mutlu müşteriye hizmet vermiştir.</p>
+                        <p data-tr="about.story.desc3">Misyonumuz, işletmelerin dijital dönüşüm süreçlerinde güvenilir bir partner olmak ve onları dijital dünyada zirveye taşımaktır.</p>
+                        <ul class="about-features">
+                            <li><i class="fas fa-check"></i> <span data-tr="about.feature1">Uluslararası Deneyim</span></li>
+                            <li><i class="fas fa-check"></i> <span data-tr="about.feature2">Kanıtlanmış Başarı</span></li>
+                            <li><i class="fas fa-check"></i> <span data-tr="about.feature3">Yenilikçi Yaklaşım</span></li>
+                            <li><i class="fas fa-check"></i> <span data-tr="about.feature4">Müşteri Odaklı Hizmet</span></li>
+                        </ul>
+                    </div>
+                    <div class="about-image" data-aos="fade-left">
+                        <img src="/placeholder.svg?height=500&width=600" alt="CefuDigital Ofisi">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 data-tr="team.title">Uzman Ekibimiz</h2>
+                    <p data-tr="team.subtitle">Alanında uzman, deneyimli ve tutkulu profesyonellerden oluşan ekibimizle tanışın</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="100">
+                        <div class="member-image">
+                            <img src="/placeholder.svg?height=300&width=280" alt="Ahmet Yılmaz">
+                        </div>
+                        <div class="member-info">
+                            <h3 data-tr="team.member1.name">Ahmet Yılmaz</h3>
+                            <div class="member-role" data-tr="team.member1.role">Kurucu & CEO</div>
+                            <p class="member-bio" data-tr="team.member1.bio">10+ yıllık dijital pazarlama deneyimi ile şirketimizin vizyonunu belirleyen lider.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="200">
+                        <div class="member-image">
+                            <img src="/placeholder.svg?height=300&width=280" alt="Elif Kaya">
+                        </div>
+                        <div class="member-info">
+                            <h3 data-tr="team.member2.name">Elif Kaya</h3>
+                            <div class="member-role" data-tr="team.member2.role">SEO Uzmanı</div>
+                            <p class="member-bio" data-tr="team.member2.bio">Arama motoru optimizasyonu alanında 8 yıllık deneyime sahip uzman.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="300">
+                        <div class="member-image">
+                            <img src="/placeholder.svg?height=300&width=280" alt="Mehmet Demir">
+                        </div>
+                        <div class="member-info">
+                            <h3 data-tr="team.member3.name">Mehmet Demir</h3>
+                            <div class="member-role" data-tr="team.member3.role">Web Tasarım Uzmanı</div>
+                            <p class="member-bio" data-tr="team.member3.bio">Kullanıcı deneyimi odaklı modern web tasarımları konusunda uzman.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-dribbble"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="team-member" data-aos="fade-up" data-aos-delay="400">
+                        <div class="member-image">
+                            <img src="/placeholder.svg?height=300&width=280" alt="Ayşe Özkan">
+                        </div>
+                        <div class="member-info">
+                            <h3 data-tr="team.member4.name">Ayşe Özkan</h3>
+                            <div class="member-role" data-tr="team.member4.role">Dijital Pazarlama Uzmanı</div>
+                            <p class="member-bio" data-tr="team.member4.bio">Sosyal medya ve PPC kampanyaları konusunda 6 yıllık deneyime sahip.</p>
+                            <div class="member-social">
+                                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                                <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Values Section -->
+        <section class="values-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 data-tr="values.title">Değerlerimiz</h2>
+                    <p data-tr="values.subtitle">İş yapış şeklimizi belirleyen temel değerlerimiz</p>
+                </div>
+                <div class="values-grid">
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 data-tr="values.innovation.title">Yenilikçilik</h3>
+                        <p data-tr="values.innovation.desc">En son teknolojileri takip ederek müşterilerimize yenilikçi çözümler sunuyoruz.</p>
+                    </div>
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3 data-tr="values.trust.title">Güvenilirlik</h3>
+                        <p data-tr="values.trust.desc">Müşterilerimizle uzun vadeli güven ilişkileri kurarak sürdürülebilir başarı sağlıyoruz.</p>
+                    </div>
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="value-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 data-tr="values.excellence.title">Mükemmellik</h3>
+                        <p data-tr="values.excellence.desc">Her projede en yüksek kalite standartlarını hedefleyerek mükemmelliği amaçlıyoruz.</p>
+                    </div>
+                    <div class="value-card" data-aos="fade-up" data-aos-delay="400">
+                        <div class="value-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3 data-tr="values.collaboration.title">İş Birliği</h3>
+                        <p data-tr="values.collaboration.desc">Müşterilerimizle yakın iş birliği içinde çalışarak ortak başarılar elde ediyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3 data-tr="stats.projects">500+</h3>
+                        <p data-tr="stats.projects-label">Tamamlanan Proje</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 data-tr="stats.clients">200+</h3>
+                        <p data-tr="stats.clients-label">Mutlu Müşteri</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 data-tr="stats.countries">3</h3>
+                        <p data-tr="stats.countries-label">Ülkede Hizmet</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3 data-tr="stats.experience">8+</h3>
+                        <p data-tr="stats.experience-label">Yıllık Deneyim</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo">Cefu<span>Digital</span></a>
+                    <p data-tr="footer.desc">Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE'de profesyonel dijital çözümler sunuyoruz.</p>
+                    <div class="social-links">
+                        <a href="#" class="footer-social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.services">Hizmetler</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> <span data-tr="service.seo.title">SEO Optimizasyonu</span></a></li>
+                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> <span data-tr="service.web.title">Web Tasarımı</span></a></li>
+                        <li><a href="services.html#corporate"><i class="fas fa-chevron-right"></i> <span data-tr="service.corporate.title">Şirket Çözümleri</span></a></li>
+                        <li><a href="services.html#marketing"><i class="fas fa-chevron-right"></i> <span data-tr="service.marketing.title">Dijital Pazarlama</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.quick-links">Hızlı Bağlantılar</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.home">Ana Sayfa</span></a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.about">Hakkımızda</span></a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.projects">Projeler</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.contact">İletişim</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.contact">İletişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> <span data-tr="contact.address.value">İstanbul, Türkiye</span></a></li>
+                        <li><a href="mailto:info@cefudigital.com"><i class="fas fa-envelope"></i> info@cefudigital.com</a></li>
+                        <li><a href="tel:+905551234567"><i class="fas fa-phone-alt"></i> +90 (555) 123 45 67</a></li>
+                        <li><a href="tel:+442071234567"><i class="fas fa-phone-alt"></i> +44 (20) 7123 4567</a></li>
+                        <li><a href="tel:+97141234567"><i class="fas fa-phone-alt"></i> +971 (4) 123 4567</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CefuDigital. <span data-tr="footer.rights">Tüm hakları saklıdır.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Language translations
+        const translations = {
+            tr: {
+                'nav.home': 'Ana Sayfa',
+                'nav.services': 'Hizmetler',
+                'nav.about': 'Hakkımızda',
+                'nav.projects': 'Projeler',
+                'nav.contact': 'İletişim',
+                'page.title': 'Hakkımızda',
+                'page.subtitle': 'Dijital dünyada 8+ yıllık deneyim ve 500+ başarılı proje ile yanınızdayız',
+                'breadcrumb.home': 'Ana Sayfa',
+                'breadcrumb.about': 'Hakkımızda',
+                'about.story.title': 'Hikayemiz',
+                'about.story.desc1': '2015 yılında kurulan CefuDigital, dijital pazarlama alanında yenilikçi çözümler sunma vizyonuyla yola çıktı. Türkiye\'de başlayan yolculuğumuz, kısa sürede İngiltere ve BAE\'ye kadar uzandı.',
+                'about.story.desc2': 'Bugün 3 farklı ülkede faaliyet gösteren ekibimiz, 500\'den fazla başarılı projeye imza atmış ve 200\'ü aşkın mutlu müşteriye hizmet vermiştir.',
+                'about.story.desc3': 'Misyonumuz, işletmelerin dijital dönüşüm süreçlerinde güvenilir bir partner olmak ve onları dijital dünyada zirveye taşımaktır.',
+                'about.feature1': 'Uluslararası Deneyim',
+                'about.feature2': 'Kanıtlanmış Başarı',
+                'about.feature3': 'Yenilikçi Yaklaşım',
+                'about.feature4': 'Müşteri Odaklı Hizmet',
+                'team.title': 'Uzman Ekibimiz',
+                'team.subtitle': 'Alanında uzman, deneyimli ve tutkulu profesyonellerden oluşan ekibimizle tanışın',
+                'team.member1.name': 'Ahmet Yılmaz',
+                'team.member1.role': 'Kurucu & CEO',
+                'team.member1.bio': '10+ yıllık dijital pazarlama deneyimi ile şirketimizin vizyonunu belirleyen lider.',
+                'team.member2.name': 'Elif Kaya',
+                'team.member2.role': 'SEO Uzmanı',
+                'team.member2.bio': 'Arama motoru optimizasyonu alanında 8 yıllık deneyime sahip uzman.',
+                'team.member3.name': 'Mehmet Demir',
+                'team.member3.role': 'Web Tasarım Uzmanı',
+                'team.member3.bio': 'Kullanıcı deneyimi odaklı modern web tasarımları konusunda uzman.',
+                'team.member4.name': 'Ayşe Özkan',
+                'team.member4.role': 'Dijital Pazarlama Uzmanı',
+                'team.member4.bio': 'Sosyal medya ve PPC kampanyaları konusunda 6 yıllık deneyime sahip.',
+                'values.title': 'Değerlerimiz',
+                'values.subtitle': 'İş yapış şeklimizi belirleyen temel değerlerimiz',
+                'values.innovation.title': 'Yenilikçilik',
+                'values.innovation.desc': 'En son teknolojileri takip ederek müşterilerimize yenilikçi çözümler sunuyoruz.',
+                'values.trust.title': 'Güvenilirlik',
+                'values.trust.desc': 'Müşterilerimizle uzun vadeli güven ilişkileri kurarak sürdürülebilir başarı sağlıyoruz.',
+                'values.excellence.title': 'Mükemmellik',
+                'values.excellence.desc': 'Her projede en yüksek kalite standartlarını hedefleyerek mükemmelliği amaçlıyoruz.',
+                'values.collaboration.title': 'İş Birliği',
+                'values.collaboration.desc': 'Müşterilerimizle yakın iş birliği içinde çalışarak ortak başarılar elde ediyoruz.',
+                'stats.projects': '500+',
+                'stats.projects-label': 'Tamamlanan Proje',
+                'stats.clients': '200+',
+                'stats.clients-label': 'Mutlu Müşteri',
+                'stats.countries': '3',
+                'stats.countries-label': 'Ülkede Hizmet',
+                'stats.experience': '8+',
+                'stats.experience-label': 'Yıllık Deneyim',
+                'footer.desc': 'Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE\'de profesyonel dijital çözümler sunuyoruz.',
+                'footer.services': 'Hizmetler',
+                'footer.quick-links': 'Hızlı Bağlantılar',
+                'footer.contact': 'İletişim',
+                'footer.rights': 'Tüm hakları saklıdır.',
+                'service.seo.title': 'SEO Optimizasyonu',
+                'service.web.title': 'Web Tasarımı',
+                'service.corporate.title': 'Şirket Çözümleri',
+                'service.marketing.title': 'Dijital Pazarlama',
+                'contact.address.value': 'İstanbul, Türkiye'
+            },
+            en: {
+                'nav.home': 'Home',
+                'nav.services': 'Services',
+                'nav.about': 'About',
+                'nav.projects': 'Projects',
+                'nav.contact': 'Contact',
+                'page.title': 'About Us',
+                'page.subtitle': 'With 8+ years of experience and 500+ successful projects in the digital world, we are with you',
+                'breadcrumb.home': 'Home',
+                'breadcrumb.about': 'About',
+                'about.story.title': 'Our Story',
+                'about.story.desc1': 'Founded in 2015, CefuDigital set out with the vision of providing innovative solutions in the field of digital marketing. Our journey that started in Turkey quickly extended to the UK and UAE.',
+                'about.story.desc2': 'Today, our team operating in 3 different countries has signed more than 500 successful projects and served more than 200 happy customers.',
+                'about.story.desc3': 'Our mission is to be a reliable partner in the digital transformation processes of businesses and take them to the top in the digital world.',
+                'about.feature1': 'International Experience',
+                'about.feature2': 'Proven Success',
+                'about.feature3': 'Innovative Approach',
+                'about.feature4': 'Customer-Focused Service',
+                'team.title': 'Our Expert Team',
+                'team.subtitle': 'Meet our team of expert, experienced and passionate professionals',
+                'team.member1.name': 'Ahmet Yılmaz',
+                'team.member1.role': 'Founder & CEO',
+                'team.member1.bio': 'Leader who determines the vision of our company with 10+ years of digital marketing experience.',
+                'team.member2.name': 'Elif Kaya',
+                'team.member2.role': 'SEO Specialist',
+                'team.member2.bio': 'Expert with 8 years of experience in search engine optimization.',
+                'team.member3.name': 'Mehmet Demir',
+                'team.member3.role': 'Web Design Specialist',
+                'team.member3.bio': 'Expert in user experience-focused modern web designs.',
+                'team.member4.name': 'Ayşe Özkan',
+                'team.member4.role': 'Digital Marketing Specialist',
+                'team.member4.bio': 'Has 6 years of experience in social media and PPC campaigns.',
+                'values.title': 'Our Values',
+                'values.subtitle': 'Our core values that determine our way of doing business',
+                'values.innovation.title': 'Innovation',
+                'values.innovation.desc': 'We offer innovative solutions to our customers by following the latest technologies.',
+                'values.trust.title': 'Reliability',
+                'values.trust.desc': 'We achieve sustainable success by establishing long-term trust relationships with our customers.',
+                'values.excellence.title': 'Excellence',
+                'values.excellence.desc': 'We aim for excellence by targeting the highest quality standards in every project.',
+                'values.collaboration.title': 'Collaboration',
+                'values.collaboration.desc': 'We achieve mutual success by working in close collaboration with our customers.',
+                'stats.projects': '500+',
+                'stats.projects-label': 'Completed Projects',
+                'stats.clients': '200+',
+                'stats.clients-label': 'Happy Clients',
+                'stats.countries': '3',
+                'stats.countries-label': 'Countries Served',
+                'stats.experience': '8+',
+                'stats.experience-label': 'Years Experience',
+                'footer.desc': 'The best way to grow your business in the digital world. We provide professional digital solutions in Turkey, UK and UAE.',
+                'footer.services': 'Services',
+                'footer.quick-links': 'Quick Links',
+                'footer.contact': 'Contact',
+                'footer.rights': 'All rights reserved.',
+                'service.seo.title': 'SEO Optimization',
+                'service.web.title': 'Web Design',
+                'service.corporate.title': 'Corporate Solutions',
+                'service.marketing.title': 'Digital Marketing',
+                'contact.address.value': 'Istanbul, Turkey'
+            },
+            ar: {
+                'nav.home': 'الرئيسية',
+                'nav.services': 'الخدمات',
+                'nav.about': 'من نحن',
+                'nav.projects': 'المشاريع',
+                'nav.contact': 'اتصل بنا',
+                'page.title': 'من نحن',
+                'page.subtitle': 'مع أكثر من 8 سنوات من الخبرة و 500+ مشروع ناجح في العالم الرقمي، نحن معك',
+                'breadcrumb.home': 'الرئيسية',
+                'breadcrumb.about': 'من نحن',
+                'about.story.title': 'قصتنا',
+                'about.story.desc1': 'تأسست CefuDigital في عام 2015 برؤية تقديم حلول مبتكرة في مجال التسويق الرقمي. رحلتنا التي بدأت في تركيا امتدت بسرعة إلى المملكة المتحدة والإمارات.',
+                'about.story.desc2': 'اليوم، فريقنا الذي يعمل في 3 دول مختلفة وقع أكثر من 500 مشروع ناجح وخدم أكثر من 200 عميل سعيد.',
+                'about.story.desc3': 'مهمتنا هي أن نكون شريكًا موثوقًا في عمليات التحول الرقمي للشركات ونأخذها إلى القمة في العالم الرقمي.',
+                'about.feature1': 'خبرة دولية',
+                'about.feature2': 'نجاح مثبت',
+                'about.feature3': 'نهج مبتكر',
+                'about.feature4': 'خدمة تركز على العملاء',
+                'team.title': 'فريقنا الخبير',
+                'team.subtitle': 'تعرف على فريقنا من المهنيين الخبراء والمتمرسين والمتحمسين',
+                'team.member1.name': 'أحمد يلماز',
+                'team.member1.role': 'المؤسس والرئيس التنفيذي',
+                'team.member1.bio': 'قائد يحدد رؤية شركتنا مع أكثر من 10 سنوات من الخبرة في التسويق الرقمي.',
+                'team.member2.name': 'إليف كايا',
+                'team.member2.role': 'أخصائي تحسين محركات البحث',
+                'team.member2.bio': 'خبير مع 8 سنوات من الخبرة في تحسين محركات البحث.',
+                'team.member3.name': 'محمد ديمير',
+                'team.member3.role': 'أخصائي تصميم المواقع',
+                'team.member3.bio': 'خبير في تصميمات المواقع الحديثة التي تركز على تجربة المستخدم.',
+                'team.member4.name': 'عائشة أوزكان',
+                'team.member4.role': 'أخصائي التسويق الرقمي',
+                'team.member4.bio': 'لديها 6 سنوات من الخبرة في وسائل التواصل الاجتماعي وحملات الدفع لكل نقرة.',
+                'values.title': 'قيمنا',
+                'values.subtitle': 'قيمنا الأساسية التي تحدد طريقة عملنا',
+                'values.innovation.title': 'الابتكار',
+                'values.innovation.desc': 'نقدم حلولاً مبتكرة لعملائنا من خلال متابعة أحدث التقنيات.',
+                'values.trust.title': 'الموثوقية',
+                'values.trust.desc': 'نحقق النجاح المستدام من خلال إقامة علاقات ثقة طويلة الأمد مع عملائنا.',
+                'values.excellence.title': 'التميز',
+                'values.excellence.desc': 'نهدف إلى التميز من خلال استهداف أعلى معايير الجودة في كل مشروع.',
+                'values.collaboration.title': 'التعاون',
+                'values.collaboration.desc': 'نحقق النجاح المتبادل من خلال العمل في تعاون وثيق مع عملائنا.',
+                'stats.projects': '500+',
+                'stats.projects-label': 'مشروع مكتمل',
+                'stats.clients': '200+',
+                'stats.clients-label': 'عميل سعيد',
+                'stats.countries': '3',
+                'stats.countries-label': 'دول نخدمها',
+                'stats.experience': '8+',
+                'stats.experience-label': 'سنوات خبرة',
+                'footer.desc': 'أفضل طريقة لتنمية أعمالك في العالم الرقمي. نقدم حلول رقمية احترافية في تركيا والمملكة المتحدة والإمارات.',
+                'footer.services': 'الخدمات',
+                'footer.quick-links': 'روابط سريعة',
+                'footer.contact': 'اتصل بنا',
+                'footer.rights': 'جميع الحقوق محفوظة.',
+                'service.seo.title': 'تحسين محركات البحث',
+                'service.web.title': 'تصميم المواقع',
+                'service.corporate.title': 'الحلول المؤسسية',
+                'service.marketing.title': 'التسويق الرقمي',
+                'contact.address.value': 'اسطنبول، تركيا'
+            }
+        };
+
+        let currentLang = localStorage.getItem('preferredLanguage') || 'tr';
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            document.documentElement.lang = lang;
+            
+            // Update active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update text content
+            document.querySelectorAll('[data-tr]').forEach(element => {
+                const key = element.dataset.tr;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update page title and meta description
+            const titles = {
+                tr: 'Hakkımızda - CefuDigital Dijital Pazarlama Ajansı',
+                en: 'About Us - CefuDigital Digital Marketing Agency',
+                ar: 'من نحن - وكالة CefuDigital للتسويق الرقمي'
+            };
+            
+            const descriptions = {
+                tr: 'CefuDigital hakkında bilgi edinin. 2015\'ten beri dijital pazarlama alanında faaliyet gösteren uzman ekibimiz ve başarı hikayelerimiz.',
+                en: 'Learn about CefuDigital. Our expert team and success stories operating in the field of digital marketing since 2015.',
+                ar: 'تعرف على CefuDigital. فريقنا الخبير وقصص نجاحنا في مجال التسويق الرقمي منذ عام 2015.'
+            };
+
+            document.title = titles[lang];
+            document.querySelector('meta[name="description"]').content = descriptions[lang];
+
+            // Update text direction for Arabic
+            if (lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.body.style.textAlign = 'right';
+            } else {
+                document.body.style.direction = 'ltr';
+                document.body.style.textAlign = 'left';
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Set initial language from localStorage or default to 'tr'
+            switchLanguage(currentLang);
+            
+            // Language switching
+            const langButtons = document.querySelectorAll('.lang-btn');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    switchLanguage(btn.dataset.lang);
+                });
+            });
+            
+            // Mobile menu
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.overlay');
+            const closeMenuBtn = document.querySelector('.close-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+            });
+            
+            closeMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            overlay.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+
+            // Scroll header effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,1297 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hizmetlerimiz - CefuDigital Dijital Pazarlama Ajansı</title>
+    <meta name="description" content="SEO optimizasyonu, web tasarımı, şirket çözümleri ve dijital pazarlama hizmetleri. Türkiye, İngiltere ve BAE'de profesyonel dijital çözümler.">
+    <meta name="keywords" content="SEO, web tasarım, dijital pazarlama, şirket çözümleri, e-ticaret, sosyal medya pazarlama">
+    <meta name="author" content="CefuDigital">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Hizmetlerimiz - CefuDigital">
+    <meta property="og:description" content="Profesyonel dijital hizmetler ile işinizi büyütün">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://cefudigital.com/services">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚀</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-color: #f8f9fa;
+            --secondary-color: #212529;
+            --accent-color: #c9a55c;
+            --text-dark: #333;
+            --text-light: #777;
+            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-heading: 'Playfair Display', serif;
+            --font-body: 'Poppins', sans-serif;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-body);
+            background-color: var(--primary-color);
+            color: var(--text-dark);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5, h5 {
+            font-family: var(--font-heading);
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 0;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            transition: var(--transition);
+            font-size: 14px;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--accent-color);
+        }
+
+        /* Header */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            transition: var(--transition);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+            letter-spacing: 1px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+            font-weight: 500;
+            font-size: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background: var(--accent-color);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after,
+        .nav-links a.active::after {
+            width: 100%;
+        }
+
+        .language-selector {
+            display: flex;
+            gap: 10px;
+            margin-left: 30px;
+        }
+
+        .lang-btn {
+            background: none;
+            border: 1px solid var(--text-light);
+            color: var(--text-dark);
+            padding: 5px 10px;
+            cursor: pointer;
+            transition: var(--transition);
+            border-radius: 0;
+            font-size: 14px;
+        }
+
+        .lang-btn:hover,
+        .lang-btn.active {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .mobile-menu span {
+            width: 25px;
+            height: 2px;
+            background: var(--text-dark);
+            margin: 3px 0;
+            transition: var(--transition);
+        }
+
+        /* Page Header */
+        .page-header {
+            padding: 150px 0 80px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            text-align: center;
+            position: relative;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('/placeholder.svg?height=600&width=1920') center/cover no-repeat;
+            opacity: 0.05;
+            z-index: 0;
+        }
+
+        .page-header-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .page-header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            font-size: 14px;
+        }
+
+        .breadcrumb a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .breadcrumb a:hover {
+            color: var(--accent-color);
+        }
+
+        .breadcrumb span {
+            color: var(--accent-color);
+        }
+
+        /* Services Section */
+        .services-detailed {
+            padding: 120px 0;
+            background: #fff;
+        }
+
+        .service-detail {
+            margin-bottom: 120px;
+            padding: 80px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .service-detail:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+        }
+
+        .service-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .service-content.reverse {
+            direction: rtl;
+        }
+
+        .service-content.reverse > * {
+            direction: ltr;
+        }
+
+        .service-text h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .service-text h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            width: 80px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .service-text p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .service-features {
+            list-style: none;
+            margin: 30px 0;
+        }
+
+        .service-features li {
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+            color: var(--text-dark);
+        }
+
+        .service-features li i {
+            color: var(--accent-color);
+            margin-right: 15px;
+            font-size: 1.2rem;
+        }
+
+        .service-image {
+            position: relative;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .service-image::before {
+            content: '';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            border: 1px solid var(--accent-color);
+            z-index: 1;
+            transition: var(--transition);
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-image:hover::before {
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+        }
+
+        /* Process Section */
+        .process {
+            padding: 120px 0;
+            background: #f8f9fa;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 80px;
+        }
+
+        .section-header h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .section-header p {
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+        }
+
+        .process-step {
+            text-align: center;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        .process-step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .step-number {
+            width: 60px;
+            height: 60px;
+            background: var(--accent-color);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin: 0 auto 20px;
+            font-family: var(--font-heading);
+        }
+
+        .process-step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            color: var(--text-dark);
+        }
+
+        .process-step p {
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 0;
+            background: var(--secondary-color);
+            color: white;
+            text-align: center;
+        }
+
+        .cta-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 20px;
+        }
+
+        .cta-content p {
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            opacity: 0.9;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: white;
+            padding: 80px 0 0;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-logo {
+            font-family: var(--font-heading);
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+
+        .footer-logo span {
+            color: var(--accent-color);
+        }
+
+        .footer-section p {
+            color: #aaa;
+            margin-bottom: 20px;
+            line-height: 1.8;
+        }
+
+        .footer-section h3 {
+            margin-bottom: 25px;
+            font-size: 1.3rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .footer-section h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background: var(--accent-color);
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+
+        .footer-links a {
+            color: #aaa;
+            text-decoration: none;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-color);
+            padding-left: 5px;
+        }
+
+        .footer-links a i {
+            margin-right: 10px;
+            font-size: 0.8rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-link {
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .social-link:hover {
+            background: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+            text-align: center;
+            color: #aaa;
+        }
+
+        /* Mobile Menu */
+        .mobile-nav {
+            position: fixed;
+            top: 0;
+            right: -300px;
+            width: 300px;
+            height: 100vh;
+            background: white;
+            z-index: 1001;
+            padding: 80px 40px;
+            transition: var(--transition);
+            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .mobile-nav.active {
+            right: 0;
+        }
+        
+        .mobile-nav-links {
+            list-style: none;
+        }
+        
+        .mobile-nav-links li {
+            margin-bottom: 20px;
+        }
+        
+        .mobile-nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 500;
+            transition: var(--transition);
+        }
+        
+        .mobile-nav-links a:hover {
+            color: var(--accent-color);
+        }
+        
+        .mobile-language-selector {
+            display: flex;
+            gap: 10px;
+            margin-top: 40px;
+        }
+        
+        .close-menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-dark);
+        }
+        
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            opacity: 0;
+            visibility: hidden;
+            transition: var(--transition);
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .service-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .service-content.reverse {
+                direction: ltr;
+            }
+            
+            .service-text {
+                text-align: center;
+            }
+            
+            .service-text h2::after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            
+            .service-image {
+                order: -1;
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .mobile-menu {
+                display: flex;
+            }
+            
+            .page-header {
+                padding: 120px 0 60px;
+            }
+            
+            .services-detailed {
+                padding: 80px 0;
+            }
+            
+            .service-detail {
+                margin-bottom: 80px;
+                padding: 60px 0;
+            }
+            
+            .process {
+                padding: 80px 0;
+            }
+            
+            .process-steps {
+                grid-template-columns: 1fr;
+            }
+            
+            .cta-section {
+                padding: 80px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Mobile Menu -->
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <button class="close-menu">
+            <i class="fas fa-times"></i>
+        </button>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html" data-tr="nav.home">Ana Sayfa</a></li>
+            <li><a href="services.html" class="active" data-tr="nav.services">Hizmetler</a></li>
+            <li><a href="about.html" data-tr="nav.about">Hakkımızda</a></li>
+            <li><a href="projects.html" data-tr="nav.projects">Projeler</a></li>
+            <li><a href="contact.html" data-tr="nav.contact">İletişim</a></li>
+        </ul>
+        <div class="mobile-language-selector">
+            <button class="lang-btn active" data-lang="tr">TR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+    </div>
+
+    <header>
+        <nav class="container">
+            <a href="index.html" class="logo">Cefu<span>Digital</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html" data-tr="nav.home">Ana Sayfa</a></li>
+                <li><a href="services.html" class="active" data-tr="nav.services">Hizmetler</a></li>
+                <li><a href="about.html" data-tr="nav.about">Hakkımızda</a></li>
+                <li><a href="projects.html" data-tr="nav.projects">Projeler</a></li>
+                <li><a href="contact.html" data-tr="nav.contact">İletişim</a></li>
+                <li class="language-selector">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </li>
+            </ul>
+            <div class="mobile-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Page Header -->
+        <section class="page-header">
+            <div class="container">
+                <div class="page-header-content" data-aos="fade-up">
+                    <h1 data-tr="page.title">Hizmetlerimiz</h1>
+                    <p data-tr="page.subtitle">İşinizi dijital dünyada büyütmek için ihtiyacınız olan tüm profesyonel çözümler</p>
+                    <div class="breadcrumb">
+                        <a href="index.html" data-tr="breadcrumb.home">Ana Sayfa</a>
+                        <span>/</span>
+                        <span data-tr="breadcrumb.services">Hizmetler</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Detailed -->
+        <section class="services-detailed">
+            <div class="container">
+                <!-- SEO Service -->
+                <div class="service-detail" id="seo">
+                    <div class="service-content" data-aos="fade-up">
+                        <div class="service-text">
+                            <h2 data-tr="seo.title">SEO Optimizasyonu</h2>
+                            <p data-tr="seo.desc1">Arama motorlarında üst sıralarda yer alarak organik trafiğinizi artırın ve potansiyel müşterilerinize daha kolay ulaşın.</p>
+                            <p data-tr="seo.desc2">Kapsamlı SEO stratejilerimizle web sitenizin görünürlüğünü artırıyor, anahtar kelime analizleri yapıyor ve teknik optimizasyonlar gerçekleştiriyoruz.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> <span data-tr="seo.feature1">Anahtar Kelime Araştırması ve Analizi</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="seo.feature2">Teknik SEO Optimizasyonu</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="seo.feature3">İçerik Optimizasyonu</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="seo.feature4">Link Building Stratejileri</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="seo.feature5">Yerel SEO Çalışmaları</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="seo.feature6">SEO Raporlama ve Analiz</span></li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" data-tr="get.quote">Teklif Al</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="SEO Optimizasyonu">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Web Design Service -->
+                <div class="service-detail" id="web-design">
+                    <div class="service-content reverse" data-aos="fade-up">
+                        <div class="service-text">
+                            <h2 data-tr="web.title">Web Tasarımı</h2>
+                            <p data-tr="web.desc1">Modern, kullanıcı dostu ve responsive web siteleri tasarlayarak markanızı dijital dünyada en iyi şekilde temsil ediyoruz.</p>
+                            <p data-tr="web.desc2">Kullanıcı deneyimini ön planda tutarak, hem görsel hem de fonksiyonel açıdan mükemmel web siteleri oluşturuyoruz.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> <span data-tr="web.feature1">Responsive Tasarım</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="web.feature2">Kullanıcı Deneyimi (UX) Optimizasyonu</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="web.feature3">Modern ve Şık Arayüz Tasarımı</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="web.feature4">Hızlı Yükleme Süreleri</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="web.feature5">SEO Dostu Kodlama</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="web.feature6">İçerik Yönetim Sistemi</span></li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" data-tr="get.quote">Teklif Al</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Web Tasarımı">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Corporate Solutions -->
+                <div class="service-detail" id="corporate">
+                    <div class="service-content" data-aos="fade-up">
+                        <div class="service-text">
+                            <h2 data-tr="corporate.title">Şirket Çözümleri</h2>
+                            <p data-tr="corporate.desc1">İşletmeniz için kapsamlı dijital altyapı ve çözümler sunarak operasyonel verimliliğinizi artırıyoruz.</p>
+                            <p data-tr="corporate.desc2">Kurumsal ihtiyaçlarınıza özel yazılım geliştirme, sistem entegrasyonları ve dijital dönüşüm süreçlerinde yanınızdayız.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> <span data-tr="corporate.feature1">Kurumsal Web Siteleri</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="corporate.feature2">E-ticaret Platformları</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="corporate.feature3">Özel Yazılım Geliştirme</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="corporate.feature4">Sistem Entegrasyonları</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="corporate.feature5">Dijital Dönüşüm Danışmanlığı</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="corporate.feature6">Teknik Destek ve Bakım</span></li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" data-tr="get.quote">Teklif Al</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Şirket Çözümleri">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Digital Marketing -->
+                <div class="service-detail" id="marketing">
+                    <div class="service-content reverse" data-aos="fade-up">
+                        <div class="service-text">
+                            <h2 data-tr="marketing.title">Dijital Pazarlama</h2>
+                            <p data-tr="marketing.desc1">Sosyal medya, PPC reklamları ve içerik pazarlama ile markanızı büyütün ve hedef kitlenize etkili şekilde ulaşın.</p>
+                            <p data-tr="marketing.desc2">Veri odaklı pazarlama stratejileri ile ROI'nizi maksimize ediyor ve marka bilinirliğinizi artırıyoruz.</p>
+                            <ul class="service-features">
+                                <li><i class="fas fa-check"></i> <span data-tr="marketing.feature1">Sosyal Medya Pazarlama</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="marketing.feature2">Google Ads ve PPC Kampanyaları</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="marketing.feature3">İçerik Pazarlama Stratejileri</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="marketing.feature4">E-posta Pazarlama</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="marketing.feature5">Influencer Marketing</span></li>
+                                <li><i class="fas fa-check"></i> <span data-tr="marketing.feature6">Analitik ve Raporlama</span></li>
+                            </ul>
+                            <a href="contact.html" class="btn btn-primary" data-tr="get.quote">Teklif Al</a>
+                        </div>
+                        <div class="service-image">
+                            <img src="/placeholder.svg?height=400&width=600" alt="Dijital Pazarlama">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process Section -->
+        <section class="process">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 data-tr="process.title">Çalışma Sürecimiz</h2>
+                    <p data-tr="process.subtitle">Projelerinizi başarıyla tamamlamak için izlediğimiz adımlar</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-number">1</div>
+                        <h3 data-tr="process.step1.title">Analiz ve Planlama</h3>
+                        <p data-tr="process.step1.desc">İhtiyaçlarınızı analiz ediyor ve size özel stratejiler geliştiriyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-number">2</div>
+                        <h3 data-tr="process.step2.title">Tasarım ve Geliştirme</h3>
+                        <p data-tr="process.step2.desc">Modern teknolojiler kullanarak projelerinizi hayata geçiriyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-number">3</div>
+                        <h3 data-tr="process.step3.title">Test ve Optimizasyon</h3>
+                        <p data-tr="process.step3.desc">Kapsamlı testler yaparak en iyi performansı sağlıyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-number">4</div>
+                        <h3 data-tr="process.step4.title">Yayınlama ve Destek</h3>
+                        <p data-tr="process.step4.desc">Projelerinizi yayınlıyor ve sürekli destek sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content" data-aos="fade-up">
+                    <h2 data-tr="cta.title">Projenizi Başlatmaya Hazır mısınız?</h2>
+                    <p data-tr="cta.subtitle">Dijital dünyada fark yaratmak için bugün bizimle iletişime geçin</p>
+                    <a href="contact.html" class="btn btn-primary" data-tr="cta.button">Hemen Başlayın</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="footer-logo">Cefu<span>Digital</span></a>
+                    <p data-tr="footer.desc">Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE'de profesyonel dijital çözümler sunuyoruz.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.services">Hizmetler</h3>
+                    <ul class="footer-links">
+                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> <span data-tr="seo.title">SEO Optimizasyonu</span></a></li>
+                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> <span data-tr="web.title">Web Tasarımı</span></a></li>
+                        <li><a href="services.html#corporate"><i class="fas fa-chevron-right"></i> <span data-tr="corporate.title">Şirket Çözümleri</span></a></li>
+                        <li><a href="services.html#marketing"><i class="fas fa-chevron-right"></i> <span data-tr="marketing.title">Dijital Pazarlama</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.quick-links">Hızlı Bağlantılar</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.home">Ana Sayfa</span></a></li>
+                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.about">Hakkımızda</span></a></li>
+                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.projects">Projeler</span></a></li>
+                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.contact">İletişim</span></a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.contact">İletişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> <span data-tr="contact.address.value">İstanbul, Türkiye</span></a></li>
+                        <li><a href="mailto:info@cefudigital.com"><i class="fas fa-envelope"></i> info@cefudigital.com</a></li>
+                        <li><a href="tel:+905551234567"><i class="fas fa-phone-alt"></i> +90 (555) 123 45 67</a></li>
+                        <li><a href="tel:+442071234567"><i class="fas fa-phone-alt"></i> +44 (20) 7123 4567</a></li>
+                        <li><a href="tel:+97141234567"><i class="fas fa-phone-alt"></i> +971 (4) 123 4567</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CefuDigital. <span data-tr="footer.rights">Tüm hakları saklıdır.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- AOS Animation Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <script>
+        // Language translations
+        const translations = {
+            tr: {
+                'nav.home': 'Ana Sayfa',
+                'nav.services': 'Hizmetler',
+                'nav.about': 'Hakkımızda',
+                'nav.projects': 'Projeler',
+                'nav.contact': 'İletişim',
+                'page.title': 'Hizmetlerimiz',
+                'page.subtitle': 'İşinizi dijital dünyada büyütmek için ihtiyacınız olan tüm profesyonel çözümler',
+                'breadcrumb.home': 'Ana Sayfa',
+                'breadcrumb.services': 'Hizmetler',
+                'seo.title': 'SEO Optimizasyonu',
+                'seo.desc1': 'Arama motorlarında üst sıralarda yer alarak organik trafiğinizi artırın ve potansiyel müşterilerinize daha kolay ulaşın.',
+                'seo.desc2': 'Kapsamlı SEO stratejilerimizle web sitenizin görünürlüğünü artırıyor, anahtar kelime analizleri yapıyor ve teknik optimizasyonlar gerçekleştiriyoruz.',
+                'seo.feature1': 'Anahtar Kelime Araştırması ve Analizi',
+                'seo.feature2': 'Teknik SEO Optimizasyonu',
+                'seo.feature3': 'İçerik Optimizasyonu',
+                'seo.feature4': 'Link Building Stratejileri',
+                'seo.feature5': 'Yerel SEO Çalışmaları',
+                'seo.feature6': 'SEO Raporlama ve Analiz',
+                'web.title': 'Web Tasarımı',
+                'web.desc1': 'Modern, kullanıcı dostu ve responsive web siteleri tasarlayarak markanızı dijital dünyada en iyi şekilde temsil ediyoruz.',
+                'web.desc2': 'Kullanıcı deneyimini ön planda tutarak, hem görsel hem de fonksiyonel açıdan mükemmel web siteleri oluşturuyoruz.',
+                'web.feature1': 'Responsive Tasarım',
+                'web.feature2': 'Kullanıcı Deneyimi (UX) Optimizasyonu',
+                'web.feature3': 'Modern ve Şık Arayüz Tasarımı',
+                'web.feature4': 'Hızlı Yükleme Süreleri',
+                'web.feature5': 'SEO Dostu Kodlama',
+                'web.feature6': 'İçerik Yönetim Sistemi',
+                'corporate.title': 'Şirket Çözümleri',
+                'corporate.desc1': 'İşletmeniz için kapsamlı dijital altyapı ve çözümler sunarak operasyonel verimliliğinizi artırıyoruz.',
+                'corporate.desc2': 'Kurumsal ihtiyaçlarınıza özel yazılım geliştirme, sistem entegrasyonları ve dijital dönüşüm süreçlerinde yanınızdayız.',
+                'corporate.feature1': 'Kurumsal Web Siteleri',
+                'corporate.feature2': 'E-ticaret Platformları',
+                'corporate.feature3': 'Özel Yazılım Geliştirme',
+                'corporate.feature4': 'Sistem Entegrasyonları',
+                'corporate.feature5': 'Dijital Dönüşüm Danışmanlığı',
+                'corporate.feature6': 'Teknik Destek ve Bakım',
+                'marketing.title': 'Dijital Pazarlama',
+                'marketing.desc1': 'Sosyal medya, PPC reklamları ve içerik pazarlama ile markanızı büyütün ve hedef kitlenize etkili şekilde ulaşın.',
+                'marketing.desc2': 'Veri odaklı pazarlama stratejileri ile ROI\'nizi maksimize ediyor ve marka bilinirliğinizi artırıyoruz.',
+                'marketing.feature1': 'Sosyal Medya Pazarlama',
+                'marketing.feature2': 'Google Ads ve PPC Kampanyaları',
+                'marketing.feature3': 'İçerik Pazarlama Stratejileri',
+                'marketing.feature4': 'E-posta Pazarlama',
+                'marketing.feature5': 'Influencer Marketing',
+                'marketing.feature6': 'Analitik ve Raporlama',
+                'process.title': 'Çalışma Sürecimiz',
+                'process.subtitle': 'Projelerinizi başarıyla tamamlamak için izlediğimiz adımlar',
+                'process.step1.title': 'Analiz ve Planlama',
+                'process.step1.desc': 'İhtiyaçlarınızı analiz ediyor ve size özel stratejiler geliştiriyoruz.',
+                'process.step2.title': 'Tasarım ve Geliştirme',
+                'process.step2.desc': 'Modern teknolojiler kullanarak projelerinizi hayata geçiriyoruz.',
+                'process.step3.title': 'Test ve Optimizasyon',
+                'process.step3.desc': 'Kapsamlı testler yaparak en iyi performansı sağlıyoruz.',
+                'process.step4.title': 'Yayınlama ve Destek',
+                'process.step4.desc': 'Projelerinizi yayınlıyor ve sürekli destek sağlıyoruz.',
+                'cta.title': 'Projenizi Başlatmaya Hazır mısınız?',
+                'cta.subtitle': 'Dijital dünyada fark yaratmak için bugün bizimle iletişime geçin',
+                'cta.button': 'Hemen Başlayın',
+                'get.quote': 'Teklif Al',
+                'footer.desc': 'Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE\'de profesyonel dijital çözümler sunuyoruz.',
+                'footer.services': 'Hizmetler',
+                'footer.quick-links': 'Hızlı Bağlantılar',
+                'footer.contact': 'İletişim',
+                'footer.rights': 'Tüm hakları saklıdır.'
+            },
+            en: {
+                'nav.home': 'Home',
+                'nav.services': 'Services',
+                'nav.about': 'About',
+                'nav.projects': 'Projects',
+                'nav.contact': 'Contact',
+                'page.title': 'Our Services',
+                'page.subtitle': 'All the professional solutions you need to grow your business in the digital world',
+                'breadcrumb.home': 'Home',
+                'breadcrumb.services': 'Services',
+                'seo.title': 'SEO Optimization',
+                'seo.desc1': 'Rank higher in search engines, increase your organic traffic, and reach your potential customers more easily.',
+                'seo.desc2': 'With our comprehensive SEO strategies, we increase your website\'s visibility, conduct keyword analyses, and perform technical optimizations.',
+                'seo.feature1': 'Keyword Research and Analysis',
+                'seo.feature2': 'Technical SEO Optimization',
+                'seo.feature3': 'Content Optimization',
+                'seo.feature4': 'Link Building Strategies',
+                'seo.feature5': 'Local SEO Services',
+                'seo.feature6': 'SEO Reporting and Analysis',
+                'web.title': 'Web Design',
+                'web.desc1': 'We design modern, user-friendly, and responsive websites to represent your brand in the best way possible in the digital world.',
+                'web.desc2': 'By prioritizing user experience, we create websites that are perfect both visually and functionally.',
+                'web.feature1': 'Responsive Design',
+                'web.feature2': 'User Experience (UX) Optimization',
+                'web.feature3': 'Modern and Elegant Interface Design',
+                'web.feature4': 'Fast Loading Times',
+                'web.feature5': 'SEO-Friendly Coding',
+                'web.feature6': 'Content Management System',
+                'corporate.title': 'Corporate Solutions',
+                'corporate.desc1': 'We increase your operational efficiency by providing comprehensive digital infrastructure and solutions for your business.',
+                'corporate.desc2': 'We are with you in custom software development, system integrations, and digital transformation processes tailored to your corporate needs.',
+                'corporate.feature1': 'Corporate Websites',
+                'corporate.feature2': 'E-commerce Platforms',
+                'corporate.feature3': 'Custom Software Development',
+                'corporate.feature4': 'System Integrations',
+                'corporate.feature5': 'Digital Transformation Consulting',
+                'corporate.feature6': 'Technical Support and Maintenance',
+                'marketing.title': 'Digital Marketing',
+                'marketing.desc1': 'Grow your brand with social media, PPC ads, and content marketing, and effectively reach your target audience.',
+                'marketing.desc2': 'We maximize your ROI and increase your brand awareness with data-driven marketing strategies.',
+                'marketing.feature1': 'Social Media Marketing',
+                'marketing.feature2': 'Google Ads and PPC Campaigns',
+                'marketing.feature3': 'Content Marketing Strategies',
+                'marketing.feature4': 'Email Marketing',
+                'marketing.feature5': 'Influencer Marketing',
+                'marketing.feature6': 'Analytics and Reporting',
+                'process.title': 'Our Work Process',
+                'process.subtitle': 'Steps we follow to successfully complete your projects',
+                'process.step1.title': 'Analysis and Planning',
+                'process.step1.desc': 'We analyze your needs and develop strategies tailored to you.',
+                'process.step2.title': 'Design and Development',
+                'process.step2.desc': 'We bring your projects to life using modern technologies.',
+                'process.step3.title': 'Testing and Optimization',
+                'process.step3.desc': 'We ensure the best performance through comprehensive testing.',
+                'process.step4.title': 'Launch and Support',
+                'process.step4.desc': 'We launch your projects and provide continuous support.',
+                'cta.title': 'Ready to Start Your Project?',
+                'cta.subtitle': 'Contact us today to make a difference in the digital world',
+                'cta.button': 'Get Started Now',
+                'get.quote': 'Get a Quote',
+                'footer.desc': 'The best way to grow your business in the digital world. We provide professional digital solutions in Turkey, UK and UAE.',
+                'footer.services': 'Services',
+                'footer.quick-links': 'Quick Links',
+                'footer.contact': 'Contact',
+                'footer.rights': 'All rights reserved.'
+            },
+            ar: {
+                'nav.home': 'الرئيسية',
+                'nav.services': 'الخدمات',
+                'nav.about': 'من نحن',
+                'nav.projects': 'المشاريع',
+                'nav.contact': 'اتصل بنا',
+                'page.title': 'خدماتنا',
+                'page.subtitle': 'جميع الحلول المهنية التي تحتاجها لتنمية أعمالك في العالم الرقمي',
+                'breadcrumb.home': 'الرئيسية',
+                'breadcrumb.services': 'الخدمات',
+                'seo.title': 'تحسين محركات البحث',
+                'seo.desc1': 'احصل على مرتبة أعلى في محركات البحث، وزيادة حركة المرور العضوية، والوصول إلى عملائك المحتملين بسهولة أكبر.',
+                'seo.desc2': 'من خلال استراتيجيات تحسين محركات البحث الشاملة، نزيد من رؤية موقعك، ونجري تحليلات للكلمات الرئيسية، ونقوم بالتحسينات التقنية.',
+                'seo.feature1': 'بحث وتحليل الكلمات الرئيسية',
+                'seo.feature2': 'تحسين تقني لمحركات البحث',
+                'seo.feature3': 'تحسين المحتوى',
+                'seo.feature4': 'استراتيجيات بناء الروابط',
+                'seo.feature5': 'خدمات تحسين محركات البحث المحلية',
+                'seo.feature6': 'تقارير وتحليلات تحسين محركات البحث',
+                'web.title': 'تصميم المواقع',
+                'web.desc1': 'نصمم مواقع حديثة وسهلة الاستخدام ومتجاوبة لتمثيل علامتك التجارية بأفضل طريقة ممكنة في العالم الرقمي.',
+                'web.desc2': 'من خلال إعطاء الأولوية لتجربة المستخدم، نقوم بإنشاء مواقع مثالية من الناحية البصرية والوظيفية.',
+                'web.feature1': 'تصميم متجاوب',
+                'web.feature2': 'تحسين تجربة المستخدم',
+                'web.feature3': 'تصميم واجهة حديث وأنيق',
+                'web.feature4': 'أوقات تحميل سريعة',
+                'web.feature5': 'ترميز صديق لمحركات البحث',
+                'web.feature6': 'نظام إدارة المحتوى',
+                'corporate.title': 'الحلول المؤسسية',
+                'corporate.desc1': 'نزيد من كفاءة عملياتك من خلال توفير بنية تحتية وحلول رقمية شاملة لعملك.',
+                'corporate.desc2': 'نحن معك في تطوير البرمجيات المخصصة وتكامل الأنظمة وعمليات التحول الرقمي المصممة خصيصًا لاحتياجات مؤسستك.',
+                'corporate.feature1': 'مواقع الشركات',
+                'corporate.feature2': 'منصات التجارة الإلكترونية',
+                'corporate.feature3': 'تطوير برمجيات مخصصة',
+                'corporate.feature4': 'تكامل الأنظمة',
+                'corporate.feature5': 'استشارات التحول الرقمي',
+                'corporate.feature6': 'الدعم الفني والصيانة',
+                'marketing.title': 'التسويق الرقمي',
+                'marketing.desc1': 'نمي علامتك التجارية من خلال وسائل التواصل الاجتماعي وإعلانات الدفع لكل نقرة وتسويق المحتوى، والوصول بفعالية إلى جمهورك المستهدف.',
+                'marketing.desc2': 'نحن نعظم عائد استثمارك ونزيد من الوعي بعلامتك التجارية من خلال استراتيجيات تسويق تعتمد على البيانات.',
+                'marketing.feature1': 'التسويق عبر وسائل التواصل الاجتماعي',
+                'marketing.feature2': 'إعلانات جوجل وحملات الدفع لكل نقرة',
+                'marketing.feature3': 'استراتيجيات تسويق المحتوى',
+                'marketing.feature4': 'التسويق عبر البريد الإلكتروني',
+                'marketing.feature5': 'تسويق المؤثرين',
+                'marketing.feature6': 'التحليلات وإعداد التقارير',
+                'process.title': 'عملية العمل لدينا',
+                'process.subtitle': 'الخطوات التي نتبعها لإكمال مشاريعك بنجاح',
+                'process.step1.title': 'التحليل والتخطيط',
+                'process.step1.desc': 'نحلل احتياجاتك ونطور استراتيجيات مخصصة لك.',
+                'process.step2.title': 'التصميم والتطوير',
+                'process.step2.desc': 'نحول مشاريعك إلى واقع باستخدام التقنيات الحديثة.',
+                'process.step3.title': 'الاختبار والتحسين',
+                'process.step3.desc': 'نضمن أفضل أداء من خلال الاختبار الشامل.',
+                'process.step4.title': 'الإطلاق والدعم',
+                'process.step4.desc': 'نطلق مشاريعك ونقدم الدعم المستمر.',
+                'cta.title': 'هل أنت مستعد لبدء مشروعك؟',
+                'cta.subtitle': 'اتصل بنا اليوم لإحداث فرق في العالم الرقمي',
+                'cta.button': 'ابدأ الآن',
+                'get.quote': 'احصل على عرض سعر',
+                'footer.desc': 'أفضل طريقة لتنمية أعمالك في العالم الرقمي. نقدم حلول رقمية احترافية في تركيا والمملكة المتحدة والإمارات.',
+                'footer.services': 'الخدمات',
+                'footer.quick-links': 'روابط سريعة',
+                'footer.contact': 'اتصل بنا',
+                'footer.rights': 'جميع الحقوق محفوظة.'
+            }
+        };
+
+        let currentLang = localStorage.getItem('preferredLanguage') || 'tr';
+
+        // Language switching functionality
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            document.documentElement.lang = lang;
+            
+            // Update active language button
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.remove('active');
+                if (btn.dataset.lang === lang) {
+                    btn.classList.add('active');
+                }
+            });
+
+            // Update text content
+            document.querySelectorAll('[data-tr]').forEach(element => {
+                const key = element.dataset.tr;
+                if (translations[lang] && translations[lang][key]) {
+                    element.textContent = translations[lang][key];
+                }
+            });
+
+            // Update placeholders
+            document.querySelectorAll('[data-tr-placeholder]').forEach(element => {
+                const key = element.dataset.trPlaceholder;
+                if (translations[lang] && translations[lang][key]) {
+                    element.placeholder = translations[lang][key];
+                }
+            });
+
+            // Update page title and meta description
+            const titles = {
+                tr: 'Hizmetlerimiz - CefuDigital Dijital Pazarlama Ajansı',
+                en: 'Our Services - CefuDigital Digital Marketing Agency',
+                ar: 'خدماتنا - وكالة CefuDigital للتسويق الرقمي'
+            };
+            
+            const descriptions = {
+                tr: 'SEO optimizasyonu, web tasarımı, şirket çözümleri ve dijital pazarlama hizmetleri. Türkiye, İngiltere ve BAE\'de profesyonel dijital çözümler.',
+                en: 'SEO optimization, web design, corporate solutions and digital marketing services. Professional digital solutions in Turkey, UK and UAE.',
+                ar: 'تحسين محركات البحث، تصميم المواقع، الحلول المؤسسية وخدمات التسويق الرقمي. حلول رقمية احترافية في تركيا والمملكة المتحدة والإمارات.'
+            };
+
+            document.title = titles[lang];
+            document.querySelector('meta[name="description"]').content = descriptions[lang];
+
+            // Update text direction for Arabic
+            if (lang === 'ar') {
+                document.body.style.direction = 'rtl';
+                document.body.style.textAlign = 'right';
+            } else {
+                document.body.style.direction = 'ltr';
+                document.body.style.textAlign = 'left';
+            }
+        }
+
+        // Initialize page
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize AOS animations
+            AOS.init({
+                duration: 800,
+                easing: 'ease-in-out',
+                once: true,
+                mirror: false
+            });
+            
+            // Set initial language from localStorage or default to 'tr'
+            switchLanguage(currentLang);
+            
+            // Language switching
+            const langButtons = document.querySelectorAll('.lang-btn');
+            langButtons.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    switchLanguage(btn.dataset.lang);
+                });
+            });
+            
+            // Mobile menu
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const overlay = document.querySelector('.overlay');
+            const closeMenuBtn = document.querySelector('.close-menu');
+            
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+            });
+            
+            closeMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+            
+            overlay.addEventListener('click', () => {
+                mobileNav.classList.remove('active');
+                overlay.classList.remove('active');
+            });
+
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+
+            // Scroll header effect
+            window.addEventListener('scroll', () => {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.classList.add('scrolled');
+                } else {
+                    header.classList.remove('scrolled');
+                }
+            });
+        });
+</script>
+</body>
+</html>
