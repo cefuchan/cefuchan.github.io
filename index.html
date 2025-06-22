@@ -16,14 +16,14 @@
     <meta property="og:image" content="https://cefudigital.com/og-image.jpg">
     
     <!-- Favicon -->
-<link rel="shortcut icon" href="img/favicon svg.svg" type="image/x-icon">    
+    <link rel="shortcut icon" href="img/favicon svg.svg" type="image/x-icon">    
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
     
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
@@ -332,6 +332,11 @@
             color: white;
             font-size: 2rem;
             transition: var(--transition);
+        }
+        .service-icon img{
+            width: 30px;
+            height: 30px;
+            filter: invert(100%);
         }
 
         .service-card:hover .service-icon {
@@ -817,7 +822,7 @@
                 <div class="services-grid">
                     <div class="service-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="service-icon">
-                            <i class="fas fa-search"></i>
+                            <img src="icons/search.png" alt="search icon"/>
                         </div>
                         <h3 data-tr="service.seo.title">SEO Optimizasyonu</h3>
                         <p data-tr="service.seo.desc">Arama motorlarında üst sıralarda yer alarak organik trafiğinizi artırın ve potansiyel müşterilerinize daha kolay ulaşın.</p>
@@ -825,7 +830,7 @@
                     </div>
                     <div class="service-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
+                            <img src="icons/laptop-code.pnng.png" alt="laptop-code"/>
                         </div>
                         <h3 data-tr="service.web.title">Web Tasarımı</h3>
                         <p data-tr="service.web.desc">Modern, kullanıcı dostu ve responsive web siteleri tasarlayarak markanızı dijital dünyada en iyi şekilde temsil ediyoruz.</p>
@@ -833,7 +838,7 @@
                     </div>
                     <div class="service-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="service-icon">
-                            <i class="fas fa-building"></i>
+                            <img src="icons/building.png" alt="building"/>
                         </div>
                         <h3 data-tr="service.corporate.title">Şirket Çözümleri</h3>
                         <p data-tr="service.corporate.desc">İşletmeniz için kapsamlı dijital altyapı ve çözümler sunarak operasyonel verimliliğinizi artırıyoruz.</p>
