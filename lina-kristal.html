@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lina Kristal - Kristalin Zarafeti</title>
+    <style>
+        /* Genel Stiller */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        a:hover {
+            color: #ccc;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        /* Başlık (Header) */
+        header {
+            background-color: #000;
+            padding: 1rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .logo img {
+            width: 50px; /* Görüntüleme boyutu */
+            height: 50px; /* Görüntüleme boyutu */
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .logo span {
+            font-size: 1.8rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: 30px;
+        }
+        nav ul li a {
+            font-size: 0.9rem;
+            font-weight: 300;
+            padding-bottom: 5px;
+            border-bottom: 2px solid transparent;
+        }
+        nav ul li a:hover {
+            border-color: #fff;
+        }
+        .menu-toggle {
+            display: none; /* Masaüstünde gizli */
+            background: none;
+            border: none;
+            color: #fff;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        /* Mobil Navigasyon */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 1rem 20px;
+                position: relative; /* Hamburger menü için */
+            }
+            .logo {
+                margin-bottom: 1rem;
+            }
+            nav {
+                width: 100%;
+                display: none; /* Mobil varsayılan olarak gizli */
+            }
+            nav.active {
+                display: block; /* Aktif olduğunda göster */
+            }
+            nav ul {
+                flex-direction: column;
+                gap: 15px;
+                width: 100%;
+                text-align: center;
+            }
+            nav ul li {
+                width: 100%;
+            }
+            nav ul li a {
+                display: block;
+                padding: 10px 0;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            }
+            .menu-toggle {
+                display: block; /* Mobil cihazlarda hamburgeri göster */
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+        }
+
+        /* Hero/Slider Bölümü */
+        .hero-slider {
+            position: relative;
+            width: 100%;
+            height: 500px; /* Slider için sabit yükseklik */
+            overflow: hidden;
+            margin-bottom: 80px;
+        }
+        .slider-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .slider-image.active {
+            opacity: 1;
+        }
+        .slider-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: #fff;
+            z-index: 10;
+            width: 80%;
+        }
+        .slider-text h1 {
+            font-size: 4rem;
+            font-weight: 200;
+            margin-bottom: 20px;
+        }
+        .slider-text p {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .slider-nav {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 10px;
+            z-index: 10;
+        }
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            background-color: rgba(255, 255, 255, 0.5);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .slider-dot.active {
+            background-color: #fff;
+        }
+
+        /* Ürün Kategorileri */
+        .product-categories {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .product-categories h2 {
+            font-size: 3rem;
+            font-weight: 200;
+            margin-bottom: 60px;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        .category-card {
+            background-color: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        .category-card:hover {
+            border-color: rgba(255, 255, 255, 0.3);
+            background-color: rgba(255, 255, 255, 0.1);
+            transform: translateY(-5px);
+        }
+        .category-card h3 {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 15px;
+        }
+        .category-card p {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Hakkımızda Bölümü */
+        .about-section {
+            padding: 80px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+        .about-section h2 {
+            font-size: 3rem;
+            font-weight: 200;
+            margin-bottom: 40px;
+        }
+        .about-section p {
+            font-size: 1.1rem;
+            font-weight: 300;
+            color: rgba(255, 255, 255, 0.8);
+            max-width: 800px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+        }
+
+        /* Altbilgi (Footer) */
+        footer {
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 60px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.5);
+        }
+        footer .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        footer .footer-links a {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        footer .footer-links a:hover {
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header class="container">
+        <div class="logo">
+            <img src="/images/lina-kristal-logo.jpg" alt="Lina Kristal Logo" width="300" height="280">
+            <span>Lina Kristal</span>
+        </div>
+        <button class="menu-toggle" aria-label="Menüyü Aç/Kapat">☰</button>
+        <nav>
+            <ul>
+                <li><a href="#">Anasayfa</a></li>
+                <li><a href="#">Hakkımızda</a></li>
+                <li><a href="#">Ürünler</a></li>
+                <li><a href="#">İletişim</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-slider">
+            <img src="/images/operation-sindoor.png" alt="Slider Görseli 1" class="slider-image active">
+            <img src="/placeholder.svg?height=500&width=1200" alt="Slider Görseli 2" class="slider-image">
+            <img src="/placeholder.svg?height=500&width=1200" alt="Slider Görseli 3" class="slider-image">
+            <div class="slider-text">
+                <h1>Kristalin Zarafetiyle Tanışın</h1>
+                <p>Özel tasarım kristal ürünler, hediyelikler ve kurumsal çözümler.</p>
+            </div>
+            <div class="slider-nav">
+                <span class="slider-dot active" data-slide="0"></span>
+                <span class="slider-dot" data-slide="1"></span>
+                <span class="slider-dot" data-slide="2"></span>
+            </div>
+        </section>
+
+        <section class="product-categories container">
+            <h2>Ürün Kategorileri</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <h3>Hediyelik Ürünler</h3>
+                    <p>Özel günler için kişiselleştirilmiş kristal hediyeler.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Lazer Ürünler</h3>
+                    <p>Lazer işleme teknolojisiyle detaylandırılmış kristal tasarımlar.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Masa Setleri ve Saatler</h3>
+                    <p>Ofis ve ev dekorasyonu için şık kristal masa setleri ve saatler.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Masaüstü Ürünleri</h3>
+                    <p>Çalışma alanınıza estetik katacak kristal masaüstü aksesuarları.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Plaketler</h3>
+                    <p>Ödül törenleri ve anma etkinlikleri için özel kristal plaketler.</p>
+                </div>
+                <div class="category-card">
+                    <h3>Üç Boyutlu Ürünler</h3>
+                    <p>İçerisinde 3D lazer işleme bulunan benzersiz kristal objeler.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-section container">
+            <h2>Lina Kristal Hakkında</h2>
+            <p>Lina Kristal olarak, yıllardır kristal sanatının inceliklerini modern tasarımlarla birleştirerek eşsiz ürünler yaratıyoruz. Her bir ürünümüz, zanaatkarlarımızın titiz çalışması ve yüksek kalite standartlarımızla hayat bulmaktadır. Müşterilerimize sadece bir ürün değil, aynı zamanda bir sanat eseri sunmayı hedefliyoruz.</p>
+            <p>Hediyelik ürünlerden kurumsal çözümlere, lazer işleme teknolojisinden üç boyutlu tasarımlara kadar geniş bir yelpazede hizmet veriyoruz. Lina Kristal, zarafeti, kaliteyi ve yeniliği bir araya getirerek yaşam alanlarınıza ve özel anlarınıza değer katıyor.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="current-year"></span> Lina Kristal. Tüm hakları saklıdır.</p>
+            <div class="footer-links">
+                <a href="#">Gizlilik Politikası</a>
+                <a href="#">Kullanım Koşulları</a>
+                <a href="#">Sıkça Sorulan Sorular</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobil menü geçişi
+        const menuToggle = document.querySelector('.menu-toggle');
+        const nav = document.querySelector('nav');
+
+        menuToggle.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Resim Slider
+        const sliderImages = document.querySelectorAll('.slider-image');
+        const sliderDots = document.querySelectorAll('.slider-dot');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            sliderImages.forEach((img, i) => {
+                img.classList.remove('active');
+                sliderDots[i].classList.remove('active');
+            });
+            sliderImages[index].classList.add('active');
+            sliderDots[index].classList.add('active');
+            currentSlide = index;
+        }
+
+        sliderDots.forEach(dot => {
+            dot.addEventListener('click', (e) => {
+                const slideIndex = parseInt(e.target.dataset.slide);
+                showSlide(slideIndex);
+            });
+        });
+
+        // Otomatik slider ilerlemesi
+        setInterval(() => {
+            currentSlide = (currentSlide + 1) % sliderImages.length;
+            showSlide(currentSlide);
+        }, 5000); // Her 5 saniyede bir slayt değiştir
+
+        // Altbilgideki mevcut yılı ayarla
+        document.getElementById('current-year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
