@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="tr" itemscope itemtype="https://schema.org/Service">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Şirket & Kurumsal Dijital Çözümler | CefuDigital Ankara</title>
+    <meta name="description" id="meta-desc" content="Ankara'da şirketlere özel dijital altyapı, özel yazılım geliştirme, e-ticaret platformları ve dijital dönüşüm danışmanlığı. CefuDigital.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cefudigital.com/service-corporate">
+    <meta property="og:title" content="Şirket & Kurumsal Dijital Çözümler | CefuDigital Ankara">
+    <meta property="og:description" content="Ankara'da şirketlere özel dijital altyapı, özel yazılım geliştirme, e-ticaret platformları ve dijital dönüşüm danışmanlığı. CefuDigital.">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="../img/favicon svg.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root { --primary-color:#f8f9fa;--secondary-color:#212529;--accent-color:#c9a55c;--text-dark:#333;--text-light:#777;--transition:all 0.4s cubic-bezier(0.4,0,0.2,1);--font-heading:'Playfair Display',serif;--font-body:'Poppins',sans-serif; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{overflow-x:hidden}
+        body{font-family:var(--font-body);background-color:var(--primary-color);color:var(--text-dark);line-height:1.6;overflow-x:hidden}
+        h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500}
+        .container{max-width:1400px;margin:0 auto;padding:0 20px}
+        .btn{display:inline-block;padding:14px 32px;text-decoration:none;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:var(--transition);font-size:14px;font-family:var(--font-body);border:1px solid}
+        .btn-primary{background:var(--accent-color);color:white;border-color:var(--accent-color)}.btn-primary:hover{background:transparent;color:var(--accent-color)}
+        .btn-secondary{background:transparent;color:var(--text-dark);border-color:var(--text-dark)}.btn-secondary:hover{background:var(--text-dark);color:white}
+        .btn-white{background:white;color:var(--secondary-color);border-color:white}.btn-white:hover{background:transparent;color:white}
+        header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);transition:var(--transition);box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+        nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+        .logo{font-family:var(--font-heading);font-size:28px;font-weight:700;color:var(--secondary-color);text-decoration:none;letter-spacing:1px}
+        .logo span{color:var(--accent-color)}
+        .nav-links{display:flex;list-style:none;gap:40px;align-items:center}
+        .nav-links a{color:var(--text-dark);text-decoration:none;font-weight:500;font-size:15px;text-transform:uppercase;letter-spacing:1px;transition:var(--transition);position:relative}
+        .nav-links a:hover,.nav-links a.active{color:var(--accent-color)}
+        .nav-links a::after{content:"";position:absolute;bottom:-5px;left:0;width:0;height:1px;background:var(--accent-color);transition:var(--transition)}
+        .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+        .language-selector{display:flex;gap:10px;margin-left:30px}
+        .lang-btn{background:none;border:1px solid var(--text-light);color:var(--text-dark);padding:5px 10px;cursor:pointer;transition:var(--transition);font-size:14px;font-family:var(--font-body)}
+        .lang-btn:hover,.lang-btn.active{border-color:var(--accent-color);color:var(--accent-color)}
+        .mobile-menu{display:none;flex-direction:column;cursor:pointer}
+        .mobile-menu span{width:25px;height:2px;background:var(--text-dark);margin:3px 0;transition:var(--transition)}
+        .page-hero{padding:150px 0 90px;background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);text-align:center;position:relative;overflow:hidden}
+        .page-hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(201,165,92,0.04) 40px,rgba(201,165,92,0.04) 41px)}
+        .hero-inner{position:relative;z-index:1}
+        .service-icon-lg{width:90px;height:90px;background:var(--accent-color);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:2.2rem;color:white;box-shadow:0 8px 30px rgba(201,165,92,0.35)}
+        .page-hero h1{font-size:clamp(2.2rem,4.5vw,3.8rem);color:var(--text-dark);margin-bottom:20px;line-height:1.2;max-width:800px;margin-left:auto;margin-right:auto}
+        .page-hero .lead{font-size:1.15rem;color:var(--text-light);max-width:640px;margin:0 auto 32px;line-height:1.8}
+        .hero-badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+        .hero-badge{font-size:0.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border:1px solid;border-radius:25px}
+        .badge-gold{color:var(--accent-color);border-color:var(--accent-color);background:rgba(201,165,92,0.07)}
+        .badge-green{color:#2d8a4e;border-color:#2d8a4e;background:rgba(45,138,78,0.06)}
+        .badge-blue{color:#2d6a8a;border-color:#2d6a8a;background:rgba(45,106,138,0.06)}
+        .breadcrumb{display:flex;justify-content:center;gap:10px;font-size:14px;color:var(--text-light);flex-wrap:wrap}
+        .breadcrumb a{color:var(--text-light);text-decoration:none;transition:var(--transition)}.breadcrumb a:hover{color:var(--accent-color)}.breadcrumb span{color:var(--accent-color)}
+        .section-header{text-align:center;margin-bottom:70px}
+        .section-header h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:18px;position:relative;display:inline-block}
+        .section-header h2::after{content:"";position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);width:70px;height:2px;background:var(--accent-color)}
+        .section-header p{color:var(--text-light);max-width:650px;margin:0 auto;font-size:1.05rem}
+        .service-detail-sec{padding:110px 0;background:white}
+        .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+        .detail-text h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:22px;position:relative;padding-bottom:16px}
+        .detail-text h2::after{content:"";position:absolute;bottom:0;left:0;width:60px;height:2px;background:var(--accent-color)}
+        .detail-text p{color:var(--text-light);font-size:1.05rem;line-height:1.9;margin-bottom:16px}
+        .feature-list{list-style:none;margin:28px 0}
+        .feature-list li{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid #f0f0f0;color:var(--text-dark);font-size:1rem}
+        .feature-list li:last-child{border-bottom:none}
+        .feature-list li i{color:var(--accent-color);font-size:1rem;margin-top:2px;flex-shrink:0}
+        .detail-image{height:460px;overflow:hidden;border-radius:4px;background:linear-gradient(135deg,#0f3460 0%,#16213e 50%,#1a1a2e 100%);display:flex;align-items:center;justify-content:center}
+        .detail-image img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}.detail-image:hover img{transform:scale(1.04)}
+        .detail-image-placeholder{color:rgba(255,255,255,0.1);font-family:var(--font-heading);font-size:5rem;font-weight:700;letter-spacing:-2px;user-select:none;text-align:center;padding:20px}
+        .stat-strip{padding:70px 0;background:var(--secondary-color)}
+        .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+        .stat-item h3{font-family:var(--font-heading);font-size:2.8rem;color:var(--accent-color);margin-bottom:8px}
+        .stat-item p{color:rgba(255,255,255,0.8);font-size:0.95rem}
+        .pricing-sec{padding:110px 0;background:#f8f9fa}
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+        .pricing-card{background:white;border-radius:12px;padding:44px 36px;box-shadow:0 8px 28px rgba(0,0,0,0.06);transition:var(--transition);position:relative;text-align:center;border:1px solid #eee}
+        .pricing-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,0.12)}
+        .pricing-card.featured{border-color:var(--accent-color);border-width:2px}
+        .pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent-color);color:white;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 18px;border-radius:25px;white-space:nowrap}
+        .pricing-name{font-family:var(--font-heading);font-size:1.3rem;color:var(--text-dark);margin-bottom:10px}
+        .pricing-price{font-family:var(--font-heading);font-size:2.6rem;color:var(--accent-color);margin-bottom:6px}
+        .pricing-price span{font-size:1rem;color:var(--text-light);font-family:var(--font-body)}
+        .pricing-desc{color:var(--text-light);font-size:0.88rem;margin-bottom:28px;line-height:1.6}
+        .pricing-features{list-style:none;margin-bottom:32px;text-align:left}
+        .pricing-features li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f5f5f5;font-size:0.95rem;color:var(--text-dark)}
+        .pricing-features li:last-child{border-bottom:none}
+        .pricing-features li i{color:var(--accent-color);font-size:0.85rem;flex-shrink:0}
+        .pricing-features li.no i{color:#ccc}.pricing-features li.no{color:var(--text-light)}
+        .process-sec{padding:110px 0;background:white}
+        .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative}
+        .process-steps::before{content:"";position:absolute;top:30px;left:calc(12.5% + 30px);right:calc(12.5% + 30px);height:1px;background:linear-gradient(90deg,var(--accent-color),rgba(201,165,92,0.2));z-index:0}
+        .process-step{text-align:center;padding:36px 22px;background:#f8f9fa;border-radius:10px;transition:var(--transition);position:relative;z-index:1}
+        .process-step:hover{background:white;box-shadow:0 12px 36px rgba(0,0,0,0.09);transform:translateY(-6px)}
+        .step-num{width:60px;height:60px;background:var(--accent-color);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.4rem;font-weight:600;margin:0 auto 20px;box-shadow:0 4px 16px rgba(201,165,92,0.35)}
+        .process-step h3{font-size:1.1rem;margin-bottom:12px;color:var(--text-dark)}
+        .process-step p{color:var(--text-light);font-size:0.92rem;line-height:1.7}
+        .testimonials-sec{padding:110px 0;background:#f8f9fa}
+        .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+        .testimonial-card{background:white;border-radius:12px;padding:36px 32px;box-shadow:0 8px 28px rgba(0,0,0,0.06);transition:var(--transition)}
+        .testimonial-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,0.1)}
+        .stars{color:var(--accent-color);font-size:1rem;margin-bottom:16px;letter-spacing:2px}
+        .testimonial-text{color:var(--text-light);font-size:0.97rem;line-height:1.8;margin-bottom:22px;font-style:italic}
+        .testimonial-author{display:flex;align-items:center;gap:14px}
+        .author-avatar{width:46px;height:46px;border-radius:50%;background:var(--accent-color);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-heading);font-weight:700;font-size:1rem;flex-shrink:0}
+        .author-info h4{font-size:0.95rem;color:var(--text-dark);margin-bottom:2px}
+        .author-info span{font-size:0.82rem;color:var(--text-light)}
+        .faq-sec{padding:110px 0;background:white}
+        .faq-wrap{max-width:820px;margin:0 auto}
+        .faq-item{border:1px solid #eee;margin-bottom:12px;border-radius:8px;overflow:hidden}
+        .faq-question{width:100%;background:none;border:none;padding:20px 26px;text-align:left;font-family:var(--font-heading);font-size:1.05rem;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:var(--transition)}
+        .faq-question:hover,.faq-question.open{background:#fafafa;color:var(--accent-color)}
+        .faq-icon{font-size:1.3rem;color:var(--accent-color);transition:var(--transition);flex-shrink:0}
+        .faq-question.open .faq-icon{transform:rotate(45deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+        .faq-answer-inner{padding:0 26px 20px;color:var(--text-light);font-size:0.97rem;line-height:1.85}
+        .faq-item.active .faq-answer{max-height:400px}
+        .cta-form-sec{padding:110px 0;background:var(--secondary-color)}
+        .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+        .cta-text h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:white;margin-bottom:20px}
+        .cta-text p{color:rgba(255,255,255,0.72);font-size:1.05rem;line-height:1.9;margin-bottom:28px}
+        .cta-text ul{list-style:none}
+        .cta-text ul li{color:rgba(255,255,255,0.8);padding:8px 0;display:flex;align-items:center;gap:12px;font-size:0.97rem}
+        .cta-text ul li i{color:var(--accent-color)}
+        .contact-form{background:white;border-radius:12px;padding:44px 40px}
+        .contact-form h3{font-size:1.5rem;margin-bottom:28px;color:var(--text-dark)}
+        .form-group{margin-bottom:20px}
+        .form-group label{display:block;font-size:0.88rem;font-weight:500;color:var(--text-dark);margin-bottom:7px;text-transform:uppercase;letter-spacing:0.5px}
+        .form-control{width:100%;padding:13px 16px;border:1px solid #ddd;background:#fafafa;font-family:var(--font-body);font-size:0.95rem;color:var(--text-dark);transition:var(--transition);border-radius:4px}
+        .form-control:focus{border-color:var(--accent-color);outline:none;background:white;box-shadow:0 0 0 3px rgba(201,165,92,0.1)}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        .form-submit{width:100%;padding:15px;background:var(--accent-color);color:white;border:none;font-family:var(--font-body);font-size:0.95rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:var(--transition);border-radius:4px}
+        .form-submit:hover{background:var(--secondary-color)}
+        .form-note{font-size:0.8rem;color:var(--text-light);text-align:center;margin-top:12px}
+        footer{background:var(--secondary-color);color:white;padding:80px 0 0}
+        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:60px}
+        .footer-logo{font-family:var(--font-heading);font-size:28px;font-weight:700;color:white;text-decoration:none;margin-bottom:20px;display:inline-block}
+        .footer-logo span{color:var(--accent-color)}
+        .footer-section p{color:#aaa;margin-bottom:20px;line-height:1.8}
+        .footer-section h3{margin-bottom:25px;font-size:1.3rem;position:relative;padding-bottom:15px}
+        .footer-section h3::after{content:"";position:absolute;bottom:0;left:0;width:50px;height:2px;background:var(--accent-color)}
+        .footer-links{list-style:none}
+        .footer-links li{margin-bottom:14px}
+        .footer-links a{color:#aaa;text-decoration:none;transition:var(--transition);display:flex;align-items:center;font-size:0.97rem}
+        .footer-links a:hover{color:var(--accent-color);padding-left:5px}
+        .footer-links a i{margin-right:10px;font-size:0.8rem}
+        .social-links{display:flex;gap:14px;margin-top:20px}
+        .social-link{width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:var(--transition);font-size:0.95rem}
+        .social-link:hover{background:var(--accent-color);transform:translateY(-3px)}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:20px 0;text-align:center;color:#aaa;font-size:0.9rem}
+        .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;opacity:0;visibility:hidden;transition:var(--transition)}
+        .overlay.active{opacity:1;visibility:visible}
+        .mobile-nav{position:fixed;top:0;right:-300px;width:300px;height:100vh;background:white;z-index:1001;padding:80px 40px;transition:var(--transition);box-shadow:-5px 0 30px rgba(0,0,0,0.1)}
+        .mobile-nav.active{right:0}
+        .mobile-nav-links{list-style:none}
+        .mobile-nav-links li{margin-bottom:20px}
+        .mobile-nav-links a{color:var(--text-dark);text-decoration:none;font-size:1.2rem;font-weight:500;transition:var(--transition)}
+        .mobile-nav-links a:hover{color:var(--accent-color)}
+        .mobile-language-selector{display:flex;gap:10px;margin-top:40px}
+        .close-menu{position:absolute;top:20px;right:20px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-dark)}
+        @media(max-width:1100px){.pricing-grid{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}.testimonials-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:992px){.detail-grid{grid-template-columns:1fr;gap:40px}.detail-image{height:300px}.cta-grid{grid-template-columns:1fr;gap:50px}.stat-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:768px){.nav-links{display:none}.mobile-menu{display:flex}.page-hero{padding:120px 0 70px}.pricing-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}.process-steps{grid-template-columns:1fr}.testimonials-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.contact-form{padding:32px 24px}}
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <button class="close-menu"><i class="fas fa-times"></i></button>
+        <ul class="mobile-nav-links">
+            <li><a href="../index.html" data-tr="nav.home">Ana Sayfa</a></li>
+            <li><a href="../services.html" class="active" data-tr="nav.services">Hizmetler</a></li>
+            <li><a href="../about.html" data-tr="nav.about">Hakkımızda</a></li>
+            <li><a href="../projects.html" data-tr="nav.projects">Projeler</a></li>
+            <li><a href="../blog.html" data-tr="nav.blog">Blog</a></li>
+            <li><a href="../contact.html" data-tr="nav.contact">İletişim</a></li>
+        </ul>
+        <div class="mobile-language-selector">
+            <button class="lang-btn active" data-lang="tr">TR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+    </div>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">Cefu<span>Digital</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html" data-tr="nav.home">Ana Sayfa</a></li>
+                <li><a href="../services.html" class="active" data-tr="nav.services">Hizmetler</a></li>
+                <li><a href="../about.html" data-tr="nav.about">Hakkımızda</a></li>
+                <li><a href="../projects.html" data-tr="nav.projects">Projeler</a></li>
+                <li><a href="../blog.html" data-tr="nav.blog">Blog</a></li>
+                <li><a href="../contact.html" data-tr="nav.contact">İletişim</a></li>
+                <li class="language-selector">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </li>
+            </ul>
+            <div class="mobile-menu"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-inner" data-aos="fade-up">
+                    <div class="service-icon-lg"><i class="fas fa-building"></i></div>
+                    <h1 itemprop="name" id="hero-h1" data-tr="hero.h1">Şirket & Kurumsal Dijital Çözümler</h1>
+                    <p class="lead"><span id="hero-lead" data-tr="hero.lead">İşletmenizin dijital altyapısını güçlendirin. E-ticaret platformları, özel yazılımlar ve dijital dönüşüm danışmanlığıyla operasyonel verimliliğinizi artırın.</span></p>
+                    <div class="hero-badges">
+                        <span class="hero-badge badge-gold"><span id="hero-b1" data-tr="hero.badge1">✓ Özel Geliştirme</span></span>
+                        <span class="hero-badge badge-green"><span id="hero-b2" data-tr="hero.badge2">✓ Entegre Çözümler</span></span>
+                        <span class="hero-badge badge-blue"><span id="hero-b3" data-tr="hero.badge3">✓ 7/24 Teknik Destek</span></span>
+                    </div>
+                    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+                        <a href="#teklif" class="btn btn-primary" data-tr="hero.cta1">Ücretsiz Danışmanlık</a>
+                        <a href="#paketler" class="btn btn-secondary" data-tr="hero.cta2">Paketleri Gör</a>
+                    </div>
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="../index.html" data-tr="nav.home">Ana Sayfa</a><span>/</span>
+                        <a href="../services.html" data-tr="nav.services">Hizmetler</a><span>/</span>
+                        <span data-tr="bc.current">Şirket Çözümleri</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-detail-sec">
+            <div class="container">
+                <div class="detail-grid" data-aos="fade-up">
+                    <div class="detail-text">
+                        <h2 id="detail-h2" data-tr="detail.h2">Neden CefuDigital Kurumsal Çözümler?</h2>
+                        <p id="detail-p1" data-tr="detail.p1">Dijital dönüşüm artık büyük şirketlerin değil, her ölçekteki işletmenin önceliği.</p>
+                        <p id="detail-p2" data-tr="detail.p2">CefuDigital olarak işletmenizin ihtiyaçlarını önce anlıyor, ardından teknolojiyi bu ihtiyaca göre şekillendiriyoruz. Standart paket değil, size özel çözüm sunuyoruz.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat1">İşletmeye özel kurumsal web siteleri</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat2">E-ticaret platformu tasarım ve geliştirme</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat3">ERP, CRM ve üçüncü taraf sistem entegrasyonları</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat4">Sürece özel özel yazılım geliştirme</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat5">Dijital dönüşüm danışmanlığı ve yol haritası</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat6">Yayın sonrası 7/24 teknik destek ve SLA</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-primary" data-tr="detail.cta">Danışmanlık Al</a>
+                    </div>
+                    <div class="detail-image">
+                        <img src="../img/sirket-cozumleri.png" alt="Şirket & Kurumsal Dijital Çözümler — CefuDigital" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="detail-image-placeholder" style="display:none">ŞİRKET ÇÖZÜMLERİ</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stat-strip">
+            <div class="container">
+                <div class="stat-grid">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3 id="stat1-num" data-tr="stat1.num">%70</h3><p id="stat1-lbl" data-tr="stat1.lbl">Şirketler dijital dönüşümle operasyonel maliyetlerini düşürüyor</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 id="stat2-num" data-tr="stat2.num">3 kat</h3><p id="stat2-lbl" data-tr="stat2.lbl">Otomasyon ile artan ortalama çalışan üretkenliği</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 id="stat3-num" data-tr="stat3.num">50+</h3><p id="stat3-lbl" data-tr="stat3.lbl">Kurumsal dijital proje teslimi</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3 id="stat4-num" data-tr="stat4.num">4+</h3><p id="stat4-lbl" data-tr="stat4.lbl">Yıllık kurumsal çözüm deneyimi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-sec" id="paketler">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="pricing-title" data-tr="pricing.title">Kurumsal Paketler</h2>
+                    <p id="pricing-sub" data-tr="pricing.sub">İşletmenizin ölçeğine göre özelleştirilebilen kurumsal dijital çözüm paketleri.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-name" id="p1-name" data-tr="p1.name">Starter</div>
+                        <div class="pricing-price"><span id="p1-price" data-tr="p1.price">₺19.900</span><span id="p1-period" data-tr="p1.period">/proje</span></div>
+                        <div class="pricing-desc" id="p1-desc" data-tr="p1.desc">Temel dijital altyapıya ihtiyaç duyan küçük işletmeler için</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span id="p1-f1" data-tr="p1.f1">Kurumsal web sitesi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f2" data-tr="p1.f2">Temel CMS entegrasyonu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f3" data-tr="p1.f3">İletişim & teklif formu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f4" data-tr="p1.f4">SEO kurulumu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f5" data-tr="p1.f5">3 ay destek</span></li>
+                            <li class="no"><i class="fas fa-times"></i> <span id="p1-f6" data-tr="p1.f6">Özel yazılım</span></li>
+                            <li class="no"><i class="fas fa-times"></i> <span id="p1-f7" data-tr="p1.f7">API entegrasyonu</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-secondary" style="width:100%;text-align:center;display:block" data-tr="btn.start">Başlayın</a>
+                    </div>
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-badge" id="p2-badge" data-tr="p2.badge">En Çok Tercih Edilen</div>
+                        <div class="pricing-name" id="p2-name" data-tr="p2.name">Business</div>
+                        <div class="pricing-price"><span id="p2-price" data-tr="p2.price">₺49.900</span><span id="p2-period" data-tr="p2.period">/proje</span></div>
+                        <div class="pricing-desc" id="p2-desc" data-tr="p2.desc">Dijital dönüşümünü hızlandırmak isteyen orta ölçekli şirketler için</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span id="p2-f1" data-tr="p2.f1">Özel modüllü web sitesi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f2" data-tr="p2.f2">E-ticaret platformu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f3" data-tr="p2.f3">CRM / ERP entegrasyonu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f4" data-tr="p2.f4">Ödeme sistemi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f5" data-tr="p2.f5">Personel / müşteri paneli</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f6" data-tr="p2.f6">Kapsamlı SEO & analitik</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f7" data-tr="p2.f7">12 ay destek & SLA</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-primary" style="width:100%;text-align:center;display:block" data-tr="btn.start">Başlayın</a>
+                    </div>
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="pricing-name" id="p3-name" data-tr="p3.name">Enterprise</div>
+                        <div class="pricing-price"><span id="p3-price" data-tr="p3.price">Teklif</span><span id="p3-period" data-tr="p3.period">üzerine</span></div>
+                        <div class="pricing-desc" id="p3-desc" data-tr="p3.desc">Karmaşık iş süreçleri ve büyük ölçekli projeler için</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span id="p3-f1" data-tr="p3.f1">Tam özel yazılım geliştirme</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f2" data-tr="p3.f2">Çok platformlu entegrasyonlar</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f3" data-tr="p3.f3">Bulut altyapı yönetimi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f4" data-tr="p3.f4">Veri güvenliği & KVKK uyumu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f5" data-tr="p3.f5">Dedicated geliştirici ekibi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f6" data-tr="p3.f6">7/24 SLA desteği</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f7" data-tr="p3.f7">Çeyreklik strateji toplantısı</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-secondary" style="width:100%;text-align:center;display:block" data-tr="btn.quote">Teklif Alın</a>
+                    </div>
+                </div>
+                <p style="text-align:center;margin-top:32px;color:var(--text-light);font-size:0.9rem"><span id="pricing-note1" data-tr="pricing.note1">Fiyatlar KDV hariçtir. Özel ihtiyaçlarınız için</span> <a href="#teklif" style="color:var(--accent-color);text-decoration:none;font-weight:600" id="pricing-note2" data-tr="pricing.note2">bizimle iletişime geçin</a>.</p>
+            </div>
+        </section>
+
+        <section class="process-sec">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="process-title" data-tr="process.title">Çalışma Sürecimiz</h2>
+                    <p id="process-sub" data-tr="process.sub">Her kurumsal projemizde izlediğimiz, kanıtlanmış 4 adımlı süreç.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-num">1</div>
+                        <h3 id="s1-title" data-tr="s1.title">Keşif & Analiz</h3>
+                        <p id="s1-desc" data-tr="s1.desc">Mevcut süreçlerinizi, yazılım altyapınızı ve ihtiyaçlarınızı derinlemesine inceliyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-num">2</div>
+                        <h3 id="s2-title" data-tr="s2.title">Mimari & Tasarım</h3>
+                        <p id="s2-desc" data-tr="s2.desc">Çözümün teknik mimarisini, veri akışlarını ve arayüz tasarımlarını oluşturuyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-num">3</div>
+                        <h3 id="s3-title" data-tr="s3.title">Geliştirme & Entegrasyon</h3>
+                        <p id="s3-desc" data-tr="s3.desc">Agile metodoloji ile sprint bazlı geliştirme yapıyoruz. Her sprint sonunda çalışan ürün teslim ediyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-num">4</div>
+                        <h3 id="s4-title" data-tr="s4.title">Yayın & Destek</h3>
+                        <p id="s4-desc" data-tr="s4.desc">Sistemi canlıya alıyor, kullanıcı eğitimini tamamlıyor ve SLA sözleşmesi kapsamında teknik destek sunuyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-sec">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="testi-title" data-tr="testi.title">Müşterilerimiz Ne Diyor?</h2>
+                    <p id="testi-sub" data-tr="testi.sub">Kurumsal proje deneyimleri.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text" id="t1-text" data-tr="t1.text">"CefuDigital özel CRM entegrasyonumuzu tam zamanında ve bütçe dahilinde teslim etti. Satış ekibimizin verimliliği belirgin şekilde arttı."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AH</div>
+                            <div class="author-info"><h4 id="t1-name" data-tr="t1.name">Ahmet Kılıç</h4><span id="t1-role" data-tr="t1.role">Kılıç Holding, Kurumsal Çözümler</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text" id="t2-text" data-tr="t2.text">"E-ticaret platformumuz 3 ay içinde yayına girdi. Hem altyapı sağlamlığı hem de kullanım kolaylığı açısından beklentileri karşıladı."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SE</div>
+                            <div class="author-info"><h4 id="t2-name" data-tr="t2.name">Selin Yılmaz</h4><span id="t2-role" data-tr="t2.role">Yılmaz Tekstil — E-ticaret Platformu</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text" id="t3-text" data-tr="t3.text">"Muhasebe yazılımımızı web sitemizle entegre ettiler. Artık teklifleri ve faturaları sistemden otomatik gönderebiliyoruz."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MU</div>
+                            <div class="author-info"><h4 id="t3-name" data-tr="t3.name">Murat Öztürk</h4><span id="t3-role" data-tr="t3.role">Öztürk Muhasebe — Yazılım Entegrasyonu</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-sec">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="faq-title" data-tr="faq.title">Sıkça Sorulan Sorular</h2>
+                    <p id="faq-sub" data-tr="faq.sub">Kurumsal dijital çözümler hakkında en çok merak edilen sorular.</p>
+                </div>
+                <div class="faq-wrap">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q1">Proje teslim süresi ne kadar?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a1" data-tr="a1">Temel projeler 4-8 haftada, orta ölçekli projeler 2-4 ayda, kurumsal çözümler 4-9 ayda teslim edilir.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q2">Mevcut yazılımlarımızla entegrasyon yapabiliyor musunuz?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a2" data-tr="a2">Evet. SAP, Netsis, Logo gibi ERP'lerle, Salesforce, HubSpot gibi CRM'lerle ve özel sistemlerle entegrasyon geliştiriyoruz.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q3">Projeyi aşama aşama mı teslim ediyorsunuz?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a3" data-tr="a3">Agile metodoloji kullanıyoruz: Projeyi sprint'lere bölerek her 2-3 haftada çalışan bir modül teslim ediyoruz.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q4">Veri güvenliği ve KVKK uyumluluğu nasıl sağlanıyor?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a4" data-tr="a4">Tüm projelerimizde KVKK gereklilikleri baştan tasarıma dahil edilir. SSL, rol bazlı erişim kontrolü, yedekleme ve güvenlik denetimleri standart uygulamalarımız arasındadır.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q5">Yayın sonrası ne olur?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a5" data-tr="a5">SLA sözleşmesi kapsamında teknik destek, hata düzeltme ve performans takibi sağlıyoruz.</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-form-sec" id="teklif">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-text" data-aos="fade-right">
+                        <h2 id="cta-h2" data-tr="cta.h2">Ücretsiz Kurumsal Danışmanlık Alın</h2>
+                        <p id="cta-p" data-tr="cta.p">İş süreçlerinizi ve dijital ihtiyaçlarınızı paylaşın; uzmanlarımız uygun çözüm yollarını sunsun.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li1" data-tr="cta.li1">İş süreci analizi</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li2" data-tr="cta.li2">Teknoloji yol haritası önerisi</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li3" data-tr="cta.li3">Tahmini proje bütçesi</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li4" data-tr="cta.li4">Çözüm mimarisi taslağı</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li5" data-tr="cta.li5">48 saat içinde geri dönüş</span></li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left">
+                        <div class="contact-form">
+                            <h3 id="form-h3" data-tr="form.h3">Formu Doldurun</h3>
+                            <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeKR3bS_b_57CLgD9CbAPZqPhzSJFduhV1ZbfSi5Hs55TlzRg/viewform" method="GET" target="_blank">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="ad" data-tr="form.ad">Ad Soyad</label>
+                                        <input type="text" id="ad" name="ad" class="form-control" placeholder="Ad Soyad" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firma" data-tr="form.firma">Firma Adı</label>
+                                        <input type="text" id="firma" name="firma" class="form-control" placeholder="Firma Adı">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" data-tr="form.email">E-posta</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="ornek@firma.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefon" data-tr="form.tel">Telefon</label>
+                                    <input type="tel" id="telefon" name="telefon" class="form-control" placeholder="+90 5XX XXX XX XX">
+                                </div>
+                                <div class="form-group">
+                                    <label for="website" data-tr="form.site">Web Siteniz</label>
+                                    <input type="url" id="website" name="website" class="form-control" placeholder="https://firmaniz.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mesaj" data-tr="form.msg">İş Süreçleriniz / Notunuz</label>
+                                    <textarea id="mesaj" name="mesaj" class="form-control" rows="3" placeholder="İş Süreçleriniz / Notunuz"></textarea>
+                                </div>
+                                <button type="submit" class="form-submit" id="form-submit" data-tr="form.submit">Ücretsiz Danışmanlık İste</button>
+                                <p class="form-note" id="form-note" data-tr="form.note">Bilgileriniz gizli tutulur. 48 saat içinde sizinle iletişime geçeceğiz.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="../index.html" class="footer-logo">Cefu<span>Digital</span></a>
+                    <p id="footer-desc" data-tr="footer.desc">Dijital dünyada işinizi büyütmenin en iyi yolu.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cefudigital/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tr.linkedin.com/company/cefudigital-cefudigitalglobal" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.services">Hizmetler</h3>
+                    <ul class="footer-links">
+                        <li><a href="./ankara-dijital-pazarlama.html"><i class="fas fa-chevron-right"></i> SEO Optimizasyonu</a></li>
+                        <li><a href="../service-web.html"><i class="fas fa-chevron-right"></i> Web Tasarımı</a></li>
+                        <li><a href="../service-corporate.html"><i class="fas fa-chevron-right"></i> Şirket Çözümleri</a></li>
+                        <li><a href="../service-marketing.html"><i class="fas fa-chevron-right"></i> Dijital Pazarlama</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.links">Hızlı Bağlantılar</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="../about.html"><i class="fas fa-chevron-right"></i> Hakkımızda</a></li>
+                        <li><a href="../blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="../contact.html"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.contact">İletişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Ankara, Türkiye</a></li>
+                        <li><a href="mailto:info@cefudigital.com"><i class="fas fa-envelope"></i> info@cefudigital.com</a></li>
+                        <li><a href="tel:+905511367634"><i class="fas fa-phone-alt"></i> +90 (551) 136 76 34</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 CefuDigital. <span data-tr="footer.rights">Tüm hakları saklıdır.</span></p></div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const translations = {"tr": {"page.title": "Şirket & Kurumsal Dijital Çözümler | CefuDigital Ankara", "meta.desc": "Ankara'da şirketlere özel dijital altyapı, özel yazılım geliştirme, e-ticaret platformları ve dijital dönüşüm danışmanlığı. CefuDigital.", "hero.h1": "Şirket & Kurumsal Dijital Çözümler", "hero.cta1": "Ücretsiz Danışmanlık", "hero.cta2": "Paketleri Gör", "bc.current": "Şirket Çözümleri", "hero.lead": "İşletmenizin dijital altyapısını güçlendirin. E-ticaret platformları, özel yazılımlar ve dijital dönüşüm danışmanlığıyla operasyonel verimliliğinizi artırın.", "hero.badge1": "✓ Özel Geliştirme", "hero.badge2": "✓ Entegre Çözümler", "hero.badge3": "✓ 7/24 Teknik Destek", "detail.h2": "Neden CefuDigital Kurumsal Çözümler?", "detail.p1": "Dijital dönüşüm artık büyük şirketlerin değil, her ölçekteki işletmenin önceliği.", "detail.p2": "CefuDigital olarak işletmenizin ihtiyaçlarını önce anlıyor, ardından teknolojiyi bu ihtiyaca göre şekillendiriyoruz. Standart paket değil, size özel çözüm sunuyoruz.", "feat1": "İşletmeye özel kurumsal web siteleri", "feat2": "E-ticaret platformu tasarım ve geliştirme", "feat3": "ERP, CRM ve üçüncü taraf sistem entegrasyonları", "feat4": "Sürece özel özel yazılım geliştirme", "feat5": "Dijital dönüşüm danışmanlığı ve yol haritası", "feat6": "Yayın sonrası 7/24 teknik destek ve SLA", "detail.cta": "Danışmanlık Al", "stat1.num": "%70", "stat1.lbl": "Şirketler dijital dönüşümle operasyonel maliyetlerini düşürüyor", "stat2.num": "3 kat", "stat2.lbl": "Otomasyon ile artan ortalama çalışan üretkenliği", "stat3.num": "50+", "stat3.lbl": "Kurumsal dijital proje teslimi", "stat4.num": "4+", "stat4.lbl": "Yıllık kurumsal çözüm deneyimi", "pricing.title": "Kurumsal Paketler", "pricing.sub": "İşletmenizin ölçeğine göre özelleştirilebilen kurumsal dijital çözüm paketleri.", "p1.name": "Starter", "p1.price": "₺19.900", "p1.period": "/proje", "p1.desc": "Temel dijital altyapıya ihtiyaç duyan küçük işletmeler için", "p1.f1": "Kurumsal web sitesi", "p1.f2": "Temel CMS entegrasyonu", "p1.f3": "İletişim & teklif formu", "p1.f4": "SEO kurulumu", "p1.f5": "3 ay destek", "p1.f6": "Özel yazılım", "p1.f7": "API entegrasyonu", "p2.name": "Business", "p2.price": "₺49.900", "p2.period": "/proje", "p2.badge": "En Çok Tercih Edilen", "p2.desc": "Dijital dönüşümünü hızlandırmak isteyen orta ölçekli şirketler için", "p2.f1": "Özel modüllü web sitesi", "p2.f2": "E-ticaret platformu", "p2.f3": "CRM / ERP entegrasyonu", "p2.f4": "Ödeme sistemi", "p2.f5": "Personel / müşteri paneli", "p2.f6": "Kapsamlı SEO & analitik", "p2.f7": "12 ay destek & SLA", "p3.name": "Enterprise", "p3.price": "Teklif", "p3.period": "üzerine", "p3.desc": "Karmaşık iş süreçleri ve büyük ölçekli projeler için", "p3.f1": "Tam özel yazılım geliştirme", "p3.f2": "Çok platformlu entegrasyonlar", "p3.f3": "Bulut altyapı yönetimi", "p3.f4": "Veri güvenliği & KVKK uyumu", "p3.f5": "Dedicated geliştirici ekibi", "p3.f6": "7/24 SLA desteği", "p3.f7": "Çeyreklik strateji toplantısı", "pricing.note1": "Fiyatlar KDV hariçtir. Özel ihtiyaçlarınız için", "pricing.note2": "bizimle iletişime geçin", "process.title": "Çalışma Sürecimiz", "process.sub": "Her kurumsal projemizde izlediğimiz, kanıtlanmış 4 adımlı süreç.", "s1.title": "Keşif & Analiz", "s1.desc": "Mevcut süreçlerinizi, yazılım altyapınızı ve ihtiyaçlarınızı derinlemesine inceliyoruz.", "s2.title": "Mimari & Tasarım", "s2.desc": "Çözümün teknik mimarisini, veri akışlarını ve arayüz tasarımlarını oluşturuyoruz.", "s3.title": "Geliştirme & Entegrasyon", "s3.desc": "Agile metodoloji ile sprint bazlı geliştirme yapıyoruz. Her sprint sonunda çalışan ürün teslim ediyoruz.", "s4.title": "Yayın & Destek", "s4.desc": "Sistemi canlıya alıyor, kullanıcı eğitimini tamamlıyor ve SLA sözleşmesi kapsamında teknik destek sunuyoruz.", "testi.title": "Müşterilerimiz Ne Diyor?", "testi.sub": "Kurumsal proje deneyimleri.", "t1.text": "\"CefuDigital özel CRM entegrasyonumuzu tam zamanında ve bütçe dahilinde teslim etti. Satış ekibimizin verimliliği belirgin şekilde arttı.\"", "t1.name": "Ahmet Kılıç", "t1.role": "Kılıç Holding, Kurumsal Çözümler", "t2.text": "\"E-ticaret platformumuz 3 ay içinde yayına girdi. Hem altyapı sağlamlığı hem de kullanım kolaylığı açısından beklentileri karşıladı.\"", "t2.name": "Selin Yılmaz", "t2.role": "Yılmaz Tekstil — E-ticaret Platformu", "t3.text": "\"Muhasebe yazılımımızı web sitemizle entegre ettiler. Artık teklifleri ve faturaları sistemden otomatik gönderebiliyoruz.\"", "t3.name": "Murat Öztürk", "t3.role": "Öztürk Muhasebe — Yazılım Entegrasyonu", "faq.title": "Sıkça Sorulan Sorular", "faq.sub": "Kurumsal dijital çözümler hakkında en çok merak edilen sorular.", "q1": "Proje teslim süresi ne kadar?", "a1": "Temel projeler 4-8 haftada, orta ölçekli projeler 2-4 ayda, kurumsal çözümler 4-9 ayda teslim edilir.", "q2": "Mevcut yazılımlarımızla entegrasyon yapabiliyor musunuz?", "a2": "Evet. SAP, Netsis, Logo gibi ERP'lerle, Salesforce, HubSpot gibi CRM'lerle ve özel sistemlerle entegrasyon geliştiriyoruz.", "q3": "Projeyi aşama aşama mı teslim ediyorsunuz?", "a3": "Agile metodoloji kullanıyoruz: Projeyi sprint'lere bölerek her 2-3 haftada çalışan bir modül teslim ediyoruz.", "q4": "Veri güvenliği ve KVKK uyumluluğu nasıl sağlanıyor?", "a4": "Tüm projelerimizde KVKK gereklilikleri baştan tasarıma dahil edilir. SSL, rol bazlı erişim kontrolü, yedekleme ve güvenlik denetimleri standart uygulamalarımız arasındadır.", "q5": "Yayın sonrası ne olur?", "a5": "SLA sözleşmesi kapsamında teknik destek, hata düzeltme ve performans takibi sağlıyoruz.", "cta.h2": "Ücretsiz Kurumsal Danışmanlık Alın", "cta.p": "İş süreçlerinizi ve dijital ihtiyaçlarınızı paylaşın; uzmanlarımız uygun çözüm yollarını sunsun.", "cta.li1": "İş süreci analizi", "cta.li2": "Teknoloji yol haritası önerisi", "cta.li3": "Tahmini proje bütçesi", "cta.li4": "Çözüm mimarisi taslağı", "cta.li5": "48 saat içinde geri dönüş", "form.h3": "Formu Doldurun", "form.ad": "Ad Soyad", "form.firma": "Firma Adı", "form.email": "E-posta", "form.tel": "Telefon", "form.site": "Web Siteniz", "form.msg": "İş Süreçleriniz / Notunuz", "form.submit": "Ücretsiz Danışmanlık İste", "form.note": "Bilgileriniz gizli tutulur. 48 saat içinde sizinle iletişime geçeceğiz.", "footer.desc": "Dijital dünyada işinizi büyütmenin en iyi yolu.", "footer.services": "Hizmetler", "footer.links": "Hızlı Bağlantılar", "footer.contact": "İletişim", "footer.rights": "Tüm hakları saklıdır.", "btn.start": "Başlayın", "btn.quote": "Teklif Alın", "btn.contact": "İletişime Geçin", "nav.home": "Ana Sayfa", "nav.services": "Hizmetler", "nav.about": "Hakkımızda", "nav.projects": "Projeler", "nav.blog": "Blog", "nav.contact": "İletişim", "bc.services": "Hizmetler"}, "en": {"page.title": "Corporate & Company Digital Solutions | CefuDigital Ankara", "meta.desc": "Custom digital infrastructure, software development, e-commerce platforms and digital transformation consulting for companies in Ankara. CefuDigital.", "hero.h1": "Corporate & Company Digital Solutions", "hero.cta1": "Free Consultation", "hero.cta2": "View Packages", "bc.current": "Corporate Solutions", "hero.lead": "Strengthen your business's digital infrastructure. Increase operational efficiency with e-commerce platforms, custom software and digital transformation consulting.", "hero.badge1": "✓ Custom Development", "hero.badge2": "✓ Integrated Solutions", "hero.badge3": "✓ 24/7 Technical Support", "detail.h2": "Why CefuDigital Corporate Solutions?", "detail.p1": "Digital transformation is now the priority of businesses of all sizes, not just large corporations.", "detail.p2": "At CefuDigital, we first understand your business needs and then shape technology accordingly. We offer custom solutions, not off-the-shelf packages.", "feat1": "Bespoke corporate websites", "feat2": "E-commerce platform design and development", "feat3": "ERP, CRM and third-party system integrations", "feat4": "Custom software development for specific processes", "feat5": "Digital transformation consulting and roadmap", "feat6": "Post-launch 24/7 technical support and SLA", "detail.cta": "Get Consultation", "stat1.num": "70%", "stat1.lbl": "Companies reduce operational costs through digital transformation", "stat2.num": "3x", "stat2.lbl": "Average employee productivity increase through automation", "stat3.num": "50+", "stat3.lbl": "Corporate digital projects delivered", "stat4.num": "4+", "stat4.lbl": "Years of corporate solutions experience", "pricing.title": "Corporate Packages", "pricing.sub": "Customisable corporate digital solution packages suited to your business scale.", "p1.name": "Starter", "p1.price": "₺19,900", "p1.period": "/project", "p1.desc": "For small businesses needing basic digital infrastructure", "p1.f1": "Corporate website", "p1.f2": "Basic CMS integration", "p1.f3": "Contact & quote form", "p1.f4": "SEO setup", "p1.f5": "3-month support", "p1.f6": "Custom software", "p1.f7": "API integration", "p2.name": "Business", "p2.price": "₺49,900", "p2.period": "/project", "p2.badge": "Most Popular", "p2.desc": "For medium-sized companies wanting to accelerate digital transformation", "p2.f1": "Website with custom modules", "p2.f2": "E-commerce platform", "p2.f3": "CRM / ERP integration", "p2.f4": "Payment system", "p2.f5": "Staff / customer panel", "p2.f6": "Comprehensive SEO & analytics", "p2.f7": "12-month support & SLA", "p3.name": "Enterprise", "p3.price": "Quote", "p3.period": "based", "p3.desc": "For complex business processes and large-scale projects", "p3.f1": "Fully custom software development", "p3.f2": "Multi-platform integrations", "p3.f3": "Cloud infrastructure management", "p3.f4": "Data security & compliance", "p3.f5": "Dedicated development team", "p3.f6": "24/7 SLA support", "p3.f7": "Quarterly strategy meetings", "pricing.note1": "Prices exclude VAT. For custom needs,", "pricing.note2": "contact us", "process.title": "Our Work Process", "process.sub": "The proven 4-step process we follow for every corporate project.", "s1.title": "Discovery & Analysis", "s1.desc": "We deeply examine your existing processes, software infrastructure and requirements.", "s2.title": "Architecture & Design", "s2.desc": "We create the technical architecture, data flows and interface designs for the solution.", "s3.title": "Development & Integration", "s3.desc": "We develop sprint by sprint using Agile methodology. At the end of each sprint, we deliver a working module.", "s4.title": "Launch & Support", "s4.desc": "We go live, complete user training and provide technical support within the SLA agreement.", "testi.title": "What Our Clients Say?", "testi.sub": "Corporate project experiences.", "t1.text": "\"CefuDigital delivered our custom CRM integration on time and within budget. Our sales team's productivity increased noticeably.\"", "t1.name": "Ahmet Kılıç", "t1.role": "Kılıç Holding — Corporate Solutions", "t2.text": "\"Our e-commerce platform went live within 3 months. It met expectations both in infrastructure robustness and ease of use.\"", "t2.name": "Selin Yılmaz", "t2.role": "Yılmaz Textile — E-commerce Platform", "t3.text": "\"They integrated our accounting software with our website. Now we can automatically send quotes and invoices from the system.\"", "t3.name": "Murat Öztürk", "t3.role": "Öztürk Accounting — Software Integration", "faq.title": "Frequently Asked Questions", "faq.sub": "Most commonly asked questions about corporate digital solutions.", "q1": "How long does project delivery take?", "a1": "Basic projects take 4-8 weeks, medium-scale projects 2-4 months, and enterprise solutions 4-9 months.", "q2": "Can you integrate with our existing software?", "a2": "Yes. We develop integrations with ERPs like SAP, Netsis, Logo, CRMs like Salesforce and HubSpot, and custom systems.", "q3": "Do you deliver projects in phases?", "a3": "We use Agile methodology, delivering a working module every 2-3 weeks in sprints.", "q4": "How is data security and compliance ensured?", "a4": "All projects include compliance requirements by design. SSL, role-based access control, backup and security audits are standard practices.", "q5": "What happens after launch?", "a5": "We provide technical support, bug fixes and performance monitoring within the SLA agreement.", "cta.h2": "Get a Free Corporate Consultation", "cta.p": "Share your business processes and digital needs; our experts will present appropriate solution paths.", "cta.li1": "Business process analysis", "cta.li2": "Technology roadmap recommendation", "cta.li3": "Estimated project budget", "cta.li4": "Solution architecture draft", "cta.li5": "Response within 48 hours", "form.h3": "Fill in the Form", "form.ad": "Full Name", "form.firma": "Company Name", "form.email": "Email", "form.tel": "Phone", "form.site": "Your Website", "form.msg": "Business Processes / Notes", "form.submit": "Request Free Consultation", "form.note": "Your information is kept confidential. We will contact you within 48 hours.", "footer.desc": "The best way to grow your business in the digital world.", "footer.services": "Services", "footer.links": "Quick Links", "footer.contact": "Contact", "footer.rights": "All rights reserved.", "btn.start": "Get Started", "btn.quote": "Get a Quote", "btn.contact": "Contact Us", "nav.home": "Home", "nav.services": "Services", "nav.about": "About", "nav.projects": "Projects", "nav.blog": "Blog", "nav.contact": "Contact", "bc.services": "Services"}, "ar": {"page.title": "حلول الشركات والمؤسسات الرقمية | CefuDigital أنقرة", "meta.desc": "بنية تحتية رقمية مخصصة وتطوير برمجيات ومنصات تجارة إلكترونية واستشارات التحول الرقمي للشركات في أنقرة. CefuDigital.", "hero.h1": "حلول الشركات والمؤسسات الرقمية", "hero.cta1": "استشارة مجانية", "hero.cta2": "عرض الباقات", "bc.current": "الحلول المؤسسية", "hero.lead": "عزّز البنية التحتية الرقمية لعملك. زِد كفاءتك التشغيلية بمنصات التجارة الإلكترونية والبرمجيات المخصصة واستشارات التحول الرقمي.", "hero.badge1": "✓ تطوير مخصص", "hero.badge2": "✓ حلول متكاملة", "hero.badge3": "✓ دعم فني 24/7", "detail.h2": "لماذا الحلول المؤسسية من CefuDigital?", "detail.p1": "التحول الرقمي أصبح الآن أولوية الشركات من جميع الأحجام، وليس فقط الكبيرة.", "detail.p2": "في CefuDigital، نفهم احتياجات عملك أولاً ثم نشكّل التكنولوجيا وفقاً لها. نقدم حلولاً مخصصة، وليس باقات جاهزة.", "feat1": "مواقع مؤسسية مصممة خصيصاً", "feat2": "تصميم وتطوير منصات التجارة الإلكترونية", "feat3": "تكاملات ERP وCRM وأنظمة الطرف الثالث", "feat4": "تطوير برمجيات مخصصة للعمليات المحددة", "feat5": "استشارات التحول الرقمي وخارطة الطريق", "feat6": "دعم فني 24/7 وSLA بعد الإطلاق", "detail.cta": "احصل على استشارة", "stat1.num": "70%", "stat1.lbl": "الشركات تخفض التكاليف التشغيلية عبر التحول الرقمي", "stat2.num": "3×", "stat2.lbl": "متوسط زيادة إنتاجية الموظفين من خلال الأتمتة", "stat3.num": "+50", "stat3.lbl": "مشروع رقمي مؤسسي مسلَّم", "stat4.num": "+4", "stat4.lbl": "سنوات من خبرة الحلول المؤسسية", "pricing.title": "الباقات المؤسسية", "pricing.sub": "باقات حلول رقمية مؤسسية قابلة للتخصيص حسب حجم عملك.", "p1.name": "مبتدئ", "p1.price": "₺19,900", "p1.period": "/مشروع", "p1.desc": "للشركات الصغيرة التي تحتاج إلى بنية تحتية رقمية أساسية", "p1.f1": "موقع مؤسسي", "p1.f2": "تكامل CMS أساسي", "p1.f3": "نموذج اتصال وعروض أسعار", "p1.f4": "إعداد SEO", "p1.f5": "دعم 3 أشهر", "p1.f6": "برمجيات مخصصة", "p1.f7": "تكامل API", "p2.name": "أعمال", "p2.price": "₺49,900", "p2.period": "/مشروع", "p2.badge": "الأكثر طلباً", "p2.desc": "للشركات المتوسطة الراغبة في تسريع تحولها الرقمي", "p2.f1": "موقع بوحدات مخصصة", "p2.f2": "منصة تجارة إلكترونية", "p2.f3": "تكامل CRM / ERP", "p2.f4": "نظام الدفع", "p2.f5": "لوحة الموظفين / العملاء", "p2.f6": "SEO شامل وتحليلات", "p2.f7": "دعم 12 شهراً وSLA", "p3.name": "مؤسسي", "p3.price": "عرض", "p3.period": "حسب الطلب", "p3.desc": "للعمليات التجارية المعقدة والمشاريع الكبيرة", "p3.f1": "تطوير برمجيات مخصصة بالكامل", "p3.f2": "تكاملات متعددة المنصات", "p3.f3": "إدارة البنية التحتية السحابية", "p3.f4": "أمن البيانات والامتثال", "p3.f5": "فريق تطوير مخصص", "p3.f6": "دعم SLA 24/7", "p3.f7": "اجتماعات استراتيجية ربع سنوية", "pricing.note1": "الأسعار لا تشمل ضريبة القيمة المضافة. للاحتياجات الخاصة،", "pricing.note2": "تواصل معنا", "process.title": "عمليتنا في العمل", "process.sub": "العملية المكونة من 4 خطوات التي نتبعها في كل مشروع مؤسسي.", "s1.title": "الاكتشاف والتحليل", "s1.desc": "نفحص بعمق عملياتك الحالية وبنيتك التحتية البرمجية ومتطلباتك.", "s2.title": "البنية والتصميم", "s2.desc": "ننشئ البنية التقنية وتدفقات البيانات وتصاميم الواجهة للحل.", "s3.title": "التطوير والتكامل", "s3.desc": "نطور بالتسلسل باستخدام منهجية Agile، نسلّم وحدة عاملة كل 2-3 أسابيع.", "s4.title": "الإطلاق والدعم", "s4.desc": "نُطلق النظام ونُكمل تدريب المستخدمين ونقدم الدعم الفني ضمن اتفاقية SLA.", "testi.title": "ماذا يقول عملاؤنا?", "testi.sub": "تجارب المشاريع المؤسسية.", "t1.text": "«سلّم CefuDigital تكامل CRM المخصص في الوقت المحدد وفي حدود الميزانية. زادت إنتاجية فريق المبيعات لدينا بشكل ملحوظ.»", "t1.name": "أحمد قيليتش", "t1.role": "قيليتش القابضة — حلول مؤسسية", "t2.text": "«تم إطلاق منصة التجارة الإلكترونية الخاصة بنا في غضون 3 أشهر. استوفت التوقعات من حيث متانة البنية التحتية وسهولة الاستخدام.»", "t2.name": "سيلين يلماز", "t2.role": "يلماز للنسيج — منصة التجارة الإلكترونية", "t3.text": "«دمجوا برنامج المحاسبة الخاص بنا مع موقعنا الإلكتروني. الآن يمكننا إرسال العروض والفواتير تلقائياً من النظام.»", "t3.name": "مراد أوزتورك", "t3.role": "محاسبة أوزتورك — تكامل البرمجيات", "faq.title": "الأسئلة الشائعة", "faq.sub": "أكثر الأسئلة شيوعاً حول الحلول الرقمية المؤسسية.", "q1": "كم يستغرق تسليم المشروع؟", "a1": "المشاريع الأساسية 4-8 أسابيع، والمتوسطة 2-4 أشهر، والحلول المؤسسية 4-9 أشهر.", "q2": "هل يمكنكم التكامل مع برمجياتنا الحالية؟", "a2": "نعم. نطور تكاملات مع ERPs كـ SAP وNetsis وLogo، وCRMs كـ Salesforce وHubSpot، والأنظمة المخصصة.", "q3": "هل تسلّمون المشاريع على مراحل؟", "a3": "نستخدم منهجية Agile، نسلّم وحدة عاملة كل 2-3 أسابيع ضمن sprints.", "q4": "كيف يتم ضمان أمن البيانات والامتثال؟", "a4": "تُدرج متطلبات الامتثال في التصميم منذ البداية. يشمل ذلك SSL والتحكم في الوصول والنسخ الاحتياطي ومراجعات الأمن.", "q5": "ماذا يحدث بعد الإطلاق؟", "a5": "نقدم الدعم الفني وإصلاح الأخطاء ومراقبة الأداء ضمن اتفاقية SLA.", "cta.h2": "احصل على استشارة مؤسسية مجانية", "cta.p": "شارك عملياتك التجارية واحتياجاتك الرقمية وسيعرض خبراؤنا مسارات الحلول المناسبة.", "cta.li1": "تحليل العمليات التجارية", "cta.li2": "توصية خارطة الطريق التقنية", "cta.li3": "تقدير ميزانية المشروع", "cta.li4": "مسودة هندسة الحل", "cta.li5": "رد خلال 48 ساعة", "form.h3": "املأ النموذج", "form.ad": "الاسم الكامل", "form.firma": "اسم الشركة", "form.email": "البريد الإلكتروني", "form.tel": "الهاتف", "form.site": "موقعك الإلكتروني", "form.msg": "العمليات التجارية / ملاحظاتك", "form.submit": "طلب استشارة مجانية", "form.note": "معلوماتك محفوظة بسرية. سنتواصل معك خلال 48 ساعة.", "footer.desc": "أفضل طريقة لتنمية أعمالك في العالم الرقمي.", "footer.services": "الخدمات", "footer.links": "روابط سريعة", "footer.contact": "اتصل بنا", "footer.rights": "جميع الحقوق محفوظة.", "btn.start": "ابدأ الآن", "btn.quote": "احصل على عرض", "btn.contact": "تواصل معنا", "nav.home": "الرئيسية", "nav.services": "الخدمات", "nav.about": "من نحن", "nav.projects": "المشاريع", "nav.blog": "المدونة", "nav.contact": "اتصل بنا", "bc.services": "الخدمات"}};
+        let currentLang = localStorage.getItem('preferredLanguage') || 'tr';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            document.documentElement.lang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+            if (translations[lang]) {
+                document.querySelectorAll('[data-tr]').forEach(el => {
+                    const key = el.dataset.tr;
+                    if (translations[lang][key]) el.textContent = translations[lang][key];
+                });
+            }
+            if (translations[lang] && translations[lang]['page.title'])
+                document.title = translations[lang]['page.title'];
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc && translations[lang] && translations[lang]['meta.desc'])
+                metaDesc.content = translations[lang]['meta.desc'];
+            document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+            document.body.style.textAlign = lang === 'ar' ? 'right' : '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({duration: 800, easing: 'ease-in-out', once: true});
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const mobileNav     = document.querySelector('.mobile-nav');
+            const overlay       = document.querySelector('.overlay');
+            const closeMenuBtn  = document.querySelector('.close-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+            });
+            [closeMenuBtn, overlay].forEach(el => {
+                el.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            });
+            window.addEventListener('scroll', () => {
+                document.querySelector('header').style.boxShadow =
+                    window.scrollY > 100 ? '0 4px 20px rgba(0,0,0,0.1)' : '0 2px 10px rgba(0,0,0,0.05)';
+            });
+            document.querySelectorAll('.faq-question').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const item   = btn.closest('.faq-item');
+                    const isOpen = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-question').classList.remove('open');
+                    });
+                    if (!isOpen) { item.classList.add('active'); btn.classList.add('open'); }
+                });
+            });
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function(e) {
+                    const t = document.querySelector(this.getAttribute('href'));
+                    if (t) { e.preventDefault(); t.scrollIntoView({behavior: 'smooth', block: 'start'}); }
+                });
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+            });
+            switchLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="tr" itemscope itemtype="https://schema.org/Service">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title id="page-title">Ankara Web Tasarım Hizmeti | CefuDigital</title>
+    <meta name="description" id="meta-desc" content="Ankara'da profesyonel web tasarım hizmeti. Modern, hızlı ve SEO uyumlu kurumsal web siteleriyle markanızı dijitalde öne çıkarın. CefuDigital.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://cefudigital.com/service-web">
+    <meta property="og:title" content="Ankara Web Tasarım Hizmeti | CefuDigital">
+    <meta property="og:description" content="Ankara'da profesyonel web tasarım hizmeti. Modern, hızlı ve SEO uyumlu kurumsal web siteleriyle markanızı dijitalde öne çıkarın. CefuDigital.">
+    <meta property="og:type" content="website">
+    <link rel="shortcut icon" href="../img/favicon svg.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root { --primary-color:#f8f9fa;--secondary-color:#212529;--accent-color:#c9a55c;--text-dark:#333;--text-light:#777;--transition:all 0.4s cubic-bezier(0.4,0,0.2,1);--font-heading:'Playfair Display',serif;--font-body:'Poppins',sans-serif; }
+        *{margin:0;padding:0;box-sizing:border-box}
+        html{overflow-x:hidden}
+        body{font-family:var(--font-body);background-color:var(--primary-color);color:var(--text-dark);line-height:1.6;overflow-x:hidden}
+        h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500}
+        .container{max-width:1400px;margin:0 auto;padding:0 20px}
+        .btn{display:inline-block;padding:14px 32px;text-decoration:none;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:var(--transition);font-size:14px;font-family:var(--font-body);border:1px solid}
+        .btn-primary{background:var(--accent-color);color:white;border-color:var(--accent-color)}.btn-primary:hover{background:transparent;color:var(--accent-color)}
+        .btn-secondary{background:transparent;color:var(--text-dark);border-color:var(--text-dark)}.btn-secondary:hover{background:var(--text-dark);color:white}
+        .btn-white{background:white;color:var(--secondary-color);border-color:white}.btn-white:hover{background:transparent;color:white}
+        header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,0.95);backdrop-filter:blur(10px);transition:var(--transition);box-shadow:0 2px 10px rgba(0,0,0,0.05)}
+        nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+        .logo{font-family:var(--font-heading);font-size:28px;font-weight:700;color:var(--secondary-color);text-decoration:none;letter-spacing:1px}
+        .logo span{color:var(--accent-color)}
+        .nav-links{display:flex;list-style:none;gap:40px;align-items:center}
+        .nav-links a{color:var(--text-dark);text-decoration:none;font-weight:500;font-size:15px;text-transform:uppercase;letter-spacing:1px;transition:var(--transition);position:relative}
+        .nav-links a:hover,.nav-links a.active{color:var(--accent-color)}
+        .nav-links a::after{content:"";position:absolute;bottom:-5px;left:0;width:0;height:1px;background:var(--accent-color);transition:var(--transition)}
+        .nav-links a:hover::after,.nav-links a.active::after{width:100%}
+        .language-selector{display:flex;gap:10px;margin-left:30px}
+        .lang-btn{background:none;border:1px solid var(--text-light);color:var(--text-dark);padding:5px 10px;cursor:pointer;transition:var(--transition);font-size:14px;font-family:var(--font-body)}
+        .lang-btn:hover,.lang-btn.active{border-color:var(--accent-color);color:var(--accent-color)}
+        .mobile-menu{display:none;flex-direction:column;cursor:pointer}
+        .mobile-menu span{width:25px;height:2px;background:var(--text-dark);margin:3px 0;transition:var(--transition)}
+        .page-hero{padding:150px 0 90px;background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);text-align:center;position:relative;overflow:hidden}
+        .page-hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(45deg,transparent,transparent 40px,rgba(201,165,92,0.04) 40px,rgba(201,165,92,0.04) 41px)}
+        .hero-inner{position:relative;z-index:1}
+        .service-icon-lg{width:90px;height:90px;background:var(--accent-color);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 28px;font-size:2.2rem;color:white;box-shadow:0 8px 30px rgba(201,165,92,0.35)}
+        .page-hero h1{font-size:clamp(2.2rem,4.5vw,3.8rem);color:var(--text-dark);margin-bottom:20px;line-height:1.2;max-width:800px;margin-left:auto;margin-right:auto}
+        .page-hero .lead{font-size:1.15rem;color:var(--text-light);max-width:640px;margin:0 auto 32px;line-height:1.8}
+        .hero-badges{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-bottom:32px}
+        .hero-badge{font-size:0.78rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;padding:5px 14px;border:1px solid;border-radius:25px}
+        .badge-gold{color:var(--accent-color);border-color:var(--accent-color);background:rgba(201,165,92,0.07)}
+        .badge-green{color:#2d8a4e;border-color:#2d8a4e;background:rgba(45,138,78,0.06)}
+        .badge-blue{color:#2d6a8a;border-color:#2d6a8a;background:rgba(45,106,138,0.06)}
+        .breadcrumb{display:flex;justify-content:center;gap:10px;font-size:14px;color:var(--text-light);flex-wrap:wrap}
+        .breadcrumb a{color:var(--text-light);text-decoration:none;transition:var(--transition)}.breadcrumb a:hover{color:var(--accent-color)}.breadcrumb span{color:var(--accent-color)}
+        .section-header{text-align:center;margin-bottom:70px}
+        .section-header h2{font-size:clamp(1.8rem,3.5vw,2.8rem);margin-bottom:18px;position:relative;display:inline-block}
+        .section-header h2::after{content:"";position:absolute;bottom:-14px;left:50%;transform:translateX(-50%);width:70px;height:2px;background:var(--accent-color)}
+        .section-header p{color:var(--text-light);max-width:650px;margin:0 auto;font-size:1.05rem}
+        .service-detail-sec{padding:110px 0;background:white}
+        .detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+        .detail-text h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-bottom:22px;position:relative;padding-bottom:16px}
+        .detail-text h2::after{content:"";position:absolute;bottom:0;left:0;width:60px;height:2px;background:var(--accent-color)}
+        .detail-text p{color:var(--text-light);font-size:1.05rem;line-height:1.9;margin-bottom:16px}
+        .feature-list{list-style:none;margin:28px 0}
+        .feature-list li{display:flex;align-items:flex-start;gap:14px;padding:12px 0;border-bottom:1px solid #f0f0f0;color:var(--text-dark);font-size:1rem}
+        .feature-list li:last-child{border-bottom:none}
+        .feature-list li i{color:var(--accent-color);font-size:1rem;margin-top:2px;flex-shrink:0}
+        .detail-image{height:460px;overflow:hidden;border-radius:4px;background:linear-gradient(135deg,#0f3460 0%,#16213e 50%,#1a1a2e 100%);display:flex;align-items:center;justify-content:center}
+        .detail-image img{width:100%;height:100%;object-fit:cover;transition:var(--transition)}.detail-image:hover img{transform:scale(1.04)}
+        .detail-image-placeholder{color:rgba(255,255,255,0.1);font-family:var(--font-heading);font-size:5rem;font-weight:700;letter-spacing:-2px;user-select:none;text-align:center;padding:20px}
+        .stat-strip{padding:70px 0;background:var(--secondary-color)}
+        .stat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;text-align:center}
+        .stat-item h3{font-family:var(--font-heading);font-size:2.8rem;color:var(--accent-color);margin-bottom:8px}
+        .stat-item p{color:rgba(255,255,255,0.8);font-size:0.95rem}
+        .pricing-sec{padding:110px 0;background:#f8f9fa}
+        .pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+        .pricing-card{background:white;border-radius:12px;padding:44px 36px;box-shadow:0 8px 28px rgba(0,0,0,0.06);transition:var(--transition);position:relative;text-align:center;border:1px solid #eee}
+        .pricing-card:hover{transform:translateY(-8px);box-shadow:0 20px 50px rgba(0,0,0,0.12)}
+        .pricing-card.featured{border-color:var(--accent-color);border-width:2px}
+        .pricing-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--accent-color);color:white;font-size:0.72rem;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;padding:5px 18px;border-radius:25px;white-space:nowrap}
+        .pricing-name{font-family:var(--font-heading);font-size:1.3rem;color:var(--text-dark);margin-bottom:10px}
+        .pricing-price{font-family:var(--font-heading);font-size:2.6rem;color:var(--accent-color);margin-bottom:6px}
+        .pricing-price span{font-size:1rem;color:var(--text-light);font-family:var(--font-body)}
+        .pricing-desc{color:var(--text-light);font-size:0.88rem;margin-bottom:28px;line-height:1.6}
+        .pricing-features{list-style:none;margin-bottom:32px;text-align:left}
+        .pricing-features li{display:flex;align-items:center;gap:10px;padding:9px 0;border-bottom:1px solid #f5f5f5;font-size:0.95rem;color:var(--text-dark)}
+        .pricing-features li:last-child{border-bottom:none}
+        .pricing-features li i{color:var(--accent-color);font-size:0.85rem;flex-shrink:0}
+        .pricing-features li.no i{color:#ccc}.pricing-features li.no{color:var(--text-light)}
+        .process-sec{padding:110px 0;background:white}
+        .process-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:32px;position:relative}
+        .process-steps::before{content:"";position:absolute;top:30px;left:calc(12.5% + 30px);right:calc(12.5% + 30px);height:1px;background:linear-gradient(90deg,var(--accent-color),rgba(201,165,92,0.2));z-index:0}
+        .process-step{text-align:center;padding:36px 22px;background:#f8f9fa;border-radius:10px;transition:var(--transition);position:relative;z-index:1}
+        .process-step:hover{background:white;box-shadow:0 12px 36px rgba(0,0,0,0.09);transform:translateY(-6px)}
+        .step-num{width:60px;height:60px;background:var(--accent-color);color:white;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-heading);font-size:1.4rem;font-weight:600;margin:0 auto 20px;box-shadow:0 4px 16px rgba(201,165,92,0.35)}
+        .process-step h3{font-size:1.1rem;margin-bottom:12px;color:var(--text-dark)}
+        .process-step p{color:var(--text-light);font-size:0.92rem;line-height:1.7}
+        .testimonials-sec{padding:110px 0;background:#f8f9fa}
+        .testimonials-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:30px}
+        .testimonial-card{background:white;border-radius:12px;padding:36px 32px;box-shadow:0 8px 28px rgba(0,0,0,0.06);transition:var(--transition)}
+        .testimonial-card:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,0.1)}
+        .stars{color:var(--accent-color);font-size:1rem;margin-bottom:16px;letter-spacing:2px}
+        .testimonial-text{color:var(--text-light);font-size:0.97rem;line-height:1.8;margin-bottom:22px;font-style:italic}
+        .testimonial-author{display:flex;align-items:center;gap:14px}
+        .author-avatar{width:46px;height:46px;border-radius:50%;background:var(--accent-color);display:flex;align-items:center;justify-content:center;color:white;font-family:var(--font-heading);font-weight:700;font-size:1rem;flex-shrink:0}
+        .author-info h4{font-size:0.95rem;color:var(--text-dark);margin-bottom:2px}
+        .author-info span{font-size:0.82rem;color:var(--text-light)}
+        .faq-sec{padding:110px 0;background:white}
+        .faq-wrap{max-width:820px;margin:0 auto}
+        .faq-item{border:1px solid #eee;margin-bottom:12px;border-radius:8px;overflow:hidden}
+        .faq-question{width:100%;background:none;border:none;padding:20px 26px;text-align:left;font-family:var(--font-heading);font-size:1.05rem;color:var(--text-dark);cursor:pointer;display:flex;justify-content:space-between;align-items:center;transition:var(--transition)}
+        .faq-question:hover,.faq-question.open{background:#fafafa;color:var(--accent-color)}
+        .faq-icon{font-size:1.3rem;color:var(--accent-color);transition:var(--transition);flex-shrink:0}
+        .faq-question.open .faq-icon{transform:rotate(45deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.4s ease}
+        .faq-answer-inner{padding:0 26px 20px;color:var(--text-light);font-size:0.97rem;line-height:1.85}
+        .faq-item.active .faq-answer{max-height:400px}
+        .cta-form-sec{padding:110px 0;background:var(--secondary-color)}
+        .cta-grid{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
+        .cta-text h2{font-size:clamp(1.8rem,3.5vw,2.8rem);color:white;margin-bottom:20px}
+        .cta-text p{color:rgba(255,255,255,0.72);font-size:1.05rem;line-height:1.9;margin-bottom:28px}
+        .cta-text ul{list-style:none}
+        .cta-text ul li{color:rgba(255,255,255,0.8);padding:8px 0;display:flex;align-items:center;gap:12px;font-size:0.97rem}
+        .cta-text ul li i{color:var(--accent-color)}
+        .contact-form{background:white;border-radius:12px;padding:44px 40px}
+        .contact-form h3{font-size:1.5rem;margin-bottom:28px;color:var(--text-dark)}
+        .form-group{margin-bottom:20px}
+        .form-group label{display:block;font-size:0.88rem;font-weight:500;color:var(--text-dark);margin-bottom:7px;text-transform:uppercase;letter-spacing:0.5px}
+        .form-control{width:100%;padding:13px 16px;border:1px solid #ddd;background:#fafafa;font-family:var(--font-body);font-size:0.95rem;color:var(--text-dark);transition:var(--transition);border-radius:4px}
+        .form-control:focus{border-color:var(--accent-color);outline:none;background:white;box-shadow:0 0 0 3px rgba(201,165,92,0.1)}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+        .form-submit{width:100%;padding:15px;background:var(--accent-color);color:white;border:none;font-family:var(--font-body);font-size:0.95rem;font-weight:600;text-transform:uppercase;letter-spacing:1px;cursor:pointer;transition:var(--transition);border-radius:4px}
+        .form-submit:hover{background:var(--secondary-color)}
+        .form-note{font-size:0.8rem;color:var(--text-light);text-align:center;margin-top:12px}
+        footer{background:var(--secondary-color);color:white;padding:80px 0 0}
+        .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:40px;margin-bottom:60px}
+        .footer-logo{font-family:var(--font-heading);font-size:28px;font-weight:700;color:white;text-decoration:none;margin-bottom:20px;display:inline-block}
+        .footer-logo span{color:var(--accent-color)}
+        .footer-section p{color:#aaa;margin-bottom:20px;line-height:1.8}
+        .footer-section h3{margin-bottom:25px;font-size:1.3rem;position:relative;padding-bottom:15px}
+        .footer-section h3::after{content:"";position:absolute;bottom:0;left:0;width:50px;height:2px;background:var(--accent-color)}
+        .footer-links{list-style:none}
+        .footer-links li{margin-bottom:14px}
+        .footer-links a{color:#aaa;text-decoration:none;transition:var(--transition);display:flex;align-items:center;font-size:0.97rem}
+        .footer-links a:hover{color:var(--accent-color);padding-left:5px}
+        .footer-links a i{margin-right:10px;font-size:0.8rem}
+        .social-links{display:flex;gap:14px;margin-top:20px}
+        .social-link{width:40px;height:40px;background:rgba(255,255,255,0.1);border-radius:50%;display:flex;align-items:center;justify-content:center;color:white;text-decoration:none;transition:var(--transition);font-size:0.95rem}
+        .social-link:hover{background:var(--accent-color);transform:translateY(-3px)}
+        .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:20px 0;text-align:center;color:#aaa;font-size:0.9rem}
+        .overlay{position:fixed;inset:0;background:rgba(0,0,0,0.5);z-index:1000;opacity:0;visibility:hidden;transition:var(--transition)}
+        .overlay.active{opacity:1;visibility:visible}
+        .mobile-nav{position:fixed;top:0;right:-300px;width:300px;height:100vh;background:white;z-index:1001;padding:80px 40px;transition:var(--transition);box-shadow:-5px 0 30px rgba(0,0,0,0.1)}
+        .mobile-nav.active{right:0}
+        .mobile-nav-links{list-style:none}
+        .mobile-nav-links li{margin-bottom:20px}
+        .mobile-nav-links a{color:var(--text-dark);text-decoration:none;font-size:1.2rem;font-weight:500;transition:var(--transition)}
+        .mobile-nav-links a:hover{color:var(--accent-color)}
+        .mobile-language-selector{display:flex;gap:10px;margin-top:40px}
+        .close-menu{position:absolute;top:20px;right:20px;background:none;border:none;font-size:1.5rem;cursor:pointer;color:var(--text-dark)}
+        @media(max-width:1100px){.pricing-grid{grid-template-columns:1fr 1fr}.process-steps{grid-template-columns:1fr 1fr}.process-steps::before{display:none}.testimonials-grid{grid-template-columns:1fr 1fr}}
+        @media(max-width:992px){.detail-grid{grid-template-columns:1fr;gap:40px}.detail-image{height:300px}.cta-grid{grid-template-columns:1fr;gap:50px}.stat-grid{grid-template-columns:repeat(2,1fr)}}
+        @media(max-width:768px){.nav-links{display:none}.mobile-menu{display:flex}.page-hero{padding:120px 0 70px}.pricing-grid{grid-template-columns:1fr;max-width:440px;margin:0 auto}.process-steps{grid-template-columns:1fr}.testimonials-grid{grid-template-columns:1fr}.form-row{grid-template-columns:1fr}.contact-form{padding:32px 24px}}
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <button class="close-menu"><i class="fas fa-times"></i></button>
+        <ul class="mobile-nav-links">
+            <li><a href="../index.html" data-tr="nav.home">Ana Sayfa</a></li>
+            <li><a href="../services.html" class="active" data-tr="nav.services">Hizmetler</a></li>
+            <li><a href="../about.html" data-tr="nav.about">Hakkımızda</a></li>
+            <li><a href="../projects.html" data-tr="nav.projects">Projeler</a></li>
+            <li><a href="../blog.html" data-tr="nav.blog">Blog</a></li>
+            <li><a href="../contact.html" data-tr="nav.contact">İletişim</a></li>
+        </ul>
+        <div class="mobile-language-selector">
+            <button class="lang-btn active" data-lang="tr">TR</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+            <button class="lang-btn" data-lang="ar">AR</button>
+        </div>
+    </div>
+    <header>
+        <nav class="container">
+            <a href="../index.html" class="logo">Cefu<span>Digital</span></a>
+            <ul class="nav-links">
+                <li><a href="../index.html" data-tr="nav.home">Ana Sayfa</a></li>
+                <li><a href="../services.html" class="active" data-tr="nav.services">Hizmetler</a></li>
+                <li><a href="../about.html" data-tr="nav.about">Hakkımızda</a></li>
+                <li><a href="../projects.html" data-tr="nav.projects">Projeler</a></li>
+                <li><a href="../blog.html" data-tr="nav.blog">Blog</a></li>
+                <li><a href="../contact.html" data-tr="nav.contact">İletişim</a></li>
+                <li class="language-selector">
+                    <button class="lang-btn active" data-lang="tr">TR</button>
+                    <button class="lang-btn" data-lang="en">EN</button>
+                    <button class="lang-btn" data-lang="ar">AR</button>
+                </li>
+            </ul>
+            <div class="mobile-menu"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-inner" data-aos="fade-up">
+                    <div class="service-icon-lg"><i class="fas fa-laptop-code"></i></div>
+                    <h1 itemprop="name" id="hero-h1" data-tr="hero.h1">Ankara Web Tasarım Hizmeti</h1>
+                    <p class="lead"><span id="hero-lead" data-tr="hero.lead">Modern, hızlı ve dönüşüm odaklı web siteleriyle markanızı dijitalde güçlendirin. Ankara'daki işletmeler için sıfırdan tasarım, yenileme ve kurumsal çözümler.</span></p>
+                    <div class="hero-badges">
+                        <span class="hero-badge badge-gold"><span id="hero-b1" data-tr="hero.badge1">✓ Responsive Tasarım</span></span>
+                        <span class="hero-badge badge-green"><span id="hero-b2" data-tr="hero.badge2">✓ SEO Uyumlu Kodlama</span></span>
+                        <span class="hero-badge badge-blue"><span id="hero-b3" data-tr="hero.badge3">✓ Hızlı Teslim</span></span>
+                    </div>
+                    <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:32px">
+                        <a href="#teklif" class="btn btn-primary" data-tr="hero.cta1">Ücretsiz Teklif Al</a>
+                        <a href="#paketler" class="btn btn-secondary" data-tr="hero.cta2">Paketleri Gör</a>
+                    </div>
+                    <nav class="breadcrumb" aria-label="Breadcrumb">
+                        <a href="../index.html" data-tr="nav.home">Ana Sayfa</a><span>/</span>
+                        <a href="../services.html" data-tr="nav.services">Hizmetler</a><span>/</span>
+                        <span data-tr="bc.current">Web Tasarımı</span>
+                    </nav>
+                </div>
+            </div>
+        </section>
+
+        <section class="service-detail-sec">
+            <div class="container">
+                <div class="detail-grid" data-aos="fade-up">
+                    <div class="detail-text">
+                        <h2 id="detail-h2" data-tr="detail.h2">Neden CefuDigital Web Tasarımı?</h2>
+                        <p id="detail-p1" data-tr="detail.p1">Ankara'daki işletmenizin dijital vitrininin ne kadar etkileyici olduğu, ziyaretçiyi müşteriye dönüştürme oranınızı doğrudan belirliyor.</p>
+                        <p id="detail-p2" data-tr="detail.p2">CefuDigital olarak her projeyi sıfırdan, müşterinin hedefleri ve kullanıcı davranışları analiz edilerek tasarlıyoruz. Estetik ile işlevselliği bir arada sunan, hızlı açılan ve dönüşüme odaklı web siteleri geliştiriyoruz.</p>
+                        <ul class="feature-list">
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat1">Tüm cihazlarda kusursuz görünen responsive tasarım</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat2">SEO uyumlu temiz kod yapısı ve sayfa hızı optimizasyonu</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat3">Dönüşümü artıran UX / UI tasarım prensipleri</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat4">Kullanımı kolay içerik yönetim sistemi entegrasyonu</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat5">E-ticaret, kurumsal ve özel proje geliştirme</span></li>
+                            <li><i class="fas fa-check-circle"></i><span data-tr="feat6">Yayın sonrası teknik destek ve bakım paketi</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-primary" data-tr="detail.cta">Ücretsiz Teklif Al</a>
+                    </div>
+                    <div class="detail-image">
+                        <img src="../img/web design.png" alt="Ankara Web Tasarım Hizmeti — CefuDigital" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                        <div class="detail-image-placeholder" style="display:none">WEB TASARIM</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stat-strip">
+            <div class="container">
+                <div class="stat-grid">
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+                        <h3 id="stat1-num" data-tr="stat1.num">%75</h3><p id="stat1-lbl" data-tr="stat1.lbl">Kullanıcılar bir markayı web tasarımına göre güvenilir buluyor</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+                        <h3 id="stat2-num" data-tr="stat2.num">3 sn</h3><p id="stat2-lbl" data-tr="stat2.lbl">Ziyaretçi bu sürede açılmayan siteyi terk ediyor</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+                        <h3 id="stat3-num" data-tr="stat3.num">100+</h3><p id="stat3-lbl" data-tr="stat3.lbl">Tasarlanan ve teslim edilen web projesi</p>
+                    </div>
+                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+                        <h3 id="stat4-num" data-tr="stat4.num">4+</h3><p id="stat4-lbl" data-tr="stat4.lbl">Yıllık web tasarım deneyimi</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing-sec" id="paketler">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="pricing-title" data-tr="pricing.title">Web Tasarım Paketleri</h2>
+                    <p id="pricing-sub" data-tr="pricing.sub">İşletmenizin ihtiyacına göre şekillenmiş web tasarım paketleri.</p>
+                </div>
+                <div class="pricing-grid">
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-name" id="p1-name" data-tr="p1.name">Temel Site</div>
+                        <div class="pricing-price"><span id="p1-price" data-tr="p1.price">₺14.900</span><span id="p1-period" data-tr="p1.period">/tek</span></div>
+                        <div class="pricing-desc" id="p1-desc" data-tr="p1.desc">Kurumsal kimlik ve temel dijital varlık için başlangıç sitesi</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span id="p1-f1" data-tr="p1.f1">5 sayfaya kadar tasarım</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f2" data-tr="p1.f2">Responsive (mobil uyumlu)</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f3" data-tr="p1.f3">Temel SEO kurulumu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f4" data-tr="p1.f4">İletişim formu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p1-f5" data-tr="p1.f5">3 ay teknik destek</span></li>
+                            <li class="no"><i class="fas fa-times"></i> <span id="p1-f6" data-tr="p1.f6">E-ticaret modülü</span></li>
+                            <li class="no"><i class="fas fa-times"></i> <span id="p1-f7" data-tr="p1.f7">Özel entegrasyonlar</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-secondary" style="width:100%;text-align:center;display:block" data-tr="btn.start">Başlayın</a>
+                    </div>
+                    <div class="pricing-card featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="pricing-badge" id="p2-badge" data-tr="p2.badge">En Çok Tercih Edilen</div>
+                        <div class="pricing-name" id="p2-name" data-tr="p2.name">Kurumsal Site</div>
+                        <div class="pricing-price"><span id="p2-price" data-tr="p2.price">₺29.900</span><span id="p2-period" data-tr="p2.period">/tek</span></div>
+                        <div class="pricing-desc" id="p2-desc" data-tr="p2.desc">Güçlü dijital varlık ve müşteri dönüşümü için kurumsal çözüm</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span id="p2-f1" data-tr="p2.f1">15 sayfaya kadar tasarım</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f2" data-tr="p2.f2">Özel UI / UX tasarımı</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f3" data-tr="p2.f3">İçerik yönetim sistemi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f4" data-tr="p2.f4">Blog & haber modülü</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f5" data-tr="p2.f5">Kapsamlı SEO kurulumu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f6" data-tr="p2.f6">Google Analytics kurulumu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p2-f7" data-tr="p2.f7">6 ay teknik destek</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-primary" style="width:100%;text-align:center;display:block" data-tr="btn.start">Başlayın</a>
+                    </div>
+                    <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="pricing-name" id="p3-name" data-tr="p3.name">E-ticaret & Özel</div>
+                        <div class="pricing-price"><span id="p3-price" data-tr="p3.price">₺59.900</span><span id="p3-period" data-tr="p3.period">+</span></div>
+                        <div class="pricing-desc" id="p3-desc" data-tr="p3.desc">E-ticaret mağazası veya özel yazılım gerektiren projeler için</div>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> <span id="p3-f1" data-tr="p3.f1">Sınırsız ürün & kategori</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f2" data-tr="p3.f2">Ödeme sistemi entegrasyonu</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f3" data-tr="p3.f3">Stok & sipariş yönetimi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f4" data-tr="p3.f4">Özel yazılım geliştirme</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f5" data-tr="p3.f5">API entegrasyonları</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f6" data-tr="p3.f6">Özel hesap yöneticisi</span></li>
+                            <li><i class="fas fa-check"></i> <span id="p3-f7" data-tr="p3.f7">12 ay teknik destek</span></li>
+                        </ul>
+                        <a href="#teklif" class="btn btn-secondary" style="width:100%;text-align:center;display:block" data-tr="btn.quote">Teklif Alın</a>
+                    </div>
+                </div>
+                <p style="text-align:center;margin-top:32px;color:var(--text-light);font-size:0.9rem"><span id="pricing-note1" data-tr="pricing.note1">Fiyatlar KDV hariçtir. Özel ihtiyaçlarınız için</span> <a href="#teklif" style="color:var(--accent-color);text-decoration:none;font-weight:600" id="pricing-note2" data-tr="pricing.note2">bizimle iletişime geçin</a>.</p>
+            </div>
+        </section>
+
+        <section class="process-sec">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="process-title" data-tr="process.title">Web Tasarım Sürecimiz</h2>
+                    <p id="process-sub" data-tr="process.sub">Her projemizde izlediğimiz, kanıtlanmış 4 adımlı web tasarım süreci.</p>
+                </div>
+                <div class="process-steps">
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="100">
+                        <div class="step-num">1</div>
+                        <h3 id="s1-title" data-tr="s1.title">Keşif & Brifing</h3>
+                        <p id="s1-desc" data-tr="s1.desc">İşletmenizi, hedef kitlenizi ve rakiplerinizi tanıyoruz. Tasarım beklentileri ve teknik gereksinimleri belirleyip proje planı hazırlıyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="200">
+                        <div class="step-num">2</div>
+                        <h3 id="s2-title" data-tr="s2.title">Tasarım & Prototip</h3>
+                        <p id="s2-desc" data-tr="s2.desc">Figma'da sayfa tasarımlarını ve etkileşim akışlarını oluşturuyoruz. Onaylandıktan sonra geliştirme aşamasına geçiyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="300">
+                        <div class="step-num">3</div>
+                        <h3 id="s3-title" data-tr="s3.title">Geliştirme & Test</h3>
+                        <p id="s3-desc" data-tr="s3.desc">Tasarımı responsive ve SEO uyumlu kodlarla hayata geçiriyoruz. Tüm cihaz ve tarayıcılarda kapsamlı testler yapıyoruz.</p>
+                    </div>
+                    <div class="process-step" data-aos="fade-up" data-aos-delay="400">
+                        <div class="step-num">4</div>
+                        <h3 id="s4-title" data-tr="s4.title">Yayın & Destek</h3>
+                        <p id="s4-desc" data-tr="s4.desc">Siteyi yayına alıyor, Analytics kurulumunu tamamlıyor ve sözleşme kapsamında teknik destek sağlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials-sec">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="testi-title" data-tr="testi.title">Müşterilerimiz Ne Diyor?</h2>
+                    <p id="testi-sub" data-tr="testi.sub">Ankara'daki işletme sahiplerinin web tasarım deneyimleri.</p>
+                </div>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text" id="t1-text" data-tr="t1.text">"CefuDigital tam hayal ettiğimiz kurumsal siteyi teslim etti. Hem mobilde hem masaüstünde kusursuz görünüyor."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">AV</div>
+                            <div class="author-info"><h4 id="t1-name" data-tr="t1.name">Av. Ahmet Kılıç</h4><span id="t1-role" data-tr="t1.role">Kılıç Hukuk Bürosu — Kurumsal Site</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="200">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text" id="t2-text" data-tr="t2.text">"E-ticaret sitemiz CefuDigital tarafından yeniden tasarlandı. Sepete ekleme ve satın alma oranlarımız ilk aydan itibaren belirgin biçimde arttı."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">SE</div>
+                            <div class="author-info"><h4 id="t2-name" data-tr="t2.name">Selin Yılmaz</h4><span id="t2-role" data-tr="t2.role">YılmazShop E-ticaret</span></div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                        <div class="stars">★★★★★</div>
+                        <p class="testimonial-text" id="t3-text" data-tr="t3.text">"Prototip aşamasında fikirlerimizi çok iyi dinlediler. Teslim süresi kısa, sonuç beklentinin üzerindeydi."</p>
+                        <div class="testimonial-author">
+                            <div class="author-avatar">MU</div>
+                            <div class="author-info"><h4 id="t3-name" data-tr="t3.name">Murat Öztürk</h4><span id="t3-role" data-tr="t3.role">Öztürk Medikal, Etimesgut</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="faq-sec">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <h2 id="faq-title" data-tr="faq.title">Sıkça Sorulan Sorular</h2>
+                    <p id="faq-sub" data-tr="faq.sub">Web tasarım hizmetimiz hakkında en çok merak edilen sorular.</p>
+                </div>
+                <div class="faq-wrap">
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q1">Web sitesi teslim süresi ne kadar?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a1" data-tr="a1">Temel paketler 2-3 haftada, kurumsal projeler 4-6 haftada, e-ticaret ve özel yazılımlar ise 6-12 haftada teslim edilir.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q2">WordPress mi kullanıyorsunuz, yoksa özel kod mu?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a2" data-tr="a2">İhtiyaca göre ikisini de sunuyoruz. İçerik yönetimini kolay tutmak isteyenler için WordPress + özel tema, yüksek performans gerektiren projeler için tamamen özel kodlama yapıyoruz.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q3">Mevcut sitemizi yenileyebilir misiniz?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a3" data-tr="a3">Evet. Mevcut sitenizin içeriğini ve SEO birikimini koruyarak tamamen yeni bir tasarım uygulayabiliyoruz.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q4">Yayın sonrası destek veriyor musunuz?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a4" data-tr="a4">Tüm paketlerde belirlenen süre boyunca teknik destek dahildir. İçerik güncellemeleri, güvenlik yamaları ve performans takibini kapsayan uzun süreli bakım paketi de mevcuttur.</span></div></div>
+                    </div>
+                    <div class="faq-item">
+                        <button class="faq-question" aria-expanded="false"><span data-tr="q5">Hosting ve domain dahil mi?</span> <span class="faq-icon">+</span></button>
+                        <div class="faq-answer"><div class="faq-answer-inner"><span id="a5" data-tr="a5">Hosting ve domain proje bedelinin dışındadır. Mevcut altyapınızı kullanabilir ya da hızlı ve güvenli barındırma için önerilerimizden yararlanabilirsiniz.</span></div></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-form-sec" id="teklif">
+            <div class="container">
+                <div class="cta-grid">
+                    <div class="cta-text" data-aos="fade-right">
+                        <h2 id="cta-h2" data-tr="cta.h2">Ücretsiz Web Tasarım Teklifi Alın</h2>
+                        <p id="cta-p" data-tr="cta.p">Projenizi anlatın, uzmanlarımız kapsamı, takvimi ve maliyeti size özel hazırlasın.</p>
+                        <ul>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li1" data-tr="cta.li1">Ücretsiz tasarım danışmanlığı</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li2" data-tr="cta.li2">Rakip site analizi</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li3" data-tr="cta.li3">Tahmini proje bütçesi</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li4" data-tr="cta.li4">Tahmini teslim takvimi</span></li>
+                            <li><i class="fas fa-check-circle"></i> <span id="cta-li5" data-tr="cta.li5">48 saat içinde geri dönüş</span></li>
+                        </ul>
+                    </div>
+                    <div data-aos="fade-left">
+                        <div class="contact-form">
+                            <h3 id="form-h3" data-tr="form.h3">Formu Doldurun</h3>
+                            <form id="contactForm" action="https://docs.google.com/forms/d/e/1FAIpQLSeKR3bS_b_57CLgD9CbAPZqPhzSJFduhV1ZbfSi5Hs55TlzRg/viewform" method="GET" target="_blank">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="ad" data-tr="form.ad">Ad Soyad</label>
+                                        <input type="text" id="ad" name="ad" class="form-control" placeholder="Ad Soyad" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="firma" data-tr="form.firma">Firma Adı</label>
+                                        <input type="text" id="firma" name="firma" class="form-control" placeholder="Firma Adı">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email" data-tr="form.email">E-posta</label>
+                                    <input type="email" id="email" name="email" class="form-control" placeholder="ornek@firma.com" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefon" data-tr="form.tel">Telefon</label>
+                                    <input type="tel" id="telefon" name="telefon" class="form-control" placeholder="+90 5XX XXX XX XX">
+                                </div>
+                                <div class="form-group">
+                                    <label for="website" data-tr="form.site">Web Siteniz</label>
+                                    <input type="url" id="website" name="website" class="form-control" placeholder="https://firmaniz.com">
+                                </div>
+                                <div class="form-group">
+                                    <label for="mesaj" data-tr="form.msg">Proje Detaylarınız</label>
+                                    <textarea id="mesaj" name="mesaj" class="form-control" rows="3" placeholder="Proje Detaylarınız"></textarea>
+                                </div>
+                                <button type="submit" class="form-submit" id="form-submit" data-tr="form.submit">Ücretsiz Teklif İste</button>
+                                <p class="form-note" id="form-note" data-tr="form.note">Bilgileriniz gizli tutulur. 48 saat içinde sizinle iletişime geçeceğiz.</p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="../index.html" class="footer-logo">Cefu<span>Digital</span></a>
+                    <p id="footer-desc" data-tr="footer.desc">Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE'de profesyonel dijital çözümler.</p>
+                    <div class="social-links">
+                        <a href="https://www.instagram.com/cefudigital/" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="https://tr.linkedin.com/company/cefudigital-cefudigitalglobal" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.services">Hizmetler</h3>
+                    <ul class="footer-links">
+                        <li><a href="./ankara-dijital-pazarlama.html"><i class="fas fa-chevron-right"></i> SEO Optimizasyonu</a></li>
+                        <li><a href="../service-web.html"><i class="fas fa-chevron-right"></i> Web Tasarımı</a></li>
+                        <li><a href="../service-corporate.html"><i class="fas fa-chevron-right"></i> Şirket Çözümleri</a></li>
+                        <li><a href="../service-marketing.html"><i class="fas fa-chevron-right"></i> Dijital Pazarlama</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.links">Hızlı Bağlantılar</h3>
+                    <ul class="footer-links">
+                        <li><a href="../index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="../about.html"><i class="fas fa-chevron-right"></i> Hakkımızda</a></li>
+                        <li><a href="../blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="../contact.html"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 data-tr="footer.contact">İletişim</h3>
+                    <ul class="footer-links">
+                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> Ankara, Türkiye</a></li>
+                        <li><a href="mailto:info@cefudigital.com"><i class="fas fa-envelope"></i> info@cefudigital.com</a></li>
+                        <li><a href="tel:+905511367634"><i class="fas fa-phone-alt"></i> +90 (551) 136 76 34</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom"><p>&copy; 2025 CefuDigital. <span data-tr="footer.rights">Tüm hakları saklıdır.</span></p></div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const translations = {"tr": {"page.title": "Ankara Web Tasarım Hizmeti | CefuDigital", "meta.desc": "Ankara'da profesyonel web tasarım hizmeti. Modern, hızlı ve SEO uyumlu kurumsal web siteleriyle markanızı dijitalde öne çıkarın. CefuDigital.", "hero.h1": "Ankara Web Tasarım Hizmeti", "hero.lead": "Modern, hızlı ve dönüşüm odaklı web siteleriyle markanızı dijitalde güçlendirin. Ankara'daki işletmeler için sıfırdan tasarım, yenileme ve kurumsal çözümler.", "hero.badge1": "✓ Responsive Tasarım", "hero.badge2": "✓ SEO Uyumlu Kodlama", "hero.badge3": "✓ Hızlı Teslim", "hero.cta1": "Ücretsiz Teklif Al", "hero.cta2": "Paketleri Gör", "bc.current": "Web Tasarımı", "detail.h2": "Neden CefuDigital Web Tasarımı?", "detail.p1": "Ankara'daki işletmenizin dijital vitrininin ne kadar etkileyici olduğu, ziyaretçiyi müşteriye dönüştürme oranınızı doğrudan belirliyor.", "detail.p2": "CefuDigital olarak her projeyi sıfırdan, müşterinin hedefleri ve kullanıcı davranışları analiz edilerek tasarlıyoruz. Estetik ile işlevselliği bir arada sunan, hızlı açılan ve dönüşüme odaklı web siteleri geliştiriyoruz.", "feat1": "Tüm cihazlarda kusursuz görünen responsive tasarım", "feat2": "SEO uyumlu temiz kod yapısı ve sayfa hızı optimizasyonu", "feat3": "Dönüşümü artıran UX / UI tasarım prensipleri", "feat4": "Kullanımı kolay içerik yönetim sistemi entegrasyonu", "feat5": "E-ticaret, kurumsal ve özel proje geliştirme", "feat6": "Yayın sonrası teknik destek ve bakım paketi", "detail.cta": "Ücretsiz Teklif Al", "stat1.num": "%75", "stat1.lbl": "Kullanıcılar bir markayı web tasarımına göre güvenilir buluyor", "stat2.num": "3 sn", "stat2.lbl": "Ziyaretçi bu sürede açılmayan siteyi terk ediyor", "stat3.num": "100+", "stat3.lbl": "Tasarlanan ve teslim edilen web projesi", "stat4.num": "4+", "stat4.lbl": "Yıllık web tasarım deneyimi", "pricing.title": "Web Tasarım Paketleri", "pricing.sub": "İşletmenizin ihtiyacına göre şekillenmiş web tasarım paketleri.", "p1.name": "Temel Site", "p1.price": "₺14.900", "p1.period": "/tek", "p1.desc": "Kurumsal kimlik ve temel dijital varlık için başlangıç sitesi", "p1.f1": "5 sayfaya kadar tasarım", "p1.f2": "Responsive (mobil uyumlu)", "p1.f3": "Temel SEO kurulumu", "p1.f4": "İletişim formu", "p1.f5": "3 ay teknik destek", "p1.f6": "E-ticaret modülü", "p1.f7": "Özel entegrasyonlar", "p2.name": "Kurumsal Site", "p2.price": "₺29.900", "p2.period": "/tek", "p2.badge": "En Çok Tercih Edilen", "p2.desc": "Güçlü dijital varlık ve müşteri dönüşümü için kurumsal çözüm", "p2.f1": "15 sayfaya kadar tasarım", "p2.f2": "Özel UI / UX tasarımı", "p2.f3": "İçerik yönetim sistemi", "p2.f4": "Blog & haber modülü", "p2.f5": "Kapsamlı SEO kurulumu", "p2.f6": "Google Analytics kurulumu", "p2.f7": "6 ay teknik destek", "p3.name": "E-ticaret & Özel", "p3.price": "₺59.900", "p3.period": "+", "p3.desc": "E-ticaret mağazası veya özel yazılım gerektiren projeler için", "p3.f1": "Sınırsız ürün & kategori", "p3.f2": "Ödeme sistemi entegrasyonu", "p3.f3": "Stok & sipariş yönetimi", "p3.f4": "Özel yazılım geliştirme", "p3.f5": "API entegrasyonları", "p3.f6": "Özel hesap yöneticisi", "p3.f7": "12 ay teknik destek", "pricing.note1": "Fiyatlar KDV hariçtir. Özel ihtiyaçlarınız için", "pricing.note2": "bizimle iletişime geçin", "process.title": "Web Tasarım Sürecimiz", "process.sub": "Her projemizde izlediğimiz, kanıtlanmış 4 adımlı web tasarım süreci.", "s1.title": "Keşif & Brifing", "s1.desc": "İşletmenizi, hedef kitlenizi ve rakiplerinizi tanıyoruz. Tasarım beklentileri ve teknik gereksinimleri belirleyip proje planı hazırlıyoruz.", "s2.title": "Tasarım & Prototip", "s2.desc": "Figma'da sayfa tasarımlarını ve etkileşim akışlarını oluşturuyoruz. Onaylandıktan sonra geliştirme aşamasına geçiyoruz.", "s3.title": "Geliştirme & Test", "s3.desc": "Tasarımı responsive ve SEO uyumlu kodlarla hayata geçiriyoruz. Tüm cihaz ve tarayıcılarda kapsamlı testler yapıyoruz.", "s4.title": "Yayın & Destek", "s4.desc": "Siteyi yayına alıyor, Analytics kurulumunu tamamlıyor ve sözleşme kapsamında teknik destek sağlıyoruz.", "testi.title": "Müşterilerimiz Ne Diyor?", "testi.sub": "Ankara'daki işletme sahiplerinin web tasarım deneyimleri.", "t1.text": "\"CefuDigital tam hayal ettiğimiz kurumsal siteyi teslim etti. Hem mobilde hem masaüstünde kusursuz görünüyor.\"", "t1.name": "Av. Ahmet Kılıç", "t1.role": "Kılıç Hukuk Bürosu — Kurumsal Site", "t2.text": "\"E-ticaret sitemiz CefuDigital tarafından yeniden tasarlandı. Sepete ekleme ve satın alma oranlarımız ilk aydan itibaren belirgin biçimde arttı.\"", "t2.name": "Selin Yılmaz", "t2.role": "YılmazShop E-ticaret", "t3.text": "\"Prototip aşamasında fikirlerimizi çok iyi dinlediler. Teslim süresi kısa, sonuç beklentinin üzerindeydi.\"", "t3.name": "Murat Öztürk", "t3.role": "Öztürk Medikal, Etimesgut", "faq.title": "Sıkça Sorulan Sorular", "faq.sub": "Web tasarım hizmetimiz hakkında en çok merak edilen sorular.", "q1": "Web sitesi teslim süresi ne kadar?", "a1": "Temel paketler 2-3 haftada, kurumsal projeler 4-6 haftada, e-ticaret ve özel yazılımlar ise 6-12 haftada teslim edilir.", "q2": "WordPress mi kullanıyorsunuz, yoksa özel kod mu?", "a2": "İhtiyaca göre ikisini de sunuyoruz. İçerik yönetimini kolay tutmak isteyenler için WordPress + özel tema, yüksek performans gerektiren projeler için tamamen özel kodlama yapıyoruz.", "q3": "Mevcut sitemizi yenileyebilir misiniz?", "a3": "Evet. Mevcut sitenizin içeriğini ve SEO birikimini koruyarak tamamen yeni bir tasarım uygulayabiliyoruz.", "q4": "Yayın sonrası destek veriyor musunuz?", "a4": "Tüm paketlerde belirlenen süre boyunca teknik destek dahildir. İçerik güncellemeleri, güvenlik yamaları ve performans takibini kapsayan uzun süreli bakım paketi de mevcuttur.", "q5": "Hosting ve domain dahil mi?", "a5": "Hosting ve domain proje bedelinin dışındadır. Mevcut altyapınızı kullanabilir ya da hızlı ve güvenli barındırma için önerilerimizden yararlanabilirsiniz.", "cta.h2": "Ücretsiz Web Tasarım Teklifi Alın", "cta.p": "Projenizi anlatın, uzmanlarımız kapsamı, takvimi ve maliyeti size özel hazırlasın.", "cta.li1": "Ücretsiz tasarım danışmanlığı", "cta.li2": "Rakip site analizi", "cta.li3": "Tahmini proje bütçesi", "cta.li4": "Tahmini teslim takvimi", "cta.li5": "48 saat içinde geri dönüş", "form.h3": "Formu Doldurun", "form.ad": "Ad Soyad", "form.firma": "Firma Adı", "form.email": "E-posta", "form.tel": "Telefon", "form.site": "Web Siteniz", "form.msg": "Proje Detaylarınız", "form.submit": "Ücretsiz Teklif İste", "form.note": "Bilgileriniz gizli tutulur. 48 saat içinde sizinle iletişime geçeceğiz.", "footer.desc": "Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE'de profesyonel dijital çözümler.", "footer.services": "Hizmetler", "footer.links": "Hızlı Bağlantılar", "footer.contact": "İletişim", "footer.rights": "Tüm hakları saklıdır.", "btn.start": "Başlayın", "btn.quote": "Teklif Alın", "btn.contact": "İletişime Geçin", "nav.home": "Ana Sayfa", "nav.services": "Hizmetler", "nav.about": "Hakkımızda", "nav.projects": "Projeler", "nav.blog": "Blog", "nav.contact": "İletişim", "bc.services": "Hizmetler"}, "en": {"page.title": "Ankara Web Design Service | CefuDigital", "meta.desc": "Professional web design service in Ankara. Stand out digitally with modern, fast and SEO-friendly corporate websites. CefuDigital.", "hero.h1": "Ankara Web Design Service", "hero.lead": "Strengthen your brand digitally with modern, fast and conversion-focused websites. Design from scratch, redesign and corporate solutions for Ankara businesses.", "hero.badge1": "✓ Responsive Design", "hero.badge2": "✓ SEO-Friendly Code", "hero.badge3": "✓ Fast Delivery", "hero.cta1": "Get Free Quote", "hero.cta2": "View Packages", "bc.current": "Web Design", "detail.h2": "Why CefuDigital Web Design?", "detail.p1": "How impressive your Ankara business's digital storefront is directly determines your visitor-to-customer conversion rate.", "detail.p2": "At CefuDigital, we design every project from scratch by analysing the client's goals and user behaviour. We build fast-loading, conversion-focused websites that balance aesthetics and functionality.", "feat1": "Responsive design that looks perfect on all devices", "feat2": "SEO-friendly clean code structure and page speed optimization", "feat3": "UX/UI design principles that boost conversions", "feat4": "Easy-to-use content management system integration", "feat5": "E-commerce, corporate and custom project development", "feat6": "Post-launch technical support and maintenance package", "detail.cta": "Get Free Quote", "stat1.num": "75%", "stat1.lbl": "Users judge a brand's credibility by its web design", "stat2.num": "3 sec", "stat2.lbl": "Visitors leave a site that doesn't load within this time", "stat3.num": "100+", "stat3.lbl": "Web projects designed and delivered", "stat4.num": "4+", "stat4.lbl": "Years of web design experience", "pricing.title": "Web Design Packages", "pricing.sub": "Web design packages shaped to your business needs.", "p1.name": "Basic Site", "p1.price": "₺14,900", "p1.period": "/one-off", "p1.desc": "A starter site for corporate identity and basic digital presence", "p1.f1": "Up to 5 pages", "p1.f2": "Responsive (mobile-friendly)", "p1.f3": "Basic SEO setup", "p1.f4": "Contact form", "p1.f5": "3-month support", "p1.f6": "E-commerce module", "p1.f7": "Custom integrations", "p2.name": "Corporate Site", "p2.price": "₺29,900", "p2.period": "/one-off", "p2.badge": "Most Popular", "p2.desc": "A corporate solution for strong digital presence and customer conversion", "p2.f1": "Up to 15 pages", "p2.f2": "Custom UI/UX design", "p2.f3": "Content management system", "p2.f4": "Blog & news module", "p2.f5": "Comprehensive SEO setup", "p2.f6": "Google Analytics setup", "p2.f7": "6-month support", "p3.name": "E-commerce & Custom", "p3.price": "₺59,900", "p3.period": "+", "p3.desc": "For projects requiring an online store or custom software", "p3.f1": "Unlimited products & categories", "p3.f2": "Payment system integration", "p3.f3": "Stock & order management", "p3.f4": "Custom software development", "p3.f5": "API integrations", "p3.f6": "Dedicated account manager", "p3.f7": "12-month support", "pricing.note1": "Prices exclude VAT. For custom needs,", "pricing.note2": "contact us", "process.title": "Our Web Design Process", "process.sub": "The proven 4-step web design process we follow for every project.", "s1.title": "Discovery & Brief", "s1.desc": "We get to know your business, target audience and competitors. We define design expectations and technical requirements, then prepare a project plan.", "s2.title": "Design & Prototype", "s2.desc": "We create page designs and interaction flows in Figma. Once approved, we move on to the development phase.", "s3.title": "Development & Testing", "s3.desc": "We bring the design to life with responsive, SEO-friendly code. We run comprehensive tests on all devices and browsers.", "s4.title": "Launch & Support", "s4.desc": "We go live, complete the Analytics setup and provide technical support within the scope of the agreement.", "testi.title": "What Our Clients Say?", "testi.sub": "Web design experiences of Ankara business owners.", "t1.text": "\"CefuDigital delivered exactly the corporate site we envisioned. It looks perfect on both mobile and desktop.\"", "t1.name": "Atty. Ahmet Kılıç", "t1.role": "Kılıç Law Firm — Corporate Site", "t2.text": "\"Our e-commerce site was redesigned by CefuDigital. Add-to-cart and purchase rates increased noticeably from the first month.\"", "t2.name": "Selin Yılmaz", "t2.role": "YılmazShop E-commerce", "t3.text": "\"They listened to our ideas very well during the prototype phase. Short delivery time and the result exceeded expectations.\"", "t3.name": "Murat Öztürk", "t3.role": "Öztürk Medical, Etimesgut", "faq.title": "Frequently Asked Questions", "faq.sub": "The most commonly asked questions about our web design service.", "q1": "How long does website delivery take?", "a1": "Basic packages are delivered in 2-3 weeks, corporate projects in 4-6 weeks, and e-commerce/custom software in 6-12 weeks.", "q2": "Do you use WordPress or custom code?", "a2": "We offer both depending on needs. WordPress + custom theme for easy content management; fully custom coding for projects requiring high performance.", "q3": "Can you redesign our existing site?", "a3": "Yes. We can apply a completely new design while preserving your existing content and SEO equity.", "q4": "Do you provide post-launch support?", "a4": "Yes, technical support is included in all packages for the specified period. Long-term maintenance packages covering updates, security patches and performance monitoring are also available.", "q5": "Are hosting and domain included?", "a5": "Hosting and domain are outside the project price. You can use your existing infrastructure or benefit from our hosting recommendations.", "cta.h2": "Get a Free Web Design Quote", "cta.p": "Tell us about your project and our experts will prepare scope, timeline and cost tailored to you.", "cta.li1": "Free design consultation", "cta.li2": "Competitor site analysis", "cta.li3": "Estimated project budget", "cta.li4": "Estimated delivery timeline", "cta.li5": "Response within 48 hours", "form.h3": "Fill in the Form", "form.ad": "Full Name", "form.firma": "Company Name", "form.email": "Email", "form.tel": "Phone", "form.site": "Your Website", "form.msg": "Project Details", "form.submit": "Request Free Quote", "form.note": "Your information is kept confidential. We will contact you within 48 hours.", "footer.desc": "The best way to grow your business in the digital world. Professional digital solutions in Turkey, UK and UAE.", "footer.services": "Services", "footer.links": "Quick Links", "footer.contact": "Contact", "footer.rights": "All rights reserved.", "btn.start": "Get Started", "btn.quote": "Get a Quote", "btn.contact": "Contact Us", "nav.home": "Home", "nav.services": "Services", "nav.about": "About", "nav.projects": "Projects", "nav.blog": "Blog", "nav.contact": "Contact", "bc.services": "Services"}, "ar": {"page.title": "خدمة تصميم المواقع في أنقرة | CefuDigital", "meta.desc": "خدمة تصميم مواقع احترافية في أنقرة. أبرز علامتك التجارية رقمياً بمواقع مؤسسية حديثة وسريعة وصديقة لـ SEO. CefuDigital.", "hero.h1": "خدمة تصميم المواقع في أنقرة", "hero.lead": "عزّز علامتك التجارية رقمياً بمواقع حديثة وسريعة تركّز على التحويل. تصميم من الصفر، وإعادة تصميم، وحلول مؤسسية للشركات في أنقرة.", "hero.badge1": "✓ تصميم متجاوب", "hero.badge2": "✓ كود صديق لـ SEO", "hero.badge3": "✓ تسليم سريع", "hero.cta1": "احصل على عرض مجاني", "hero.cta2": "عرض الباقات", "bc.current": "تصميم المواقع", "detail.h2": "لماذا تصميم المواقع من CefuDigital?", "detail.p1": "مدى إثارة واجهتك الرقمية يحدد مباشرةً معدل تحويل الزوار إلى عملاء.", "detail.p2": "في CefuDigital، نصمم كل مشروع من الصفر بعد تحليل أهداف العميل وسلوك المستخدم. نبني مواقع سريعة التحميل تركز على التحويل وتوازن بين الجماليات والوظائف.", "feat1": "تصميم متجاوب يبدو مثالياً على جميع الأجهزة", "feat2": "بنية كود نظيفة صديقة لـ SEO وتحسين سرعة الصفحة", "feat3": "مبادئ تصميم UX/UI تعزز التحويلات", "feat4": "تكامل نظام إدارة محتوى سهل الاستخدام", "feat5": "تطوير التجارة الإلكترونية والمواقع المؤسسية والمشاريع الخاصة", "feat6": "دعم فني وصيانة ما بعد الإطلاق", "detail.cta": "احصل على عرض مجاني", "stat1.num": "75%", "stat1.lbl": "المستخدمون يحكمون على مصداقية العلامة التجارية بتصميم موقعها", "stat2.num": "3 ثوان", "stat2.lbl": "يغادر الزوار الموقع الذي لا يُحمَّل خلال هذا الوقت", "stat3.num": "+100", "stat3.lbl": "مشروع ويب تم تصميمه وتسليمه", "stat4.num": "+4", "stat4.lbl": "سنوات من خبرة تصميم المواقع", "pricing.title": "باقات تصميم المواقع", "pricing.sub": "باقات تصميم مواقع مشكّلة وفق احتياجات عملك.", "p1.name": "موقع أساسي", "p1.price": "₺14,900", "p1.period": "/مرة", "p1.desc": "موقع انطلاق للهوية المؤسسية والحضور الرقمي الأساسي", "p1.f1": "حتى 5 صفحات", "p1.f2": "متجاوب (ملائم للموبايل)", "p1.f3": "إعداد SEO أساسي", "p1.f4": "نموذج اتصال", "p1.f5": "دعم 3 أشهر", "p1.f6": "وحدة التجارة الإلكترونية", "p1.f7": "تكاملات مخصصة", "p2.name": "موقع مؤسسي", "p2.price": "₺29,900", "p2.period": "/مرة", "p2.badge": "الأكثر طلباً", "p2.desc": "حل مؤسسي لحضور رقمي قوي وتحويل العملاء", "p2.f1": "حتى 15 صفحة", "p2.f2": "تصميم UI/UX مخصص", "p2.f3": "نظام إدارة المحتوى", "p2.f4": "وحدة المدونة والأخبار", "p2.f5": "إعداد SEO شامل", "p2.f6": "إعداد Google Analytics", "p2.f7": "دعم 6 أشهر", "p3.name": "تجارة إلكترونية ومخصص", "p3.price": "₺59,900", "p3.period": "+", "p3.desc": "للمشاريع التي تتطلب متجراً إلكترونياً أو برمجيات مخصصة", "p3.f1": "منتجات وفئات غير محدودة", "p3.f2": "تكامل نظام الدفع", "p3.f3": "إدارة المخزون والطلبات", "p3.f4": "تطوير برمجيات مخصصة", "p3.f5": "تكاملات API", "p3.f6": "مدير حساب مخصص", "p3.f7": "دعم 12 شهراً", "pricing.note1": "الأسعار لا تشمل ضريبة القيمة المضافة. للاحتياجات الخاصة،", "pricing.note2": "تواصل معنا", "process.title": "عمليتنا في تصميم المواقع", "process.sub": "عملية تصميم المواقع المكونة من 4 خطوات المثبتة التي نتبعها في كل مشروع.", "s1.title": "الاكتشاف والموجز", "s1.desc": "نتعرف على عملك وجمهورك المستهدف ومنافسيك. نحدد توقعات التصميم والمتطلبات التقنية ثم نعد خطة المشروع.", "s2.title": "التصميم والنموذج الأولي", "s2.desc": "ننشئ تصاميم الصفحات وتدفقات التفاعل في Figma. بعد الموافقة، ننتقل إلى مرحلة التطوير.", "s3.title": "التطوير والاختبار", "s3.desc": "نُحيي التصميم بكود متجاوب وصديق لـ SEO. نجري اختبارات شاملة على جميع الأجهزة والمتصفحات.", "s4.title": "الإطلاق والدعم", "s4.desc": "نُطلق الموقع ونُكمل إعداد Analytics ونقدم الدعم الفني ضمن نطاق الاتفاقية.", "testi.title": "ماذا يقول عملاؤنا؟", "testi.sub": "تجارب أصحاب الأعمال في أنقرة مع خدمة تصميم المواقع.", "t1.text": "«سلّم CefuDigital الموقع المؤسسي الذي تخيلناه بالضبط. يبدو مثالياً على الموبايل وسطح المكتب.»", "t1.name": "المحامي أحمد قيليتش", "t1.role": "مكتب قيليتش للمحاماة — موقع مؤسسي", "t2.text": "«أعاد CefuDigital تصميم موقع متجرنا الإلكتروني. ارتفعت معدلات إضافة العناصر إلى السلة والشراء بشكل ملحوظ منذ الشهر الأول.»", "t2.name": "سيلين يلماز", "t2.role": "متجر يلماز الإلكتروني", "t3.text": "«استمعوا جيداً لأفكارنا في مرحلة النموذج الأولي. وقت التسليم قصير والنتيجة فاقت التوقعات.»", "t3.name": "مراد أوزتورك", "t3.role": "أوزتورك الطبية، إتيميسغوت", "faq.title": "الأسئلة الشائعة", "faq.sub": "أكثر الأسئلة شيوعاً حول خدمة تصميم المواقع.", "q1": "كم يستغرق تسليم الموقع؟", "a1": "الباقات الأساسية تُسلَّم في 2-3 أسابيع، والمشاريع المؤسسية في 4-6 أسابيع، والتجارة الإلكترونية والبرمجيات المخصصة في 6-12 أسبوعاً.", "q2": "هل تستخدمون WordPress أم كوداً مخصصاً؟", "a2": "نقدم كليهما حسب الحاجة. WordPress + قالب مخصص لسهولة إدارة المحتوى؛ وكود مخصص بالكامل للمشاريع التي تتطلب أداءً عالياً.", "q3": "هل يمكنكم إعادة تصميم موقعنا الحالي؟", "a3": "نعم. يمكننا تطبيق تصميم جديد كلياً مع الحفاظ على محتوى موقعك الحالي ورصيد SEO.", "q4": "هل تقدمون دعماً بعد الإطلاق؟", "a4": "نعم، الدعم الفني مدرج في جميع الباقات للمدة المحددة. تتوفر أيضاً باقات صيانة طويلة الأمد تشمل التحديثات وتصحيح الثغرات الأمنية.", "q5": "هل الاستضافة والنطاق مشمولان؟", "a5": "الاستضافة والنطاق خارج سعر المشروع. يمكنك استخدام بنيتك التحتية الحالية أو الاستفادة من توصياتنا للاستضافة.", "cta.h2": "احصل على عرض تصميم مجاني", "cta.p": "أخبرنا عن مشروعك وسيعدّ خبراؤنا النطاق والجدول الزمني والتكلفة المخصصة لك.", "cta.li1": "استشارة تصميم مجانية", "cta.li2": "تحليل مواقع المنافسين", "cta.li3": "تقدير ميزانية المشروع", "cta.li4": "تقدير جدول التسليم", "cta.li5": "رد خلال 48 ساعة", "form.h3": "املأ النموذج", "form.ad": "الاسم الكامل", "form.firma": "اسم الشركة", "form.email": "البريد الإلكتروني", "form.tel": "الهاتف", "form.site": "موقعك الإلكتروني", "form.msg": "تفاصيل المشروع", "form.submit": "طلب عرض مجاني", "form.note": "معلوماتك محفوظة بسرية. سنتواصل معك خلال 48 ساعة.", "footer.desc": "أفضل طريقة لتنمية أعمالك في العالم الرقمي. حلول رقمية احترافية في تركيا والمملكة المتحدة والإمارات.", "footer.services": "الخدمات", "footer.links": "روابط سريعة", "footer.contact": "اتصل بنا", "footer.rights": "جميع الحقوق محفوظة.", "btn.start": "ابدأ الآن", "btn.quote": "احصل على عرض", "btn.contact": "تواصل معنا", "nav.home": "الرئيسية", "nav.services": "الخدمات", "nav.about": "من نحن", "nav.projects": "المشاريع", "nav.blog": "المدونة", "nav.contact": "اتصل بنا", "bc.services": "الخدمات"}};
+        let currentLang = localStorage.getItem('preferredLanguage') || 'tr';
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            document.documentElement.lang = lang;
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+            if (translations[lang]) {
+                document.querySelectorAll('[data-tr]').forEach(el => {
+                    const key = el.dataset.tr;
+                    if (translations[lang][key]) el.textContent = translations[lang][key];
+                });
+            }
+            if (translations[lang] && translations[lang]['page.title'])
+                document.title = translations[lang]['page.title'];
+            const metaDesc = document.querySelector('meta[name="description"]');
+            if (metaDesc && translations[lang] && translations[lang]['meta.desc'])
+                metaDesc.content = translations[lang]['meta.desc'];
+            document.body.style.direction = lang === 'ar' ? 'rtl' : 'ltr';
+            document.body.style.textAlign = lang === 'ar' ? 'right' : '';
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            AOS.init({duration: 800, easing: 'ease-in-out', once: true});
+            const mobileMenuBtn = document.querySelector('.mobile-menu');
+            const mobileNav     = document.querySelector('.mobile-nav');
+            const overlay       = document.querySelector('.overlay');
+            const closeMenuBtn  = document.querySelector('.close-menu');
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileNav.classList.add('active');
+                overlay.classList.add('active');
+            });
+            [closeMenuBtn, overlay].forEach(el => {
+                el.addEventListener('click', () => {
+                    mobileNav.classList.remove('active');
+                    overlay.classList.remove('active');
+                });
+            });
+            window.addEventListener('scroll', () => {
+                document.querySelector('header').style.boxShadow =
+                    window.scrollY > 100 ? '0 4px 20px rgba(0,0,0,0.1)' : '0 2px 10px rgba(0,0,0,0.05)';
+            });
+            document.querySelectorAll('.faq-question').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const item   = btn.closest('.faq-item');
+                    const isOpen = item.classList.contains('active');
+                    document.querySelectorAll('.faq-item').forEach(i => {
+                        i.classList.remove('active');
+                        i.querySelector('.faq-question').classList.remove('open');
+                    });
+                    if (!isOpen) { item.classList.add('active'); btn.classList.add('open'); }
+                });
+            });
+            document.querySelectorAll('a[href^="#"]').forEach(a => {
+                a.addEventListener('click', function(e) {
+                    const t = document.querySelector(this.getAttribute('href'));
+                    if (t) { e.preventDefault(); t.scrollIntoView({behavior: 'smooth', block: 'start'}); }
+                });
+            });
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => switchLanguage(btn.dataset.lang));
+            });
+            switchLanguage(currentLang);
+        });
+    </script>
+</body>
+</html>
