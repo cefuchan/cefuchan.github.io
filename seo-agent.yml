@@ -1,0 +1,55 @@
+name: 🤖 SEO Agent (Ücretsiz)
+
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '**.html'
+  schedule:
+    - cron: '0 6 * * 1'   # Her Pazartesi 09:00 TR saati
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  issues: write
+  pull-requests: write
+
+jobs:
+  seo-agent:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 📥 Repoyu çek
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🐍 Python kur
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 📦 Bağımlılıkları yükle
+        run: |
+          pip install requests beautifulsoup4 lxml google-auth google-auth-httplib2 google-api-python-client
+
+      - name: 🔍 SEO Agent'ı çalıştır
+        env:
+          GITHUB_TOKEN:                ${{ secrets.GITHUB_TOKEN }}
+          SITE_URL:                    ${{ secrets.SITE_URL }}
+          REPO_NAME:                   ${{ github.repository }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+        run: python seo_agent.py
+
+      - name: 📤 Sitemap'i commit et
+        run: |
+          git config --local user.email "seo-agent[bot]@github.com"
+          git config --local user.name "SEO Agent Bot"
+          git add sitemap.xml
+          if git diff --staged --quiet; then
+            echo "Sitemap değişikliği yok."
+          else
+            git commit -m "🗺️ [SEO Agent] sitemap.xml güncellendi"
+            git push
+            echo "✅ Sitemap push edildi."
+          fi
