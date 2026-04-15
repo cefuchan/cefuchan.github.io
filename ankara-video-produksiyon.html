@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankara Video Prodüksiyon — Cefu Dijital</title>
+  <meta name="description" content="Ankara video prodüksiyon ajansı olarak uzmanız. Kurumsal filmler, reklam videoları ve profesyonel video çekimi hizmetleri." />
+  <meta name="keywords" content="Ankara video prodüksiyon, Ankara video prodüksiyon ajansı, video prodüksiyon Ankara, kurumsal video prodüksiyon, reklam filmi prodüksiyon, video çekim Ankara, video prodüksiyon hizmetleri, video prodüksiyon ajansı seçimi, video prodüksiyon fiyatları, profesyonel video prodüksiyon" />
+  <meta property="og:title" content="Ankara Video Prodüksiyon — Cefu Dijital" />
+  <meta property="og:description" content="Ankara video prodüksiyon merkezi olarak sinematik kalitede kurumsal ve reklam filmleri üretiyoruz." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cefudigital.com/ankara-video-produksiyon.html" />
+  <link rel="canonical" href="https://www.cefudigital.com/ankara-video-produksiyon.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE-SPECIFIC ── */
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 130px 40px 90px;
+      position: relative; overflow: hidden;
+      background: var(--white);
+    }
+    .hero-ornament {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .hero-ornament::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 860px; height: 860px;
+      border: 1px solid rgba(212,165,55,0.065);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite;
+    }
+    .hero-ornament::after {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px; height: 580px;
+      border: 1px solid rgba(212,165,55,0.045);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite 2.5s;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%,-50%) scale(1.035); }
+    }
+    .hero-tag {
+      font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 34px;
+      opacity: 0; animation: fadeUp 1s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6.5vw, 5.4rem);
+      font-weight: 600; line-height: 1.08;
+      letter-spacing: 0.02em; color: var(--ink);
+      max-width: 920px; margin-bottom: 30px;
+      opacity: 0; animation: fadeUp 1s 0.4s forwards;
+    }
+    .hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+    .hero-sub {
+      font-family: var(--font-serif); font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 300; color: var(--ink-soft); max-width: 560px; line-height: 1.75;
+      margin-bottom: 52px;
+      opacity: 0; animation: fadeUp 1s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeUp 1s 0.8s forwards;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      opacity: 0; animation: fadeUp 1s 1.3s forwards;
+    }
+    .hero-scroll span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+    .scroll-line { width: 1px; height: 46px; background: var(--gold); animation: sc 2s ease-in-out infinite; }
+    @keyframes sc { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.7)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+    /* VIDEO STATS */
+    #video-stats {
+      padding: 72px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .video-stats-inner { display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+    .stats-quote { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.55rem); font-weight: 300; font-style: italic; color: var(--ink-mid); max-width: 560px; text-align: center; }
+    .video-stat-item { flex: 1; min-width: 120px; }
+    .video-stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--ink); line-height: 1; }
+    .video-stat-num span { color: var(--gold); }
+    .video-stat-lbl { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+
+    /* VIDEO HIZMETLER */
+    #video-hizmetler { background: var(--white); }
+    .video-hizmetler-head { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: end; margin-bottom: 72px; }
+    .video-hizmetler-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .video-hizmet-card {
+      background: var(--white); padding: 48px 38px;
+      position: relative; overflow: hidden; transition: background 0.4s;
+    }
+    .video-hizmet-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+    .video-hizmet-card:hover { background: var(--off-white); }
+    .video-hizmet-card:hover::after { transform: scaleX(1); }
+    .video-hizmet-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .video-hizmet-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .video-hizmet-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+
+    /* VIDEO SÜREÇ */
+    #video-surec { background: var(--ink); }
+    #video-surec .section-title { color: var(--white); }
+    #video-surec .section-lead { color: rgba(255,255,255,0.45); }
+    .video-surec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 72px; }
+    .video-surec-step { padding: 56px 44px; position: relative; }
+    .video-surec-num { font-family: var(--font-display); font-size: 3.8rem; font-weight: 700; color: rgba(212,165,55,0.1); line-height: 1; margin-bottom: 22px; }
+    .video-surec-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.08em; color: var(--white); margin-bottom: 14px; }
+    .video-surec-desc { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.8; }
+    .video-surec-connector { position: absolute; right: -1px; top: 50%; transform: translateY(-50%); width: 1px; height: 56px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+
+    /* VIDEO CASE */
+    #video-case { background: var(--off-white); }
+    .video-case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 68px; }
+    .video-case-card { background: var(--white); padding: 44px 36px; border: 1px solid transparent; transition: border-color 0.4s, transform 0.4s; }
+    .video-case-card:hover { border-color: var(--border); transform: translateY(-5px); }
+    .video-case-industry { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .video-case-client { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .video-case-result { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 7px; }
+    .video-case-result span { color: var(--gold); }
+    .video-case-metric { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 22px; }
+    .video-case-desc { font-family: var(--font-serif); font-size: 0.93rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 22px; }
+
+    /* CTA */
+    #video-cta { background: var(--ink); text-align: center; }
+    .video-cta-inner { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+    .video-cta-inner .section-title { color: var(--white); }
+    .video-cta-inner .section-lead { color: rgba(255,255,255,0.42); max-width: 100%; text-align: center; }
+    .video-cta-inner .gold-divider { background: rgba(212,165,55,0.4); margin: 0 auto 36px; }
+    .video-cta-actions { display: flex; gap: 18px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+
+    /* VIDEO REHBER */
+    #video-rehber { background: var(--off-white); }
+    .video-rehber-head { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; margin-bottom: 72px; align-items: start; }
+    .video-rehber-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 32px; }
+    .video-rehber-card { background: var(--white); padding: 48px 44px; border: 1px solid transparent; transition: border-color 0.4s, transform 0.4s; }
+    .video-rehber-card:hover { border-color: var(--border); transform: translateY(-5px); }
+    .video-rehber-icon { font-size: 2.5rem; margin-bottom: 24px; }
+    .video-rehber-title { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; color: var(--ink); margin-bottom: 18px; line-height: 1.4; }
+    .video-rehber-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+
+    @media (max-width: 1024px) {
+      .video-hizmetler-head { grid-template-columns: 1fr; gap: 28px; }
+      .video-hizmetler-grid { grid-template-columns: repeat(2,1fr); }
+      .video-case-grid { grid-template-columns: repeat(2,1fr); }
+      .video-surec-grid { grid-template-columns: repeat(2,1fr); }
+      .video-rehber-head { grid-template-columns: 1fr; gap: 28px; }
+      .video-rehber-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      #hero { padding: 120px 22px 80px; }
+      .video-stats-inner { gap: 44px; }
+      .video-hizmetler-grid { grid-template-columns: 1fr; }
+      .video-surec-grid { grid-template-columns: 1fr; }
+      .video-surec-connector { display: none; }
+      .video-case-grid { grid-template-columns: 1fr; }
+      .video-rehber-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Cefu Dijital Ana Sayfa"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobil Menü">
+  <button class="mobile-close" id="mobileClose" aria-label="Menüyü Kapat">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Ankara Video Prodüksiyon">
+    <div class="hero-ornament" aria-hidden="true"></div>
+    <p class="hero-tag">Ankara Video Prodüksiyon</p>
+    <h1 class="hero-title">
+      Sinematik<br>
+      <em>Video Anlatımı</em>
+    </h1>
+    <p class="hero-sub">
+      Ankara video prodüksiyon ajansı olarak uzmanız. Kurumsal video prodüksiyon,
+      reklam filmi prodüksiyon ve profesyonel video çekim hizmetleri Ankara'da.
+    </p>
+    <div class="hero-actions">
+      <a href="iletisim.html" class="btn-primary">Video Prodüksiyon Başlat</a>
+      <a href="#video-hizmetler" class="btn-ghost">Hizmetlerimizi İncele</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Keşfet</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ VIDEO STATS ══ -->
+  <section id="video-stats" aria-label="Video Prodüksiyon İstatistikleri">
+    <div class="container">
+      <div class="stats-inner">
+        <p class="stats-quote reveal">"Ankara video prodüksiyon ajansı olarak, video prodüksiyon hizmetlerinde öncüüz"</p>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num">67<span>+</span></div>
+          <div class="stat-lbl">Prodüksiyon Projesi</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">2.1<span>M</span></div>
+          <div class="stat-lbl">Toplam İzlenme</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">%92</div>
+          <div class="stat-lbl">Müşteri Memnuniyeti</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-num">18</div>
+          <div class="stat-lbl">Aktif Video Müşteri</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VIDEO HIZMETLER ══ -->
+  <section id="video-hizmetler" aria-labelledby="video-hizmetler-heading">
+    <div class="container">
+      <div class="video-hizmetler-head">
+        <div>
+          <span class="section-eyebrow reveal">Video Prodüksiyon Hizmetleri</span>
+          <h2 class="section-title reveal" id="video-hizmetler-heading">
+            Profesyonel Video<br><em>Çekimi ve Prodüksiyon</em>
+          </h2>
+        </div>
+        <p class="section-lead reveal">
+          Kurumsal tanıtım filmlerinden sosyal medya reels'lerine kadar tüm video ihtiyaçlarınız için Ankara'da profesyonel prodüksiyon.
+        </p>
+      </div>
+
+      <div class="video-hizmetler-grid reveal">
+        <article class="video-hizmet-card">
+          <div class="video-hizmet-num">01</div>
+          <h3 class="video-hizmet-title">Kurumsal Tanıtım Filmleri</h3>
+          <p class="video-hizmet-desc">Marka hikayenizi sinematik dille anlatan, profesyonel kurumsal video prodüksiyonu.</p>
+        </article>
+        <article class="video-hizmet-card">
+          <div class="video-hizmet-num">02</div>
+          <h3 class="video-hizmet-title">Reklam Videoları</h3>
+          <p class="video-hizmet-desc">Ürün ve hizmetlerinizi etkileyici reklam filmleriyle tanıtın, satışlarınızı artırın.</p>
+        </article>
+        <article class="video-hizmet-card">
+          <div class="video-hizmet-num">03</div>
+          <h3 class="video-hizmet-title">Sosyal Medya Videoları</h3>
+          <p class="video-hizmet-desc">Reels, TikTok, Instagram Stories için kısa, etkili ve viral video içerikleri.</p>
+        </article>
+        <article class="video-hizmet-card">
+          <div class="video-hizmet-num">04</div>
+          <h3 class="video-hizmet-title">Ürün Tanıtım Videoları</h3>
+          <p class="video-hizmet-desc">E-ticaret ürünleriniz için profesyonel tanıtım videoları ve demo çekimleri.</p>
+        </article>
+        <article class="video-hizmet-card">
+          <div class="video-hizmet-num">05</div>
+          <h3 class="video-hizmet-title">Etkinlik Çekimleri</h3>
+          <p class="video-hizmet-desc">Kongre, lansman, toplantı gibi kurumsal etkinliklerinizin profesyonel video kaydı.</p>
+        </article>
+        <article class="video-hizmet-card">
+          <div class="video-hizmet-num">06</div>
+          <h3 class="video-hizmet-title">Video Prodüksiyon Analizi</h3>
+          <p class="video-hizmet-desc">Montaj, renk düzeltme, ses tasarımı ve efektlerle videolarınızı mükemmelleştirme, performans analizi.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VIDEO SÜREÇ ══ -->
+  <section id="video-surec" aria-labelledby="video-surec-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Video Prodüksiyon Süreci</span>
+      <h2 class="section-title reveal" id="video-surec-heading">Profesyonel <em>Video Yapımı</em></h2>
+      <p class="section-lead reveal">Pre-prodüksiyon'dan post-prodüksiyon'a kadar tüm aşamalar uzman ekibimizle yönetilir.</p>
+      <div class="video-surec-grid reveal">
+        <div class="video-surec-step">
+          <div class="video-surec-num">01</div>
+          <h3 class="video-surec-title">Konsept ve Senaryo</h3>
+          <p class="video-surec-desc">Hedef kitle analizi, hikaye geliştirme ve detaylı senaryo yazımı.</p>
+          <div class="video-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="video-surec-step">
+          <div class="video-surec-num">02</div>
+          <h3 class="video-surec-title">Pre-Prodüksiyon</h3>
+          <p class="video-surec-desc">Lokasyon seçimi, ekip planlaması ve prodüksiyon hazırlıkları.</p>
+          <div class="video-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="video-surec-step">
+          <div class="video-surec-num">03</div>
+          <h3 class="video-surec-title">Çekim</h3>
+          <p class="video-surec-desc">Profesyonel ekipman ve tekniklerle sinematik kalitede çekim.</p>
+          <div class="video-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="video-surec-step">
+          <div class="video-surec-num">04</div>
+          <h3 class="video-surec-title">Post-Prodüksiyon</h3>
+          <p class="video-surec-desc">Montaj, efektler, ses tasarımı ve final teslimatı.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VIDEO CASE ══ -->
+  <section id="video-case" aria-labelledby="video-case-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Video Prodüksiyon Başarıları</span>
+      <h2 class="section-title reveal" id="video-case-heading">Görsel <em>Hikaye Anlatımı</em></h2>
+      <div class="video-case-grid">
+        <article class="video-case-card reveal reveal-delay-1">
+          <div class="video-case-industry">Teknoloji / Ankara</div>
+          <div class="video-case-client">Yazılım Şirketi</div>
+          <div class="video-case-result"><span>+</span>450<span>K</span></div>
+          <div class="video-case-metric">Video İzlenme — 3 Ay</div>
+          <p class="video-case-desc">Kurumsal tanıtım filmi ile marka bilinirliğinde büyük artış ve müşteri adaylarında patlama.</p>
+        </article>
+        <article class="video-case-card reveal reveal-delay-2">
+          <div class="video-case-industry">E-Ticaret / Ankara</div>
+          <div class="video-case-client">Online Mağaza</div>
+          <div class="video-case-result"><span>+</span>320<span>%</span></div>
+          <div class="video-case-metric">Ürün Satışı Artışı — 6 Ay</div>
+          <p class="video-case-desc">Ankara video prodüksiyon ajansı olarak ürün tanıtım videoları ve sosyal medya reels'leri ile satışlarda dramatik yükseliş.</p>
+        </article>
+        <article class="video-case-card reveal reveal-delay-3">
+          <div class="video-case-industry">Hizmet / Ankara</div>
+          <div class="video-case-client">Danışmanlık Firması</div>
+          <div class="video-case-result"><span>+</span>5.8<span>x</span></div>
+          <div class="video-case-metric">Web Sitesi Trafiği — 4 Ay</div>
+          <p class="video-case-desc">Kurumsal video prodüksiyon hizmetlerimizle marka bilinirliğini artıran kapsamlı video prodüksiyon projesi.</p>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="case-study.html" class="btn-ghost">Tüm Video Prodüksiyon Case Study'leri</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VIDEO CTA ══ -->
+  <section id="video-cta" aria-labelledby="video-cta-heading">
+    <div class="container">
+      <div class="video-cta-inner">
+        <span class="section-eyebrow reveal">Video Prodüksiyon Danışmanlığı</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="video-cta-heading">
+          Ankara Video<br><em>Prodüksiyon Merkezi</em>
+        </h2>
+        <p class="section-lead reveal">
+          Ücretsiz video danışmanlığı ile projenizi planlayalım.
+          Ankara video prodüksiyon ajansı olarak lider ekibimizle tanışın.
+        </p>
+        <div class="video-cta-actions reveal">
+          <a href="iletisim.html" class="btn-gold">Ücretsiz Danışmanlık</a>
+          <a href="tel:05511367634" class="btn-outline-white">0551 136 76 34</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ VIDEO REHBER ══ -->
+  <section id="video-rehber" aria-labelledby="video-rehber-heading">
+    <div class="container">
+      <div class="video-rehber-head">
+        <div>
+          <span class="section-eyebrow reveal">Video Prodüksiyon Rehberi</span>
+          <h2 class="section-title reveal" id="video-rehber-heading">
+            Video Prodüksiyon<br><em>Nedir? Nasıl Yapılır?</em>
+          </h2>
+        </div>
+        <p class="section-lead reveal">
+          Ankara video prodüksiyon ajansı olarak, farklı video türleri ve prodüksiyon süreçleri hakkında detaylı bilgi.
+        </p>
+      </div>
+
+      <div class="video-rehber-grid reveal">
+        <article class="video-rehber-card">
+          <div class="video-rehber-icon">🎬</div>
+          <h3 class="video-rehber-title">Kurumsal Video Prodüksiyon</h3>
+          <p class="video-rehber-desc">Marka hikayenizi anlatan, kurumsal kimliğinizi yansıtan profesyonel tanıtım filmleri. Ankara'da kurumsal video prodüksiyon lideri olarak, sinematik kalitede kurumsal videolar üretiyoruz.</p>
+        </article>
+        <article class="video-rehber-card">
+          <div class="video-rehber-icon">📱</div>
+          <h3 class="video-rehber-title">Reklam Filmi Prodüksiyon</h3>
+          <p class="video-rehber-desc">Ürün ve hizmetlerinizi etkileyici reklam filmleriyle tanıtın. Ankara video prodüksiyon ajansı olarak, yüksek dönüşüm sağlayan reklam videoları üretiyoruz.</p>
+        </article>
+        <article class="video-rehber-card">
+          <div class="video-rehber-icon">📹</div>
+          <h3 class="video-rehber-title">Sosyal Medya Videoları</h3>
+          <p class="video-rehber-desc">Reels, TikTok, Instagram Stories için kısa, etkili ve viral video içerikleri. Ankara'da sosyal medya video prodüksiyonu konusunda uzman ekibimizle çalışın.</p>
+        </article>
+        <article class="video-rehber-card">
+          <div class="video-rehber-icon">🛍️</div>
+          <h3 class="video-rehber-title">Ürün Tanıtım Videoları</h3>
+          <p class="video-rehber-desc">E-ticaret ürünleriniz için profesyonel tanıtım videoları ve demo çekimleri. Ankara video prodüksiyon hizmetleri ile ürün satışlarınızı artırın.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Ankara'nın lider dijital pazarlama ajansı. SEO, web tasarımı ve performans reklamcılığı alanında uzmanız.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · SEO hizmeti · Google reklam yönetimi · Web sitesi tasarımı · Video prodüksiyon Ankara · Kurumsal video prodüksiyon · Reklam filmi prodüksiyon</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html">Başvuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara video prodüksiyon ajansı</p>
+      <nav class="social-links" aria-label="Sosyal Medya">
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+        <a href="#" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" rel="noopener noreferrer">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+
+  // Mobile menu
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>

@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankara Dijital Pazarlama Ajansı — Cefu Dijital</title>
+  <meta name="description" content="Ankara dijital pazarlama ajansı olarak entegre stratejilerle markanızı büyütüyoruz. Dijital pazarlama nedir? Dijital pazarlama danışmanlığı ve profesyonel hizmetlerimizle hedeflerinize ulaşın." />
+  <meta name="keywords" content="Ankara dijital pazarlama ajansı, Ankara dijital pazarlama, dijital pazarlama ajansı Ankara, dijital pazarlama hizmetleri, dijital pazarlama danışmanlığı, dijital pazarlama stratejisi, dijital pazarlama nedir, dijital pazarlama eğitimi, dijital pazarlama ajansı seçimi" />
+  <meta property="og:title" content="Ankara Dijital Pazarlama Ajansı — Cefu Dijital" />
+  <meta property="og:description" content="Ankara dijital pazarlama ajansı olarak entegre dijital stratejilerle markanızın büyümesine liderlik ediyoruz." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cefudigital.com/ankara-dijital-pazarlama-ajansi.html" />
+  <link rel="canonical" href="https://www.cefudigital.com/ankara-dijital-pazarlama-ajansi.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE-SPECIFIC ── */
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 130px 40px 90px;
+      position: relative; overflow: hidden;
+      background: var(--white);
+    }
+    .hero-ornament {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .hero-ornament::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 860px; height: 860px;
+      border: 1px solid rgba(212,165,55,0.065);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite;
+    }
+    .hero-ornament::after {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px; height: 580px;
+      border: 1px solid rgba(212,165,55,0.045);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite 2.5s;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%,-50%) scale(1.035); }
+    }
+    .hero-tag {
+      font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 34px;
+      opacity: 0; animation: fadeUp 1s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6.5vw, 5.4rem);
+      font-weight: 600; line-height: 1.08;
+      letter-spacing: 0.02em; color: var(--ink);
+      max-width: 920px; margin-bottom: 30px;
+      opacity: 0; animation: fadeUp 1s 0.4s forwards;
+    }
+    .hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+    .hero-sub {
+      font-family: var(--font-serif); font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 300; color: var(--ink-soft); max-width: 560px; line-height: 1.75;
+      margin-bottom: 52px;
+      opacity: 0; animation: fadeUp 1s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeUp 1s 0.8s forwards;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      opacity: 0; animation: fadeUp 1s 1.3s forwards;
+    }
+    .hero-scroll span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+    .scroll-line { width: 1px; height: 46px; background: var(--gold); animation: sc 2s ease-in-out infinite; }
+    @keyframes sc { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.7)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+    /* PAZARLAMA STATS */
+    #pazarlama-stats {
+      padding: 72px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .pazarlama-stats-inner { display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+    .stats-quote { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.55rem); font-weight: 300; font-style: italic; color: var(--ink-mid); max-width: 560px; text-align: center; }
+    .pazarlama-stat-item { flex: 1; min-width: 120px; }
+    .pazarlama-stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--ink); line-height: 1; }
+    .pazarlama-stat-num span { color: var(--gold); }
+    .pazarlama-stat-lbl { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+
+    /* PAZARLAMA HIZMETLER */
+    #pazarlama-hizmetler { background: var(--white); }
+    .pazarlama-hizmetler-head { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: end; margin-bottom: 72px; }
+    .pazarlama-hizmetler-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .pazarlama-hizmet-card {
+      background: var(--white); padding: 48px 38px;
+      position: relative; overflow: hidden; transition: background 0.4s;
+    }
+    .pazarlama-hizmet-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+    .pazarlama-hizmet-card:hover { background: var(--off-white); }
+    .pazarlama-hizmet-card:hover::after { transform: scaleX(1); }
+    .pazarlama-hizmet-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .pazarlama-hizmet-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .pazarlama-hizmet-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+
+    /* PAZARLAMA SÜREÇ */
+    #pazarlama-surec { background: var(--ink); }
+    #pazarlama-surec .section-title { color: var(--white); }
+    #pazarlama-surec .section-lead { color: rgba(255,255,255,0.45); }
+    .pazarlama-surec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 72px; }
+    .pazarlama-surec-step { padding: 56px 44px; position: relative; }
+    .pazarlama-surec-num { font-family: var(--font-display); font-size: 3.8rem; font-weight: 700; color: rgba(212,165,55,0.1); line-height: 1; margin-bottom: 22px; }
+    .pazarlama-surec-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.08em; color: var(--white); margin-bottom: 14px; }
+    .pazarlama-surec-desc { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.8; }
+    .pazarlama-surec-connector { position: absolute; right: -1px; top: 50%; transform: translateY(-50%); width: 1px; height: 56px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+
+    /* PAZARLAMA CASE */
+    #pazarlama-case { background: var(--off-white); }
+    .pazarlama-case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 68px; }
+    .pazarlama-case-card { background: var(--white); padding: 44px 36px; border: 1px solid transparent; transition: border-color 0.4s, transform 0.4s; }
+    .pazarlama-case-card:hover { border-color: var(--border); transform: translateY(-5px); }
+    .pazarlama-case-industry { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .pazarlama-case-client { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .pazarlama-case-result { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 7px; }
+    .pazarlama-case-result span { color: var(--gold); }
+    .pazarlama-case-metric { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 22px; }
+    .pazarlama-case-desc { font-family: var(--font-serif); font-size: 0.93rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 22px; }
+
+    /* CTA */
+    #pazarlama-cta { background: var(--ink); text-align: center; }
+    .pazarlama-cta-inner { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+    .pazarlama-cta-inner .section-title { color: var(--white); }
+    .pazarlama-cta-inner .section-lead { color: rgba(255,255,255,0.42); max-width: 100%; text-align: center; }
+    .pazarlama-cta-inner .gold-divider { background: rgba(212,165,55,0.4); margin: 0 auto 36px; }
+    .pazarlama-cta-actions { display: flex; gap: 18px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+
+    /* PAZARLAMA REHBER */
+    #pazarlama-rehber { background: var(--off-white); padding: 72px 0; }
+    .pazarlama-rehber-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px; margin-top: 72px; }
+    .pazarlama-rehber-item { background: var(--white); padding: 48px 38px; border: 1px solid var(--border); border-radius: 8px; transition: transform 0.4s, box-shadow 0.4s; }
+    .pazarlama-rehber-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .pazarlama-rehber-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .pazarlama-rehber-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .pazarlama-rehber-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+    .pazarlama-rehber-note { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 300; color: var(--ink-mid); max-width: 600px; margin: 0 auto; }
+
+    @media (max-width: 1024px) {
+      .pazarlama-rehber-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 1024px) {
+      .pazarlama-hizmetler-head { grid-template-columns: 1fr; gap: 28px; }
+      .pazarlama-hizmetler-grid { grid-template-columns: repeat(2,1fr); }
+      .pazarlama-case-grid { grid-template-columns: repeat(2,1fr); }
+      .pazarlama-surec-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      #hero { padding: 120px 22px 80px; }
+      .pazarlama-stats-inner { gap: 44px; }
+      .pazarlama-hizmetler-grid { grid-template-columns: 1fr; }
+      .pazarlama-surec-grid { grid-template-columns: 1fr; }
+      .pazarlama-surec-connector { display: none; }
+      .pazarlama-case-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Cefu Dijital Ana Sayfa"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobil Menü">
+  <button class="mobile-close" id="mobileClose" aria-label="Menüyü Kapat">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Ankara Dijital Pazarlama Ajansı">
+    <div class="hero-ornament" aria-hidden="true"></div>
+    <p class="hero-tag">Ankara Dijital Pazarlama Ajansı</p>
+    <h1 class="hero-title">
+      Dijital Dünyada<br>
+      <em>Marka Hakimiyeti</em>
+    </h1>
+    <p class="hero-sub">
+      Ankara dijital pazarlama ajansı olarak, dijital pazarlama nedir sorusuna kapsamlı cevap veriyoruz.
+      Dijital pazarlama stratejisi ve danışmanlığı ile markanızı büyütüyoruz.
+      Profesyonel dijital pazarlama hizmetleri Ankara'da.
+    </p>
+    <div class="hero-actions">
+      <a href="iletisim.html" class="btn-primary">Pazarlama Danışmanlığı Al</a>
+      <a href="#pazarlama-hizmetler" class="btn-ghost">Hizmetlerimizi İncele</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Keşfet</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ PAZARLAMA STATS ══ -->
+  <section id="pazarlama-stats" aria-label="Dijital Pazarlama İstatistikleri">
+    <div class="container">
+      <div class="stats-inner">
+        <p class="stats-quote reveal">"Ankara dijital pazarlama ajansı olarak, dijital pazarlama stratejilerinde öncüüz"</p>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num">89<span>+</span></div>
+          <div class="stat-lbl">Dijital Kampanya</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">3.8<span>x</span></div>
+          <div class="stat-lbl">Ortalama ROI Artışı</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">%76</div>
+          <div class="stat-lbl">Hedef Kitle Erişimi</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-num">32</div>
+          <div class="stat-lbl">Aktif Dijital Müşteri</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PAZARLAMA HIZMETLER ══ -->
+  <section id="pazarlama-hizmetler" aria-labelledby="pazarlama-hizmetler-heading">
+    <div class="container">
+      <div class="pazarlama-hizmetler-head">
+        <div>
+          <span class="section-eyebrow reveal">Dijital Pazarlama Hizmetleri</span>
+          <h2 class="section-title reveal" id="pazarlama-hizmetler-heading">
+            Entegre Dijital<br><em>Stratejiler</em>
+          </h2>
+        </div>
+        <p class="section-lead reveal">
+          SEO'dan sosyal medyaya, reklamdan içeriğe kadar tüm dijital pazarlama kanallarında uzmanız.
+          Ankara'da rekabet gücünüzü artırıyoruz.
+        </p>
+      </div>
+
+      <div class="pazarlama-hizmetler-grid reveal">
+        <article class="pazarlama-hizmet-card">
+          <div class="pazarlama-hizmet-num">01</div>
+          <h3 class="pazarlama-hizmet-title">SEO ve Arama Motoru Optimizasyonu</h3>
+          <p class="pazarlama-hizmet-desc">Organik arama sonuçlarında üst sıralara çıkarak sürdürülebilir trafik ve müşteri kazanımı.</p>
+        </article>
+        <article class="pazarlama-hizmet-card">
+          <div class="pazarlama-hizmet-num">02</div>
+          <h3 class="pazarlama-hizmet-title">Sosyal Medya Yönetimi</h3>
+          <p class="pazarlama-hizmet-desc">İçerik stratejisi, topluluk yönetimi ve etkileşim odaklı sosyal medya pazarlaması.</p>
+        </article>
+        <article class="pazarlama-hizmet-card">
+          <div class="pazarlama-hizmet-num">03</div>
+          <h3 class="pazarlama-hizmet-title">Performans Reklamcılığı</h3>
+          <p class="pazarlama-hizmet-desc">Google Ads, Meta Ads ve diğer platformlarda hedefli reklam kampanyaları.</p>
+        </article>
+        <article class="pazarlama-hizmet-card">
+          <div class="pazarlama-hizmet-num">04</div>
+          <h3 class="pazarlama-hizmet-title">İçerik Pazarlama</h3>
+          <p class="pazarlama-hizmet-desc">Değer odaklı içerik üretimi, blog yönetimi ve marka hikayesi anlatımı.</p>
+        </article>
+        <article class="pazarlama-hizmet-card">
+          <div class="pazarlama-hizmet-num">05</div>
+          <h3 class="pazarlama-hizmet-title">Email Marketing</h3>
+          <p class="pazarlama-hizmet-desc">Segmentasyon, otomasyon ve kişiselleştirilmiş email kampanyaları ile müşteri sadakati.</p>
+        </article>
+        <article class="pazarlama-hizmet-card">
+          <div class="pazarlama-hizmet-num">06</div>
+          <h3 class="pazarlama-hizmet-title">Dijital Pazarlama Analizi</h3>
+          <p class="pazarlama-hizmet-desc">Veri analizi, performans takibi ve dijital pazarlama stratejisi raporlaması ile sürekli optimizasyon.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PAZARLAMA SÜREÇ ══ -->
+  <section id="pazarlama-surec" aria-labelledby="pazarlama-surec-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Dijital Pazarlama Süreci</span>
+      <h2 class="section-title reveal" id="pazarlama-surec-heading">Stratejik <em>Yaklaşımımız</em></h2>
+      <p class="section-lead reveal">Veriye dayalı, hedef odaklı dijital pazarlama süreçleri ile maksimum etki.</p>
+      <div class="pazarlama-surec-grid reveal">
+        <div class="pazarlama-surec-step">
+          <div class="pazarlama-surec-num">01</div>
+          <h3 class="pazarlama-surec-title">Analiz ve Strateji</h3>
+          <p class="pazarlama-surec-desc">Pazar araştırması, hedef kitle analizi ve rekabet değerlendirmesi.</p>
+          <div class="pazarlama-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="pazarlama-surec-step">
+          <div class="pazarlama-surec-num">02</div>
+          <h3 class="pazarlama-surec-title">Kanal Seçimi</h3>
+          <p class="pazarlama-surec-desc">Hedef kitleye en uygun dijital kanalların belirlenmesi.</p>
+          <div class="pazarlama-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="pazarlama-surec-step">
+          <div class="pazarlama-surec-num">03</div>
+          <h3 class="pazarlama-surec-title">Uygulama</h3>
+          <p class="pazarlama-surec-desc">Kampanya başlatma, içerik üretimi ve optimizasyon çalışmaları.</p>
+          <div class="pazarlama-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="pazarlama-surec-step">
+          <div class="pazarlama-surec-num">04</div>
+          <h3 class="pazarlama-surec-title">İzleme & Optimizasyon</h3>
+          <p class="pazarlama-surec-desc">Performans takibi, A/B testleri ve sürekli iyileştirme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PAZARLAMA CASE ══ -->
+  <section id="pazarlama-case" aria-labelledby="pazarlama-case-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Dijital Pazarlama Başarıları</span>
+      <h2 class="section-title reveal" id="pazarlama-case-heading">Sonuç Odaklı <em>Kampanyalar</em></h2>
+      <div class="pazarlama-case-grid">
+        <article class="pazarlama-case-card reveal reveal-delay-1">
+          <div class="pazarlama-case-industry">E-Ticaret / Ankara</div>
+          <div class="pazarlama-case-client">Online Mağaza</div>
+          <div class="pazarlama-case-result"><span>+</span>245<span>%</span></div>
+          <div class="pazarlama-case-metric">Dijital Satış Artışı — 9 Ay</div>
+          <p class="pazarlama-case-desc">Ankara dijital pazarlama ajansı olarak entegre dijital pazarlama stratejisi ile organik ve ücretli kanallarda satış patlaması.</p>
+        </article>
+        <article class="pazarlama-case-card reveal reveal-delay-2">
+          <div class="pazarlama-case-industry">Hizmet / Ankara</div>
+          <div class="pazarlama-case-client">Danışmanlık Şirketi</div>
+          <div class="pazarlama-case-result"><span>+</span>4.2<span>x</span></div>
+          <div class="pazarlama-case-metric">Müşteri Adayı Artışı — 7 Ay</div>
+          <p class="pazarlama-case-desc">LinkedIn ve Google Ads kombinasyonuyla nitelikli müşteri adaylarında dramatik artış.</p>
+        </article>
+        <article class="pazarlama-case-card reveal reveal-delay-3">
+          <div class="pazarlama-case-industry">Restoran / Ankara</div>
+          <div class="pazarlama-case-client">Fine Dining Restoran</div>
+          <div class="pazarlama-case-result"><span>+</span>189<span>%</span></div>
+          <div class="pazarlama-case-metric">Rezervasyon Artışı — 5 Ay</div>
+          <p class="pazarlama-case-desc">Sosyal medya ve yerel SEO entegrasyonuyla restoran rezervasyonlarında büyük başarı.</p>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="case-study.html" class="btn-ghost">Tüm Dijital Pazarlama Case Study'leri</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PAZARLAMA CTA ══ -->
+  <section id="pazarlama-cta" aria-labelledby="pazarlama-cta-heading">
+    <div class="container">
+      <div class="pazarlama-cta-inner">
+        <span class="section-eyebrow reveal">Dijital Pazarlama Danışmanlığı</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="pazarlama-cta-heading">
+          Ankara Dijital<br><em>Pazarlama Ajansı</em>
+        </h2>
+        <p class="section-lead reveal">
+          Dijital pazarlama danışmanlığı ile markanızı büyütün.
+          Dijital pazarlama ajansı Ankara'da lider olarak uzman ekibimizle tanışın.
+        </p>
+        <div class="pazarlama-cta-actions reveal">
+          <a href="iletisim.html" class="btn-gold">Ücretsiz Analiz</a>
+          <a href="tel:05511367634" class="btn-outline-white">0551 136 76 34</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ PAZARLAMA REHBER ══ -->
+  <section id="pazarlama-rehber" aria-labelledby="pazarlama-rehber-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Dijital Pazarlama Rehberi</span>
+      <h2 class="section-title reveal" id="pazarlama-rehber-heading">Dijital Pazarlama <em>Nedir?</em></h2>
+      <p class="section-lead reveal">
+        Ankara dijital pazarlama ajansı olarak, dijital pazarlama nedir sorusuna kapsamlı cevap veriyoruz.
+        Dijital pazarlama stratejisi ve uygulamaları hakkında detaylı bilgiler.
+      </p>
+      <div class="pazarlama-rehber-grid reveal">
+        <div class="pazarlama-rehber-item">
+          <div class="pazarlama-rehber-num">01</div>
+          <h3 class="pazarlama-rehber-title">SEO ve Arama Motoru Pazarlaması</h3>
+          <p class="pazarlama-rehber-desc">Organik arama sonuçlarında üst sıralara çıkmak için teknik ve içerik optimizasyonu.</p>
+        </div>
+        <div class="pazarlama-rehber-item">
+          <div class="pazarlama-rehber-num">02</div>
+          <h3 class="pazarlama-rehber-title">Sosyal Medya Pazarlaması</h3>
+          <p class="pazarlama-rehber-desc">Facebook, Instagram, LinkedIn gibi platformlarda hedef kitleye ulaşma ve etkileşim.</p>
+        </div>
+        <div class="pazarlama-rehber-item">
+          <div class="pazarlama-rehber-num">03</div>
+          <h3 class="pazarlama-rehber-title">Performans Reklamcılığı</h3>
+          <p class="pazarlama-rehber-desc">Google Ads ve Meta Ads ile hedefli reklam kampanyaları ve dönüşüm optimizasyonu.</p>
+        </div>
+        <div class="pazarlama-rehber-item">
+          <div class="pazarlama-rehber-num">04</div>
+          <h3 class="pazarlama-rehber-title">İçerik ve Email Pazarlaması</h3>
+          <p class="pazarlama-rehber-desc">Değer odaklı içerik üretimi ve kişiselleştirilmiş email kampanyaları ile müşteri sadakati.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <p class="pazarlama-rehber-note">Dijital pazarlama ajansı Ankara olarak, dijital pazarlama eğitimi ve danışmanlığı sağlıyoruz.</p>
+        <a href="iletisim.html" class="btn-primary" style="margin-top:24px;">Dijital Pazarlama Danışmanlığı Alın</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Ankara'nın lider dijital pazarlama ajansı. SEO, web tasarımı ve performans reklamcılığı alanında uzmanız.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · Ankara dijital pazarlama · Dijital pazarlama ajansı Ankara · Dijital pazarlama hizmetleri · Dijital pazarlama danışmanlığı · Dijital pazarlama stratejisi</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html">Başvuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links" aria-label="Sosyal Medya">
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+        <a href="#" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" rel="noopener noreferrer">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+
+  // Mobile menu
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>

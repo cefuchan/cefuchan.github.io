@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cefu Dijital — Ankara Dijital Pazarlama ve SEO Ajansı</title>
+  <meta name="description" content="Cefu Dijital, Ankara'nın seçkin dijital büyüme ajansıdır. SEO, Google reklam yönetimi, web sitesi tasarımı ve marka hakimiyeti sistemleriyle üst segment markaları büyütüyoruz." />
+  <meta name="keywords" content="Ankara SEO ajansı, dijital pazarlama ajansı, Cefu Dijital, web sitesi tasarımı, Google reklam yönetimi, Ankara dijital ajans" />
+  <meta property="og:title" content="Cefu Dijital — Ankara Dijital Pazarlama ve SEO Ajansı" />
+  <meta property="og:description" content="Her marka ile çalışmıyoruz. Büyümeye hazır seçkin markalar için yüksek performanslı dijital büyüme sistemleri." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cefudigital.com/" />
+  <link rel="canonical" href="https://www.cefudigital.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE-SPECIFIC ── */
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 130px 40px 90px;
+      position: relative; overflow: hidden;
+      background: var(--white);
+    }
+    .hero-ornament {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .hero-ornament::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 860px; height: 860px;
+      border: 1px solid rgba(212,165,55,0.065);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite;
+    }
+    .hero-ornament::after {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px; height: 580px;
+      border: 1px solid rgba(212,165,55,0.045);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite 2.5s;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%,-50%) scale(1.035); }
+    }
+    .hero-tag {
+      font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 34px;
+      opacity: 0; animation: fadeUp 1s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6.5vw, 5.4rem);
+      font-weight: 600; line-height: 1.08;
+      letter-spacing: 0.02em; color: var(--ink);
+      max-width: 920px; margin-bottom: 30px;
+      opacity: 0; animation: fadeUp 1s 0.4s forwards;
+    }
+    .hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+    .hero-sub {
+      font-family: var(--font-serif); font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 300; color: var(--ink-soft); max-width: 560px; line-height: 1.75;
+      margin-bottom: 52px;
+      opacity: 0; animation: fadeUp 1s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeUp 1s 0.8s forwards;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      opacity: 0; animation: fadeUp 1s 1.3s forwards;
+    }
+    .hero-scroll span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+    .scroll-line { width: 1px; height: 46px; background: var(--gold); animation: sc 2s ease-in-out infinite; }
+    @keyframes sc { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.7)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+    /* STATS STRIP */
+    #stats {
+      padding: 72px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-inner { display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+    .stat-item {}
+    .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--ink); line-height: 1; }
+    .stat-num span { color: var(--gold); }
+    .stat-lbl { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+    .stats-quote { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.55rem); font-weight: 300; font-style: italic; color: var(--ink-mid); max-width: 560px; text-align: center; }
+
+    /* HIZMETLER PREVIEW */
+    #hizmetler-preview { background: var(--white); }
+    .hizmetler-head { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: end; margin-bottom: 72px; }
+    .hizmetler-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .hizmet-card {
+      background: var(--white); padding: 48px 38px;
+      position: relative; overflow: hidden; transition: background 0.4s;
+    }
+    .hizmet-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+    .hizmet-card:hover { background: var(--off-white); }
+    .hizmet-card:hover::after { transform: scaleX(1); }
+    .hizmet-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .hizmet-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .hizmet-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+    .hizmet-link { display: inline-block; margin-top: 26px; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: transform 0.3s; }
+    .hizmet-card:hover .hizmet-link { transform: translateX(6px); }
+    .hizmet-card-quote { background: var(--off-white); display: flex; flex-direction: column; justify-content: center; }
+    .hizmet-card-quote .q-text { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; font-style: italic; color: var(--gold); line-height: 1.5; }
+    .hizmet-card-quote .q-src { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 16px; }
+
+    /* SÜREÇ */
+    #surec { background: var(--ink); }
+    #surec .section-title { color: var(--white); }
+    #surec .section-lead { color: rgba(255,255,255,0.45); }
+    .surec-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 72px; }
+    .surec-step { padding: 56px 44px; position: relative; }
+    .surec-num { font-family: var(--font-display); font-size: 3.8rem; font-weight: 700; color: rgba(212,165,55,0.1); line-height: 1; margin-bottom: 22px; }
+    .surec-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.08em; color: var(--white); margin-bottom: 14px; }
+    .surec-desc { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.8; }
+    .surec-connector { position: absolute; right: -1px; top: 50%; transform: translateY(-50%); width: 1px; height: 56px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+
+    /* CASE PREVIEW */
+    #case-preview { background: var(--off-white); }
+    .case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 68px; }
+    .case-card { background: var(--white); padding: 44px 36px; border: 1px solid transparent; transition: border-color 0.4s, transform 0.4s; }
+    .case-card:hover { border-color: var(--border); transform: translateY(-5px); }
+    .case-industry { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .case-client { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .case-result { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 7px; }
+    .case-result span { color: var(--gold); }
+    .case-metric { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 22px; }
+    .case-desc { font-family: var(--font-serif); font-size: 0.93rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 22px; }
+
+    /* BRAND MARQUEE */
+    #brand-bar { background: var(--cream); }
+    .brand-bar-inner { padding: 44px 0; }
+    .brand-bar-title { max-width: 760px; margin: 0 auto 26px; }
+    .brand-marquee { position: relative; overflow: hidden; border-radius: 22px; background: rgba(255,255,255,0.9); padding: 20px 0; }
+    .marquee-track { display: flex; gap: 24px; width: 200%; animation: marquee 24s linear infinite; align-items: center; }
+    .marquee-item { flex: 0 0 auto; min-width: 180px; height: 70px; display: flex; align-items: center; justify-content: center; background: var(--white); border: 1px solid rgba(12,12,12,0.06); border-radius: 16px; padding: 0 18px; box-shadow: 0 18px 50px rgba(12,12,12,0.04); }
+    .marquee-item span { font-family: var(--font-display); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+    .marquee-item img { max-height: 42px; width: auto; display: block; }
+    .brand-marquee::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(250,249,246,1) 0%, rgba(250,249,246,0.1) 12%, rgba(250,249,246,0.1) 88%, rgba(250,249,246,1) 100%); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* SEÇİCİLİK */
+    #secicilik { background: var(--white); text-align: center; }
+    .secicilik-inner { max-width: 760px; margin: 0 auto; }
+    .secicilik-inner .gold-divider { margin: 0 auto 36px; }
+    .secicilik-inner .section-title { font-size: clamp(2rem, 4.5vw, 3.6rem); }
+    .secicilik-inner .section-lead { max-width: 100%; text-align: center; font-size: 1.2rem; }
+    .criteria-tags { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 44px; }
+    .criteria-tag { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); border: 1px solid var(--border); padding: 10px 20px; }
+    .badge-open { display: inline-flex; align-items: center; gap: 10px; margin-top: 52px; padding: 15px 30px; background: var(--ink); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    /* CTA SECTION */
+    #cta-basvuru { background: var(--ink); text-align: center; }
+    .cta-inner { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+    .cta-inner .section-title { color: var(--white); }
+    .cta-inner .section-lead { color: rgba(255,255,255,0.42); max-width: 100%; text-align: center; }
+    .cta-inner .gold-divider { background: rgba(212,165,55,0.4); margin: 0 auto 36px; }
+    .cta-actions { display: flex; gap: 18px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+
+    /* BLOG PLACEHOLDER */
+    #blog { background: var(--cream); }
+    .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 64px; }
+    .blog-card { background: var(--white); padding: 36px 32px; border: 1px solid var(--border); transition: transform 0.4s; }
+    .blog-card:hover { transform: translateY(-4px); }
+    .blog-cat { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .blog-title { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 500; color: var(--ink); line-height: 1.5; margin-bottom: 14px; }
+    .blog-excerpt { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.75; margin-bottom: 20px; }
+    .blog-link { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 1024px) {
+      .hizmetler-head { grid-template-columns: 1fr; gap: 28px; }
+      .hizmetler-grid { grid-template-columns: repeat(2,1fr); }
+      .case-grid { grid-template-columns: repeat(2,1fr); }
+      .blog-grid { grid-template-columns: repeat(2,1fr); }
+      .brand-bar-title { max-width: 100%; }
+      .marquee-track { gap: 18px; }
+      .marquee-item { min-width: 150px; }
+    }
+    @media (max-width: 768px) {
+      #hero { padding: 120px 22px 80px; }
+      .stats-inner { gap: 44px; }
+      .hizmetler-grid { grid-template-columns: 1fr; }
+      .surec-grid { grid-template-columns: 1fr; }
+      .surec-connector { display: none; }
+      .case-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .brand-bar-inner { padding: 32px 0; }
+      .brand-bar-title { text-align: center; }
+      .marquee-track { gap: 14px; animation-duration: 28s; }
+      .marquee-item { min-width: 140px; height: 60px; padding: 0 14px; }
+      .marquee-item span { font-size: 0.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Cefu Dijital Ana Sayfa"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobil Menü">
+  <button class="mobile-close" id="mobileClose" aria-label="Menüyü Kapat">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Ana Ekran">
+    <div class="hero-ornament" aria-hidden="true"></div>
+    <p class="hero-tag">Ankara Dijital Pazarlama Ajansı</p>
+    <h1 class="hero-title">
+      Markaları Yönetmiyoruz.<br>
+      <em>Büyütüyoruz.</em>
+    </h1>
+    <p class="hero-sub">
+      Üst segment markalar için özel, ölçeklenebilir dijital büyüme sistemleri.
+      Trafik değil, marka hakimiyeti.
+    </p>
+    <div class="hero-actions">
+      <a href="iletisim.html" class="btn-primary">Başvuru Yap</a>
+      <a href="case-study.html" class="btn-ghost">Başarı Hikâyeleri</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Keşfet</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ STATS ══ -->
+  <section id="stats" aria-label="Ajans İstatistikleri">
+    <div class="container">
+      <div class="stats-inner">
+        <p class="stats-quote reveal">"Büyümeye hazır markaların tercih ettiği dijital büyüme ajansı"</p>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num">48<span>+</span></div>
+          <div class="stat-lbl">Büyütülen Marka</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">3.2<span>x</span></div>
+          <div class="stat-lbl">Ortalama Büyüme</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">%94</div>
+          <div class="stat-lbl">Müşteri Devamlılığı</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-num">6</div>
+          <div class="stat-lbl">Aktif Müşteri Kapasitesi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ MARKA LOGO BARI ══ -->
+  <section id="brand-bar" aria-labelledby="brand-bar-heading">
+    <div class="container brand-bar-inner">
+      <div class="brand-bar-title">
+        <span class="section-eyebrow reveal">Referanslar</span>
+        <h2 class="section-title reveal" id="brand-bar-heading">Çalıştığımız markaların logoları</h2>
+        <p class="section-lead reveal">Ankara'da birlikte büyüttüğümüz firmaların logo göstergesi. Bu alan otomatik olarak kayan bir referans sunar.</p>
+      </div>
+      <div class="brand-marquee reveal">
+        <div class="marquee-track">
+          <div class="marquee-item"><span>Mk Psikoloji</span></div>
+          <div class="marquee-item"><span>Değişim Psikoloji</span></div>
+          <div class="marquee-item"><span>Süha Optik</span></div>
+          <div class="marquee-item"><span>DecCrane</span></div>
+          <div class="marquee-item"><span>Dynomark</span></div>
+          <div class="marquee-item"><span>Bs-Mimarlık</span></div>
+          <div class="marquee-item"><span>Siltem</span></div>
+          <div class="marquee-item"><span>İklim Danışmanlık</span></div>
+          <div class="marquee-item"><span>Mk Psikoloji</span></div>
+          <div class="marquee-item"><span>Değişim Psikoloji</span></div>
+          <div class="marquee-item"><span>Süha Optik</span></div>
+          <div class="marquee-item"><span>DecCrane</span></div>
+          <div class="marquee-item"><span>Dynomark</span></div>
+          <div class="marquee-item"><span>Bs-Mimarlık</span></div>
+          <div class="marquee-item"><span>Siltem</span></div>
+          <div class="marquee-item"><span>İklim Danışmanlık</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ HİZMETLER PREVIEW ══ -->
+  <section id="hizmetler-preview" aria-labelledby="hizmetler-heading">
+    <div class="container">
+      <div class="hizmetler-head">
+        <div>
+          <span class="section-eyebrow reveal">Sistemlerimiz</span>
+          <h2 class="section-title reveal" id="hizmetler-heading">
+            Hizmet Değil,<br><em>Büyüme Sistemi</em>
+          </h2>
+        </div>
+        <p class="section-lead reveal">
+          Her strateji, markanızın özgün dinamiklerine göre kurgulanır.
+          Hazır şablon yok. Kopyala-yapıştır yok. Yalnızca sonuç.
+        </p>
+      </div>
+
+      <div class="hizmetler-grid reveal">
+        <article class="hizmet-card">
+          <div class="hizmet-num">01</div>
+          <h3 class="hizmet-title">Organik Büyüme Sistemi</h3>
+          <p class="hizmet-desc">Ankara SEO ajansı uzmanlığıyla markanızı arama motorlarında kalıcı üst sıralara taşıyan sürdürülebilir stratejiler.</p>
+          <a href="hizmetler.html#seo" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">02</div>
+          <h3 class="hizmet-title">Dönüşüm Odaklı Web Sistemleri</h3>
+          <p class="hizmet-desc">Ziyaretçiyi müşteriye dönüştürmek için psikoloji destekli, performans ölçümlü web mimarileri. Güzel değil, etkili.</p>
+          <a href="hizmetler.html#web" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">03</div>
+          <h3 class="hizmet-title">Marka Büyütme Stratejisi</h3>
+          <p class="hizmet-desc">Dijital dünyada kalıcı marka hakimiyeti için entegre içerik, konum ve topluluk büyütme sistemleri.</p>
+          <a href="hizmetler.html#marka" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">04</div>
+          <h3 class="hizmet-title">Performans Reklam Sistemleri</h3>
+          <p class="hizmet-desc">Google reklam yönetimi ve sosyal medya reklamlarında her kuruşun hesabının verildiği, sürekli optimize edilen stratejiler.</p>
+          <a href="hizmetler.html#reklam" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">05</div>
+          <h3 class="hizmet-title">Ankara Video Prodüksiyon</h3>
+          <p class="hizmet-desc">Marka anlatısını sinematik dille aktaran, stratejik amaçlı kurumsal ve reklam filmleri. İzletmek değil, etkilemek.</p>
+          <a href="hizmetler.html#video" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card hizmet-card-quote">
+          <p class="q-text">"Tek bir sistemle değil,<br>entegre bir yapıyla büyürsünüz."</p>
+          <p class="q-src">— Cefu Dijital Yaklaşımı</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SÜREÇ ══ -->
+  <section id="surec" aria-labelledby="surec-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Süreç</span>
+      <h2 class="section-title reveal" id="surec-heading">Nasıl <em>Çalışırız</em></h2>
+      <p class="section-lead reveal">Belirsizlik yoktur. Her adım şeffaf, ölçülebilir ve hedefe yönelik şekilde yürütülür.</p>
+      <div class="surec-grid reveal">
+        <div class="surec-step">
+          <div class="surec-num">01</div>
+          <h3 class="surec-title">Başvuru</h3>
+          <p class="surec-desc">Kısa başvuru formu ile markanızı tanıyoruz. Nerede olduğunuzu, nereye gitmek istediğinizi ve büyümeye ne kadar hazır olduğunuzu analiz ediyoruz.</p>
+          <div class="surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="surec-step">
+          <div class="surec-num">02</div>
+          <h3 class="surec-title">Stratejik Değerlendirme</h3>
+          <p class="surec-desc">Stratejik uyum analizi yapıyoruz. Birlikte çalışmanın her iki taraf için de gerçek değer yaratacağına emin olduğumuzda özel büyüme planınızı hazırlıyoruz.</p>
+          <div class="surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="surec-step">
+          <div class="surec-num">03</div>
+          <h3 class="surec-title">Uygulama & Büyüme</h3>
+          <p class="surec-desc">Veriye dayalı, sonuç odaklı sistemleri devreye alıyoruz. Aylık raporlar ve düzenli strateji toplantılarıyla şeffaf bir ortaklık yürütüyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CASE PREVIEW ══ -->
+  <section id="case-preview" aria-labelledby="case-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Başarı Hikayeleri</span>
+      <h2 class="section-title reveal" id="case-heading">Sonuçlar <em>Konuşuyor</em></h2>
+      <div class="case-grid">
+        <article class="case-card reveal reveal-delay-1">
+          <div class="case-industry">E-Ticaret / Moda</div>
+          <div class="case-client">Luxe Butik</div>
+          <div class="case-result"><span>+</span>312<span>%</span></div>
+          <div class="case-metric">Organik Trafik Büyümesi — 8 Ay</div>
+          <p class="case-desc">Organik Büyüme Sistemi ve Marka Büyütme Stratejisi entegrasyonuyla rekabetçi segmentte dijital hakimiyet kuruldu.</p>
+        </article>
+        <article class="case-card reveal reveal-delay-2">
+          <div class="case-industry">Profesyonel Hizmetler</div>
+          <div class="case-client">Apex Hukuk Bürosu</div>
+          <div class="case-result"><span>+</span>4.7<span>x</span></div>
+          <div class="case-metric">Nitelikli Müşteri Adayı — 6 Ay</div>
+          <p class="case-desc">Dönüşüm Odaklı Web Sistemi ve Performans Reklam Sistemleri kombinasyonuyla yüksek değerli müvekkil edinimi dramatik biçimde arttı.</p>
+        </article>
+        <article class="case-card reveal reveal-delay-3">
+          <div class="case-industry">Gayrimenkul</div>
+          <div class="case-client">Prestige Yapı</div>
+          <div class="case-result"><span>+</span>218<span>%</span></div>
+          <div class="case-metric">Dijital Satış Kanalı Büyümesi — 1 Yıl</div>
+          <p class="case-desc">Premium Video Prodüksiyon ve entegre dijital strateji ile markanın premium konumu pekişti; satış döngüsü kısaldı.</p>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="case-study.html" class="btn-ghost">Tüm Başarı Hikâyeleri</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SEÇİCİLİK ══ -->
+  <section id="secicilik" aria-labelledby="secicilik-heading">
+    <div class="container">
+      <div class="secicilik-inner">
+        <span class="section-eyebrow reveal">Çalışma Felsefemiz</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="secicilik-heading">
+          Her Marka ile<br><em>Çalışmıyoruz.</em>
+        </h2>
+        <p class="section-lead reveal">
+          Sınırlı sayıda marka kabul ediyoruz. Çünkü her müşterimize tam kapasite,
+          derin odak ve gerçek sonuçlar sunmayı taahhüt ediyoruz.
+          Çalıştığımız markalar bizi seçmiyor — biz de onları seçiyoruz.
+        </p>
+        <div class="criteria-tags reveal">
+          <span class="criteria-tag">Büyüme Vizyonu</span>
+          <span class="criteria-tag">Uzun Vadeli Düşünce</span>
+          <span class="criteria-tag">Ölçeklenebilir Model</span>
+          <span class="criteria-tag">Premium Segment</span>
+          <span class="criteria-tag">Sonuç Odaklı Yönetim</span>
+        </div>
+        <div class="reveal">
+          <div class="badge-open">
+            <span class="badge-dot"></span>
+            Şu An: 2 Açık Pozisyon
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ BLOG PLACEHOLDER ══ -->
+  <section id="blog" aria-labelledby="blog-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">İçgörüler</span>
+      <h2 class="section-title reveal" id="blog-heading">Dijital <em>Büyüme Blogu</em></h2>
+      <p class="section-lead reveal">Ankara dijital pazarlama, SEO ve marka büyütme üzerine içgörüler ve stratejik analizler.</p>
+      <div class="blog-grid">
+        <article class="blog-card reveal reveal-delay-1">
+          <div class="blog-cat">SEO Stratejisi</div>
+          <h3 class="blog-title">Ankara'da SEO ile Rakiplerinizi Geride Bırakmanın 5 Yolu</h3>
+          <p class="blog-excerpt">Yerel SEO stratejileri ve teknik optimizasyon ile arama motorlarında kalıcı üst sıra hakimiyeti nasıl kurulur?</p>
+          <a href="#" class="blog-link">Okumaya Devam Et →</a>
+        </article>
+        <article class="blog-card reveal reveal-delay-2">
+          <div class="blog-cat">Dijital Reklamcılık</div>
+          <h3 class="blog-title">Google Reklam Bütçenizi %40 Daha Verimli Kullanmanın Yolları</h3>
+          <p class="blog-excerpt">Performans reklam sistemlerinde bütçe optimizasyonu ve dönüşüm odaklı kampanya yapılandırması üzerine stratejik bir rehber.</p>
+          <a href="#" class="blog-link">Okumaya Devam Et →</a>
+        </article>
+        <article class="blog-card reveal reveal-delay-3">
+          <div class="blog-cat">Marka Stratejisi</div>
+          <h3 class="blog-title">Premium Marka Hakimiyeti: Dijitalde Otorite Nasıl İnşa Edilir?</h3>
+          <p class="blog-excerpt">Üst segment markalar için ölçeklenebilir dijital hakimiyet sistemleri ve uzun vadeli büyüme mimarisi.</p>
+          <a href="#" class="blog-link">Okumaya Devam Et →</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section id="cta-basvuru" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-eyebrow reveal">Bir Sonraki Adım</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="cta-heading">
+          Bizimle Çalışmak<br>İçin <em>Başvurun</em>
+        </h2>
+        <p class="section-lead reveal">
+          Markanızın büyüme potansiyelini değerlendirmek için ücretsiz bir strateji görüşmesi talep edin.
+          Yükümlülük yok. Gereksiz sunum yok.
+        </p>
+        <div class="cta-actions reveal">
+          <a href="iletisim.html" class="btn-gold">Başvuru Yap</a>
+          <a href="tel:05511367634" class="btn-outline-white">0551 136 76 34</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Üst segment markalar için ölçeklenebilir dijital büyüme sistemleri. Ankara merkezli, Türkiye genelinde hizmet.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · SEO hizmeti · Google reklam yönetimi · Web sitesi tasarımı · Video prodüksiyon Ankara</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html">Başvuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links" aria-label="Sosyal Medya">
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+        <a href="#" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" rel="noopener noreferrer">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+
+  // Mobile menu
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>

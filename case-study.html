@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Case Study — Cefu Dijital | Dijital Büyüme Başarı Hikayeleri</title>
+  <meta name="description" content="Cefu Dijital case study: %312 organik trafik artışı, 4.7x müşteri adayı büyümesi. Ankara SEO, Google reklam ve dijital pazarlama başarı hikayeleri." />
+  <meta name="keywords" content="dijital pazarlama case study, SEO başarı hikayesi, Ankara dijital ajans sonuçlar, Cefu Dijital referanslar" />
+  <link rel="canonical" href="https://www.cefudigital.com/case-study.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .page-hero {
+      padding: 160px 40px 100px;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-hero .section-title { font-size: clamp(2.2rem, 5vw, 4rem); }
+    .page-hero .section-lead { max-width: 560px; margin: 0 auto; text-align: center; }
+
+    /* MEGA STATS */
+    #mega-stats { background: var(--ink); padding: 80px 0; }
+    .mega-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.05); }
+    .mega-stat { padding: 52px 36px; text-align: center; }
+    .mega-num { font-family: var(--font-display); font-size: clamp(2.4rem,4vw,3.4rem); font-weight: 700; color: var(--white); line-height: 1; }
+    .mega-num span { color: var(--gold); }
+    .mega-lbl { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.38); margin-top: 10px; }
+
+    /* CASE CARDS */
+    #hikayeler { background: var(--white); }
+    .case-full { margin-bottom: 1px; background: var(--white); border: 1px solid var(--border-light); transition: border-color 0.4s; }
+    .case-full:hover { border-color: var(--border); }
+    .case-full-inner { display: grid; grid-template-columns: 280px 1fr; }
+    .case-sidebar {
+      background: var(--off-white); padding: 52px 40px;
+      border-right: 1px solid var(--border-light);
+      display: flex; flex-direction: column; justify-content: space-between;
+    }
+    .case-industry { font-size: 0.63rem; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .case-client-name { font-family: var(--font-display); font-size: 1.15rem; font-weight: 500; color: var(--ink); line-height: 1.3; margin-bottom: 24px; }
+    .case-big-num { font-family: var(--font-display); font-size: 3.2rem; font-weight: 700; color: var(--ink); line-height: 1; }
+    .case-big-num span { color: var(--gold); }
+    .case-metric-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-top: 8px; }
+    .case-period { font-size: 0.75rem; color: var(--ink-faint); margin-top: 24px; }
+
+    .case-body { padding: 52px 52px; }
+    .case-body-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--ink); margin-bottom: 20px; }
+    .case-body-text { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: var(--ink-soft); line-height: 1.9; margin-bottom: 16px; }
+    .case-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 24px; }
+    .case-tag { font-size: 0.63rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-mid); border: 1px solid var(--border); padding: 7px 16px; }
+
+    /* CHART VISUAL */
+    .chart-area { background: var(--cream); border: 1px solid var(--border); padding: 36px; margin-top: 28px; }
+    .chart-title { font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-soft); margin-bottom: 20px; }
+    .chart-bars { display: flex; align-items: flex-end; gap: 8px; height: 120px; }
+    .chart-bar-wrap { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; }
+    .chart-bar { width: 100%; background: rgba(212,165,55,0.15); border-bottom: 2px solid var(--gold); transition: height 1s ease; border-radius: 1px 1px 0 0; }
+    .chart-bar-label { font-size: 0.6rem; color: var(--ink-faint); text-align: center; white-space: nowrap; }
+
+    /* TESTIMONIAL */
+    #testimonial { background: var(--cream); padding: 100px 0; text-align: center; }
+    .testimonial-quote { font-family: var(--font-serif); font-size: clamp(1.3rem, 2.5vw, 2rem); font-weight: 400; font-style: italic; color: var(--ink); line-height: 1.6; max-width: 760px; margin: 0 auto 28px; }
+    .testimonial-src { font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); }
+
+    /* CTA */
+    .page-cta { background: var(--ink); padding: 100px 0; text-align: center; }
+    .page-cta .section-title { color: var(--white); }
+    .page-cta .section-lead { color: rgba(255,255,255,0.4); max-width: 500px; margin: 0 auto 40px; text-align: center; }
+    .page-cta .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 1024px) {
+      .mega-grid { grid-template-columns: repeat(2,1fr); }
+      .case-full-inner { grid-template-columns: 1fr; }
+      .case-sidebar { border-right: none; border-bottom: 1px solid var(--border-light); }
+    }
+    @media (max-width: 768px) {
+      .page-hero { padding: 130px 22px 72px; }
+      .case-body { padding: 36px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html" class="active">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <div class="page-hero">
+    <span class="section-eyebrow reveal">Başarı Hikayeleri</span>
+    <h1 class="section-title reveal">Sonuçlar <em>Konuşuyor</em></h1>
+    <p class="section-lead reveal">
+      Birlikte büyüdüğümüz markaların dijital dönüşüm hikayeleri.
+      Her rakam, gerçek bir stratejinin, gerçek bir sonucu.
+    </p>
+  </div>
+
+  <!-- MEGA STATS -->
+  <section id="mega-stats" aria-label="Genel Performans İstatistikleri">
+    <div class="container">
+      <div class="mega-grid reveal">
+        <div class="mega-stat">
+          <div class="mega-num"><span>+</span>%200</div>
+          <div class="mega-lbl">Ortalama Trafik Artışı</div>
+        </div>
+        <div class="mega-stat">
+          <div class="mega-num"><span>+</span>%150</div>
+          <div class="mega-lbl">Ortalama Dönüşüm Artışı</div>
+        </div>
+        <div class="mega-stat">
+          <div class="mega-num">3.2<span>x</span></div>
+          <div class="mega-lbl">Ortalama ROI Büyümesi</div>
+        </div>
+        <div class="mega-stat">
+          <div class="mega-num">%94</div>
+          <div class="mega-lbl">Müşteri Devamlılık Oranı</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HİKAYELER -->
+  <section id="hikayeler" aria-labelledby="hikayeler-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Detaylı Vakalar</span>
+      <h2 class="section-title reveal" id="hikayeler-heading">Büyütülen <em>Markalar</em></h2>
+
+      <!-- CASE 1 -->
+      <article class="case-full reveal" aria-label="DecCrane Case Study">
+        <div class="case-full-inner">
+          <div class="case-sidebar">
+            <div>
+              <div class="case-industry">Mühendislik</div>
+              <div class="case-client-name">DecCrane</div>
+            </div>
+            <div>
+              <div class="case-big-num"><span>+</span>312<span>%</span></div>
+              <div class="case-metric-label">Organik Trafik Büyümesi</div>
+              <div class="case-period">Süre: 8 Ay</div>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-body-title">Organik Büyüme ile Pazar Hakimiyeti</h3>
+            <p class="case-body-text">
+              İstanbul merkezli vinç kiralama şirketi DecCrane, dijital görünürlüğünü artırmak ve organik trafikle müşteri adayı üretmek istiyordu. Kapsamlı SEO stratejisi, teknik optimizasyon ve sektör odaklı içerik üretimiyle hedef anahtar kelimelerde hızlı sıralama artışı sağladık.
+            </p>
+            <p class="case-body-text">
+              Hedef anahtar kelimelerde ilk sayfa sıralaması elde edilmesi,
+              dönüşüm optimizasyonu çalışmalarıyla birleşince online satış
+              gelirleri de aynı dönemde %185 büyüme kaydetti.
+            </p>
+            <div class="chart-area" aria-label="Trafik büyüme grafiği">
+              <div class="chart-title">Aylık Organik Trafik Büyümesi (Endeksleme)</div>
+              <div class="chart-bars" id="chart1">
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:20%"></div><div class="chart-bar-label">A1</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:28%"></div><div class="chart-bar-label">A2</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:38%"></div><div class="chart-bar-label">A3</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:50%"></div><div class="chart-bar-label">A4</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:62%"></div><div class="chart-bar-label">A5</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:74%"></div><div class="chart-bar-label">A6</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:88%"></div><div class="chart-bar-label">A7</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:100%"></div><div class="chart-bar-label">A8</div></div>
+              </div>
+            </div>
+            <div class="case-tags">
+              <span class="case-tag">Organik Büyüme / SEO</span>
+              <span class="case-tag">Marka Büyütme</span>
+              <span class="case-tag">İçerik Stratejisi</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 2 -->
+      <article class="case-full reveal" aria-label="Mk Psikoloji Case Study">
+        <div class="case-full-inner">
+          <div class="case-sidebar">
+            <div>
+              <div class="case-industry">Profesyonel Hizmetler / Psikoloji</div>
+              <div class="case-client-name">Mk Psikoloji</div>
+            </div>
+            <div>
+              <div class="case-big-num"><span>+</span>4.7<span>x</span></div>
+              <div class="case-metric-label">Nitelikli Müşteri Adayı</div>
+              <div class="case-period">Süre: 6 Ay</div>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-body-title">Dönüşüm Odaklı Büyüme Sistemi</h3>
+            <p class="case-body-text">
+              Ankara'nın önde gelen psikoloji merkezlerinden Mk Psikoloji, dijital kanallardan yeterli müşteri adayı üretemiyordu. Kullanıcı deneyimi odaklı web tasarımı, hedefli arama reklamları ve remarketing stratejileriyle nitelikli müşteri adayı sayısı 4.7 katına çıkarken müşteri edinim maliyeti %52 düştü.
+            </p>
+            <p class="case-body-text">
+              Kullanıcı deneyimi odaklı web tasarımı, hedefli arama reklamları ve
+              remarketing stratejileriyle nitelikli müşteri adayı sayısı 4.7 katına
+              çıkarken müşteri edinim maliyeti %52 düştü.
+            </p>
+            <div class="chart-area" aria-label="Dönüşüm büyüme grafiği">
+              <div class="chart-title">Aylık Nitelikli Müşteri Adayı Büyümesi (Endeksleme)</div>
+              <div class="chart-bars">
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:18%"></div><div class="chart-bar-label">A1</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:30%"></div><div class="chart-bar-label">A2</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:44%"></div><div class="chart-bar-label">A3</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:58%"></div><div class="chart-bar-label">A4</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:76%"></div><div class="chart-bar-label">A5</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:100%"></div><div class="chart-bar-label">A6</div></div>
+              </div>
+            </div>
+            <div class="case-tags">
+              <span class="case-tag">Web Sistemleri</span>
+              <span class="case-tag">Google Reklam</span>
+              <span class="case-tag">Dönüşüm Optimizasyonu</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- CASE 3 -->
+      <article class="case-full reveal" aria-label="Prestige Yapı Case Study">
+        <div class="case-full-inner">
+          <div class="case-sidebar">
+            <div>
+              <div class="case-industry">Araç / Ticaret</div>
+              <div class="case-client-name">Dynomark Ekspertiz</div>
+            </div>
+            <div>
+              <div class="case-big-num"><span>+</span>218<span>%</span></div>
+              <div class="case-metric-label">Dijital Satış Kanalı Büyümesi</div>
+              <div class="case-period">Süre: 12 Ay</div>
+            </div>
+          </div>
+          <div class="case-body">
+            <h3 class="case-body-title">Premium Video ile Marka Hakimiyeti</h3>
+            <p class="case-body-text">
+              Ordu merkezli araç ekspertiz firması Dynomark, dijital pazarlama yatırımlarından beklediği geri dönüşü alamıyordu. Sinematik kurumsal filmler, hedefli sosyal medya reklamları ve SEO destekli içerik stratejisiyle dijital satış kanalı %218 büyürken satış döngüsü ortalama 3 hafta kısaldı.
+            </p>
+            <p class="case-body-text">
+              Sinematik kurumsal filmler, hedefli sosyal medya reklamları ve
+              SEO destekli içerik stratejisiyle dijital satış kanalı
+              %218 büyürken satış döngüsü ortalama 3 hafta kısaldı.
+            </p>
+            <div class="chart-area" aria-label="Satış büyüme grafiği">
+              <div class="chart-title">Çeyreklik Dijital Müşteri Adayı Büyümesi (Endeksleme)</div>
+              <div class="chart-bars">
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:22%"></div><div class="chart-bar-label">Ç1</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:48%"></div><div class="chart-bar-label">Ç2</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:72%"></div><div class="chart-bar-label">Ç3</div></div>
+                <div class="chart-bar-wrap"><div class="chart-bar" style="height:100%"></div><div class="chart-bar-label">Ç4</div></div>
+              </div>
+            </div>
+            <div class="case-tags">
+              <span class="case-tag">Video Prodüksiyon</span>
+              <span class="case-tag">Performans Reklam</span>
+              <span class="case-tag">SEO</span>
+              <span class="case-tag">Marka Büyütme</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIAL -->
+  <section id="testimonial" aria-label="Müşteri Yorumları">
+    <div class="container">
+      <blockquote class="testimonial-quote reveal">
+        "Cefu Dijital ile çalışmak, bir ajans ilişkisi değil; gerçek bir büyüme ortaklığı.
+        Her ay gelen raporlar değil, her ay gelen sonuçlar bizi farklı kılıyor."
+      </blockquote>
+      <div class="testimonial-src reveal">— Seçkin Marka, Ankara</div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="page-cta">
+    <div class="container">
+      <span class="section-eyebrow reveal" style="color:var(--gold)">Sıradaki Başarı Hikayesi</span>
+      <h2 class="section-title reveal">Markanız <em>Burada Olabilir</em></h2>
+      <p class="section-lead reveal">Büyüme potansiyelinizi değerlendirmek için ücretsiz strateji görüşmesi talep edin.</p>
+      <div class="cta-btns reveal">
+        <a href="iletisim.html" class="btn-gold">Başvuru Yap</a>
+        <a href="hakkimizda.html" class="btn-outline-white">Bizi Daha İyi Tanıyın</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Üst segment markalar için ölçeklenebilir dijital büyüme sistemleri. Ankara merkezli, Türkiye genelinde hizmet.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · SEO hizmeti · Google reklam yönetimi · Web sitesi tasarımı · Video prodüksiyon Ankara</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links"><a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Twitter / X</a></nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+  const hb = document.getElementById('hamburger'); const mm = document.getElementById('mobileMenu'); const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>

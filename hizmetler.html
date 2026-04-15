@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hizmetler — Cefu Dijital | Ankara SEO, Web Tasarım, Google Reklam Ajansı</title>
+  <meta name="description" content="Cefu Dijital hizmetleri: Ankara SEO ajansı, dönüşüm odaklı web sitesi tasarımı, Google reklam yönetimi, marka büyütme stratejisi ve video prodüksiyon." />
+  <meta name="keywords" content="Ankara SEO ajansı, dijital pazarlama ajansı, web sitesi tasarımı, Google reklam yönetimi, video prodüksiyon Ankara, marka büyütme" />
+  <link rel="canonical" href="https://www.cefudigital.com/hizmetler.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE HERO ── */
+    .page-hero {
+      padding: 160px 40px 100px;
+      background: var(--off-white);
+      border-bottom: 1px solid var(--border);
+      text-align: center;
+    }
+    .page-hero .section-title { font-size: clamp(2.2rem, 5vw, 4rem); }
+    .page-hero .section-lead { max-width: 580px; margin: 0 auto; text-align: center; }
+
+    /* ── SERVICE SECTIONS ── */
+    .service-block {
+      padding: 100px 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+    .service-block:nth-child(even) { background: var(--off-white); }
+    .service-inner {
+      display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: center;
+    }
+    .service-block:nth-child(even) .service-inner { direction: rtl; }
+    .service-block:nth-child(even) .service-inner > * { direction: ltr; }
+
+    .service-label {
+      display: inline-flex; align-items: center; gap: 12px;
+      font-size: 0.65rem; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .service-label::before { content: ''; display: block; width: 28px; height: 1px; background: var(--gold); }
+
+    .service-heading { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.4rem); font-weight: 500; letter-spacing: 0.01em; color: var(--ink); line-height: 1.2; margin-bottom: 28px; }
+    .service-heading em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+
+    .service-text { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 300; color: var(--ink-soft); line-height: 1.9; margin-bottom: 18px; }
+
+    .service-features { list-style: none; margin-top: 28px; display: flex; flex-direction: column; gap: 10px; }
+    .service-features li {
+      font-size: 0.83rem; color: var(--ink-mid); padding-left: 20px; position: relative; line-height: 1.6;
+    }
+    .service-features li::before { content: '—'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem; top: 2px; }
+
+    .service-visual {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      aspect-ratio: 4/3;
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    .service-visual img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .service-visual::before {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, transparent 60%, rgba(212,165,55,0.08) 100%);
+    }
+    .service-visual-num {
+      font-family: var(--font-display); font-size: 7rem; font-weight: 700;
+      color: rgba(212,165,55,0.12); line-height: 1; position: relative;
+    }
+    .service-visual-icon {
+      position: absolute; bottom: 28px; right: 28px;
+      font-size: 0.68rem; letter-spacing: 0.18em; text-transform: uppercase;
+      color: var(--gold); border: 1px solid var(--border); padding: 8px 18px;
+    }
+
+    /* CTA STRIP */
+    .cta-strip {
+      background: var(--ink);
+      padding: 80px 0;
+      text-align: center;
+    }
+    .cta-strip .section-title { color: var(--white); margin-bottom: 16px; }
+    .cta-strip .section-lead { color: rgba(255,255,255,0.4); max-width: 500px; margin: 0 auto 40px; text-align: center; }
+    .cta-strip .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 1024px) {
+      .service-inner { grid-template-columns: 1fr; gap: 40px; }
+      .service-block:nth-child(even) .service-inner { direction: ltr; }
+      .service-visual { aspect-ratio: 16/7; }
+    }
+    @media (max-width: 768px) {
+      .page-hero { padding: 130px 22px 72px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html" class="active">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <!-- ── PAGE HERO ── -->
+  <div class="page-hero">
+    <span class="section-eyebrow reveal">Dijital Büyüme Sistemleri</span>
+    <h1 class="section-title reveal">
+      Hizmet Değil,<br><em>Büyüme Sistemi</em>
+    </h1>
+    <p class="section-lead reveal">
+      Ankara'nın seçkin dijital pazarlama ajansı olarak her strateji,
+      markanızın özgün dinamiklerine göre tasarlanır. Hazır şablon yok. Yalnızca sonuç.
+    </p>
+  </div>
+
+  <!-- ── SEO ── -->
+  <section class="service-block" id="seo" aria-labelledby="seo-heading">
+    <div class="container">
+      <div class="service-inner">
+        <div class="reveal">
+          <span class="service-label">01 — SEO</span>
+          <h2 class="service-heading" id="seo-heading">
+            Organik Büyüme <em>Sistemi</em>
+          </h2>
+          <p class="service-text">
+            Cefu Dijital olarak Ankara SEO ajansı uzmanlığıyla markanızı
+            arama motorlarında rakiplerinizin önüne taşıyoruz. Teknik SEO,
+            içerik stratejisi ve otorite inşası üçgeninde sürdürülebilir
+            organik görünürlük sistemleri kuruyoruz.
+          </p>
+          <p class="service-text">
+            Sadece trafik artışı değil, nitelikli ziyaretçi ve dönüşüm
+            odaklı bir yaklaşımla çalışıyoruz. Ankara'da faaliyet gösteren
+            ve Türkiye genelinde büyümeyi hedefleyen markalar için
+            uzun vadeli marka hakimiyeti inşa ediyoruz.
+          </p>
+          <p class="service-text">
+            Arama motoru algoritma değişikliklerine karşı dirençli,
+            etik ve white-hat yöntemlerle kurduğumuz SEO altyapısı
+            markanıza kalıcı bir rekabet avantajı sağlar.
+          </p>
+          <ul class="service-features">
+            <li>Teknik SEO Denetimi &amp; Optimizasyon</li>
+            <li>Anahtar Kelime Araştırması &amp; İçerik Stratejisi</li>
+            <li>Backlink Profili Geliştirme &amp; Otorite İnşası</li>
+            <li>Yerel SEO &amp; Google İşletme Profili Yönetimi</li>
+            <li>Aylık Performans Raporlaması</li>
+          </ul>
+        </div>
+        <div class="service-visual reveal reveal-delay-2 visible">
+          <img src="images/cefu digital web tasarım.jpg" alt="SEO ve dijital pazarlama görseli" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── WEB ── -->
+  <section class="service-block" id="web" aria-labelledby="web-heading">
+    <div class="container">
+      <div class="service-inner">
+        <div class="reveal">
+          <span class="service-label">02 — Web</span>
+          <h2 class="service-heading" id="web-heading">
+            Dönüşüm Odaklı <em>Web Sistemleri</em>
+          </h2>
+          <p class="service-text">
+            Web sitesi tasarımı konusunda estetik kadar işlevsellik de önceliğimizdir.
+            Ziyaretçiyi müşteriye dönüştürmek için psikoloji destekli,
+            performans ölçümlü web mimarileri tasarlıyoruz. Güzel değil, etkili.
+          </p>
+          <p class="service-text">
+            Her web projesi, markanızın dijital büyüme hedefleriyle
+            bütünleşik şekilde planlanır. Kullanıcı deneyimi, dönüşüm
+            optimizasyonu ve teknik performans tek çatı altında yönetilir.
+          </p>
+          <p class="service-text">
+            Ankara'dan Türkiye geneline, kurumsal web sitelerinden
+            e-ticaret platformlarına kadar dijital büyümeyi destekleyen
+            yüksek performanslı web sistemleri kuruyoruz.
+          </p>
+          <ul class="service-features">
+            <li>UI/UX Tasarım &amp; Prototipleme</li>
+            <li>Hız ve Teknik Performans Optimizasyonu</li>
+            <li>SEO Uyumlu Kod Altyapısı</li>
+            <li>Dönüşüm Odaklı Landing Page Tasarımı</li>
+            <li>A/B Testi &amp; Sürekli Optimizasyon</li>
+          </ul>
+        </div>
+        <div class="service-visual reveal reveal-delay-2 visible">
+          <img src="images/cefu digital ankara web tasarım.jpg" alt="Web tasarım hizmeti görseli" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── MARKA ── -->
+  <section class="service-block" id="marka" aria-labelledby="marka-heading">
+    <div class="container">
+      <div class="service-inner">
+        <div class="reveal">
+          <span class="service-label">03 — Dijital Pazarlama</span>
+          <h2 class="service-heading" id="marka-heading">
+            Marka Büyütme <em>Stratejisi</em>
+          </h2>
+          <p class="service-text">
+            Dijital dünyada kalıcı marka hakimiyeti kurmak için entegre
+            içerik, konum ve topluluk büyütme sistemleri geliştiriyoruz.
+            Dijital pazarlama ajansı yaklaşımımızda görünürlük değil,
+            otorite inşası önceliktir.
+          </p>
+          <p class="service-text">
+            Markanızın dijital ekosistemde nasıl algılandığını,
+            rakiplerinizle kıyaslandığında nerede konumlandığını
+            ve nasıl öne çıkabileceğini analiz ederek stratejik bir
+            büyüme yol haritası hazırlıyoruz.
+          </p>
+          <p class="service-text">
+            İçerik pazarlaması, sosyal medya stratejisi ve topluluk
+            yönetimi ile markanızın dijital sesini güçlendiriyor,
+            sektörünüzde düşünce liderliği konumu yaratıyoruz.
+          </p>
+          <ul class="service-features">
+            <li>Marka Konumlandırma &amp; Rekabet Analizi</li>
+            <li>İçerik Pazarlama Stratejisi &amp; Üretimi</li>
+            <li>Sosyal Medya Stratejisi &amp; Yönetimi</li>
+            <li>Influencer &amp; PR Stratejileri</li>
+            <li>Topluluk Büyütme Sistemleri</li>
+          </ul>
+        </div>
+        <div class="service-visual reveal reveal-delay-2 visible">
+          <img src="images/cefu digital marka.jpg" alt="Marka büyütme stratejisi görseli" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REKLAM ── -->
+  <section class="service-block" id="reklam" aria-labelledby="reklam-heading">
+    <div class="container">
+      <div class="service-inner">
+        <div class="reveal">
+          <span class="service-label">04 — Dijital Reklamcılık</span>
+          <h2 class="service-heading" id="reklam-heading">
+            Performans Reklam <em>Sistemleri</em>
+          </h2>
+          <p class="service-text">
+            Google reklam yönetimi ve sosyal medya reklamlarında
+            her kuruşun hesabının verildiği, sürekli optimize edilen
+            ücretli reklam stratejileri geliştiriyoruz. Bütçe değil,
+            verim odaklı dijital hakimiyet.
+          </p>
+          <p class="service-text">
+            Google Ads, Meta Ads ve programatik reklam
+            platformlarında veri odaklı kampanya yönetimiyle
+            reklam harcamalarınızın geri dönüşünü maksimize ediyoruz.
+            Her kampanya, hedef kitlenize özel kurgulanır.
+          </p>
+          <p class="service-text">
+            Reklam performansını izlemek için gelişmiş analitik altyapı
+            kurarak şeffaf raporlama ve sürekli iyileştirme döngüsüyle
+            markanızın dijital büyüme hızını artırıyoruz.
+          </p>
+          <ul class="service-features">
+            <li>Google Ads (Arama, Display, YouTube) Yönetimi</li>
+            <li>Meta Ads (Facebook &amp; Instagram) Kampanyaları</li>
+            <li>Yeniden Pazarlama (Remarketing) Stratejileri</li>
+            <li>Dönüşüm İzleme &amp; Analytics Entegrasyonu</li>
+            <li>Haftalık Performans Optimizasyonu</li>
+          </ul>
+        </div>
+        <div class="service-visual reveal reveal-delay-2 visible">
+          <img src="images/cefu digital dijital pazarlama.jpg" alt="Dijital reklamcılık görseli" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── VIDEO ── -->
+  <section class="service-block" id="video" aria-labelledby="video-heading">
+    <div class="container">
+      <div class="service-inner">
+        <div class="reveal">
+          <span class="service-label">05 — Video Prodüksiyon</span>
+          <h2 class="service-heading" id="video-heading">
+            Ankara Video <em>Prodüksiyon Hizmeti</em>
+          </h2>
+          <p class="service-text">
+            Ankara'da profesyonel video prodüksiyon hizmeti sunarak
+            markanızın hikâyesini sinematik bir dille anlatıyoruz.
+            Kurumsal filmlerden reklam videolarına kadar her projede
+            stratejik amaç ve yaratıcı mükemmellik bir arada.
+          </p>
+          <p class="service-text">
+            Video içerik, dijital büyüme stratejisinin ayrılmaz
+            bir parçasıdır. Her video projesi, markanızın SEO performansına,
+            sosyal medya büyümesine ve dönüşüm oranlarına doğrudan
+            katkı sağlayacak şekilde planlanır.
+          </p>
+          <p class="service-text">
+            Ankara merkezli prodüksiyon ekibimizle ön prodüksiyondan
+            post prodüksiyona kadar tüm süreci yönetiyor,
+            yayınlamaya hazır, yüksek kaliteli video içerikler üretiyoruz.
+          </p>
+          <ul class="service-features">
+            <li>Kurumsal Tanıtım Filmleri</li>
+            <li>Dijital Reklam Videoları (YouTube, Meta, TikTok)</li>
+            <li>Ürün &amp; Hizmet Tanıtım Videoları</li>
+            <li>Etkinlik &amp; Organizasyon Çekimleri</li>
+            <li>Animasyon &amp; Motion Graphics</li>
+          </ul>
+        </div>
+        <div class="service-visual reveal reveal-delay-2 visible">
+          <img src="images/cefu digital ankara video çekim.jpg" alt="Video prodüksiyon hizmeti görseli" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── CTA STRIP ── -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2 class="section-title reveal">Hangi Sistem <em>Size Uygun?</em></h2>
+      <p class="section-lead reveal">Ücretsiz strateji görüşmesinde markanız için en doğru büyüme sistemini birlikte belirleyelim.</p>
+      <div class="cta-btns reveal">
+        <a href="iletisim.html" class="btn-gold">Başvuru Yap</a>
+        <a href="tel:05511367634" class="btn-outline-white">0551 136 76 34</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Üst segment markalar için ölçeklenebilir dijital büyüme sistemleri. Ankara merkezli, Türkiye genelinde hizmet.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · SEO hizmeti · Google reklam yönetimi · Web sitesi tasarımı · Video prodüksiyon Ankara</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links">
+        <a href="#">Instagram</a>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>
