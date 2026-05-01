@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta name="theme-color" content="#0A0A0A" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <title>Ink Lab Tattoo Studio</title>
+  <meta name="description" content="Ink Lab Tattoo Studio — İletişim ve sosyal medya linkleri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IM+Fell+English:ital@0;1&family=Space+Mono&display=swap" rel="stylesheet" />
+
+  <style>
+    /* ══════════════════════════════════
+       RESET & TOKENS
+    ══════════════════════════════════ */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0; padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    :root {
+      --bg:        #0A0A0A;
+      --surface:   #111111;
+      --surface2:  #161616;
+      --border:    rgba(255,255,255,0.07);
+      --border-hover: rgba(255,255,255,0.14);
+      --ink-red:   #C0392B;
+      --ink-red-glow: rgba(192,57,43,0.3);
+      --cream:     #EDE5D4;
+      --cream-dim: rgba(237,229,212,0.5);
+      --cream-faint: rgba(237,229,212,0.1);
+      --display:   'Bebas Neue', cursive;
+      --serif:     'IM Fell English', serif;
+      --mono:      'Space Mono', monospace;
+    }
+
+    html {
+      background: var(--bg);
+      color: var(--cream);
+      font-family: var(--serif);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      min-height: 100svh;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow-x: hidden;
+    }
+
+    /* ══════════════════════════════════
+       ATMOSPHERIC BACKGROUND
+    ══════════════════════════════════ */
+    .bg-layer {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Radial glow top */
+    .bg-layer::before {
+      content: '';
+      position: absolute;
+      top: -10vh; left: 50%;
+      transform: translateX(-50%);
+      width: min(500px, 140vw);
+      height: min(500px, 140vw);
+      background: radial-gradient(ellipse at center,
+        rgba(192,57,43,0.12) 0%,
+        rgba(192,57,43,0.04) 40%,
+        transparent 70%
+      );
+    }
+
+    /* Subtle grain */
+    .bg-layer::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23g)' opacity='0.04'/%3E%3C/svg%3E");
+      opacity: 1;
+    }
+
+    /* ══════════════════════════════════
+       PAGE WRAPPER
+    ══════════════════════════════════ */
+    .page {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 430px;
+      padding: 56px 20px 52px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0;
+    }
+
+    /* ══════════════════════════════════
+       EMBLEM
+    ══════════════════════════════════ */
+    .emblem {
+      width: 96px;
+      height: 96px;
+      margin-bottom: 24px;
+      animation: dropIn 0.9s cubic-bezier(0.22,1,0.36,1) both;
+    }
+
+    .emblem-svg {
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    /* ══════════════════════════════════
+       HEADER TEXT
+    ══════════════════════════════════ */
+    .brand {
+      text-align: center;
+      animation: fadeUp 0.7s 0.15s ease both;
+      margin-bottom: 6px;
+    }
+
+    .brand-name {
+      font-family: var(--display);
+      font-size: clamp(3rem, 18vw, 4rem);
+      letter-spacing: 0.14em;
+      line-height: 0.88;
+      color: var(--cream);
+      text-transform: uppercase;
+    }
+
+    .brand-name .red {
+      color: var(--ink-red);
+      display: inline-block;
+      position: relative;
+    }
+
+    /* ink drip under LAB */
+    .brand-name .red::after {
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 3px;
+      height: 14px;
+      background: linear-gradient(to bottom, var(--ink-red), transparent);
+      border-radius: 0 0 4px 4px;
+    }
+
+    .brand-sub {
+      font-family: var(--mono);
+      font-size: 0.6rem;
+      letter-spacing: 0.38em;
+      text-transform: uppercase;
+      color: var(--cream-dim);
+      margin-top: 16px;
+      display: block;
+    }
+
+    /* ══════════════════════════════════
+       ORNAMENT DIVIDER
+    ══════════════════════════════════ */
+    .orn {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 28px 0 32px;
+      animation: fadeUp 0.7s 0.25s ease both;
+    }
+
+    .orn-line {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(to right,
+        transparent 0%,
+        rgba(237,229,212,0.12) 50%,
+        transparent 100%
+      );
+    }
+
+    .orn-center {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .orn-dot {
+      width: 4px; height: 4px;
+      background: var(--ink-red);
+      border-radius: 50%;
+      opacity: 0.8;
+    }
+
+    .orn-diamond {
+      width: 6px; height: 6px;
+      background: transparent;
+      border: 1px solid rgba(237,229,212,0.25);
+      transform: rotate(45deg);
+    }
+
+    /* ══════════════════════════════════
+       LINK CARDS
+    ══════════════════════════════════ */
+    .links {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card {
+      --c: var(--ink-red);
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 18px 16px 16px;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      text-decoration: none;
+      color: var(--cream);
+      position: relative;
+      overflow: hidden;
+      transition:
+        border-color 0.3s,
+        transform 0.2s cubic-bezier(0.34,1.56,0.64,1),
+        background 0.3s;
+      /* stagger via inline style */
+      animation: slideIn 0.55s ease both;
+      /* prevent text select on tap */
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* left accent bar */
+    .card::before {
+      content: '';
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 3px;
+      background: var(--c);
+      transform: scaleY(0);
+      transform-origin: bottom;
+      transition: transform 0.35s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    /* hover fill */
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--c);
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+
+    .card:hover,
+    .card:focus-visible {
+      border-color: var(--border-hover);
+      transform: translateY(-2px) translateX(3px);
+      background: var(--surface2);
+    }
+
+    .card:hover::before { transform: scaleY(1); }
+    .card:hover::after  { opacity: 0.05; }
+
+    .card:active {
+      transform: scale(0.98) translateX(1px);
+      transition: transform 0.1s;
+    }
+
+    /* ── ICON ── */
+    .card-icon {
+      width: 42px;
+      height: 42px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      position: relative;
+      z-index: 1;
+      transition: border-color 0.3s;
+    }
+
+    .card:hover .card-icon {
+      border-color: rgba(255,255,255,0.1);
+    }
+
+    .card-icon svg {
+      width: 20px;
+      height: 20px;
+      fill: var(--c);
+      transition: transform 0.35s cubic-bezier(0.34,1.56,0.64,1);
+    }
+
+    .card:hover .card-icon svg {
+      transform: scale(1.15);
+    }
+
+    /* ── TEXT ── */
+    .card-body {
+      flex: 1;
+      min-width: 0;
+      position: relative;
+      z-index: 1;
+    }
+
+    .card-platform {
+      font-family: var(--mono);
+      font-size: 0.52rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--c);
+      opacity: 0.75;
+      display: block;
+      margin-bottom: 3px;
+    }
+
+    .card-label {
+      font-family: var(--display);
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+      color: var(--cream);
+      line-height: 1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    /* ── ARROW ── */
+    .card-arrow {
+      position: relative;
+      z-index: 1;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      opacity: 0.35;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .card-arrow svg {
+      width: 16px;
+      height: 16px;
+      stroke: var(--cream);
+      fill: none;
+      stroke-width: 1.5;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .card:hover .card-arrow {
+      opacity: 0.9;
+      transform: translateX(4px);
+    }
+
+    /* ── CARD ACCENT COLORS ── */
+    .c-ig       { --c: #E1306C; }
+    .c-mail     { --c: #E8E0D0; }
+    .c-snap     { --c: #FFFC00; }
+    .c-fb       { --c: #4C8BF5; }
+    .c-maps     { --c: #34A853; }
+
+    /* ══════════════════════════════════
+       FOOTER
+    ══════════════════════════════════ */
+    .foot {
+      margin-top: 40px;
+      text-align: center;
+      animation: fadeUp 0.6s 0.9s ease both;
+    }
+
+    .foot-logo {
+      font-family: var(--display);
+      font-size: 0.85rem;
+      letter-spacing: 0.22em;
+      color: rgba(237,229,212,0.2);
+      text-transform: uppercase;
+    }
+
+    .foot-logo span { color: rgba(192,57,43,0.4); }
+
+    .foot-copy {
+      font-family: var(--mono);
+      font-size: 0.5rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(237,229,212,0.12);
+      margin-top: 6px;
+    }
+
+    /* ══════════════════════════════════
+       ANIMATIONS
+    ══════════════════════════════════ */
+    @keyframes dropIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px) scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideIn {
+      from { opacity: 0; transform: translateX(-14px); }
+      to   { opacity: 1; transform: translateX(0); }
+    }
+
+    /* ══════════════════════════════════
+       TOUCH RIPPLE
+    ══════════════════════════════════ */
+    .ripple-el {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(237,229,212,0.1);
+      animation: rippleAnim 0.55s ease-out forwards;
+      pointer-events: none;
+      z-index: 10;
+    }
+
+    @keyframes rippleAnim {
+      from { transform: scale(0); opacity: 1; }
+      to   { transform: scale(5); opacity: 0; }
+    }
+
+    /* ══════════════════════════════════
+       DESKTOP — keep it centered
+    ══════════════════════════════════ */
+    @media (min-width: 500px) {
+      .page { padding-top: 72px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="bg-layer" aria-hidden="true"></div>
+
+<main class="page">
+
+  <!-- ── EMBLEM ── -->
+  <div class="emblem" aria-hidden="true">
+    <svg class="emblem-svg" viewBox="0 0 96 96" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <!-- outer rings -->
+      <circle cx="48" cy="48" r="46" stroke="rgba(237,229,212,0.08)" stroke-width="1"/>
+      <circle cx="48" cy="48" r="38" stroke="rgba(237,229,212,0.04)" stroke-width="0.5"/>
+
+      <!-- ink drop body -->
+      <path d="M48 16 C48 16 30 36 30 50 C30 60.5 38.06 69 48 69 C57.94 69 66 60.5 66 50 C66 36 48 16 48 16Z"
+            fill="rgba(192,57,43,0.15)"
+            stroke="#C0392B"
+            stroke-width="1.2"
+            stroke-linejoin="round"/>
+
+      <!-- inner highlight -->
+      <ellipse cx="43" cy="43" rx="4" ry="7"
+               fill="rgba(237,229,212,0.08)"
+               transform="rotate(-20 43 43)"/>
+
+      <!-- needle stem -->
+      <line x1="48" y1="69" x2="48" y2="82"
+            stroke="rgba(237,229,212,0.3)"
+            stroke-width="1.8"
+            stroke-linecap="round"/>
+
+      <!-- needle tip -->
+      <polygon points="44,82 52,82 48,88"
+               fill="rgba(237,229,212,0.2)"
+               stroke="rgba(237,229,212,0.3)"
+               stroke-width="0.5"/>
+
+      <!-- horizontal ticks -->
+      <line x1="12" y1="48" x2="20" y2="48" stroke="rgba(192,57,43,0.45)" stroke-width="1" stroke-linecap="round"/>
+      <line x1="76" y1="48" x2="84" y2="48" stroke="rgba(192,57,43,0.45)" stroke-width="1" stroke-linecap="round"/>
+
+      <!-- small corner diamonds -->
+      <rect x="21" y="21" width="5" height="5"
+            fill="transparent"
+            stroke="rgba(237,229,212,0.15)"
+            stroke-width="0.8"
+            transform="rotate(45 23.5 23.5)"/>
+      <rect x="70" y="21" width="5" height="5"
+            fill="transparent"
+            stroke="rgba(237,229,212,0.15)"
+            stroke-width="0.8"
+            transform="rotate(45 72.5 23.5)"/>
+    </svg>
+  </div>
+
+  <!-- ── BRAND NAME ── -->
+  <header class="brand">
+    <h1 class="brand-name">
+      INK <span class="red">LAB</span>
+    </h1>
+    <span class="brand-sub">Tattoo Studio</span>
+  </header>
+
+  <!-- ── ORNAMENT ── -->
+  <div class="orn" aria-hidden="true">
+    <div class="orn-line"></div>
+    <div class="orn-center">
+      <div class="orn-dot"></div>
+      <div class="orn-diamond"></div>
+      <div class="orn-dot"></div>
+    </div>
+    <div class="orn-line"></div>
+  </div>
+
+  <!-- ── LINKS ── -->
+  <nav class="links" aria-label="Sosyal medya ve iletişim">
+
+    <!-- Instagram -->
+    <a class="card c-ig"
+       href="https://instagram.com/inklabtattoo"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="animation-delay:0.25s"
+       aria-label="Instagram sayfamız">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="card-platform">Instagram</span>
+        <span class="card-label">@inklabtattoo</span>
+      </div>
+      <div class="card-arrow">
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </div>
+    </a>
+
+    <!-- Mail -->
+    <a class="card c-mail"
+       href="mailto:info@inklab.com"
+       style="animation-delay:0.35s"
+       aria-label="E-posta gönder">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="card-platform">E-posta</span>
+        <span class="card-label">info@inklab.com</span>
+      </div>
+      <div class="card-arrow">
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </div>
+    </a>
+
+    <!-- Snapchat -->
+    <a class="card c-snap"
+       href="https://snapchat.com/add/inklabtattoo"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="animation-delay:0.45s"
+       aria-label="Snapchat">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12.206.793c.99 0 4.347.276 5.93 3.821.529 1.193.403 3.219.299 4.847l-.003.06c-.012.18-.022.345-.03.51.075.045.203.09.401.09.3-.016.659-.12 1.033-.301.165-.088.344-.104.464-.104.182 0 .359.029.509.09.45.149.734.479.734.838.015.449-.39.839-1.213 1.168-.089.029-.209.075-.344.119-.45.135-1.139.36-1.333.81-.09.224-.061.524.12.868l.015.015c.06.136 1.526 3.475 4.791 4.014.255.044.435.27.42.509 0 .075-.015.149-.045.225-.24.569-1.273.988-3.146 1.271-.059.091-.12.375-.164.57-.029.179-.074.36-.134.553-.076.271-.27.405-.555.405h-.03c-.135 0-.313-.031-.538-.074-.36-.075-.765-.135-1.273-.135-.3 0-.599.015-.913.074-.6.104-1.123.464-1.723.884-.853.599-1.826 1.288-3.294 1.288-.06 0-.119-.015-.18-.015h-.149c-1.468 0-2.427-.675-3.279-1.288-.6-.42-1.107-.779-1.707-.884-.314-.045-.629-.074-.928-.074-.54 0-.958.089-1.272.149-.211.043-.391.074-.54.074-.299 0-.465-.135-.554-.42-.061-.192-.09-.389-.135-.567-.046-.181-.105-.494-.166-.57-1.918-.222-2.95-.642-3.189-1.226-.031-.063-.052-.15-.055-.225-.015-.243.165-.465.42-.509 3.264-.54 4.73-3.878 4.791-4.014l.016-.029c.18-.345.21-.645.119-.869-.195-.45-.884-.674-1.333-.809-.135-.045-.255-.09-.345-.12C.561 11.547.15 11.157.165 10.693c0-.359.284-.689.749-.838.149-.061.313-.09.495-.09.12 0 .3.016.464.104.375.181.733.285 1.034.301.197 0 .326-.045.401-.09l-.031-.51c-.105-1.629-.231-3.654.3-4.847C4.921 1.069 8.278.793 9.267.793h.046z"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="card-platform">Snapchat</span>
+        <span class="card-label">inklabtattoo</span>
+      </div>
+      <div class="card-arrow">
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </div>
+    </a>
+
+    <!-- Facebook -->
+    <a class="card c-fb"
+       href="https://facebook.com/inklabtattoo"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="animation-delay:0.55s"
+       aria-label="Facebook sayfamız">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="card-platform">Facebook</span>
+        <span class="card-label">Ink Lab Tattoo</span>
+      </div>
+      <div class="card-arrow">
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </div>
+    </a>
+
+    <!-- Google Maps -->
+    <a class="card c-maps"
+       href="https://maps.google.com/?q=Ink+Lab+Tattoo+Studio"
+       target="_blank"
+       rel="noopener noreferrer"
+       style="animation-delay:0.65s"
+       aria-label="Google Maps'te bul">
+      <div class="card-icon">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+        </svg>
+      </div>
+      <div class="card-body">
+        <span class="card-platform">Google Maps</span>
+        <span class="card-label">Bizi Bul</span>
+      </div>
+      <div class="card-arrow">
+        <svg viewBox="0 0 16 16"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </div>
+    </a>
+
+  </nav>
+
+  <!-- ── FOOTER ── -->
+  <footer class="foot">
+    <div class="foot-logo">INK <span>LAB</span></div>
+    <div class="foot-copy">© 2025 Ink Lab Tattoo Studio</div>
+  </footer>
+
+</main>
+
+<script>
+  // Touch ripple effect
+  document.querySelectorAll('.card').forEach(card => {
+    card.addEventListener('pointerdown', function(e) {
+      const rect = this.getBoundingClientRect();
+      const size = 60;
+      const x = e.clientX - rect.left - size / 2;
+      const y = e.clientY - rect.top  - size / 2;
+      const r = document.createElement('span');
+      r.className = 'ripple-el';
+      r.style.cssText = `width:${size}px;height:${size}px;left:${x}px;top:${y}px`;
+      this.appendChild(r);
+      setTimeout(() => r.remove(), 600);
+    });
+  });
+</script>
+
+</body>
+</html>
