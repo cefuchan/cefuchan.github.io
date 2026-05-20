@@ -267,6 +267,56 @@
             background: #fff;
         }
 
+        .topics-table-wrapper {
+            background: white;
+            padding: 35px 30px;
+            border-radius: 20px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.06);
+            margin-bottom: 50px;
+        }
+
+        .topics-table-wrapper .table-description {
+            color: var(--text-light);
+            margin-top: 12px;
+            margin-bottom: 25px;
+            line-height: 1.75;
+            font-size: 1rem;
+        }
+
+        .table-scroll {
+            overflow-x: auto;
+        }
+
+        .topics-table {
+            width: 100%;
+            border-collapse: collapse;
+            min-width: 680px;
+        }
+
+        .topics-table th,
+        .topics-table td {
+            text-align: left;
+            padding: 18px 20px;
+            border-bottom: 1px solid #eee;
+            font-size: 1rem;
+        }
+
+        .topics-table th {
+            background: var(--secondary-color);
+            color: white;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .topics-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+
+        .topics-table td:first-child {
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
         .blog-content {
             display: grid;
             grid-template-columns: 2fr 1fr;
@@ -871,6 +921,65 @@
                 width: 100%;
                 height: 200px;
             }
+
+            .topics-table-wrapper {
+                padding: 25px 20px;
+            }
+
+            .topics-table {
+                display: block;
+                width: 100%;
+                min-width: 0;
+            }
+
+            .topics-table thead,
+            .topics-table tbody,
+            .topics-table th,
+            .topics-table td,
+            .topics-table tr {
+                display: block;
+            }
+
+            .topics-table thead tr {
+                position: absolute;
+                top: -9999px;
+                left: -9999px;
+            }
+
+            .topics-table tr {
+                margin-bottom: 18px;
+                border: 1px solid #eee;
+                border-radius: 15px;
+                overflow: hidden;
+            }
+
+            .topics-table td {
+                border: none;
+                padding: 14px 18px;
+                position: relative;
+                padding-left: 50%;
+                text-align: left;
+                background: #fff;
+            }
+
+            .topics-table td:before {
+                position: absolute;
+                top: 14px;
+                left: 18px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                font-weight: 700;
+                color: var(--text-dark);
+            }
+
+            .topics-table td:nth-of-type(1):before {
+                content: 'Başlık';
+            }
+
+            .topics-table td:nth-of-type(2):before {
+                content: 'İçerik Alanı';
+            }
         }
     </style>
 </head>
@@ -939,6 +1048,66 @@
         <!-- Blog Section -->
         <section class="blog-section">
             <div class="container">
+                <div class="topics-table-wrapper" data-aos="fade-up">
+                    <h3 class="widget-title">Ankara İçin Popüler Başlıklar</h3>
+                    <p class="table-description">Bu başlıklar, Ankara’da web tasarım, SEO ve dijital pazarlama aramalarında öne çıkan konuları hızlıca gösterir.</p>
+                    <div class="table-scroll">
+                        <table class="topics-table">
+                            <thead>
+                                <tr>
+                                    <th>Başlık</th>
+                                    <th>İçerik Alanı</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Ankara web tasarım fiyatları</td>
+                                    <td>Yerel web tasarım paketleri ve maliyet karşılaştırması</td>
+                                </tr>
+                                <tr>
+                                    <td>SEO nedir ankarada SEO yapan firmalar</td>
+                                    <td>Ankara’da SEO hizmeti sunan uzman ajanslar ve faydaları</td>
+                                </tr>
+                                <tr>
+                                    <td>Aramalarda üste çıkmak istiyorum</td>
+                                    <td>Organik arama sonuçlarında görünürlüğü artırma stratejileri</td>
+                                </tr>
+                                <tr>
+                                    <td>Ankarada dijital pazarlama fiyatları</td>
+                                    <td>Dijital kampanya maliyetleri ve hizmet seçenekleri</td>
+                                </tr>
+                                <tr>
+                                    <td>Ankara SEO ajansları hangileri</td>
+                                    <td>Bölgedeki güvenilir SEO ajansları ve karşılaştırma</td>
+                                </tr>
+                                <tr>
+                                    <td>SEO fiyatları Ankara</td>
+                                    <td>Ankara’da SEO yatırımı için fiyat aralığı ve paket önerileri</td>
+                                </tr>
+                                <tr>
+                                    <td>Ankara’da e-ticaret satışlarını artırmanın yolları</td>
+                                    <td>Yerel e-ticaret için dönüşüm odaklı satış stratejileri</td>
+                                </tr>
+                                <tr>
+                                    <td>Ankara yerel müşteriye dönüştüren SEO stratejileri</td>
+                                    <td>Satış hedefli yerel SEO taktikleri ve dönüşüm iyileştirme</td>
+                                </tr>
+                                <tr>
+                                    <td>Ankara web tasarımında satış odaklı dönüşüm optimizasyonu</td>
+                                    <td>Ziyaretçiyi müşteriye çevirmek için site tasarımının gücü</td>
+                                </tr>
+                                <tr>
+                                    <td>Google Ads ile Ankara’da satış kampanyası</td>
+                                    <td>Reklam bütçesini satışa dönüştürmenin öne çıkan yöntemleri</td>
+                                </tr>
+                                <tr>
+                                    <td>Ankara'da dijital pazarlama ile satış potansiyelini artırmak</td>
+                                    <td>Yerel satış hedeflerini yükselten dijital pazarlama kombinasyonları</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
                 <div class="blog-content">
                     <div class="blog-posts">
                         <!-- Blog Post 1 -->
@@ -1092,6 +1261,28 @@
                                         <span class="category-count">7</span>
                                     </a>
                                 </li>
+                            </ul>
+                        </div>
+
+                        <div class="sidebar-widget" data-aos="fade-up" data-aos-delay="250">
+                            <h3 class="widget-title">Ankara Yazıları</h3>
+                            <ul class="categories-list">
+                                <li><a href="blog/ankara-web-tasarim-fiyatlari.html">Ankara web tasarım fiyatları</a></li>
+                                <li><a href="blog/seo-nedir-ankarada-seo-yapan-firmalar.html">SEO nedir Ankara'da SEO yapan firmalar</a></li>
+                                <li><a href="blog/aramalarda-uste-cikmak-istiyorum.html">Aramalarda üste çıkmak istiyorum</a></li>
+                                <li><a href="blog/ankarada-dijital-pazarlama-fiyatlari.html">Ankara'da dijital pazarlama fiyatları</a></li>
+                                <li><a href="blog/ankara-seo-ajanslari-hangileri.html">Ankara SEO ajansları hangileri</a></li>
+                                <li><a href="blog/seo-fiyatlari-ankara.html">SEO fiyatları Ankara</a></li>
+                                <li><a href="blog/ankara-e-ticaret-satislarini-artirmanin-yollari.html">Ankara’da e-ticaret satışlarını artırmanın yolları</a></li>
+                                <li><a href="blog/ankara-yerel-musteriye-donusturen-seo-stratejileri.html">Ankara yerel müşteriye dönüştüren SEO stratejileri</a></li>
+                                <li><a href="blog/ankara-web-tasariminda-satis-odakli-donusum-optimizasyonu.html">Ankara web tasarımında satış odaklı dönüşüm optimizasyonu</a></li>
+                                <li><a href="blog/google-ads-ile-ankara-satis-kampanyasi.html">Google Ads ile Ankara’da satış kampanyası</a></li>
+                                <li><a href="blog/ankara-dijital-pazarlama-ile-satislari-2x-artirmak.html">Ankara'da dijital pazarlama ile satışları 2x artırmak</a></li>
+                                <li><a href="blog/ankara-sosyal-medya-ile-satis-artirma.html">Ankara'da sosyal medya ile satış artırma taktikleri</a></li>
+                                <li><a href="blog/ankara-e-posta-pazarlama-tekrar-satis.html">Ankara için e-posta pazarlaması ile tekrar satış stratejileri</a></li>
+                                <li><a href="blog/ankara-lokal-seo-magaza-trafigi.html">Ankara mağazaları için lokal SEO ve mağaza trafiği</a></li>
+                                <li><a href="blog/ankara-teklif-sayfasi-donusum-optimizasyonu.html">Ankara hedefli teklif sayfalarıyla dönüşümleri artırma</a></li>
+                                <li><a href="blog/ankara-referanslarla-guven-kazanma.html">Ankara referansları ve vaka çalışmaları ile güven kazanma</a></li>
                             </ul>
                         </div>
 

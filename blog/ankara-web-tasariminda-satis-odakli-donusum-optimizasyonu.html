@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="tr" itemscope itemtype="https://schema.org/BlogPosting">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ankara Web Tasarımında Satış Odaklı Dönüşüm Optimizasyonu | CefuDigital</title>
+    <meta name="description" content="Ankara web tasarım projelerinde dönüşümü artıran UX ve tasarım stratejileri. Satış odaklı site tasarımı, hız ve kullanıcı deneyimi.">
+    <meta name="keywords" content="Ankara web tasarım, dönüşüm optimizasyonu, satış odaklı tasarım, UX, dijital satışlar">
+    <meta name="author" content="CefuDigital">
+    <meta name="robots" content="index, follow">
+
+    <link rel="shortcut icon" href="/img/favicon svg.svg" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root { --primary-color:#f8f9fa; --secondary-color:#212529; --accent-color:#c9a55c; --text-dark:#333; --text-light:#777; --transition:all .4s cubic-bezier(.4,0,.2,1); --font-heading:'Playfair Display',serif; --font-body:'Poppins',sans-serif; }
+        *{margin:0;padding:0;box-sizing:border-box;}
+        body{font-family:var(--font-body);background:var(--primary-color);color:var(--text-dark);line-height:1.75;overflow-x:hidden;}
+        h1,h2,h3,h4,h5,h6{font-family:var(--font-heading);font-weight:500;}
+        .container{max-width:1400px;margin:0 auto;padding:0 20px;}
+        a{color:inherit;text-decoration:none;}
+        .btn{display:inline-flex;align-items:center;justify-content:center;padding:15px 32px;font-size:.95rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:var(--transition);}
+        .btn-primary{background:var(--accent-color);color:white;border:1px solid var(--accent-color);} .btn-primary:hover{background:transparent;color:var(--accent-color);}
+        header{position:fixed;top:0;width:100%;z-index:1000;background:rgba(255,255,255,.96);backdrop-filter:blur(10px);box-shadow:0 2px 12px rgba(0,0,0,.06);} nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0;} .logo{font-family:var(--font-heading);font-size:30px;font-weight:700;letter-spacing:1px;} .logo span{color:var(--accent-color);} .nav-links{display:flex;gap:35px;list-style:none;align-items:center;} .nav-links a{font-size:.95rem;font-weight:500;text-transform:uppercase;color:var(--text-dark);transition:var(--transition);} .nav-links a.active,.nav-links a:hover{color:var(--accent-color);} .mobile-menu{display:none;flex-direction:column;gap:4px;cursor:pointer;} .mobile-menu span{width:26px;height:3px;background:var(--text-dark);border-radius:2px;}
+        .page-header{padding:180px 0 100px;text-align:center;position:relative;background:linear-gradient(135deg,#f8f9fa 0%,#e9ecef 100%);} .page-header::before{content:'';position:absolute;inset:0;background:url('/placeholder.svg?height=600&width=1920') center/cover no-repeat;opacity:.05;} .page-header-content{position:relative;z-index:1;} .post-category-badge{display:inline-block;background:var(--accent-color);color:white;padding:8px 18px;font-size:.85rem;text-transform:uppercase;border-radius:25px;margin-bottom:22px;} .page-header h1{font-size:clamp(2.5rem,5vw,4rem);color:var(--text-dark);line-height:1.1;margin-bottom:20px;} .page-header p{color:var(--text-light);font-size:1.2rem;max-width:760px;margin:0 auto;} .breadcrumb{margin-top:25px;display:flex;justify-content:center;gap:12px;font-size:.95rem;color:var(--text-light);} .breadcrumb a:hover{color:var(--accent-color);}
+        .blog-section{padding:120px 0 80px;background:#fff;} .blog-content{display:grid;grid-template-columns:2fr 1fr;gap:60px;} .post-article{background:white;border-radius:20px;overflow:hidden;box-shadow:0 16px 40px rgba(0,0,0,.08);} .post-cover{background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:white;padding:70px 35px 60px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;position:relative;} .post-cover h2{font-size:clamp(2.4rem,4vw,3.5rem);margin-bottom:20px;line-height:1.05;} .post-cover p{max-width:760px;color:rgba(255,255,255,.82);line-height:1.8;} .post-cover-label{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);background:rgba(255,255,255,.12);color:rgba(255,255,255,.88);padding:10px 16px;border-radius:999px;font-size:.85rem;}
+        .post-body{padding:45px 45px 55px;} .post-intro{font-size:1.1rem;color:var(--text-dark);line-height:1.95;margin-bottom:35px;border-left:4px solid var(--accent-color);padding-left:22px;} .post-section{margin-bottom:40px;} .post-section h2{font-size:1.75rem;margin-bottom:18px;color:var(--text-dark);position:relative;padding-bottom:12px;} .post-section h2::after{content:'';position:absolute;left:0;bottom:0;width:60px;height:3px;background:var(--accent-color);} .post-section p,.post-section li{color:var(--text-light);font-size:1.02rem;line-height:1.85;} .post-section ul{list-style:disc inside;margin-top:16px;} .post-section li{margin-bottom:12px;} .tip-box{background:rgba(201,165,92,.12);border-left:4px solid var(--accent-color);padding:22px 24px;border-radius:10px;margin:30px 0;} .tip-box h4{margin-bottom:10px;color:var(--text-dark);}
+        .sidebar{display:grid;gap:30px;} .sidebar-widget{background:white;padding:30px 30px;border-radius:18px;box-shadow:0 16px 35px rgba(0,0,0,.06);} .widget-title{font-size:1.4rem;margin-bottom:22px;color:var(--text-dark);position:relative;padding-bottom:18px;} .widget-title::after{content:'';position:absolute;left:0;bottom:0;width:55px;height:3px;background:var(--accent-color);} .related-list{list-style:none;display:grid;gap:14px;} .related-list a{display:block;color:var(--text-dark);font-weight:500;transition:var(--transition);} .related-list a:hover{color:var(--accent-color);} .related-list a::before{content:'•';margin-right:10px;color:var(--accent-color);}
+        footer{background:var(--secondary-color);color:white;padding:80px 0 25px;} .footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:40px;margin-bottom:45px;} .footer-logo{font-family:var(--font-heading);font-size:30px;font-weight:700;text-decoration:none;color:white;} .footer-logo span{color:var(--accent-color);} .footer-section p,.footer-links li a{color:#c8c8c8;line-height:1.8;} .footer-links{list-style:none;padding:0;} .footer-links li{margin-bottom:14px;} .footer-links li a{display:inline-flex;align-items:center;gap:10px;font-size:.98rem;} .footer-links li a:hover{color:white;} .footer-bottom{border-top:1px solid rgba(255,255,255,.12);padding-top:20px;text-align:center;color:#b1b1b1;font-size:.95rem;}
+        .mobile-nav{position:fixed;top:0;right:-360px;width:360px;height:100vh;background:white;z-index:1001;padding:90px 30px;transition:var(--transition);box-shadow:-5px 0 30px rgba(0,0,0,.1);} .mobile-nav.active{right:0;} .mobile-nav-links{list-style:none;display:grid;gap:22px;} .mobile-nav-links a{font-size:1.25rem;color:var(--text-dark);} .close-menu{position:absolute;top:22px;right:22px;background:none;border:none;font-size:1.8rem;cursor:pointer;color:var(--text-dark);} .overlay{position:fixed;inset:0;background:rgba(0,0,0,.45);z-index:1000;opacity:0;visibility:hidden;transition:var(--transition);} .overlay.active{opacity:1;visibility:visible;}
+        @media (max-width:992px){.blog-content{grid-template-columns:1fr;gap:45px;}.sidebar{order:-1;}} @media (max-width:768px){.nav-links{display:none;}.mobile-menu{display:flex;}.page-header{padding:140px 0 80px;}.post-cover{padding:60px 25px 45px;}.post-body{padding:30px 25px 40px;}.sidebar-widget{padding:25px 22px;}}
+    </style>
+</head>
+<body>
+    <div class="overlay"></div>
+    <div class="mobile-nav">
+        <button class="close-menu"><i class="fas fa-times"></i></button>
+        <ul class="mobile-nav-links">
+            <li><a href="/index.html">Ana Sayfa</a></li>
+            <li><a href="/services.html">Hizmetler</a></li>
+            <li><a href="/about.html">Hakkımızda</a></li>
+            <li><a href="/projects.html">Projeler</a></li>
+            <li><a href="/contact.html">İletişim</a></li>
+            <li><a href="/blog.html" class="active">Blog</a></li>
+        </ul>
+    </div>
+    <header>
+        <nav class="container">
+            <a href="/index.html" class="logo">Cefu<span>Digital</span></a>
+            <ul class="nav-links">
+                <li><a href="/index.html">Ana Sayfa</a></li>
+                <li><a href="/services.html">Hizmetler</a></li>
+                <li><a href="/about.html">Hakkımızda</a></li>
+                <li><a href="/projects.html">Projeler</a></li>
+                <li><a href="/blog.html" class="active">Blog</a></li>
+                <li><a href="/contact.html">İletişim</a></li>
+            </ul>
+            <div class="mobile-menu"><span></span><span></span><span></span></div>
+        </nav>
+    </header>
+    <main>
+        <section class="page-header">
+            <div class="container page-header-content" data-aos="fade-up">
+                <span class="post-category-badge">Web Tasarım</span>
+                <h1>Ankara Web Tasarımında Satış Odaklı Dönüşüm Optimizasyonu</h1>
+                <p>Ankara'da web sitenizin satışa dönüştüren bir tasarım ve kullanıcı deneyimine sahip olmasını sağlayın.</p>
+                <div class="breadcrumb">
+                    <a href="/index.html">Ana Sayfa</a>
+                    <span>/</span>
+                    <a href="/blog.html">Blog</a>
+                    <span>/</span>
+                    <span>Web Tasarım</span>
+                </div>
+            </div>
+        </section>
+        <section class="blog-section">
+            <div class="container">
+                <div class="blog-content">
+                    <article class="post-article" data-aos="fade-up">
+                        <div class="post-cover">
+                            <h2>Ankara sitenizde ziyaretçiyi hızlıca müşteriye dönüştürecek tasarım adımları.</h2>
+                            <p>Satış odaklı web tasarım, dönüşüm huninizi güçlendirir ve kullanıcıyı harekete geçirir.</p>
+                            <span class="post-cover-label">CefuDigital</span>
+                        </div>
+                        <div class="post-body">
+                            <p class="post-intro">Ankara'da satış potansiyeli yüksek web siteleri, sade ve etkili kullanıcı deneyimi ile öne çıkar. Dönüşüm odaklı tasarım, ziyaretçiyi eyleme çağırır.</p>
+                            <section class="post-section">
+                                <h2>Hız ve erişilebilirlik</h2>
+                                <p>Site hızı ve mobil uyumluluk, Ankara'daki ziyaretçilerin hemen ayrılmasını engeller ve daha fazla satış fırsatı yaratır.</p>
+                                <ul>
+                                    <li>Mobilde sorunsuz gezinme sağlayın.</li>
+                                    <li>Görsel ağırlığını optimize edin.</li>
+                                    <li>Hızlı yüklenen sayfalarla kullanıcıyı elde tutun.</li>
+                                </ul>
+                            </section>
+                            <section class="post-section">
+                                <h2>Sade ve net CTA'lar</h2>
+                                <p>Sayfa tasarımında kullanıcıyı kararsız bırakmayacak açık eylem çağrıları kullanın. 'Hemen Teklif Al' veya 'Fiyat Öğren' gibi mesajlar dönüşümü artırır.</p>
+                                <ul>
+                                    <li>CTA butonlarını ayrı renklerle vurgulayın.</li>
+                                    <li>Form ve satın alma adımlarını basitleştirin.</li>
+                                    <li>Güven göstergeleriyle dönüşümleri destekleyin.</li>
+                                </ul>
+                            </section>
+                            <section class="post-section">
+                                <h2>Yerel satış mesajları</h2>
+                                <p>Ankara'ya özgü faydaları ve hız avantajını öne çıkaran mesajlar, yerel müşterinin güvenini kazanır.</p>
+                                <ul>
+                                    <li>Yerel destek ve hızlı teslimat seçeneklerini gösterin.</li>
+                                    <li>Ankara referansları ve başarı hikayelerinden bahsedin.</li>
+                                    <li>Yerel avantajları başlık ve alt metinlerde kullanın.</li>
+                                </ul>
+                            </section>
+                            <div class="tip-box">
+                                <h4>Uygulama önerisi:</h4>
+                                <p>Ürün veya hizmet sayfalarında görselleri ve avantajları net biçimde sunmak, dönüşüm oranını hızla iyileştirir.</p>
+                            </div>
+                            <a href="/contact.html" class="btn btn-primary">Web Tasarım Teklifi Al</a>
+                        </div>
+                    </article>
+                    <aside class="sidebar">
+                        <div class="sidebar-widget" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="widget-title">Ankara Satış Konuları</h3>
+                            <ul class="related-list">
+                                <li><a href="/blog/ankara-e-ticaret-satislarini-artirmanin-yollari.html">Ankara'da e-ticaret satışlarını artırmanın yolları</a></li>
+                                <li><a href="/blog/ankara-yerel-musteriye-donusturen-seo-stratejileri.html">Ankara yerel müşteriye dönüştüren SEO stratejileri</a></li>
+                                <li><a href="/blog/google-ads-ile-ankara-satis-kampanyasi.html">Google Ads ile Ankara’da satış kampanyası</a></li>
+                                <li><a href="/blog/ankara-dijital-pazarlama-ile-satislari-2x-artirmak.html">Ankara'da dijital pazarlama ile satışları 2x artırmak</a></li>
+                            </ul>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <a href="/index.html" class="footer-logo">Cefu<span>Digital</span></a>
+                    <p>Ankara'da satış odaklı web tasarım ile dönüşüm oranınızı artırmaya yardımcı oluyoruz.</p>
+                </div>
+                <div>
+                    <h3>Hızlı Bağlantılar</h3>
+                    <ul class="footer-links">
+                        <li><a href="/index.html"><i class="fas fa-chevron-right"></i> Ana Sayfa</a></li>
+                        <li><a href="/services.html"><i class="fas fa-chevron-right"></i> Hizmetler</a></li>
+                        <li><a href="/blog.html"><i class="fas fa-chevron-right"></i> Blog</a></li>
+                        <li><a href="/contact.html"><i class="fas fa-chevron-right"></i> İletişim</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">&copy; 2026 CefuDigital. Tüm hakları saklıdır.</div>
+        </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 800, easing: 'ease-in-out', once: true });
+        const mobileMenuBtn = document.querySelector('.mobile-menu');
+        const mobileNav = document.querySelector('.mobile-nav');
+        const closeMenuBtn = document.querySelector('.close-menu');
+        const overlay = document.querySelector('.overlay');
+        mobileMenuBtn.addEventListener('click', () => { mobileNav.classList.add('active'); overlay.classList.add('active'); });
+        closeMenuBtn.addEventListener('click', () => { mobileNav.classList.remove('active'); overlay.classList.remove('active'); });
+        overlay.addEventListener('click', () => { mobileNav.classList.remove('active'); overlay.classList.remove('active'); });
+    </script>
+</body>
+</html>
