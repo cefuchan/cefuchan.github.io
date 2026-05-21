@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankara Meta Reklamcılığı Merkezi — Cefu Dijital</title>
+  <meta name="description" content="Ankara Meta reklamcılığı merkezi olarak uzmanız. Meta reklam nedir? Facebook ve Instagram reklam yönetimi ile hedef kitlenize ulaşın." />
+  <meta name="keywords" content="Ankara Meta reklamcılığı, Ankara Meta reklam, Meta reklam ajansı Ankara, Meta reklam yönetimi, Meta reklam danışmanlığı, Meta reklam stratejisi, Meta reklam nedir, Facebook reklam ajansı Ankara, Instagram reklam ajansı Ankara, Meta reklam fiyatları, Meta reklam ajansı seçimi" />
+  <meta property="og:title" content="Ankara Meta Reklamcılığı Merkezi — Cefu Dijital" />
+  <meta property="og:description" content="Ankara Meta reklamcılığı merkezi olarak Facebook ve Instagram reklamlarınızda uzmanız." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cefudigital.com/ankara-meta-reklamciligi.html" />
+  <link rel="canonical" href="https://www.cefudigital.com/ankara-meta-reklamciligi.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE-SPECIFIC ── */
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 130px 40px 90px;
+      position: relative; overflow: hidden;
+      background: var(--white);
+    }
+    .hero-ornament {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .hero-ornament::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 860px; height: 860px;
+      border: 1px solid rgba(212,165,55,0.065);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite;
+    }
+    .hero-ornament::after {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px; height: 580px;
+      border: 1px solid rgba(212,165,55,0.045);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite 2.5s;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%,-50%) scale(1.035); }
+    }
+    .hero-tag {
+      font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 34px;
+      opacity: 0; animation: fadeUp 1s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6.5vw, 5.4rem);
+      font-weight: 600; line-height: 1.08;
+      letter-spacing: 0.02em; color: var(--ink);
+      max-width: 920px; margin-bottom: 30px;
+      opacity: 0; animation: fadeUp 1s 0.4s forwards;
+    }
+    .hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+    .hero-sub {
+      font-family: var(--font-serif); font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 300; color: var(--ink-soft); max-width: 560px; line-height: 1.75;
+      margin-bottom: 52px;
+      opacity: 0; animation: fadeUp 1s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeUp 1s 0.8s forwards;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      opacity: 0; animation: fadeUp 1s 1.3s forwards;
+    }
+    .hero-scroll span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+    .scroll-line { width: 1px; height: 46px; background: var(--gold); animation: sc 2s ease-in-out infinite; }
+    @keyframes sc { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.7)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+    /* META STATS */
+    #meta-stats {
+      padding: 72px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .meta-stats-inner { display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+    .stats-quote { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.55rem); font-weight: 300; font-style: italic; color: var(--ink-mid); max-width: 560px; text-align: center; }
+    .meta-stat-item { flex: 1; min-width: 120px; }
+    .meta-stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--ink); line-height: 1; }
+    .meta-stat-num span { color: var(--gold); }
+    .meta-stat-lbl { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+
+    /* META HIZMETLER */
+    #meta-hizmetler { background: var(--white); }
+    .meta-hizmetler-head { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: end; margin-bottom: 72px; }
+    .meta-hizmetler-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .meta-hizmet-card {
+      background: var(--white); padding: 48px 38px;
+      position: relative; overflow: hidden; transition: background 0.4s;
+    }
+    .meta-hizmet-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+    .meta-hizmet-card:hover { background: var(--off-white); }
+    .meta-hizmet-card:hover::after { transform: scaleX(1); }
+    .meta-hizmet-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .meta-hizmet-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .meta-hizmet-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+
+    /* META SÜREÇ */
+    #meta-surec { background: var(--ink); }
+    #meta-surec .section-title { color: var(--white); }
+    #meta-surec .section-lead { color: rgba(255,255,255,0.45); }
+    .meta-surec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 72px; }
+    .meta-surec-step { padding: 56px 44px; position: relative; }
+    .meta-surec-num { font-family: var(--font-display); font-size: 3.8rem; font-weight: 700; color: rgba(212,165,55,0.1); line-height: 1; margin-bottom: 22px; }
+    .meta-surec-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.08em; color: var(--white); margin-bottom: 14px; }
+    .meta-surec-desc { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.8; }
+    .meta-surec-connector { position: absolute; right: -1px; top: 50%; transform: translateY(-50%); width: 1px; height: 56px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+
+    /* META CASE */
+    #meta-case { background: var(--off-white); }
+    .meta-case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 68px; }
+    .meta-case-card { background: var(--white); padding: 44px 36px; border: 1px solid transparent; transition: border-color 0.4s, transform 0.4s; }
+    .meta-case-card:hover { border-color: var(--border); transform: translateY(-5px); }
+    .meta-case-industry { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .meta-case-client { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .meta-case-result { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 7px; }
+    .meta-case-result span { color: var(--gold); }
+    .meta-case-metric { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 22px; }
+    .meta-case-desc { font-family: var(--font-serif); font-size: 0.93rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 22px; }
+
+    /* CTA */
+    #meta-cta { background: var(--ink); text-align: center; }
+    .meta-cta-inner { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+    .meta-cta-inner .section-title { color: var(--white); }
+    .meta-cta-inner .section-lead { color: rgba(255,255,255,0.42); max-width: 100%; text-align: center; }
+    .meta-cta-inner .gold-divider { background: rgba(212,165,55,0.4); margin: 0 auto 36px; }
+    .meta-cta-actions { display: flex; gap: 18px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+
+    /* META REHBER */
+    #meta-rehber { background: var(--off-white); padding: 72px 0; }
+    .meta-rehber-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px; margin-top: 72px; }
+    .meta-rehber-item { background: var(--white); padding: 48px 38px; border: 1px solid var(--border); border-radius: 8px; transition: transform 0.4s, box-shadow 0.4s; }
+    .meta-rehber-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .meta-rehber-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .meta-rehber-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .meta-rehber-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+    .meta-rehber-note { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 300; color: var(--ink-mid); max-width: 600px; margin: 0 auto; }
+
+    @media (max-width: 1024px) {
+      .meta-rehber-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 1024px) {
+      .meta-hizmetler-head { grid-template-columns: 1fr; gap: 28px; }
+      .meta-hizmetler-grid { grid-template-columns: repeat(2,1fr); }
+      .meta-case-grid { grid-template-columns: repeat(2,1fr); }
+      .meta-surec-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      #hero { padding: 120px 22px 80px; }
+      .meta-stats-inner { gap: 44px; }
+      .meta-hizmetler-grid { grid-template-columns: 1fr; }
+      .meta-surec-grid { grid-template-columns: 1fr; }
+      .meta-surec-connector { display: none; }
+      .meta-case-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Cefu Dijital Ana Sayfa"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobil Menü">
+  <button class="mobile-close" id="mobileClose" aria-label="Menüyü Kapat">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Ankara Meta Reklamcılığı">
+    <div class="hero-ornament" aria-hidden="true"></div>
+    <p class="hero-tag">Ankara Meta Reklamcılığı Merkezi</p>
+    <h1 class="hero-title">
+      Facebook & Instagram'da<br>
+      <em>Maksimum Etki</em>
+    </h1>
+    <p class="hero-sub">
+      Ankara Meta reklamcılığı merkezi olarak uzmanız. Meta reklam nedir?
+      Facebook ve Instagram reklam yönetimi ile hedef kitlenize ulaşın.
+    </p>
+    <div class="hero-actions">
+      <a href="iletisim.html" class="btn-primary">Meta Reklam Başlat</a>
+      <a href="#meta-hizmetler" class="btn-ghost">Hizmetlerimizi İncele</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Keşfet</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ META STATS ══ -->
+  <section id="meta-stats" aria-label="Meta Reklamcılığı İstatistikleri">
+    <div class="container">
+      <div class="stats-inner">
+        <p class="stats-quote reveal">"Ankara Meta reklamcılığı merkezi olarak, Meta reklam stratejilerinde uzmanız"</p>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num">124<span>+</span></div>
+          <div class="stat-lbl">Meta Kampanyası</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">3.7<span>x</span></div>
+          <div class="stat-lbl">Ortalama ROAS</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">%85</div>
+          <div class="stat-lbl">Hedef Kitle Erişimi</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-num">28</div>
+          <div class="stat-lbl">Aktif Meta Müşteri</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ META HIZMETLER ══ -->
+  <section id="meta-hizmetler" aria-labelledby="meta-hizmetler-heading">
+    <div class="container">
+      <div class="meta-hizmetler-head">
+        <div>
+          <span class="section-eyebrow reveal">Meta Reklamcılığı Hizmetleri</span>
+          <h2 class="section-title reveal" id="meta-hizmetler-heading">
+            Facebook & Instagram<br><em>Reklam Yönetimi</em>
+          </h2>
+        </div>
+        <p class="section-lead reveal">
+          Meta'nın güçlü algoritması ve geniş kitle erişimi ile markanızı doğru hedef kitleye ulaştırıyoruz.
+          Ankara'da Meta reklamcılığı konusunda uzmanız.
+        </p>
+      </div>
+
+      <div class="meta-hizmetler-grid reveal">
+        <article class="meta-hizmet-card">
+          <div class="meta-hizmet-num">01</div>
+          <h3 class="meta-hizmet-title">Hedef Kitle Analizi</h3>
+          <p class="meta-hizmet-desc">Demografik veriler, davranış analizi ve ilgi alanları ile en uygun hedef kitleyi belirleme.</p>
+        </article>
+        <article class="meta-hizmet-card">
+          <div class="meta-hizmet-num">02</div>
+          <h3 class="meta-hizmet-title">Kampanya Stratejisi</h3>
+          <p class="meta-hizmet-desc">Bütçe optimizasyonu, reklam formatları ve zamanlama ile maksimum etki stratejisi.</p>
+        </article>
+        <article class="meta-hizmet-card">
+          <div class="meta-hizmet-num">03</div>
+          <h3 class="meta-hizmet-title">Kreatif Tasarım</h3>
+          <p class="meta-hizmet-desc">Göz alıcı görseller, videolar ve kopyalar ile dikkat çekici reklam içerikleri.</p>
+        </article>
+        <article class="meta-hizmet-card">
+          <div class="meta-hizmet-num">04</div>
+          <h3 class="meta-hizmet-title">A/B Testleri</h3>
+          <p class="meta-hizmet-desc">Farklı reklam varyasyonları ile performans optimizasyonu ve sürekli iyileştirme.</p>
+        </article>
+        <article class="meta-hizmet-card">
+          <div class="meta-hizmet-num">05</div>
+          <h3 class="meta-hizmet-title">Retargeting Kampanyaları</h3>
+          <p class="meta-hizmet-desc">Web sitesi ziyaretçilerini yeniden hedefleme ile dönüşüm oranlarını artırma.</p>
+        </article>
+        <article class="meta-hizmet-card">
+          <div class="meta-hizmet-num">06</div>
+          <h3 class="meta-hizmet-title">Meta Reklam Analizi</h3>
+          <p class="meta-hizmet-desc">Detaylı analizler, ROI takibi ve Meta reklam stratejisi raporlaması ile şeffaf yönetim.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ META SÜREÇ ══ -->
+  <section id="meta-surec" aria-labelledby="meta-surec-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Meta Reklamcılığı Süreci</span>
+      <h2 class="section-title reveal" id="meta-surec-heading">Veriye Dayalı <em>Reklam Yönetimi</em></h2>
+      <p class="section-lead reveal">Meta'nın güçlü araçları ve algoritmaları ile reklam bütçenizi maksimum verime çıkarıyoruz.</p>
+      <div class="meta-surec-grid reveal">
+        <div class="meta-surec-step">
+          <div class="meta-surec-num">01</div>
+          <h3 class="meta-surec-title">Strateji Geliştirme</h3>
+          <p class="meta-surec-desc">Hedef belirleme, bütçe planlaması ve kampanya hedeflerinin tanımlanması.</p>
+          <div class="meta-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="meta-surec-step">
+          <div class="meta-surec-num">02</div>
+          <h3 class="meta-surec-title">Hedef Kitle Araştırması</h3>
+          <p class="meta-surec-desc">Demografik analiz, ilgi alanları ve davranış paternleri ile doğru kitleyi belirleme.</p>
+          <div class="meta-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="meta-surec-step">
+          <div class="meta-surec-num">03</div>
+          <h3 class="meta-surec-title">Kampanya Kurulumu</h3>
+          <p class="meta-surec-desc">Reklam hesabı kurulumu, pixel entegrasyonu ve kampanya başlatma.</p>
+          <div class="meta-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="meta-surec-step">
+          <div class="meta-surec-num">04</div>
+          <h3 class="meta-surec-title">Optimizasyon & Ölçüm</h3>
+          <p class="meta-surec-desc">Performans takibi, A/B testleri ve sürekli optimizasyon ile sonuç maksimizasyonu.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ META CASE ══ -->
+  <section id="meta-case" aria-labelledby="meta-case-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Meta Reklamcılığı Başarıları</span>
+      <h2 class="section-title reveal" id="meta-case-heading">Sosyal Medya'da <em>Gerçek Sonuçlar</em></h2>
+      <div class="meta-case-grid">
+        <article class="meta-case-card reveal reveal-delay-1">
+          <div class="meta-case-industry">E-Ticaret / Ankara</div>
+          <div class="meta-case-client">Online Butik</div>
+          <div class="meta-case-result"><span>+</span>520<span>%</span></div>
+          <div class="meta-case-metric">Satış Artışı — 8 Ay</div>
+          <p class="meta-case-desc">Hedefli Instagram reklamları ve retargeting stratejisi ile satışlarda büyük patlama.</p>
+        </article>
+        <article class="meta-case-card reveal reveal-delay-2">
+          <div class="meta-case-industry">Hizmet / Ankara</div>
+          <div class="meta-case-client">Danışmanlık Ofisi</div>
+          <div class="meta-case-result"><span>+</span>6.2<span>x</span></div>
+          <div class="meta-case-metric">Müşteri Adayı Artışı — 6 Ay</div>
+          <p class="meta-case-desc">Ankara Meta reklamcılığı merkezi olarak LinkedIn ve Facebook kombinasyonuyla nitelikli müşteri adaylarında dramatik artış.</p>
+        </article>
+        <article class="meta-case-card reveal reveal-delay-3">
+          <div class="meta-case-industry">Eğitim / Ankara</div>
+          <div class="meta-case-client">Dil Kursu</div>
+          <div class="meta-case-result"><span>+</span>380<span>%</span></div>
+          <div class="meta-case-metric">Kayıt Artışı — 4 Ay</div>
+          <p class="meta-case-desc">Hedefli Facebook reklamları ve video içerikleriyle öğrenci kayıtlarında büyük başarı.</p>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="case-study.html" class="btn-ghost">Tüm Meta Reklamcılığı Case Study'leri</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ META CTA ══ -->
+  <section id="meta-cta" aria-labelledby="meta-cta-heading">
+    <div class="container">
+      <div class="meta-cta-inner">
+        <span class="section-eyebrow reveal">Meta Reklamcılığı Danışmanlığı</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="meta-cta-heading">
+          Ankara Meta<br><em>Reklamcılığı Merkezi</em>
+        </h2>
+        <p class="section-lead reveal">
+          Ücretsiz Meta reklam analizi ile stratejilerinizi optimize edin.
+          Meta reklam ajansı Ankara olarak uzman ekibimizle tanışın.
+        </p>
+        <div class="meta-cta-actions reveal">
+          <a href="iletisim.html" class="btn-gold">Ücretsiz Analiz</a>
+          <a href="tel:05511367634" class="btn-outline-white">0551 136 76 34</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ META REHBER ══ -->
+  <section id="meta-rehber" aria-labelledby="meta-rehber-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Meta Reklam Rehberi</span>
+      <h2 class="section-title reveal" id="meta-rehber-heading">Meta Reklam <em>Nedir?</em></h2>
+      <p class="section-lead reveal">
+        Ankara Meta reklamcılığı merkezi olarak uzmanız. Meta reklam nedir?
+        Facebook ve Instagram reklam yönetimi hakkında detaylı bilgiler.
+      </p>
+      <div class="meta-rehber-grid reveal">
+        <div class="meta-rehber-item">
+          <div class="meta-rehber-num">01</div>
+          <h3 class="meta-rehber-title">Facebook Reklamları</h3>
+          <p class="meta-rehber-desc">Facebook platformunda hedefli reklam kampanyaları ve kitle segmentasyonu.</p>
+        </div>
+        <div class="meta-rehber-item">
+          <div class="meta-rehber-num">02</div>
+          <h3 class="meta-rehber-title">Instagram Reklamları</h3>
+          <p class="meta-rehber-desc">Görsel odaklı reklamlar, Stories ve Reels ile genç kitleye ulaşma.</p>
+        </div>
+        <div class="meta-rehber-item">
+          <div class="meta-rehber-num">03</div>
+          <h3 class="meta-rehber-title">Messenger Reklamları</h3>
+          <p class="meta-rehber-desc">Doğrudan mesajlaşma ile potansiyel müşterilerle etkileşim kurma.</p>
+        </div>
+        <div class="meta-rehber-item">
+          <div class="meta-rehber-num">04</div>
+          <h3 class="meta-rehber-title">Audience Network</h3>
+          <p class="meta-rehber-desc">Meta'nın partner uygulamalarında reklam gösterimi ve geniş kitle erişimi.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <p class="meta-rehber-note">Meta reklam ajansı Ankara olarak, Meta reklam fiyatları konusunda şeffaf danışmanlık sağlıyoruz.</p>
+        <a href="iletisim.html" class="btn-primary" style="margin-top:24px;">Meta Reklam Danışmanlığı Alın</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Ankara'nın lider dijital pazarlama ajansı. SEO, web tasarımı ve performans reklamcılığı alanında uzmanız.</p>
+        <p class="footer-seo">Ankara Meta reklamcılığı · Ankara Meta reklam · Meta reklam ajansı Ankara · Meta reklam yönetimi · Meta reklam danışmanlığı · Meta reklam stratejisi</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html">Başvuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links" aria-label="Sosyal Medya">
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+        <a href="#" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" rel="noopener noreferrer">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+
+  // Mobile menu
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>

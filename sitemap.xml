@@ -1,67 +1,128 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
 <url>
-  <loc>https://cefudigital.com/</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>1.00</priority>
+<loc>https://cefudigital.com/</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>1.00</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/index.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://cefudigital.com/index.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/services.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://cefudigital.com/hizmetler.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/about.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://cefudigital.com/hakkimizda.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/projects.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://cefudigital.com/case-study.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/contact.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.80</priority>
+<loc>https://cefudigital.com/iletisim.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/hizmetlerimiz/seo-optimizasyonu.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://cefudigital.com/ankara-seo.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/hizmetlerimiz/webtasarim.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://cefudigital.com/ankara-seo-stratejisi.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/hizmetlerimiz/sirketcozumleri.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://cefudigital.com/ankara-seo-analizi.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/hizmetlerimiz/dijitalpazarlama.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://cefudigital.com/ankara-seo-icerik-stratejisi.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
 <url>
-  <loc>https://cefudigital.com/hizmetlerimiz/googleads.html</loc>
-  <lastmod>2026-03-22T23:43:15+00:00</lastmod>
-  <priority>0.64</priority>
+<loc>https://cefudigital.com/ankara-reels-cekimi.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
 </url>
-
-
+<url>
+<loc>https://cefudigital.com/ankara-reels-produsyon.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-sosyal-medya-yonetimi.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-icerik-uretim.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-dijital-pazarlama-ajansi.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-video-produksiyon.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-profesyonel-video-cekim.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-meta-reklamciligi.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-google-reklam-verme.html</loc>
+<lastmod>2026-04-15T08:54:33+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-saglik-sektoru-dijital-pazarlama.html</loc>
+<lastmod>2026-05-06T10:00:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-cankaya-dijital-pazarlama.html</loc>
+<lastmod>2026-05-06T10:00:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-ostim-ivedik-seo.html</loc>
+<lastmod>2026-05-06T10:00:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/ankara-etimesgut-sincan-keciyoren.html</loc>
+<lastmod>2026-05-06T10:00:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/sincan-video-cekim.html</loc>
+<lastmod>2026-05-06T10:00:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
+<url>
+<loc>https://cefudigital.com/inklab.html</loc>
+<lastmod>2026-05-06T10:00:00+00:00</lastmod>
+<priority>0.80</priority>
+</url>
 </urlset>

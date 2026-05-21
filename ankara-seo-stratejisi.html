@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankara SEO Stratejisi — Cefu Dijital</title>
+  <meta name="description" content="Ankara SEO stratejisi rehberi. Anahtar kelime planlaması, teknik SEO analizi, içerik stratejisi ve sürdürülebilir organik trafik artışı için yol haritası." />
+  <meta name="keywords" content="Ankara SEO stratejisi, SEO planlama, teknik SEO analizi, içerik stratejisi, organik trafik artırma, yerel SEO Ankara, SEO kampanyası" />
+  <meta property="og:title" content="Ankara SEO Stratejisi — Cefu Dijital" />
+  <meta property="og:description" content="Ankara SEO stratejisi sayfası. SEO projeleri için doğru yol haritasını belirleyin, teknik optimizasyon, içerik planı ve performans izleme ile organik görünürlüğü artırın." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cefudigital.com/ankara-seo-stratejisi.html" />
+  <link rel="canonical" href="https://www.cefudigital.com/ankara-seo-stratejisi.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    #hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 120px 32px 80px;
+      background: var(--off-white);
+      position: relative;
+    }
+    .hero-eye {
+      font-size: 0.72rem;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 28px;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 6vw, 4.8rem);
+      line-height: 1.05;
+      color: var(--ink);
+      max-width: 860px;
+      margin: 0 auto 28px;
+    }
+    .hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+    .hero-lead {
+      font-family: var(--font-serif);
+      font-size: clamp(1rem, 1.9vw, 1.35rem);
+      font-weight: 300;
+      color: var(--ink-soft);
+      max-width: 680px;
+      line-height: 1.9;
+      margin: 0 auto 40px;
+    }
+    .hero-actions { display: flex; gap: 18px; flex-wrap: wrap; justify-content: center; }
+    .strategy-grid {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 24px;
+      margin-top: 60px;
+    }
+    .strategy-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 36px 32px;
+      border-radius: 16px;
+      box-shadow: 0 20px 50px rgba(20,20,20,0.04);
+    }
+    .strategy-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin-bottom: 18px;
+    }
+    .strategy-card p {
+      font-family: var(--font-serif);
+      font-size: 0.95rem;
+      font-weight: 300;
+      color: var(--ink-soft);
+      line-height: 1.75;
+    }
+    #strategy-steps {
+      padding: 80px 0;
+      background: var(--white);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      gap: 24px;
+    }
+    .step-card {
+      background: var(--off-white);
+      border: 1px solid var(--border);
+      padding: 34px 28px;
+      border-radius: 14px;
+    }
+    .step-num {
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+    .step-title {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+    .step-desc {
+      font-family: var(--font-serif);
+      font-size: 0.94rem;
+      color: var(--ink-soft);
+      line-height: 1.8;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: repeat(2,1fr);
+      gap: 24px;
+      margin-top: 36px;
+    }
+    .faq-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      padding: 30px 28px;
+      border-radius: 14px;
+    }
+    .faq-card h4 {
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      margin-bottom: 14px;
+      color: var(--ink);
+    }
+    .faq-card p {
+      font-family: var(--font-serif);
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      line-height: 1.75;
+    }
+    @media (max-width: 1024px) {
+      .strategy-grid, .steps-grid, .faq-grid { grid-template-columns: 1fr 1fr; }
+      .hero-title { font-size: clamp(2.6rem, 7vw, 4.2rem); }
+    }
+    @media (max-width: 768px) {
+      #hero { padding: 90px 20px 72px; }
+      .strategy-grid, .steps-grid, .faq-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Cefu Dijital Ana Sayfa"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+  <section id="hero">
+    <span class="hero-eye">SEO STRATEJİSİ</span>
+    <h1 class="hero-title">Ankara SEO Stratejisi ile organik trafiğinizi hızla büyütün</h1>
+    <p class="hero-lead">Doğru SEO planlaması, teknik altyapı optimizasyonu ve içerik stratejisi ile arama sonuçlarında kalıcı üst sıralar elde edin. Bu sayfa, SEO projenizi bir sistem olarak kurmanız için adım adım yol haritasını sunuyor.</p>
+    <div class="hero-actions">
+      <a href="iletisim.html" class="btn-gold">Ücretsiz SEO Danışmanlığı</a>
+      <a href="ankara-seo.html" class="btn-outline">Ankara SEO Çözümleri</a>
+    </div>
+  </section>
+
+  <section class="container" id="strategy-overview">
+    <div class="service-label" style="margin-bottom: 24px;">SEO YOL HARİTASI</div>
+    <h2 class="section-title">Ankara SEO stratejisini nasıl inşa ediyoruz?</h2>
+    <p class="section-lead">Her SEO çalışması öncelikle izlenebilir hedeflere, güçlü bir rekabet analizine ve sürdürülebilir içerik planına dayanır. Anahtar kelime araştırmasından teknik optimizasyona kadar her adım markanızın büyümesini destekler.</p>
+
+    <div class="strategy-grid">
+      <article class="strategy-card">
+        <h3>Anahtar Kelime Planlaması</h3>
+        <p>Hedef kitlenizin arama davranışlarını analiz ederek, Ankara ve Türkiye pazarında yüksek potansiyelli anahtar kelimeleri belirliyoruz.</p>
+      </article>
+      <article class="strategy-card">
+        <h3>Teknik SEO Analizi</h3>
+        <p>Web sitenizin hız, yapı, erişilebilirlik ve indekslenme performansını denetleyerek, arama motorlarının kolayca tarayabileceği bir altyapı kuruyoruz.</p>
+      </article>
+      <article class="strategy-card">
+        <h3>İçerik Stratejisi</h3>
+        <p>Hedef kelimelerle uyumlu, kullanıcı odaklı içerik planı hazırlıyor, organik trafik ile dönüşüm arasında köprü kuran içerikler üretiyoruz.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="strategy-steps" class="container">
+    <div class="service-label" style="margin-bottom: 24px;">ADIM ADIM SEO</div>
+    <h2 class="section-title">SEO stratejisini biz nasıl işler hale getiriyoruz?</h2>
+    <div class="steps-grid">
+      <article class="step-card">
+        <div class="step-num">01</div>
+        <h3 class="step-title">Durum Analizi</h3>
+        <p class="step-desc">Site içi ve site dışı durumunuzu, rakiplerinizi ve Google sıralamalarını analiz ederek mevcut fırsatları belirliyoruz.</p>
+      </article>
+      <article class="step-card">
+        <div class="step-num">02</div>
+        <h3 class="step-title">Strateji Dokümanı</h3>
+        <p class="step-desc">Hedef kelime seti, içerik planı ve teknik iyileştirme listesi içeren kapsamlı bir SEO strateji dokümanı hazırlıyoruz.</p>
+      </article>
+      <article class="step-card">
+        <div class="step-num">03</div>
+        <h3 class="step-title">Uygulama</h3>
+        <p class="step-desc">Teknik düzenlemeler, içerik üretimi ve backlink stratejisiyle stratejiyi hayata geçiriyoruz.</p>
+      </article>
+      <article class="step-card">
+        <div class="step-num">04</div>
+        <h3 class="step-title">Ölçüm ve İyileştirme</h3>
+        <p class="step-desc">Veriye dayalı raporlama ile hangi adımların performans getirdiğini takip ediyor, sürekli bir iyileştirme döngüsü kuruyoruz.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="container" id="faq-section">
+    <div class="service-label" style="margin-bottom: 24px;">SEO SIKÇA SORULANLAR</div>
+    <h2 class="section-title">SEO stratejisi ve performans için sık sorulan sorular</h2>
+    <div class="faq-grid">
+      <article class="faq-card">
+        <h4>SEO puanımı nasıl yükseltirim?</h4>
+        <p>Teknik sorunları çözmek, içerik kalitesini artırmak ve otoritenizi sağlıklı backlinklerle güçlendirmek en etkili yaklaşımdır.</p>
+      </article>
+      <article class="faq-card">
+        <h4>Anahtar kelime seçimi nasıl yapılır?</h4>
+        <p>Arama hacmi, rekabet seviyesi ve alaka düzeyini aynı anda değerlendirerek hem kısa hem de uzun kuyruklu kelimeleri dengeli seçiyoruz.</p>
+      </article>
+      <article class="faq-card">
+        <h4>Yerel SEO neden önemli?</h4>
+        <p>Ankara gibi yerel hedeflerde Google Haritalar, yerel listeleme ve coğrafi optimizasyon sitenize ciddi trafik avantajı sağlar.</p>
+      </article>
+      <article class="faq-card">
+        <h4>SEO ile dönüşüm arasında nasıl bağ kurulur?</h4>
+        <p>Arama niyetiyle uyumlu içerikler ve dönüşüm hedefli sayfa yapıları sayesinde organik ziyaretçiyi müşteri adayına dönüştürüyoruz.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="seo-cta" class="container" style="padding: 80px 0; text-align:center;">
+    <span class="section-eyebrow">SEO STRATEJİSİ</span>
+    <h2 class="section-title">SEO stratejinizi hazır hale getirelim</h2>
+    <p class="section-lead">Ankara SEO stratejinizi bir danışmanlık süreciyle somut hale getiriyoruz. Hedef kelimeler, içerik takvimi ve teknik optimizasyon için ücretsiz keşif isteyin.</p>
+    <div class="hero-actions" style="justify-content:center; margin-top:32px;">
+      <a href="iletisim.html" class="btn-gold">Keşif Görüşmesi</a>
+      <a href="ankara-seo.html" class="btn-outline">SEO Hizmetlerimiz</a>
+    </div>
+  </section>
+</main>
+
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Ankara'nın lider dijital pazarlama ajansı. SEO, web tasarımı ve performans reklamcılığı alanında uzmanız.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · SEO hizmeti · Google reklam yönetimi · Web sitesi tasarımı · Video prodüksiyon Ankara</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links" aria-label="Sosyal Medya">
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+        <a href="#" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" rel="noopener noreferrer">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>

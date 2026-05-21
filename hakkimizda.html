@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hakkımızda — Cefu Dijital | Ankara Premium Dijital Pazarlama Ajansı</title>
+  <meta name="description" content="Cefu Dijital, Ankara merkezli seçkin dijital pazarlama ajansıdır. Her marka ile çalışmıyoruz. Premium, büyüme odaklı markalar için yüksek performanslı dijital stratejiler." />
+  <meta name="keywords" content="Cefu Dijital hakkında, Ankara dijital pazarlama ajansı, premium SEO ajansı, dijital büyüme ajansı Ankara" />
+  <link rel="canonical" href="https://www.cefudigital.com/hakkimizda.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* PAGE HERO */
+    .page-hero {
+      padding: 160px 40px 100px;
+      background: var(--ink);
+      text-align: center;
+      position: relative; overflow: hidden;
+    }
+    .page-hero::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%,-50%);
+      width: 700px; height: 700px;
+      border: 1px solid rgba(212,165,55,0.06);
+      border-radius: 50%;
+    }
+    .page-hero .section-eyebrow { color: var(--gold); }
+    .page-hero .section-title { color: var(--white); font-size: clamp(2.2rem, 5vw, 4rem); }
+    .page-hero .section-lead { color: rgba(255,255,255,0.42); max-width: 580px; margin: 0 auto; text-align: center; }
+
+    /* VISION */
+    #vizyon { background: var(--white); }
+    .vizyon-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+    .vizyon-quote {
+      font-family: var(--font-serif); font-size: clamp(1.6rem, 3vw, 2.4rem);
+      font-weight: 400; font-style: italic; color: var(--ink); line-height: 1.4;
+      border-left: 2px solid var(--gold); padding-left: 32px;
+    }
+    .vizyon-text { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 300; color: var(--ink-soft); line-height: 1.9; margin-bottom: 18px; }
+
+    /* VALUES */
+    #degerler { background: var(--off-white); }
+    .degerler-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); margin-top: 64px; }
+    .deger-card { background: var(--off-white); padding: 48px 40px; transition: background 0.4s; }
+    .deger-card:hover { background: var(--white); }
+    .deger-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 22px; }
+    .deger-title { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .deger-desc { font-family: var(--font-serif); font-size: 0.98rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; }
+
+    /* SECICILIK */
+    #secicilik { background: var(--white); }
+    .secicilik-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start; }
+    .secicilik-text { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 300; color: var(--ink-soft); line-height: 1.9; margin-bottom: 18px; }
+    .evet-hayir { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; margin-top: 8px; }
+    .evet-col, .hayir-col { padding: 32px 28px; }
+    .evet-col { background: var(--gold-pale); border: 1px solid var(--border); }
+    .hayir-col { background: rgba(12,12,12,0.03); border: 1px solid var(--border-light); }
+    .col-label { font-size: 0.65rem; letter-spacing: 0.22em; text-transform: uppercase; margin-bottom: 18px; font-weight: 500; }
+    .evet-col .col-label { color: var(--gold); }
+    .hayir-col .col-label { color: var(--ink-faint); }
+    .col-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .col-list li { font-size: 0.83rem; color: var(--ink-mid); padding-left: 18px; position: relative; line-height: 1.5; }
+    .evet-col .col-list li::before { content: '✓'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem; }
+    .hayir-col .col-list li::before { content: '×'; position: absolute; left: 0; color: var(--ink-faint); font-size: 0.85rem; }
+
+    /* STATS DARK */
+    #ajans-stats { background: var(--ink); }
+    .ajans-stats-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 64px; }
+    .ajans-stat { padding: 48px 36px; text-align: center; }
+    .ajans-stat-num { font-family: var(--font-display); font-size: 2.6rem; font-weight: 600; color: var(--white); line-height: 1; }
+    .ajans-stat-num span { color: var(--gold); }
+    .ajans-stat-lbl { font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-top: 10px; }
+
+    /* CTA */
+    .page-cta { background: var(--cream); padding: 100px 0; text-align: center; }
+    .page-cta .section-lead { max-width: 500px; margin: 0 auto 40px; text-align: center; }
+    .page-cta .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+
+    @media (max-width: 1024px) {
+      .vizyon-grid { grid-template-columns: 1fr; gap: 40px; }
+      .degerler-grid { grid-template-columns: repeat(2,1fr); }
+      .secicilik-layout { grid-template-columns: 1fr; gap: 40px; }
+      .ajans-stats-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      .page-hero { padding: 130px 22px 72px; }
+      .degerler-grid { grid-template-columns: 1fr; }
+      .evet-hayir { grid-template-columns: 1fr; }
+      .ajans-stats-grid { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html" class="active">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button class="mobile-close" id="mobileClose">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <!-- PAGE HERO -->
+  <div class="page-hero">
+    <span class="section-eyebrow reveal">Biz Kimiz</span>
+    <h1 class="section-title reveal">
+      Seçkin Markalar İçin<br><em>Seçkin Bir Ajans</em>
+    </h1>
+    <p class="section-lead reveal">
+      Cefu Dijital olarak her marka ile çalışmıyoruz.
+      Büyümeye gerçekten hazır, seçkin markalar için varız.
+    </p>
+  </div>
+
+  <!-- VİZYON -->
+  <section id="vizyon" aria-labelledby="vizyon-heading">
+    <div class="container">
+      <div class="vizyon-grid">
+        <div class="reveal">
+          <span class="section-eyebrow">Vizyonumuz</span>
+          <div class="gold-divider"></div>
+          <blockquote class="vizyon-quote">
+            "Dijital büyüme, bir hizmet değil; stratejik bir ortaklıktır."
+          </blockquote>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <h2 class="section-title" id="vizyon-heading">
+            Ankara'nın <em>Seçkin</em> Dijital Büyüme Ajansı
+          </h2>
+          <p class="vizyon-text">
+            Cefu Dijital, Ankara merkezli, Türkiye genelinde hizmet veren
+            bir dijital büyüme ajansıdır. Kurulduğumuz günden bu yana
+            tek bir misyonla hareket ettik: Üst segment markalara,
+            gerçekten işe yarayan, ölçeklenebilir dijital büyüme sistemleri sunmak.
+          </p>
+          <p class="vizyon-text">
+            Geleneksel dijital pazarlama ajanslarından farklı olarak
+            hazır çözümler satmıyor, şablon stratejiler önermiyoruz.
+            Her müşterimiz için sıfırdan tasarlanmış, veriye dayalı ve
+            markanın gerçek büyüme hedeflerine odaklanan sistemler kuruyoruz.
+          </p>
+          <p class="vizyon-text">
+            Ankara dijital pazarlama ekosisteminde yıllar içinde edindiğimiz
+            deneyimle bugün Türkiye'nin farklı sektörlerindeki seçkin markalar
+            için dijital hakimiyet sistemleri inşa ediyoruz.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DEĞERLER -->
+  <section id="degerler" aria-labelledby="degerler-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Temel Değerlerimiz</span>
+      <h2 class="section-title reveal" id="degerler-heading">
+        Bizi <em>Farklı Kılan</em> Nedir?
+      </h2>
+      <div class="degerler-grid reveal">
+        <div class="deger-card">
+          <div class="deger-num">01</div>
+          <h3 class="deger-title">Seçicilik</h3>
+          <p class="deger-desc">Sınırlı sayıda marka ile çalışıyoruz. Her müşterimize tam dikkat, tam kapasite ve gerçek sonuçlar sunmak için bu seçici yapıyı koruyoruz.</p>
+        </div>
+        <div class="deger-card">
+          <div class="deger-num">02</div>
+          <h3 class="deger-title">Şeffaflık</h3>
+          <p class="deger-desc">Her adımı, her veriyi ve her sonucu açık raporlarla paylaşıyoruz. Ajans-marka ilişkisinde belirsizlik yoktur; ortak bir büyüme vizyonu vardır.</p>
+        </div>
+        <div class="deger-card">
+          <div class="deger-num">03</div>
+          <h3 class="deger-title">Sonuç Odaklılık</h3>
+          <p class="deger-desc">Gösterişli sunumlar değil, ölçülebilir sonuçlar üretiyoruz. Başarımız, markanızın büyümesiyle doğru orantılıdır.</p>
+        </div>
+        <div class="deger-card">
+          <div class="deger-num">04</div>
+          <h3 class="deger-title">Uzun Vadeli Perspektif</h3>
+          <p class="deger-desc">Kısa vadeli taktikler değil, sürdürülebilir büyüme sistemleri kuruyoruz. Markanızın dijital varlığı yıllarca değer üretmeye devam eder.</p>
+        </div>
+        <div class="deger-card">
+          <div class="deger-num">05</div>
+          <h3 class="deger-title">Stratejik Ortaklık</h3>
+          <p class="deger-desc">Sizi bir müşteri olarak değil, büyüme ortağı olarak görüyoruz. Markanızın hedefleri bizim hedeflerimizdir.</p>
+        </div>
+        <div class="deger-card">
+          <div class="deger-num">06</div>
+          <h3 class="deger-title">Entegre Yaklaşım</h3>
+          <p class="deger-desc">SEO, web, reklam ve içerik sistemlerini izole değil, birbirine bağlı büyüme motorları olarak kurguluyor ve yönetiyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SEÇİCİLİK -->
+  <section id="secicilik" aria-labelledby="secicilik-heading">
+    <div class="container">
+      <div class="secicilik-layout">
+        <div class="reveal">
+          <span class="section-eyebrow">Çalışma Felsefemiz</span>
+          <div class="gold-divider"></div>
+          <h2 class="section-title" id="secicilik-heading">
+            Her Marka ile<br><em>Çalışmıyoruz.</em>
+          </h2>
+          <p class="secicilik-text">
+            Bu bir slogan değil, gerçek bir tercih. Sınırlı müşteri kapasitemizi
+            korumamızın sebebi basit: Her markaya gerçekten odaklanabilmek,
+            gerçek sonuçlar üretebilmek için bu seçicilik şarttır.
+          </p>
+          <p class="secicilik-text">
+            Çalışmaya uygun olduğumuzu gördüğümüzde, uzun vadeli ve
+            derin bir büyüme ortaklığı kuruyoruz. Çalıştığımız markaların
+            %94'ü ilk yılın sonunda çalışmaya devam ediyor.
+          </p>
+          <div style="margin-top:36px;">
+            <div class="badge-open" style="display:inline-flex">
+              <span class="badge-dot"></span>
+              Şu An: 2 Açık Pozisyon
+            </div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <div class="evet-hayir">
+            <div class="evet-col">
+              <div class="col-label">Birlikte Büyüyebileceğimiz Markalar</div>
+              <ul class="col-list">
+                <li>Büyüme vizyonu net olan</li>
+                <li>Uzun vadeli düşünen</li>
+                <li>Ölçeklenebilir modeli olan</li>
+                <li>Premium segmentte konumlanan</li>
+                <li>Sonuç odaklı yönetim anlayışı</li>
+                <li>Stratejik ortaklığa açık</li>
+              </ul>
+            </div>
+            <div class="hayir-col">
+              <div class="col-label">Bizim İçin Uygun Olmayan Markalar</div>
+              <ul class="col-list">
+                <li>Hızlı çözüm bekleyen</li>
+                <li>Kısa vadeli düşünen</li>
+                <li>Fiyat odaklı karar veren</li>
+                <li>Şeffaf ilişkiye kapalı</li>
+                <li>Büyümeye gerçekten hazır olmayan</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AJANS STATS -->
+  <section id="ajans-stats" aria-labelledby="stats-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal" style="color:var(--gold)">Rakamlarla Cefu Dijital</span>
+      <h2 class="section-title reveal" id="stats-heading" style="color:var(--white)">
+        Sonuçlar <em>Rakamlarla</em>
+      </h2>
+      <div class="ajans-stats-grid reveal">
+        <div class="ajans-stat">
+          <div class="ajans-stat-num">48<span>+</span></div>
+          <div class="ajans-stat-lbl">Büyütülen Marka</div>
+        </div>
+        <div class="ajans-stat">
+          <div class="ajans-stat-num">3.2<span>x</span></div>
+          <div class="ajans-stat-lbl">Ortalama Büyüme</div>
+        </div>
+        <div class="ajans-stat">
+          <div class="ajans-stat-num">%94</div>
+          <div class="ajans-stat-lbl">Müşteri Devamlılığı</div>
+        </div>
+        <div class="ajans-stat">
+          <div class="ajans-stat-num">6</div>
+          <div class="ajans-stat-lbl">Aktif Müşteri Kapasitesi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="page-cta">
+    <div class="container">
+      <span class="section-eyebrow reveal">Bir Sonraki Adım</span>
+      <h2 class="section-title reveal">
+        Büyümeye <em>Hazır mısınız?</em>
+      </h2>
+      <p class="section-lead reveal">
+        Stratejik uyum değerlendirmesi için başvurun. Markanızın büyüme potansiyelini birlikte analiz edelim.
+      </p>
+      <div class="cta-btns reveal">
+        <a href="iletisim.html" class="btn-primary">Başvuru Yap</a>
+        <a href="case-study.html" class="btn-ghost">Başarı Hikâyelerini Gör</a>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Üst segment markalar için ölçeklenebilir dijital büyüme sistemleri. Ankara merkezli, Türkiye genelinde hizmet.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · SEO hizmeti · Google reklam yönetimi · Web sitesi tasarımı · Video prodüksiyon Ankara</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links">
+        <a href="#">Instagram</a><a href="#">LinkedIn</a><a href="#">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+  const hb = document.getElementById('hamburger'); const mm = document.getElementById('mobileMenu'); const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+  // badge dot
+  const bd = document.querySelector('.badge-dot');
+  if(bd) { setInterval(() => bd.style.opacity = bd.style.opacity === '0.2' ? '1' : '0.2', 1000); }
+</script>
+</body>
+</html>

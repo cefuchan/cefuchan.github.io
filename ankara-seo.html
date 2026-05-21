@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ankara SEO Ajansı — Cefu Dijital</title>
+  <meta name="description" content="Ankara'nın en etkili SEO ajansı. Ankara SEO yapan firmalar arasında öncü olarak, SEO puanınızı nasıl yükseltirim? SEO sorgulama ve optimizasyon hizmetlerimizle organik büyüme sağlıyoruz." />
+  <meta name="keywords" content="Ankara SEO ajansı, Ankara SEO yapan firmalar, Ankara SEO, SEO danışmanlığı, arama motoru optimizasyonu, organik büyüme, Google SEO, yerel SEO Ankara, SEO puanımı nasıl yükseltirim, SEO sorgulama" />
+  <meta property="og:title" content="Ankara SEO Ajansı — Cefu Dijital" />
+  <meta property="og:description" content="Ankara SEO ajansı olarak organik büyüme sistemlerimizle markanızı arama motorlarında kalıcı üst sıralara çıkarıyoruz." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cefudigital.com/ankara-seo.html" />
+  <link rel="canonical" href="https://www.cefudigital.com/ankara-seo.html" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE-SPECIFIC ── */
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 130px 40px 90px;
+      position: relative; overflow: hidden;
+      background: var(--white);
+    }
+    .hero-ornament {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .hero-ornament::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 860px; height: 860px;
+      border: 1px solid rgba(212,165,55,0.065);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite;
+    }
+    .hero-ornament::after {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px; height: 580px;
+      border: 1px solid rgba(212,165,55,0.045);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite 2.5s;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%,-50%) scale(1.035); }
+    }
+    .hero-tag {
+      font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 34px;
+      opacity: 0; animation: fadeUp 1s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6.5vw, 5.4rem);
+      font-weight: 600; line-height: 1.08;
+      letter-spacing: 0.02em; color: var(--ink);
+      max-width: 920px; margin-bottom: 30px;
+      opacity: 0; animation: fadeUp 1s 0.4s forwards;
+    }
+    .hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+    .hero-sub {
+      font-family: var(--font-serif); font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 300; color: var(--ink-soft); max-width: 560px; line-height: 1.75;
+      margin-bottom: 52px;
+      opacity: 0; animation: fadeUp 1s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeUp 1s 0.8s forwards;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      opacity: 0; animation: fadeUp 1s 1.3s forwards;
+    }
+    .hero-scroll span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+    .scroll-line { width: 1px; height: 46px; background: var(--gold); animation: sc 2s ease-in-out infinite; }
+    @keyframes sc { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.7)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+    /* SEO STATS */
+    #seo-stats {
+      padding: 72px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .seo-stats-inner { display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+    .stats-quote { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.55rem); font-weight: 300; font-style: italic; color: var(--ink-mid); max-width: 560px; text-align: center; }
+    .seo-stat-item { flex: 1; min-width: 120px; }
+    .seo-stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--ink); line-height: 1; }
+    .seo-stat-num span { color: var(--gold); }
+    .seo-stat-lbl { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+
+    /* SEO HIZMETLER */
+    #seo-hizmetler { background: var(--white); }
+    .seo-hizmetler-head { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: end; margin-bottom: 72px; }
+    .seo-hizmetler-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .seo-hizmet-card {
+      background: var(--white); padding: 48px 38px;
+      position: relative; overflow: hidden; transition: background 0.4s;
+    }
+    .seo-hizmet-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+    .seo-hizmet-card:hover { background: var(--off-white); }
+    .seo-hizmet-card:hover::after { transform: scaleX(1); }
+    .seo-hizmet-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .seo-hizmet-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .seo-hizmet-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+
+    /* SEO SÜREÇ */
+    #seo-surec { background: var(--ink); }
+    #seo-surec .section-title { color: var(--white); }
+    #seo-surec .section-lead { color: rgba(255,255,255,0.45); }
+    .seo-surec-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 72px; }
+    .seo-surec-step { padding: 56px 44px; position: relative; }
+    .seo-surec-num { font-family: var(--font-display); font-size: 3.8rem; font-weight: 700; color: rgba(212,165,55,0.1); line-height: 1; margin-bottom: 22px; }
+    .seo-surec-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.08em; color: var(--white); margin-bottom: 14px; }
+    .seo-surec-desc { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.8; }
+    .seo-surec-connector { position: absolute; right: -1px; top: 50%; transform: translateY(-50%); width: 1px; height: 56px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+
+    /* SEO CASE */
+    #seo-case { background: var(--off-white); }
+    .seo-case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 68px; }
+    .seo-case-card { background: var(--white); padding: 44px 36px; border: 1px solid transparent; transition: border-color 0.4s, transform 0.4s; }
+    .seo-case-card:hover { border-color: var(--border); transform: translateY(-5px); }
+    .seo-case-industry { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .seo-case-client { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .seo-case-result { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 7px; }
+    .seo-case-result span { color: var(--gold); }
+    .seo-case-metric { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 22px; }
+    .seo-case-desc { font-family: var(--font-serif); font-size: 0.93rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 22px; }
+
+    /* CTA */
+    #seo-cta { background: var(--ink); text-align: center; }
+    .seo-cta-inner { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+    .seo-cta-inner .section-title { color: var(--white); }
+    .seo-cta-inner .section-lead { color: rgba(255,255,255,0.42); max-width: 100%; text-align: center; }
+    .seo-cta-inner .gold-divider { background: rgba(212,165,55,0.4); margin: 0 auto 36px; }
+    .seo-cta-actions { display: flex; gap: 18px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+
+    /* SEO REHBER */
+    #seo-rehber { background: var(--off-white); padding: 72px 0; }
+    .seo-rehber-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 48px; margin-top: 72px; }
+    .seo-rehber-item { background: var(--white); padding: 48px 38px; border: 1px solid var(--border); border-radius: 8px; transition: transform 0.4s, box-shadow 0.4s; }
+    .seo-rehber-item:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    .seo-rehber-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .seo-rehber-title { font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .seo-rehber-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+    .seo-rehber-note { font-family: var(--font-serif); font-size: 1.05rem; font-weight: 300; color: var(--ink-mid); max-width: 600px; margin: 0 auto; }
+
+    @media (max-width: 1024px) {
+      .seo-rehber-grid { grid-template-columns: 1fr; gap: 32px; }
+    }
+
+    @media (max-width: 1024px) {
+      .seo-hizmetler-head { grid-template-columns: 1fr; gap: 28px; }
+      .seo-hizmetler-grid { grid-template-columns: repeat(2,1fr); }
+      .seo-case-grid { grid-template-columns: repeat(2,1fr); }
+      .seo-surec-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width: 768px) {
+      #hero { padding: 120px 22px 80px; }
+      .seo-stats-inner { gap: 44px; }
+      .seo-hizmetler-grid { grid-template-columns: 1fr; }
+      .seo-surec-grid { grid-template-columns: 1fr; }
+      .seo-surec-connector { display: none; }
+      .seo-case-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ══ NAVBAR ══ -->
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Cefu Dijital Ana Sayfa"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>
+        <li><a href="ankara-seo.html" class="active">Ankara SEO</a></li>
+        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobil Menü">
+  <button class="mobile-close" id="mobileClose" aria-label="Menüyü Kapat">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
+
+<main>
+
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Ankara SEO Ajansı">
+    <div class="hero-ornament" aria-hidden="true"></div>
+    <p class="hero-tag">Ankara SEO Ajansı</p>
+    <h1 class="hero-title">
+      Arama Motorlarında<br>
+      <em>Üst Sıra Hakimiyeti</em>
+    </h1>
+    <p class="hero-sub">
+      Ankara'nın en güvenilir SEO ajansı olarak, markanızı Google'da kalıcı üst sıralara çıkarıyoruz.
+      Ankara SEO yapan firmalar arasında öncü konumdayız. SEO puanınızı nasıl yükseltirim?
+      Profesyonel SEO sorgulama ve optimizasyon hizmetlerimizle organik büyümenizi sağlıyoruz.
+    </p>
+    <div class="hero-actions">
+      <a href="iletisim.html" class="btn-primary">SEO Danışmanlığı Al</a>
+      <a href="#seo-hizmetler" class="btn-ghost">Hizmetlerimizi İncele</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Keşfet</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ══ SEO STATS ══ -->
+  <section id="seo-stats" aria-label="SEO İstatistikleri">
+    <div class="container">
+      <div class="stats-inner">
+        <p class="stats-quote reveal">"Ankara SEO ajansı olarak, Ankara SEO yapan firmalar arasında uzmanız"</p>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num">156<span>+</span></div>
+          <div class="stat-lbl">SEO Projesi</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">4.2<span>x</span></div>
+          <div class="stat-lbl">Ortalama Trafik Artışı</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">%89</div>
+          <div class="stat-lbl">Sıra İyileşme Oranı</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-num">24</div>
+          <div class="stat-lbl">Aktif SEO Müşterisi</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SEO HIZMETLER ══ -->
+  <section id="seo-hizmetler" aria-labelledby="seo-hizmetler-heading">
+    <div class="container">
+      <div class="seo-hizmetler-head">
+        <div>
+          <span class="section-eyebrow reveal">SEO Hizmetlerimiz</span>
+          <h2 class="section-title reveal" id="seo-hizmetler-heading">
+            Kapsamlı SEO<br><em>Stratejileri</em>
+          </h2>
+        </div>
+        <p class="section-lead reveal">
+          Teknik optimizasyon, içerik stratejisi ve yerel SEO ile Ankara'da rekabet gücünüzü artırıyoruz.
+          Her adım veri odaklı, sonuç garantili.
+        </p>
+      </div>
+
+      <div class="seo-hizmetler-grid reveal">
+        <article class="seo-hizmet-card">
+          <div class="seo-hizmet-num">01</div>
+          <h3 class="seo-hizmet-title">Teknik SEO Optimizasyonu</h3>
+          <p class="seo-hizmet-desc">Site hızı, mobil uyumluluk, yapılandırılmış veri ve teknik altyapı optimizasyonu ile arama motoru dostu web siteleri.</p>
+        </article>
+        <article class="seo-hizmet-card">
+          <div class="seo-hizmet-num">02</div>
+          <h3 class="seo-hizmet-title">İçerik ve Anahtar Kelime Stratejisi</h3>
+          <p class="seo-hizmet-desc">Rekabet analizi, anahtar kelime araştırması ve kullanıcı odaklı içerik üretimi ile organik sıralama başarısı.</p>
+        </article>
+        <article class="seo-hizmet-card">
+          <div class="seo-hizmet-num">03</div>
+          <h3 class="seo-hizmet-title">Yerel SEO ve Google My Business</h3>
+          <p class="seo-hizmet-desc">Ankara merkezli işletmeler için yerel arama optimizasyonu, GMB yönetimi ve coğrafi hedefleme stratejileri.</p>
+        </article>
+        <article class="seo-hizmet-card">
+          <div class="seo-hizmet-num">04</div>
+          <h3 class="seo-hizmet-title">Backlink ve Otorite İnşası</h3>
+          <p class="seo-hizmet-desc">Kaliteli backlink profili oluşturma, dijital PR ve domain otoritesi geliştirme çalışmaları.</p>
+        </article>
+        <article class="seo-hizmet-card">
+          <div class="seo-hizmet-num">05</div>
+          <h3 class="seo-hizmet-title">SEO Sorgulama ve Raporlama</h3>
+          <p class="seo-hizmet-desc">Düzenli SEO sorgulama, sıralama takibi, performans raporları ve sürekli optimizasyon ile şeffaf SEO yönetimi.</p>
+        </article>
+        <article class="seo-hizmet-card">
+          <div class="seo-hizmet-num">06</div>
+          <h3 class="seo-hizmet-title">E-Ticaret SEO</h3>
+          <p class="seo-hizmet-desc">Ürün sayfası optimizasyonu, kategori SEO ve e-ticaret siteleri için özel arama motoru stratejileri.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SEO SÜREÇ ══ -->
+  <section id="seo-surec" aria-labelledby="seo-surec-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">SEO Süreci</span>
+      <h2 class="section-title reveal" id="seo-surec-heading">SEO'da <em>Başarı Adımları</em></h2>
+      <p class="section-lead reveal">Sistematik yaklaşımımızla her projede tutarlı sonuçlar elde ediyoruz.</p>
+      <div class="seo-surec-grid reveal">
+        <div class="seo-surec-step">
+          <div class="seo-surec-num">01</div>
+          <h3 class="seo-surec-title">SEO Analizi</h3>
+          <p class="seo-surec-desc">Mevcut durum analizi, rekabet araştırması ve fırsatların belirlenmesi.</p>
+          <div class="seo-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="seo-surec-step">
+          <div class="seo-surec-num">02</div>
+          <h3 class="seo-surec-title">Strateji Geliştirme</h3>
+          <p class="seo-surec-desc">Özelleştirilmiş SEO stratejisi ve eylem planı oluşturma.</p>
+          <div class="seo-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="seo-surec-step">
+          <div class="seo-surec-num">03</div>
+          <h3 class="seo-surec-title">Uygulama</h3>
+          <p class="seo-surec-desc">Teknik optimizasyon, içerik üretimi ve optimizasyon çalışmaları.</p>
+          <div class="seo-surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="seo-surec-step">
+          <div class="seo-surec-num">04</div>
+          <h3 class="seo-surec-title">İzleme & Optimizasyon</h3>
+          <p class="seo-surec-desc">Performans takibi, raporlama ve sürekli iyileştirme.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SEO CASE ══ -->
+  <section id="seo-case" aria-labelledby="seo-case-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">SEO Başarı Hikayeleri</span>
+      <h2 class="section-title reveal" id="seo-case-heading">SEO ile <em>Gerçek Büyüme</em></h2>
+      <div class="seo-case-grid">
+        <article class="seo-case-card reveal reveal-delay-1">
+          <div class="seo-case-industry">E-Ticaret / Ankara</div>
+          <div class="seo-case-client">Teknoloji Mağazası</div>
+          <div class="seo-case-result"><span>+</span>380<span>%</span></div>
+          <div class="seo-case-metric">Organik Trafik — 10 Ay</div>
+          <p class="seo-case-desc">Ankara SEO ajansı olarak teknik SEO optimizasyonu ve içerik stratejisi ile Ankara'da teknoloji ürünleri kategorisinde ilk sıralara yükseliş.</p>
+        </article>
+        <article class="seo-case-card reveal reveal-delay-2">
+          <div class="seo-case-industry">Hizmet / Ankara</div>
+          <div class="seo-case-client">Danışmanlık Firması</div>
+          <div class="seo-case-result"><span>+</span>5.1<span>x</span></div>
+          <div class="seo-case-metric">Organik Müşteri Adayı — 8 Ay</div>
+          <p class="seo-case-desc">Yerel SEO ve uzun kuyruk anahtar kelime optimizasyonuyla nitelikli müşteri adaylarında dramatik artış.</p>
+        </article>
+        <article class="seo-case-card reveal reveal-delay-3">
+          <div class="seo-case-industry">Sağlık / Ankara</div>
+          <div class="seo-case-client">Tıp Kliniği</div>
+          <div class="seo-case-result"><span>+</span>267<span>%</span></div>
+          <div class="seo-case-metric">Google Sıralaması — 6 Ay</div>
+          <p class="seo-case-desc">Yerel SEO ve GMB optimizasyonuyla Ankara'da rekabetçi sağlık sektöründe üst sıralara yerleşim.</p>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="case-study.html" class="btn-ghost">Tüm SEO Case Study'leri</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SEO CTA ══ -->
+  <section id="seo-cta" aria-labelledby="seo-cta-heading">
+    <div class="container">
+      <div class="seo-cta-inner">
+        <span class="section-eyebrow reveal">SEO Danışmanlığı</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="seo-cta-heading">
+          Ankara SEO<br><em>Ajansı Seçiminiz</em>
+        </h2>
+        <p class="section-lead reveal">
+          Ücretsiz SEO analizi ile sitenizin potansiyelini keşfedin.
+          Ankara'da SEO yapan firmalar arasında öncü olarak uzman ekibimizle tanışın.
+        </p>
+        <div class="seo-cta-actions reveal">
+          <a href="iletisim.html" class="btn-gold">Ücretsiz SEO Analizi</a>
+          <a href="tel:05511367634" class="btn-outline-white">0551 136 76 34</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ SEO REHBER ══ -->
+  <section id="seo-rehber" aria-labelledby="seo-rehber-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">SEO Rehberi</span>
+      <h2 class="section-title reveal" id="seo-rehber-heading">SEO Puanımı Nasıl <em>Yükseltirim?</em></h2>
+      <p class="section-lead reveal">
+        Ankara SEO ajansı olarak, SEO puanınızı yükseltmek için pratik adımlar ve profesyonel stratejiler sunuyoruz.
+        SEO sorgulama araçları ve optimizasyon teknikleriyle sürdürülebilir başarı.
+      </p>
+      <div class="seo-rehber-grid reveal">
+        <div class="seo-rehber-item">
+          <div class="seo-rehber-num">01</div>
+          <h3 class="seo-rehber-title">Teknik SEO Temelleri</h3>
+          <p class="seo-rehber-desc">Site hızı optimizasyonu, mobil uyumluluk ve teknik hataların giderilmesi ile SEO puanınızı artırın.</p>
+        </div>
+        <div class="seo-rehber-item">
+          <div class="seo-rehber-num">02</div>
+          <h3 class="seo-rehber-title">İçerik Optimizasyonu</h3>
+          <p class="seo-rehber-desc">Kaliteli içerik üretimi, anahtar kelime araştırması ve kullanıcı odaklı yazma teknikleri.</p>
+        </div>
+        <div class="seo-rehber-item">
+          <div class="seo-rehber-num">03</div>
+          <h3 class="seo-rehber-title">Backlink Stratejisi</h3>
+          <p class="seo-rehber-desc">Kaliteli backlink edinme yöntemleri ve otorite inşası için sürdürülebilir link building taktikleri.</p>
+        </div>
+        <div class="seo-rehber-item">
+          <div class="seo-rehber-num">04</div>
+          <h3 class="seo-rehber-title">Düzenli SEO Sorgulama</h3>
+          <p class="seo-rehber-desc">Sıralama takibi, performans analizi ve sürekli optimizasyon için SEO sorgulama araçlarının kullanımı.</p>
+        </div>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <p class="seo-rehber-note">Ankara SEO yapan firmalar olarak, SEO puanınızı yükseltmek için profesyonel destek sağlıyoruz.</p>
+        <a href="iletisim.html" class="btn-primary" style="margin-top:24px;">SEO Danışmanlığı Alın</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Ankara'nın lider dijital pazarlama ajansı. SEO, web tasarımı ve performans reklamcılığı alanında uzmanız.</p>
+        <p class="footer-seo">Ankara SEO ajansı · Ankara SEO yapan firmalar · Ankara SEO · SEO puanımı nasıl yükseltirim · SEO sorgulama · Arama motoru optimizasyonu</p>
+      </div>
+      <div>
+        <span class="footer-col-title">SEO Hizmetleri</span>
+        <ul class="footer-links">
+          <li><a href="#seo-hizmetler">Teknik SEO</a></li>
+          <li><a href="#seo-hizmetler">İçerik Stratejisi</a></li>
+          <li><a href="#seo-hizmetler">Yerel SEO</a></li>
+          <li><a href="#seo-rehber">SEO Puan Yükseltme</a></li>
+          <li><a href="#seo-hizmetler">SEO Sorgulama</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html">Başvuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara SEO ajansı</p>
+      <nav class="social-links" aria-label="Sosyal Medya">
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+        <a href="#" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" rel="noopener noreferrer">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Navbar scroll
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
+
+  // Mobile menu
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
+</script>
+</body>
+</html>

@@ -1,1250 +1,613 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CefuDigital Ankara Dijital Pazarlama Ajansı | EN, BAE</title>
-    <meta name="description" content="Türkiye, İngiltere ve BAE'de profesyonel dijital pazarlama, SEO, web tasarım ve şirket çözümleri. CefuDigital ile dijital dünyada büyüyün.">
-    <meta name="keywords" content="dijital pazarlama, SEO, web tasarım, şirket çözümleri, Türkiye, İngiltere, BAE, CefuDigital">
-    <meta name="author" content="CefuDigital">
-    <link rel="canonical" href="https://cefudigital.com/index.html" />
-    
-    
-    <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="CefuDigital - Dijital Pazarlama Ajansı">
-    <meta property="og:description" content="Profesyonel dijital çözümler ile işinizi büyütün">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://cefudigital.com">
-    <meta property="og:image" content="https://cefudigital.com/og-image.jpg">
-    
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="img/favicon svg.svg" type="image/x-icon">    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"> -->
-    
-    <!-- AOS Animation Library -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <style>
-        :root {
-            --primary-color: #f8f9fa;
-            --secondary-color: #212529;
-            --accent-color: #c9a55c;
-            --text-dark: #333;
-            --text-light: #777;
-            --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            --font-heading: 'Playfair Display', serif;
-            --font-body: 'Poppins', sans-serif;
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: var(--font-body);
-            background-color: var(--primary-color);
-            color: var(--text-dark);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        h1, h2, h3, h4, h5, h6 {
-            font-family: var(--font-heading);
-            font-weight: 500;
-        }
-
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-
-        .btn {
-            display: inline-block;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 0;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: var(--transition);
-            font-size: 14px;
-            position: relative;
-            overflow: hidden;
-            z-index: 1;
-        }
-
-        .btn-primary {
-            background-color: var(--accent-color);
-            color: white;
-            border: 1px solid var(--accent-color);
-        }
-
-        .btn-primary:hover {
-            background-color: transparent;
-            color: var(--accent-color);
-        }
-
-        .btn-secondary {
-            background-color: transparent;
-            color: var(--text-dark);
-            border: 1px solid var(--text-dark);
-        }
-
-        .btn-secondary:hover {
-            background-color: var(--text-dark);
-            color: white;
-        }
-
-        /* Header */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            transition: var(--transition);
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 20px 0;
-        }
-
-        .logo {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            font-weight: 700;
-            color: var(--secondary-color);
-            text-decoration: none;
-            transition: var(--transition);
-            letter-spacing: 1px;
-        }
-
-        .logo span {
-            color: var(--accent-color);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .nav-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            transition: var(--transition);
-            position: relative;
-            font-weight: 500;
-            font-size: 15px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .nav-links a:hover,
-        .nav-links a.active {
-            color: var(--accent-color);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 1px;
-            background: var(--accent-color);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after,
-        .nav-links a.active::after {
-            width: 100%;
-        }
-
-        .language-selector {
-            display: flex;
-            gap: 10px;
-            margin-left: 30px;
-        }
-
-        .lang-btn {
-            background: none;
-            border: 1px solid var(--text-light);
-            color: var(--text-dark);
-            padding: 5px 10px;
-            cursor: pointer;
-            transition: var(--transition);
-            border-radius: 0;
-            font-size: 14px;
-        }
-
-        .lang-btn:hover,
-        .lang-btn.active {
-            border-color: var(--accent-color);
-            color: var(--accent-color);
-        }
-
-        .mobile-menu {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .mobile-menu span {
-            width: 25px;
-            height: 2px;
-            background: var(--text-dark);
-            margin: 3px 0;
-            transition: var(--transition);
-        }
-
-        /* Hero Section */
-        .hero {
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('/placeholder.svg?height=1080&width=1920') center/cover no-repeat;
-            opacity: 0.05;
-            z-index: 0;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 800px;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 6vw, 5rem);
-            margin-bottom: 30px;
-            color: var(--text-dark);
-            line-height: 1.2;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            color: var(--text-light);
-            margin-bottom: 40px;
-            line-height: 1.6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 120px 0;
-            background: white;
-        }
-
-        .section-header {
-            text-align: center;
-            margin-bottom: 80px;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-
-        .section-header h2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 2px;
-            background: var(--accent-color);
-        }
-
-        .section-header p {
-            color: var(--text-light);
-            max-width: 700px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-        }
-
-        .service-card {
-            background: white;
-            padding: 40px 30px;
-            text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .service-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-        }
-
-        .service-icon {
-            width: 80px;
-            height: 80px;
-            background: var(--accent-color);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 30px;
-            color: white;
-            font-size: 2rem;
-            transition: var(--transition);
-        }
-        .service-icon img{
-            width: 30px;
-            height: 30px;
-            filter: invert(100%);
-        }
-
-        .service-card:hover .service-icon {
-            transform: scale(1.1);
-        }
-
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 20px;
-            color: var(--text-dark);
-        }
-
-        .service-card p {
-            color: var(--text-light);
-            line-height: 1.6;
-            margin-bottom: 25px;
-        }
-
-        .service-link {
-            color: var(--accent-color);
-            text-decoration: none;
-            font-weight: 500;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-            transition: var(--transition);
-        }
-
-        .service-link::after {
-            content: '→';
-            margin-left: 5px;
-            transition: var(--transition);
-        }
-
-        .service-link:hover::after {
-            margin-left: 10px;
-        }
-
-        /* About Section */
-        .about {
-            padding: 120px 0;
-            background: #f8f9fa;
-        }
-
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-        }
-
-        .about-text h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 30px;
-            position: relative;
-        }
-
-        .about-text h2::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 0;
-            width: 80px;
-            height: 2px;
-            background: var(--accent-color);
-        }
-
-        .about-text p {
-            color: var(--text-light);
-            margin-bottom: 20px;
-            font-size: 1.1rem;
-        }
-
-        .about-features {
-            list-style: none;
-            margin: 30px 0;
-        }
-
-        .about-features li {
-            padding: 10px 0;
-            display: flex;
-            align-items: center;
-            color: var(--text-dark);
-        }
-
-        .about-features li i {
-            color: var(--accent-color);
-            margin-right: 15px;
-            font-size: 1.2rem;
-        }
-
-        .about-image {
-            position: relative;
-            height: 500px;
-            overflow: hidden;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .about-image::before {
-            content: '';
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            right: 20px;
-            bottom: 20px;
-            z-index: 1;
-            transition: var(--transition);
-        }
-
-        .about-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .about-image:hover::before {
-            top: 10px;
-            left: 10px;
-            right: 10px;
-            bottom: 10px;
-        }
-
-        /* Stats Section */
-        .stats {
-            padding: 80px 0;
-            background: var(--secondary-color);
-            color: white;
-        }
-
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            font-size: 3rem;
-            color: var(--accent-color);
-            margin-bottom: 10px;
-            font-family: var(--font-heading);
-        }
-
-        .stat-item p {
-            font-size: 1.1rem;
-            opacity: 0.9;
-        }
-
-        /* CTA Section */
-        .cta {
-            padding: 120px 0;
-            background: white;
-            text-align: center;
-        }
-
-        .cta h2 {
-            font-size: clamp(2rem, 4vw, 3rem);
-            margin-bottom: 20px;
-            color: var(--text-dark);
-        }
-
-        .cta p {
-            font-size: 1.2rem;
-            color: var(--text-light);
-            margin-bottom: 40px;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--secondary-color);
-            color: white;
-            padding: 80px 0 0;
-        }
-
-        .footer-content {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            margin-bottom: 60px;
-        }
-
-        .footer-logo {
-            font-family: var(--font-heading);
-            font-size: 28px;
-            font-weight: 700;
-            color: white;
-            text-decoration: none;
-            margin-bottom: 20px;
-            display: inline-block;
-        }
-
-        .footer-logo span {
-            color: var(--accent-color);
-        }
-
-        .footer-section p {
-            color: #aaa;
-            margin-bottom: 20px;
-            line-height: 1.8;
-        }
-
-        .footer-section h3 {
-            margin-bottom: 25px;
-            font-size: 1.3rem;
-            position: relative;
-            padding-bottom: 15px;
-        }
-
-        .footer-section h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 50px;
-            height: 2px;
-            background: var(--accent-color);
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 15px;
-        }
-
-        .footer-links a {
-            color: #aaa;
-            text-decoration: none;
-            transition: var(--transition);
-            display: flex;
-            align-items: center;
-        }
-
-        .footer-links a:hover {
-            color: var(--accent-color);
-            padding-left: 5px;
-        }
-
-        .footer-links a i {
-            margin-right: 10px;
-            font-size: 0.8rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 15px;
-            margin-top: 20px;
-        }
-
-        .social-link {
-            width: 40px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            text-decoration: none;
-            transition: var(--transition);
-        }
-
-        .social-link:hover {
-            background: var(--accent-color);
-            transform: translateY(-3px);
-        }
-
-        .footer-bottom {
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            padding: 20px 0;
-            text-align: center;
-            color: #aaa;
-        }
-
-        /* Mobile Menu */
-        .mobile-nav {
-            position: fixed;
-            top: 0;
-            right: -300px;
-            width: 300px;
-            height: 100vh;
-            background: white;
-            z-index: 1001;
-            padding: 80px 40px;
-            transition: var(--transition);
-            box-shadow: -5px 0 30px rgba(0, 0, 0, 0.1);
-        }
-        
-        .mobile-nav.active {
-            right: 0;
-        }
-        
-        .mobile-nav-links {
-            list-style: none;
-        }
-        
-        .mobile-nav-links li {
-            margin-bottom: 20px;
-        }
-        
-        .mobile-nav-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            font-size: 1.2rem;
-            font-weight: 500;
-            transition: var(--transition);
-        }
-        
-        .mobile-nav-links a:hover {
-            color: var(--accent-color);
-        }
-        
-        .mobile-language-selector {
-            display: flex;
-            gap: 10px;
-            margin-top: 40px;
-        }
-        
-        .close-menu {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-dark);
-        }
-        
-        .overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1000;
-            opacity: 0;
-            visibility: hidden;
-            transition: var(--transition);
-        }
-        
-        .overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .about-text {
-                text-align: center;
-            }
-            
-            .about-text h2::after {
-                left: 50%;
-                transform: translateX(-50%);
-            }
-            
-            .about-image {
-                order: -1;
-                height: 400px;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
-            
-            .hero {
-                padding: 0 20px;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .services {
-                padding: 80px 0;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .about {
-                padding: 80px 0;
-            }
-            
-            .stats {
-                padding: 60px 0;
-            }
-            
-            .stats-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .cta {
-                padding: 80px 0;
-            }
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cefu Dijital — Ankara Dijital Pazarlama ve SEO Ajansı</title>
+  <meta name="description" content="Cefu Dijital, Ankara'nın seçkin dijital büyüme ajansıdır. SEO, Google reklam yönetimi, web sitesi tasarımı ve marka hakimiyeti sistemleriyle üst segment markaları büyütüyoruz." />
+  <meta name="keywords" content="Ankara SEO ajansı, dijital pazarlama ajansı, Cefu Dijital, web sitesi tasarımı, Google reklam yönetimi, Ankara dijital ajans" />
+  <meta property="og:title" content="Cefu Dijital — Ankara Dijital Pazarlama ve SEO Ajansı" />
+  <meta property="og:description" content="Her marka ile çalışmıyoruz. Büyümeye hazır seçkin markalar için yüksek performanslı dijital büyüme sistemleri." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.cefudigital.com/" />
+  <link rel="canonical" href="https://www.cefudigital.com/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ── PAGE-SPECIFIC ── */
+
+    /* HERO */
+    #hero {
+      min-height: 100vh;
+      display: flex; flex-direction: column;
+      justify-content: center; align-items: center;
+      text-align: center;
+      padding: 130px 40px 90px;
+      position: relative; overflow: hidden;
+      background: var(--white);
+    }
+    .hero-ornament {
+      position: absolute; inset: 0;
+      pointer-events: none; overflow: hidden;
+    }
+    .hero-ornament::before {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 860px; height: 860px;
+      border: 1px solid rgba(212,165,55,0.065);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite;
+    }
+    .hero-ornament::after {
+      content: '';
+      position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      width: 580px; height: 580px;
+      border: 1px solid rgba(212,165,55,0.045);
+      border-radius: 50%;
+      animation: pulse-ring 9s ease-in-out infinite 2.5s;
+    }
+    @keyframes pulse-ring {
+      0%, 100% { opacity: 0.5; transform: translate(-50%,-50%) scale(1); }
+      50% { opacity: 1; transform: translate(-50%,-50%) scale(1.035); }
+    }
+    .hero-tag {
+      font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+      color: var(--gold); margin-bottom: 34px;
+      opacity: 0; animation: fadeUp 1s 0.2s forwards;
+    }
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 6.5vw, 5.4rem);
+      font-weight: 600; line-height: 1.08;
+      letter-spacing: 0.02em; color: var(--ink);
+      max-width: 920px; margin-bottom: 30px;
+      opacity: 0; animation: fadeUp 1s 0.4s forwards;
+    }
+    .hero-title em { font-family: var(--font-serif); font-style: italic; font-weight: 400; color: var(--gold); }
+    .hero-sub {
+      font-family: var(--font-serif); font-size: clamp(1.05rem, 2vw, 1.35rem);
+      font-weight: 300; color: var(--ink-soft); max-width: 560px; line-height: 1.75;
+      margin-bottom: 52px;
+      opacity: 0; animation: fadeUp 1s 0.6s forwards;
+    }
+    .hero-actions {
+      display: flex; gap: 18px; align-items: center; flex-wrap: wrap; justify-content: center;
+      opacity: 0; animation: fadeUp 1s 0.8s forwards;
+    }
+    .hero-scroll {
+      position: absolute; bottom: 38px; left: 50%; transform: translateX(-50%);
+      display: flex; flex-direction: column; align-items: center; gap: 10px;
+      opacity: 0; animation: fadeUp 1s 1.3s forwards;
+    }
+    .hero-scroll span { font-size: 0.62rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--ink-faint); }
+    .scroll-line { width: 1px; height: 46px; background: var(--gold); animation: sc 2s ease-in-out infinite; }
+    @keyframes sc { 0%,100%{opacity:0.3;transform:scaleY(1)} 50%{opacity:1;transform:scaleY(0.7)} }
+    @keyframes fadeUp { from{opacity:0;transform:translateY(26px)} to{opacity:1;transform:translateY(0)} }
+
+    /* STATS STRIP */
+    #stats {
+      padding: 72px 0;
+      background: var(--off-white);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+    .stats-inner { display: flex; justify-content: center; align-items: center; gap: 80px; flex-wrap: wrap; text-align: center; }
+    .stat-item {}
+    .stat-num { font-family: var(--font-display); font-size: 2.5rem; font-weight: 600; color: var(--ink); line-height: 1; }
+    .stat-num span { color: var(--gold); }
+    .stat-lbl { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-soft); margin-top: 8px; }
+    .stats-quote { font-family: var(--font-serif); font-size: clamp(1.1rem, 2vw, 1.55rem); font-weight: 300; font-style: italic; color: var(--ink-mid); max-width: 560px; text-align: center; }
+
+    /* HIZMETLER PREVIEW */
+    #hizmetler-preview { background: var(--white); }
+    .hizmetler-head { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: end; margin-bottom: 72px; }
+    .hizmetler-grid {
+      display: grid; grid-template-columns: repeat(3,1fr);
+      gap: 1px; background: var(--border);
+      border: 1px solid var(--border);
+    }
+    .hizmet-card {
+      background: var(--white); padding: 48px 38px;
+      position: relative; overflow: hidden; transition: background 0.4s;
+    }
+    .hizmet-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px; background: var(--gold); transform: scaleX(0); transform-origin: left; transition: transform 0.5s; }
+    .hizmet-card:hover { background: var(--off-white); }
+    .hizmet-card:hover::after { transform: scaleX(1); }
+    .hizmet-num { font-family: var(--font-display); font-size: 0.62rem; letter-spacing: 0.22em; color: var(--gold); margin-bottom: 26px; }
+    .hizmet-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 16px; line-height: 1.4; }
+    .hizmet-desc { font-family: var(--font-serif); font-size: 0.95rem; font-weight: 300; color: var(--ink-soft); line-height: 1.75; }
+    .hizmet-link { display: inline-block; margin-top: 26px; font-size: 0.7rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--gold); text-decoration: none; transition: transform 0.3s; }
+    .hizmet-card:hover .hizmet-link { transform: translateX(6px); }
+    .hizmet-card-quote { background: var(--off-white); display: flex; flex-direction: column; justify-content: center; }
+    .hizmet-card-quote .q-text { font-family: var(--font-serif); font-size: 1.3rem; font-weight: 400; font-style: italic; color: var(--gold); line-height: 1.5; }
+    .hizmet-card-quote .q-src { font-size: 0.72rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-soft); margin-top: 16px; }
+
+    /* SÜREÇ */
+    #surec { background: var(--ink); }
+    #surec .section-title { color: var(--white); }
+    #surec .section-lead { color: rgba(255,255,255,0.45); }
+    .surec-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; background: rgba(255,255,255,0.05); margin-top: 72px; }
+    .surec-step { padding: 56px 44px; position: relative; }
+    .surec-num { font-family: var(--font-display); font-size: 3.8rem; font-weight: 700; color: rgba(212,165,55,0.1); line-height: 1; margin-bottom: 22px; }
+    .surec-title { font-family: var(--font-display); font-size: 1rem; font-weight: 500; letter-spacing: 0.08em; color: var(--white); margin-bottom: 14px; }
+    .surec-desc { font-family: var(--font-serif); font-size: 1rem; font-weight: 300; color: rgba(255,255,255,0.45); line-height: 1.8; }
+    .surec-connector { position: absolute; right: -1px; top: 50%; transform: translateY(-50%); width: 1px; height: 56px; background: linear-gradient(to bottom, transparent, var(--gold), transparent); }
+
+    /* CASE PREVIEW */
+    #case-preview { background: var(--off-white); }
+    .case-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 68px; }
+    .case-card { background: var(--white); padding: 44px 36px; border: 1px solid transparent; transition: border-color 0.4s, transform 0.4s; }
+    .case-card:hover { border-color: var(--border); transform: translateY(-5px); }
+    .case-industry { font-size: 0.65rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 18px; }
+    .case-client { font-family: var(--font-display); font-size: 1.05rem; font-weight: 500; color: var(--ink); margin-bottom: 14px; }
+    .case-result { font-family: var(--font-display); font-size: 2.8rem; font-weight: 700; color: var(--ink); line-height: 1; margin-bottom: 7px; }
+    .case-result span { color: var(--gold); }
+    .case-metric { font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-faint); margin-bottom: 22px; }
+    .case-desc { font-family: var(--font-serif); font-size: 0.93rem; font-weight: 300; color: var(--ink-soft); line-height: 1.8; border-top: 1px solid var(--border); padding-top: 22px; }
+
+    /* BRAND MARQUEE */
+    #brand-bar { background: var(--cream); }
+    .brand-bar-inner { padding: 44px 0; }
+    .brand-bar-title { max-width: 760px; margin: 0 auto 26px; }
+    .brand-marquee { position: relative; overflow: hidden; border-radius: 22px; background: rgba(255,255,255,0.9); padding: 20px 0; }
+    .marquee-track { display: flex; gap: 24px; width: 200%; animation: marquee 24s linear infinite; align-items: center; }
+    .marquee-item { flex: 0 0 auto; min-width: 180px; height: 70px; display: flex; align-items: center; justify-content: center; background: var(--white); border: 1px solid rgba(12,12,12,0.06); border-radius: 16px; padding: 0 18px; box-shadow: 0 18px 50px rgba(12,12,12,0.04); }
+    .marquee-item span { font-family: var(--font-display); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.09em; text-transform: uppercase; color: var(--ink); white-space: nowrap; }
+    .marquee-item img { max-height: 42px; width: auto; display: block; }
+    .brand-marquee::before { content: ''; position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, rgba(250,249,246,1) 0%, rgba(250,249,246,0.1) 12%, rgba(250,249,246,0.1) 88%, rgba(250,249,246,1) 100%); }
+    @keyframes marquee { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+    /* SEÇİCİLİK */
+    #secicilik { background: var(--white); text-align: center; }
+    .secicilik-inner { max-width: 760px; margin: 0 auto; }
+    .secicilik-inner .gold-divider { margin: 0 auto 36px; }
+    .secicilik-inner .section-title { font-size: clamp(2rem, 4.5vw, 3.6rem); }
+    .secicilik-inner .section-lead { max-width: 100%; text-align: center; font-size: 1.2rem; }
+    .criteria-tags { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; margin-top: 44px; }
+    .criteria-tag { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink); border: 1px solid var(--border); padding: 10px 20px; }
+    .badge-open { display: inline-flex; align-items: center; gap: 10px; margin-top: 52px; padding: 15px 30px; background: var(--ink); font-size: 0.72rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--white); }
+    .badge-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
+
+    /* CTA SECTION */
+    #cta-basvuru { background: var(--ink); text-align: center; }
+    .cta-inner { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; align-items: center; }
+    .cta-inner .section-title { color: var(--white); }
+    .cta-inner .section-lead { color: rgba(255,255,255,0.42); max-width: 100%; text-align: center; }
+    .cta-inner .gold-divider { background: rgba(212,165,55,0.4); margin: 0 auto 36px; }
+    .cta-actions { display: flex; gap: 18px; margin-top: 48px; flex-wrap: wrap; justify-content: center; }
+
+    /* BLOG PLACEHOLDER */
+    #blog { background: var(--cream); }
+    .blog-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; margin-top: 64px; }
+    .blog-card { background: var(--white); padding: 36px 32px; border: 1px solid var(--border); transition: transform 0.4s; }
+    .blog-card:hover { transform: translateY(-4px); }
+    .blog-cat { font-size: 0.64rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
+    .blog-title { font-family: var(--font-serif); font-size: 1.1rem; font-weight: 500; color: var(--ink); line-height: 1.5; margin-bottom: 14px; }
+    .blog-excerpt { font-size: 0.85rem; color: var(--ink-soft); line-height: 1.75; margin-bottom: 20px; }
+    .blog-link { font-size: 0.68rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); text-decoration: none; }
+
+    @media (max-width: 1024px) {
+      .hizmetler-head { grid-template-columns: 1fr; gap: 28px; }
+      .hizmetler-grid { grid-template-columns: repeat(2,1fr); }
+      .case-grid { grid-template-columns: repeat(2,1fr); }
+      .blog-grid { grid-template-columns: repeat(2,1fr); }
+      .brand-bar-title { max-width: 100%; }
+      .marquee-track { gap: 18px; }
+      .marquee-item { min-width: 150px; }
+    }
+    @media (max-width: 768px) {
+      #hero { padding: 120px 22px 80px; }
+      .stats-inner { gap: 44px; }
+      .hizmetler-grid { grid-template-columns: 1fr; }
+      .surec-grid { grid-template-columns: 1fr; }
+      .surec-connector { display: none; }
+      .case-grid { grid-template-columns: 1fr; }
+      .blog-grid { grid-template-columns: 1fr; }
+      .brand-bar-inner { padding: 32px 0; }
+      .brand-bar-title { text-align: center; }
+      .marquee-track { gap: 14px; animation-duration: 28s; }
+      .marquee-item { min-width: 140px; height: 60px; padding: 0 14px; }
+      .marquee-item span { font-size: 0.75rem; }
+    }
+  </style>
 </head>
 <body>
-    <!-- Mobile Menu -->
-    <div class="overlay"></div>
-    <div class="mobile-nav">
-        <button class="close-menu">
-            <i class="fas fa-times"></i>
-        </button>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html" class="active" data-tr="nav.home">Ana Sayfa</a></li>
-            <li><a href="services.html" data-tr="nav.services">Hizmetler</a></li>
-            <li><a href="about.html" data-tr="nav.about">Hakkımızda</a></li>
-            <li><a href="projects.html" data-tr="nav.projects">Projeler</a></li>
-            <li><a href="blog.html" data-tr="nav.blog">Blog</a></li>
-            <li><a href="contact.html" data-tr="nav.contact">İletişim</a></li>
-        </ul>
-        <div class="mobile-language-selector">
-            <button class="lang-btn active" data-lang="tr">TR</button>
-            <button class="lang-btn" data-lang="en">EN</button>
-            <button class="lang-btn" data-lang="ar">AR</button>
-        </div>
+
+<!-- ══ NAVBAR ══ -->
+<header>
+  <nav id="navbar" role="navigation" aria-label="Ana Menü">
+    <div class="container">
+      <a href="index.html" class="nav-logo" aria-label="Cefu Dijital Ana Sayfa"><img src="images/cefu digital logo transparan.png" alt="Cefu Dijital Logo" /></a>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Anasayfa</a></li>
+        <li><a href="hizmetler.html">Hizmetler</a></li>
+        <li><a href="hakkimizda.html">Hakkımızda</a></li>
+        <li><a href="case-study.html">Case Study</a></li>        <li><a href="iletisim.html">İletişim</a></li>
+      </ul>
+      <a href="iletisim.html" class="nav-cta">Başvuru Yap</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Menüyü Aç" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
+</header>
 
-    <header>
-        <nav class="container">
-            <a href="index.html" class="logo">Cefu<span>Digital</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html" class="active" data-tr="nav.home">Ana Sayfa</a></li>
-                <li><a href="services.html" data-tr="nav.services">Hizmetler</a></li>
-                <li><a href="about.html" data-tr="nav.about">Hakkımızda</a></li>
-                <li><a href="projects.html" data-tr="nav.projects">Projeler</a></li>
-                <li><a href="blog.html" data-tr="nav.blog">Blog</a></li>
-                <li><a href="contact.html" data-tr="nav.contact">İletişim</a></li>
-                <li class="language-selector">
-                    <button class="lang-btn active" data-lang="tr">TR</button>
-                    <button class="lang-btn" data-lang="en">EN</button>
-                    <button class="lang-btn" data-lang="ar">AR</button>
-                </li>
-            </ul>
-            <div class="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+<div class="mobile-menu" id="mobileMenu" role="dialog" aria-modal="true" aria-label="Mobil Menü">
+  <button class="mobile-close" id="mobileClose" aria-label="Menüyü Kapat">✕</button>
+  <a href="index.html">Anasayfa</a>
+  <a href="hizmetler.html">Hizmetler</a>
+  <a href="hakkimizda.html">Hakkımızda</a>
+  <a href="case-study.html">Case Study</a>  <a href="iletisim.html">İletişim</a>
+  <a href="iletisim.html" class="mob-cta">Başvuru Yap</a>
+</div>
 
-    <main>
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="hero-content" data-aos="fade-up">
-                <h1 data-tr="hero.title">Dijital Dünyada <span style="color: var(--accent-color);">Büyüyün</span></h1>
-                <p data-tr="hero.subtitle">Türkiye, İngiltere ve BAE'de profesyonel dijital pazarlama, SEO ve web tasarım hizmetleri ile işinizi bir üst seviyeye taşıyın.</p>
-                <div class="hero-buttons">
-                    <a href="services.html" class="btn btn-primary" data-tr="hero.cta1">Hizmetlerimizi Keşfedin</a>
-                    <a href="contact.html" class="btn btn-secondary" data-tr="hero.cta2">İletişime Geçin</a>
-                </div>
-            </div>
-        </section>
+<main>
 
-        <!-- Services Section -->
-        <section class="services">
-            <div class="container">
-                <div class="section-header" data-aos="fade-up">
-                    <h2 data-tr="services.title">Hizmetlerimiz</h2>
-                    <p data-tr="services.subtitle">İşinizi dijital dünyada büyütmek için ihtiyacınız olan tüm profesyonel çözümler</p>
-                </div>
-                <div class="services-grid">
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="100">
-                        <div class="service-icon">
-                            <img src="icons/search.png" alt="Cefu Digital | Seo Optimizasyonu Ankara"/>
-                        </div>
-                        <h3 data-tr="service.seo.title">SEO Optimizasyonu</h3>
-                        <p data-tr="service.seo.desc">Arama motorlarında üst sıralarda yer alarak organik trafiğinizi artırın ve potansiyel müşterilerinize daha kolay ulaşın.</p>
-                        <a href="services.html#seo" class="service-link" data-tr="service.learn-more">Daha Fazla</a>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon">
-                            <img src="icons/laptop-code.pnng.png" alt="Cefu Digital | Ankara Web Tasarım"/>
-                        </div>
-                        <h3 data-tr="service.web.title">Web Tasarımı</h3>
-                        <p data-tr="service.web.desc">Modern, kullanıcı dostu ve responsive web siteleri tasarlayarak markanızı dijital dünyada en iyi şekilde temsil ediyoruz.</p>
-                        <a href="services.html#web-design" class="service-link" data-tr="service.learn-more">Daha Fazla</a>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="200">
-                        <div class="service-icon">
-                            <img src="icons/video-camera.png" alt="Cefu Digital | Ankara Video Çekimi"/>
-                        </div>
-                        <h3 data-tr="service.video.title">Ankara Video Çekim</h3>
-                        <p data-tr="service.vide.desc">Ankara'da profesyonel video çekim, video prodüksiyon ve kurgulama işlemlerimiz ile sizlere daha profesyonel içerikler sunuyoruz.</p>
-                        <a href="services.html#video-prodüksiyon" class="service-link" data-tr="service.learn-more">Daha Fazla</a>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="300">
-                        <div class="service-icon">
-                            <img src="icons/building.png" alt="Cefu Digital | Şirket Yazılımları Ankara"/>
-                        </div>
-                        <h3 data-tr="service.corporate.title">Şirket Çözümleri</h3>
-                        <p data-tr="service.corporate.desc">İşletmeniz için kapsamlı dijital altyapı ve çözümler sunarak operasyonel verimliliğinizi artırıyoruz.</p>
-                        <a href="services.html#corporate" class="service-link" data-tr="service.learn-more">Daha Fazla</a>
-                    </div>
-                    <div class="service-card" data-aos="fade-up" data-aos-delay="400">
-                        <div class="service-icon">
-                            <img src="./icons/digital-marketing.png" alt="Cefu Digital | Dijital Pazarlama Ajansı Ankara">
-                        </div>
-                        <h3 data-tr="service.marketing.title">Dijital Pazarlama</h3>
-                        <p data-tr="service.marketing.desc">Sosyal medya, PPC reklamları ve içerik pazarlama ile markanızı büyütün ve hedef kitlenize etkili şekilde ulaşın.</p>
-                        <a href="services.html#marketing" class="service-link" data-tr="service.learn-more">Daha Fazla</a>
-                    </div>
-                </div>
-            </div>
-        </section>
+  <!-- ══ HERO ══ -->
+  <section id="hero" aria-label="Ana Ekran">
+    <div class="hero-ornament" aria-hidden="true"></div>
+    <p class="hero-tag">Ankara Dijital Pazarlama Ajansı</p>
+    <h1 class="hero-title">
+      Markaları Yönetmiyoruz.<br>
+      <em>Büyütüyoruz.</em>
+    </h1>
+    <p class="hero-sub">
+      Üst segment markalar için özel, ölçeklenebilir dijital büyüme sistemleri.
+      Trafik değil, marka hakimiyeti.
+    </p>
+    <div class="hero-actions">
+      <a href="iletisim.html" class="btn-primary">Başvuru Yap</a>
+      <a href="case-study.html" class="btn-ghost">Başarı Hikâyeleri</a>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Keşfet</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
 
-        <!-- About Section -->
-        <section class="about">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text" data-aos="fade-right">
-                        <h2 data-tr="about.title">Neden CefuDigital?</h2>
-                        <p data-tr="about.desc1">2015'ten beri dijital pazarlama alanında faaliyet gösteren CefuDigital, Ankara Seo hizmeti ile faaliyetlere başlamıştır. Şuanda aktif olarak Ankara merkezli firmamızda Ankara Seo Hizmeti, Ankara Google Reklamcılık, Ankara Dijital Pazarlama gibi alanlarda hizmet vermektedir.</p>
-                        <p data-tr="about.desc2">Uzman ekibimiz, en son teknolojiler ve kanıtlanmış stratejiler kullanarak işinizi dijital dünyada öne çıkarır.</p>
-                        <ul class="about-features">
-                            <li><i class="fas fa-check"></i> <span data-tr="about.feature1">4+ Yıllık Deneyim</span></li>
-                            <li><i class="fas fa-check"></i> <span data-tr="about.feature2">500+ Başarılı Proje</span></li>
-                            <li><i class="fas fa-check"></i> <span data-tr="about.feature3">3 Ülkede Hizmet</span></li>
-                            <li><i class="fas fa-check"></i> <span data-tr="about.feature4">7/24 Destek</span></li>
-                        </ul>
-                        <a href="about.html" class="btn btn-primary" data-tr="about.learn-more">Daha Fazla Bilgi</a>
-                    </div>
-                    <div class="about-image" data-aos="fade-left">
-                        <img src="/img/main2.png" alt="CefuDigital Ekibi">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Stats Section -->
-        <section class="stats">
-            <div class="container">
-                <div class="stats-grid">
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
-                        <h3 data-tr="stats.projects">100+</h3>
-                        <p data-tr="stats.projects-label">Tamamlanan Proje</p>
-                    </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
-                        <h3 data-tr="stats.clients">100+</h3>
-                        <p data-tr="stats.clients-label">Mutlu Müşteri</p>
-                    </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-                        <h3 data-tr="stats.countries">3</h3>
-                        <p data-tr="stats.countries-label">Ülkede Hizmet</p>
-                    </div>
-                    <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-                        <h3 data-tr="stats.experience">4+</h3>
-                        <p data-tr="stats.experience-label">Yıllık Deneyim</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CTA Section -->
-        <section class="cta">
-            <div class="container">
-                <div data-aos="fade-up">
-                    <h2 data-tr="cta.title">Projenizi Başlatmaya Hazır mısınız?</h2>
-                    <p data-tr="cta.subtitle">Dijital dünyada fark yaratmak için bugün bizimle iletişime geçin</p>
-                    <a href="contact.html" class="btn btn-primary" data-tr="cta.button">Hemen Başlayın</a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <a href="index.html" class="footer-logo">Cefu<span>Digital</span></a>
-                    <p data-tr="footer.desc">Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE'de profesyonel dijital çözümler sunuyoruz.</p>
-                    <div class="social-links">
-                        <a href="https://www.facebook.com/cefudigital" class="social-link"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/cefudigital" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/cefudigital" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h3 data-tr="footer.services">Hizmetler</h3>
-                    <ul class="footer-links">
-                        <li><a href="services.html#seo"><i class="fas fa-chevron-right"></i> <span data-tr="service.seo.title">Ankara SEO Optimizasyonu</span></a></li>
-                        <li><a href="services.html#web-design"><i class="fas fa-chevron-right"></i> <span data-tr="service.web.title">Ankara Web Tasarımı</span></a></li>
-                        <li><a href="services.html#corporate"><i class="fas fa-chevron-right"></i> <span data-tr="service.corporate.title">Ankara Şirket Çözümleri</span></a></li>
-                        <li><a href="services.html#marketing"><i class="fas fa-chevron-right"></i> <span data-tr="video.title">Ankara Video Çekimi</span></a></li>
-                        <li><a href="services.html#marketing"><i class="fas fa-chevron-right"></i> <span data-tr="service.marketing.title">Ankara Dijital Pazarlama</span></a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-tr="footer.quick-links">Hızlı Bağlantılar</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.home">Ana Sayfa</span></a></li>
-                        <li><a href="about.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.about">Hakkımızda</span></a></li>
-                        <li><a href="projects.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.projects">Projeler</span></a></li>
-                        <li><a href="contact.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.contact">İletişim</span></a></li>
-                        <li><a href="blog.html"><i class="fas fa-chevron-right"></i> <span data-tr="nav.blog">Blog</span></a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h3 data-tr="footer.contact">İletişim</h3>
-                    <ul class="footer-links">
-                        <li><a href="#"><i class="fas fa-map-marker-alt"></i> <span data-tr="contact.address.value">Ankara, Türkiye</span></a></li>
-                        <li><a href="mailto:info@cefudigital.com"><i class="fas fa-envelope"></i> info@cefudigital.com</a></li>
-                        <li><a href="tel:+905511367634"><i class="fas fa-phone-alt"></i> +90 (551) 136 76 34</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 CefuDigital. <span data-tr="footer.rights">Tüm hakları saklıdır.</span></p>
-            </div>
+  <!-- ══ STATS ══ -->
+  <section id="stats" aria-label="Ajans İstatistikleri">
+    <div class="container">
+      <div class="stats-inner">
+        <p class="stats-quote reveal">"Büyümeye hazır markaların tercih ettiği dijital büyüme ajansı"</p>
+        <div class="stat-item reveal reveal-delay-1">
+          <div class="stat-num">48<span>+</span></div>
+          <div class="stat-lbl">Büyütülen Marka</div>
         </div>
-    </footer>
+        <div class="stat-item reveal reveal-delay-2">
+          <div class="stat-num">3.2<span>x</span></div>
+          <div class="stat-lbl">Ortalama Büyüme</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-3">
+          <div class="stat-num">%94</div>
+          <div class="stat-lbl">Müşteri Devamlılığı</div>
+        </div>
+        <div class="stat-item reveal reveal-delay-4">
+          <div class="stat-num">6</div>
+          <div class="stat-lbl">Aktif Müşteri Kapasitesi</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- AOS Animation Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <!-- ══ MARKA LOGO BARI ══ -->
+  <section id="brand-bar" aria-labelledby="brand-bar-heading">
+    <div class="container brand-bar-inner">
+      <div class="brand-bar-title">
+        <span class="section-eyebrow reveal">Referanslar</span>
+        <h2 class="section-title reveal" id="brand-bar-heading">Çalıştığımız markaların logoları</h2>
+        <p class="section-lead reveal">Ankara'da birlikte büyüttüğümüz firmaların logo göstergesi. Bu alan otomatik olarak kayan bir referans sunar.</p>
+      </div>
+      <div class="brand-marquee reveal">
+        <div class="marquee-track">
+          <div class="marquee-item"><span>Mk Psikoloji</span></div>
+          <div class="marquee-item"><span>Değişim Psikoloji</span></div>
+          <div class="marquee-item"><span>Süha Optik</span></div>
+          <div class="marquee-item"><span>DecCrane</span></div>
+          <div class="marquee-item"><span>Dynomark</span></div>
+          <div class="marquee-item"><span>Bs-Mimarlık</span></div>
+          <div class="marquee-item"><span>Siltem</span></div>
+          <div class="marquee-item"><span>İklim Danışmanlık</span></div>
+          <div class="marquee-item"><span>Mk Psikoloji</span></div>
+          <div class="marquee-item"><span>Değişim Psikoloji</span></div>
+          <div class="marquee-item"><span>Süha Optik</span></div>
+          <div class="marquee-item"><span>DecCrane</span></div>
+          <div class="marquee-item"><span>Dynomark</span></div>
+          <div class="marquee-item"><span>Bs-Mimarlık</span></div>
+          <div class="marquee-item"><span>Siltem</span></div>
+          <div class="marquee-item"><span>İklim Danışmanlık</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        // Language translations
-        const translations = {
-            tr: {
-                'nav.home': 'Ana Sayfa',
-                'nav.services': 'Hizmetler',
-                'nav.about': 'Hakkımızda',
-                'nav.projects': 'Projeler',
-                'nav.contact': 'İletişim',
-                'hero.title': 'Dijital Dünyada Büyüyün',
-                'hero.subtitle': 'Türkiye, İngiltere ve BAE\'de profesyonel dijital pazarlama, SEO ve web tasarım hizmetleri ile işinizi bir üst seviyeye taşıyın.',
-                'hero.cta1': 'Hizmetlerimizi Keşfedin',
-                'hero.cta2': 'İletişime Geçin',
-                'services.title': 'Hizmetlerimiz',
-                'services.subtitle': 'İşinizi dijital dünyada büyütmek için ihtiyacınız olan tüm profesyonel çözümler',
-                'service.seo.title': 'Ankara SEO Optimizasyonu',
-                'service.seo.desc': 'Arama motorlarında üst sıralarda yer alarak organik trafiğinizi artırın ve potansiyel müşterilerinize daha kolay ulaşın.',
-                'service.web.title': 'Ankara Web Tasarımı',
-                'service.web.desc': 'Modern, kullanıcı dostu ve responsive web siteleri tasarlayarak markanızı dijital dünyada en iyi şekilde temsil ediyoruz.',
-                'service.corporate.title': 'Ankara Şirket Çözümleri',
-                'service.corporate.desc': 'İşletmeniz için kapsamlı dijital altyapı ve çözümler sunarak operasyonel verimliliğinizi artırıyoruz.',
-                'service.marketing.title': 'Ankara Dijital Pazarlama',
-                'service.marketing.desc': 'Sosyal medya, PPC reklamları ve içerik pazarlama ile markanızı büyütün ve hedef kitlenize etkili şekilde ulaşın.',
-                'service.learn-more': 'Daha Fazla',
-                'about.title': 'Neden CefuDigital?',
-                'about.desc1': '2015 ten beri dijital pazarlama alanında faaliyet gösteren CefuDigital, Ankara Seo hizmeti ile faaliyetlere başlamıştır. Şuanda aktif olarak Ankara merkezli firmamızda Ankara Seo Hizmeti, Ankara Google Reklamcılık, Ankara Dijital Pazarlama gibi alanlarda hizmet vermektedir.',
-                'about.desc2': 'Uzman ekibimiz, en son teknolojiler ve kanıtlanmış stratejiler kullanarak işinizi dijital dünyada öne çıkarır.',
-                'about.feature1': '4+ Yıllık Deneyim',
-                'about.feature2': '200+ Başarılı Proje',
-                'about.feature3': '3 Ülkede Hizmet',
-                'about.feature4': '7/24 Destek',
-                'about.learn-more': 'Daha Fazla Bilgi',
-                'stats.projects': '200+',
-                'stats.projects-label': 'Tamamlanan Proje',
-                'stats.clients': '200+',
-                'stats.clients-label': 'Mutlu Müşteri',
-                'stats.countries': '3',
-                'stats.countries-label': 'Ülkede Hizmet',
-                'stats.experience': '4+',
-                'stats.experience-label': 'Yıllık Deneyim',
-                'cta.title': 'Projenizi Başlatmaya Hazır mısınız?',
-                'cta.subtitle': 'Dijital dünyada fark yaratmak için bugün bizimle iletişime geçin',
-                'cta.button': 'Hemen Başlayın',
-                'footer.desc': 'Dijital dünyada işinizi büyütmenin en iyi yolu. Türkiye, İngiltere ve BAE\'de profesyonel dijital çözümler sunuyoruz.',
-                'footer.services': 'Hizmetler',
-                'footer.quick-links': 'Hızlı Bağlantılar',
-                'footer.contact': 'İletişim',
-                'footer.rights': 'Tüm hakları saklıdır.',
-                'contact.address.value': 'Ankara, Türkiye'
-            },
-            en: {
-                'nav.home': 'Home',
-                'nav.services': 'Services',
-                'nav.about': 'About',
-                'nav.projects': 'Projects',
-                'nav.contact': 'Contact',
-                'hero.title': 'Grow in the Digital World',
-                'hero.subtitle': 'Take your business to the next level with professional digital marketing, SEO and web design services in Turkey, UK and UAE.',
-                'hero.cta1': 'Discover Our Services',
-                'hero.cta2': 'Get in Touch',
-                'services.title': 'Our Services',
-                'services.subtitle': 'All the professional solutions you need to grow your business in the digital world',
-                'service.seo.title': 'SEO Optimization',
-                'service.seo.desc': 'Rank higher in search engines, increase your organic traffic, and reach your potential customers more easily.',
-                'service.web.title': 'Web Design',
-                'service.web.desc': 'We design modern, user-friendly, and responsive websites to represent your brand in the best way possible in the digital world.',
-                'service.corporate.title': 'Corporate Solutions',
-                'service.corporate.desc': 'We increase your operational efficiency by providing comprehensive digital infrastructure and solutions for your business.',
-                'service.marketing.title': 'Digital Marketing',
-                'service.marketing.desc': 'Grow your brand with social media, PPC ads, and content marketing, and effectively reach your target audience.',
-                'service.learn-more': 'Learn More',
-                'about.title': 'Why CefuDigital?',
-                'about.desc1': 'Operating in the digital marketing field since 2015, CefuDigital has signed hundreds of successful projects in Turkey, UK and UAE.',
-                'about.desc2': 'Our expert team makes your business stand out in the digital world using the latest technologies and proven strategies.',
-                'about.feature1': '4+ Years Experience',
-                'about.feature2': '200+ Successful Projects',
-                'about.feature3': 'Service in 3 Countries',
-                'about.feature4': '24/7 Support',
-                'about.learn-more': 'Learn More',
-                'stats.projects': '200+',
-                'stats.projects-label': 'Completed Projects',
-                'stats.clients': '100+',
-                'stats.clients-label': 'Happy Clients',
-                'stats.countries': '3',
-                'stats.countries-label': 'Countries Served',
-                'stats.experience': '4+',
-                'stats.experience-label': 'Years Experience',
-                'cta.title': 'Ready to Start Your Project?',
-                'cta.subtitle': 'Contact us today to make a difference in the digital world',
-                'cta.button': 'Get Started Now',
-                'footer.desc': 'The best way to grow your business in the digital world. We provide professional digital solutions in Turkey, UK and UAE.',
-                'footer.services': 'Services',
-                'footer.quick-links': 'Quick Links',
-                'footer.contact': 'Contact',
-                'footer.rights': 'All rights reserved.',
-                'contact.address.value': 'Ankara, Turkey'
-            },
-            ar: {
-                'nav.home': 'الرئيسية',
-                'nav.services': 'الخدمات',
-                'nav.about': 'من نحن',
-                'nav.projects': 'المشاريع',
-                'nav.contact': 'اتصل بنا',
-                'hero.title': 'انمو في العالم الرقمي',
-                'hero.subtitle': 'انقل عملك إلى المستوى التالي مع خدمات التسويق الرقمي وتحسين محركات البحث وتصميم المواقع المهنية في تركيا والمملكة المتحدة والإمارات.',
-                'hero.cta1': 'اكتشف خدماتنا',
-                'hero.cta2': 'تواصل معنا',
-                'services.title': 'خدماتنا',
-                'services.subtitle': 'جميع الحلول المهنية التي تحتاجها لتنمية أعمالك في العالم الرقمي',
-                'service.seo.title': 'تحسين محركات البحث',
-                'service.seo.desc': 'احصل على مرتبة أعلى في محركات البحث، وزيادة حركة المرور العضوية، والوصول إلى عملائك المحتملين بسهولة أكبر.',
-                'service.web.title': 'تصميم المواقع',
-                'service.web.desc': 'نصمم مواقع حديثة وسهلة الاستخدام ومتجاوبة لتمثيل علامتك التجارية بأفضل طريقة ممكنة في العالم الرقمي.',
-                'service.corporate.title': 'الحلول المؤسسية',
-                'service.corporate.desc': 'نزيد من كفاءة عملياتك من خلال توفير بنية تحتية وحلول رقمية شاملة لعملك.',
-                'service.marketing.title': 'التسويق الرقمي',
-                'service.marketing.desc': 'نمي علامتك التجارية من خلال وسائل التواصل الاجتماعي وإعلانات الدفع لكل نقرة وتسويق المحتوى، والوصول بفعالية إلى جمهورك المستهدف.',
-                'service.learn-more': 'اعرف المزيد',
-                'about.title': 'لماذا CefuDigital؟',
-                'about.desc1': 'تعمل في مجال التسويق الرقمي منذ عام 2015، وقد وقعت CefuDigital مئات المشاريع الناجحة في تركيا والمملكة المتحدة والإمارات.',
-                'about.desc2': 'يجعل فريقنا الخبير عملك يبرز في العالم الرقمي باستخدام أحدث التقنيات والاستراتيجيات المثبتة.',
-                'about.feature1': '4+ سنوات خبرة',
-                'about.feature2': '200+ مشروع ناجح',
-                'about.feature3': 'خدمة في 3 دول',
-                'about.feature4': 'دعم 24/7',
-                'about.learn-more': 'اعرف المزيد',
-                'stats.projects': '100+',
-                'stats.projects-label': 'مشروع مكتمل',
-                'stats.clients': '200+',
-                'stats.clients-label': 'عميل سعيد',
-                'stats.countries': '3',
-                'stats.countries-label': 'دول نخدمها',
-                'stats.experience': '4+',
-                'stats.experience-label': 'سنوات خبرة',
-                'cta.title': 'هل أنت مستعد لبدء مشروعك؟',
-                'cta.subtitle': 'اتصل بنا اليوم لإحداث فرق في العالم الرقمي',
-                'cta.button': 'ابدأ الآن',
-                'footer.desc': 'أفضل طريقة لتنمية أعمالك في العالم الرقمي. نقدم حلول رقمية احترافية في تركيا والمملكة المتحدة والإمارات.',
-                'footer.services': 'الخدمات',
-                'footer.quick-links': 'روابط سريعة',
-                'footer.contact': 'اتصل بنا',
-                'footer.rights': 'جميع الحقوق محفوظة.',
-                'contact.address.value': 'أنقرة تركيا'
-            }
-        };
+  <!-- ══ HİZMETLER PREVIEW ══ -->
+  <section id="hizmetler-preview" aria-labelledby="hizmetler-heading">
+    <div class="container">
+      <div class="hizmetler-head">
+        <div>
+          <span class="section-eyebrow reveal">Sistemlerimiz</span>
+          <h2 class="section-title reveal" id="hizmetler-heading">
+            Hizmet Değil,<br><em>Büyüme Sistemi</em>
+          </h2>
+        </div>
+        <p class="section-lead reveal">
+          Her strateji, markanızın özgün dinamiklerine göre kurgulanır.
+          Hazır şablon yok. Kopyala-yapıştır yok. Yalnızca sonuç.
+        </p>
+      </div>
 
-        let currentLang = localStorage.getItem('preferredLanguage') || 'tr';
+      <div class="hizmetler-grid reveal">
+        <article class="hizmet-card">
+          <div class="hizmet-num">01</div>
+          <h3 class="hizmet-title">Organik Büyüme Sistemi</h3>
+          <p class="hizmet-desc">Ankara SEO ajansı uzmanlığıyla markanızı arama motorlarında kalıcı üst sıralara taşıyan sürdürülebilir stratejiler.</p>
+          <a href="hizmetler.html#seo" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">02</div>
+          <h3 class="hizmet-title">Dönüşüm Odaklı Web Sistemleri</h3>
+          <p class="hizmet-desc">Ziyaretçiyi müşteriye dönüştürmek için psikoloji destekli, performans ölçümlü web mimarileri. Güzel değil, etkili.</p>
+          <a href="hizmetler.html#web" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">03</div>
+          <h3 class="hizmet-title">Marka Büyütme Stratejisi</h3>
+          <p class="hizmet-desc">Dijital dünyada kalıcı marka hakimiyeti için entegre içerik, konum ve topluluk büyütme sistemleri.</p>
+          <a href="hizmetler.html#marka" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">04</div>
+          <h3 class="hizmet-title">Performans Reklam Sistemleri</h3>
+          <p class="hizmet-desc">Google reklam yönetimi ve sosyal medya reklamlarında her kuruşun hesabının verildiği, sürekli optimize edilen stratejiler.</p>
+          <a href="hizmetler.html#reklam" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card">
+          <div class="hizmet-num">05</div>
+          <h3 class="hizmet-title">Ankara Video Prodüksiyon</h3>
+          <p class="hizmet-desc">Marka anlatısını sinematik dille aktaran, stratejik amaçlı kurumsal ve reklam filmleri. İzletmek değil, etkilemek.</p>
+          <a href="hizmetler.html#video" class="hizmet-link">→ Detaylı İncele</a>
+        </article>
+        <article class="hizmet-card hizmet-card-quote">
+          <p class="q-text">"Tek bir sistemle değil,<br>entegre bir yapıyla büyürsünüz."</p>
+          <p class="q-src">— Cefu Dijital Yaklaşımı</p>
+        </article>
+      </div>
+    </div>
+  </section>
 
-        // Language switching functionality
-        function switchLanguage(lang) {
-            currentLang = lang;
-            localStorage.setItem('preferredLanguage', lang);
-            document.documentElement.lang = lang;
-            
-            // Update active language button
-            document.querySelectorAll('.lang-btn').forEach(btn => {
-                btn.classList.remove('active');
-                if (btn.dataset.lang === lang) {
-                    btn.classList.add('active');
-                }
-            });
+  <!-- ══ SÜREÇ ══ -->
+  <section id="surec" aria-labelledby="surec-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Süreç</span>
+      <h2 class="section-title reveal" id="surec-heading">Nasıl <em>Çalışırız</em></h2>
+      <p class="section-lead reveal">Belirsizlik yoktur. Her adım şeffaf, ölçülebilir ve hedefe yönelik şekilde yürütülür.</p>
+      <div class="surec-grid reveal">
+        <div class="surec-step">
+          <div class="surec-num">01</div>
+          <h3 class="surec-title">Başvuru</h3>
+          <p class="surec-desc">Kısa başvuru formu ile markanızı tanıyoruz. Nerede olduğunuzu, nereye gitmek istediğinizi ve büyümeye ne kadar hazır olduğunuzu analiz ediyoruz.</p>
+          <div class="surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="surec-step">
+          <div class="surec-num">02</div>
+          <h3 class="surec-title">Stratejik Değerlendirme</h3>
+          <p class="surec-desc">Stratejik uyum analizi yapıyoruz. Birlikte çalışmanın her iki taraf için de gerçek değer yaratacağına emin olduğumuzda özel büyüme planınızı hazırlıyoruz.</p>
+          <div class="surec-connector" aria-hidden="true"></div>
+        </div>
+        <div class="surec-step">
+          <div class="surec-num">03</div>
+          <h3 class="surec-title">Uygulama & Büyüme</h3>
+          <p class="surec-desc">Veriye dayalı, sonuç odaklı sistemleri devreye alıyoruz. Aylık raporlar ve düzenli strateji toplantılarıyla şeffaf bir ortaklık yürütüyoruz.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            // Update text content
-            document.querySelectorAll('[data-tr]').forEach(element => {
-                const key = element.dataset.tr;
-                if (translations[lang] && translations[lang][key]) {
-                    element.textContent = translations[lang][key];
-                }
-            });
+  <!-- ══ CASE PREVIEW ══ -->
+  <section id="case-preview" aria-labelledby="case-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">Başarı Hikayeleri</span>
+      <h2 class="section-title reveal" id="case-heading">Sonuçlar <em>Konuşuyor</em></h2>
+      <div class="case-grid">
+        <article class="case-card reveal reveal-delay-1">
+          <div class="case-industry">E-Ticaret / Moda</div>
+          <div class="case-client">Luxe Butik</div>
+          <div class="case-result"><span>+</span>312<span>%</span></div>
+          <div class="case-metric">Organik Trafik Büyümesi — 8 Ay</div>
+          <p class="case-desc">Organik Büyüme Sistemi ve Marka Büyütme Stratejisi entegrasyonuyla rekabetçi segmentte dijital hakimiyet kuruldu.</p>
+        </article>
+        <article class="case-card reveal reveal-delay-2">
+          <div class="case-industry">Profesyonel Hizmetler</div>
+          <div class="case-client">Apex Hukuk Bürosu</div>
+          <div class="case-result"><span>+</span>4.7<span>x</span></div>
+          <div class="case-metric">Nitelikli Müşteri Adayı — 6 Ay</div>
+          <p class="case-desc">Dönüşüm Odaklı Web Sistemi ve Performans Reklam Sistemleri kombinasyonuyla yüksek değerli müvekkil edinimi dramatik biçimde arttı.</p>
+        </article>
+        <article class="case-card reveal reveal-delay-3">
+          <div class="case-industry">Gayrimenkul</div>
+          <div class="case-client">Prestige Yapı</div>
+          <div class="case-result"><span>+</span>218<span>%</span></div>
+          <div class="case-metric">Dijital Satış Kanalı Büyümesi — 1 Yıl</div>
+          <p class="case-desc">Premium Video Prodüksiyon ve entegre dijital strateji ile markanın premium konumu pekişti; satış döngüsü kısaldı.</p>
+        </article>
+      </div>
+      <div style="text-align:center; margin-top:48px;" class="reveal">
+        <a href="case-study.html" class="btn-ghost">Tüm Başarı Hikâyeleri</a>
+      </div>
+    </div>
+  </section>
 
-            // Update page title and meta description
-            const titles = {
-                tr: 'CefuDigital - Dijital Pazarlama Ajansı | Türkiye, İngiltere, BAE',
-                en: 'CefuDigital - Digital Marketing Agency | Turkey, UK, UAE',
-                ar: 'CefuDigital - وكالة التسويق الرقمي | تركيا، المملكة المتحدة، الإمارات'
-            };
-            
-            const descriptions = {
-                tr: 'Türkiye, İngiltere ve BAE\'de profesyonel dijital pazarlama, SEO, web tasarım ve şirket çözümleri. CefuDigital ile dijital dünyada büyüyün.',
-                en: 'Professional digital marketing, SEO, web design and corporate solutions in Turkey, UK and UAE. Grow in the digital world with CefuDigital.',
-                ar: 'التسويق الرقمي المهني وتحسين محركات البحث وتصميم المواقع والحلول المؤسسية في تركيا والمملكة المتحدة والإمارات. انمو في العالم الرقمي مع CefuDigital.'
-            };
+  <!-- ══ SEÇİCİLİK ══ -->
+  <section id="secicilik" aria-labelledby="secicilik-heading">
+    <div class="container">
+      <div class="secicilik-inner">
+        <span class="section-eyebrow reveal">Çalışma Felsefemiz</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="secicilik-heading">
+          Her Marka ile<br><em>Çalışmıyoruz.</em>
+        </h2>
+        <p class="section-lead reveal">
+          Sınırlı sayıda marka kabul ediyoruz. Çünkü her müşterimize tam kapasite,
+          derin odak ve gerçek sonuçlar sunmayı taahhüt ediyoruz.
+          Çalıştığımız markalar bizi seçmiyor — biz de onları seçiyoruz.
+        </p>
+        <div class="criteria-tags reveal">
+          <span class="criteria-tag">Büyüme Vizyonu</span>
+          <span class="criteria-tag">Uzun Vadeli Düşünce</span>
+          <span class="criteria-tag">Ölçeklenebilir Model</span>
+          <span class="criteria-tag">Premium Segment</span>
+          <span class="criteria-tag">Sonuç Odaklı Yönetim</span>
+        </div>
+        <div class="reveal">
+          <div class="badge-open">
+            <span class="badge-dot"></span>
+            Şu An: 2 Açık Pozisyon
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            document.title = titles[lang];
-            document.querySelector('meta[name="description"]').content = descriptions[lang];
+  <!-- ══ BLOG PLACEHOLDER ══ -->
+  <section id="blog" aria-labelledby="blog-heading">
+    <div class="container">
+      <span class="section-eyebrow reveal">İçgörüler</span>
+      <h2 class="section-title reveal" id="blog-heading">Dijital <em>Büyüme Blogu</em></h2>
+      <p class="section-lead reveal">Ankara dijital pazarlama, SEO ve marka büyütme üzerine içgörüler ve stratejik analizler.</p>
+      <div class="blog-grid">
+        <article class="blog-card reveal reveal-delay-1">
+          <div class="blog-cat">Sağlık Pazarlama</div>
+          <h3 class="blog-title">Sağlık Sektöründe Dijital Pazarlama: Tanıtım Filmi ve Video Prodüksiyon</h3>
+          <p class="blog-excerpt">Klinik ve hastaneler için dijital pazarlama stratejileri, tanıtım filmleri ve SEO hizmetleri.</p>
+          <a href="ankara-saglik-sektoru-dijital-pazarlama.html" class="blog-link">Okumaya Devam Et →</a>
+        </article>
+        <article class="blog-card reveal reveal-delay-2">
+          <div class="blog-cat">Çankaya Pazarlama</div>
+          <h3 class="blog-title">Çankaya Dijital Pazarlama: SEO, Tanıtım Filmi ve Video Prodüksiyon</h3>
+          <p class="blog-excerpt">Çankaya'daki işletmeler için dijital pazarlama stratejileri ve lokal SEO hizmetleri.</p>
+          <a href="ankara-cankaya-dijital-pazarlama.html" class="blog-link">Okumaya Devam Et →</a>
+        </article>
+        <article class="blog-card reveal reveal-delay-3">
+          <div class="blog-cat">Ostim İvedik SEO</div>
+          <h3 class="blog-title">Ostim ve İvedik Sanayi Bölgesi Dijital Pazarlama ve SEO Hizmetleri</h3>
+          <p class="blog-excerpt">Ostim ve İvedik'teki sanayi firmaları için dijital pazarlama, tanıtım filmi ve SEO stratejileri.</p>
+          <a href="ankara-ostim-ivedik-seo.html" class="blog-link">Okumaya Devam Et →</a>
+        </article>
+        <article class="blog-card reveal reveal-delay-4">
+          <div class="blog-cat">Yerel Pazarlama</div>
+          <h3 class="blog-title">Ankara Batı ve Kuzey İlçelerinde Dijital Pazarlama Stratejileri</h3>
+          <p class="blog-excerpt">Etimesgut, Sincan ve Keçiören'de yerel işletmeler için SEO, tanıtım filmi ve reels çekimi hizmetleri.</p>
+          <a href="ankara-etimesgut-sincan-keciyoren.html" class="blog-link">Okumaya Devam Et →</a>
+        </article>
+      </div>
+    </div>
+  </section>
 
-            // Update text direction for Arabic
-            if (lang === 'ar') {
-                document.body.style.direction = 'rtl';
-                document.body.style.textAlign = 'right';
-            } else {
-                document.body.style.direction = 'ltr';
-                document.body.style.textAlign = 'left';
-            }
-        }
+  <!-- ══ CTA ══ -->
+  <section id="cta-basvuru" aria-labelledby="cta-heading">
+    <div class="container">
+      <div class="cta-inner">
+        <span class="section-eyebrow reveal">Bir Sonraki Adım</span>
+        <div class="gold-divider reveal"></div>
+        <h2 class="section-title reveal" id="cta-heading">
+          Bizimle Çalışmak<br>İçin <em>Başvurun</em>
+        </h2>
+        <p class="section-lead reveal">
+          Markanızın büyüme potansiyelini değerlendirmek için ücretsiz bir strateji görüşmesi talep edin.
+          Yükümlülük yok. Gereksiz sunum yok.
+        </p>
+        <div class="cta-actions reveal">
+          <a href="iletisim.html" class="btn-gold">Başvuru Yap</a>
+          <a href="tel:05511367634" class="btn-outline-white">0551 136 76 34</a>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        // Initialize page
-        document.addEventListener('DOMContentLoaded', function() {
-            // Initialize AOS animations
-            AOS.init({
-                duration: 800,
-                easing: 'ease-in-out',
-                once: true,
-                mirror: false
-            });
-            
-            // Set initial language from localStorage or default to 'tr'
-            switchLanguage(currentLang);
-            
-            // Language switching
-            const langButtons = document.querySelectorAll('.lang-btn');
-            langButtons.forEach(btn => {
-                btn.addEventListener('click', () => {
-                    switchLanguage(btn.dataset.lang);
-                });
-            });
-            
-            // Mobile menu
-            const mobileMenuBtn = document.querySelector('.mobile-menu');
-            const mobileNav = document.querySelector('.mobile-nav');
-            const overlay = document.querySelector('.overlay');
-            const closeMenuBtn = document.querySelector('.close-menu');
-            
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileNav.classList.add('active');
-                overlay.classList.add('active');
-            });
-            
-            closeMenuBtn.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
-            });
-            
-            overlay.addEventListener('click', () => {
-                mobileNav.classList.remove('active');
-                overlay.classList.remove('active');
-            });
+</main>
 
-            // Scroll header effect
-            window.addEventListener('scroll', () => {
-                const header = document.querySelector('header');
-                if (window.scrollY > 100) {
-                    header.classList.add('scrolled');
-                } else {
-                    header.classList.remove('scrolled');
-                }
-            });
-        });
-    </script>
-    <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "CefuDigital",
-    "url": "https://www.cefudigital.com"
-  }
-  </script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17997923433">
-</script>
+<!-- ══ FOOTER ══ -->
+<footer aria-label="Alt Bilgi">
+  <div class="container">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-brand-logo">Cefu <span>Dijital</span></a>
+        <p>Üst segment markalar için ölçeklenebilir dijital büyüme sistemleri. Ankara merkezli, Türkiye genelinde hizmet.</p>
+        <p class="footer-seo">Ankara dijital pazarlama ajansı · SEO hizmeti · Google reklam yönetimi · Web sitesi tasarımı · Video prodüksiyon Ankara</p>
+      </div>
+      <div>
+        <span class="footer-col-title">Hizmetler</span>
+        <ul class="footer-links">
+          <li><a href="ankara-seo.html">Ankara SEO Ajansı</a></li>
+          <li><a href="ankara-seo-stratejisi.html">Ankara SEO Stratejisi</a></li>
+          <li><a href="ankara-seo-analizi.html">Ankara SEO Analizi</a></li>
+          <li><a href="ankara-seo-icerik-stratejisi.html">Ankara SEO İçerik Stratejisi</a></li>
+          <li><a href="ankara-reels-cekimi.html">Ankara Reels Çekimi</a></li>
+          <li><a href="ankara-reels-produsyon.html">Ankara Reels Prodüksiyon</a></li>
+          <li><a href="ankara-sosyal-medya-yonetimi.html">Ankara Sosyal Medya Yönetimi</a></li>
+          <li><a href="ankara-icerik-uretim.html">Ankara İçerik Üretimi</a></li>
+          <li><a href="ankara-dijital-pazarlama-ajansi.html">Ankara Dijital Pazarlama</a></li>
+          <li><a href="ankara-video-produksiyon.html">Ankara Video Prodüksiyon</a></li>
+          <li><a href="ankara-profesyonel-video-cekim.html">Ankara Profesyonel Video Çekim</a></li>
+          <li><a href="ankara-meta-reklamciligi.html">Ankara Meta Reklamcılığı</a></li>
+          <li><a href="ankara-google-reklam-verme.html">Ankara Google Reklam</a></li>
+          <li><a href="ankara-saglik-sektoru-dijital-pazarlama.html">Sağlık Sektörü Pazarlama</a></li>
+          <li><a href="ankara-cankaya-dijital-pazarlama.html">Çankaya Dijital Pazarlama</a></li>
+          <li><a href="ankara-ostim-ivedik-seo.html">Ostim İvedik SEO</a></li>
+          <li><a href="sincan-video-cekim.html">Sincan Video Çekim</a></li>
+          <li><a href="inklab.html">Ink Lab Tattoo Studio</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">Ajans</span>
+        <ul class="footer-links">
+          <li><a href="hakkimizda.html">Hakkımızda</a></li>
+          <li><a href="case-study.html">Case Study</a></li>
+          <li><a href="iletisim.html">İletişim</a></li>
+          <li><a href="iletisim.html">Başvuru</a></li>
+        </ul>
+      </div>
+      <div>
+        <span class="footer-col-title">İletişim</span>
+        <ul class="footer-links">
+          <li><a href="mailto:info@cefudigital.com">info@cefudigital.com</a></li>
+          <li><a href="tel:05511367634">0551 136 76 34</a></li>
+          <li><a href="iletisim.html">Ankara, Türkiye</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2025 Cefu Dijital. Tüm hakları saklıdır. | Ankara dijital pazarlama ajansı</p>
+      <nav class="social-links" aria-label="Sosyal Medya">
+        <a href="#" rel="noopener noreferrer">Instagram</a>
+        <a href="#" rel="noopener noreferrer">LinkedIn</a>
+        <a href="#" rel="noopener noreferrer">Twitter / X</a>
+      </nav>
+    </div>
+  </div>
+</footer>
+
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  // Navbar scroll
+  const nb = document.getElementById('navbar');
+  window.addEventListener('scroll', () => nb.classList.toggle('scrolled', window.scrollY > 50), {passive:true});
 
-  gtag('config', 'AW-17997923433');
+  // Mobile menu
+  const hb = document.getElementById('hamburger');
+  const mm = document.getElementById('mobileMenu');
+  const mc = document.getElementById('mobileClose');
+  hb.addEventListener('click', () => { mm.classList.add('open'); hb.setAttribute('aria-expanded','true'); });
+  mc.addEventListener('click', () => { mm.classList.remove('open'); hb.setAttribute('aria-expanded','false'); });
+  mm.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mm.classList.remove('open')));
+
+  // Scroll reveal
+  const io = new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target);} }), {threshold:0.1});
+  document.querySelectorAll('.reveal').forEach(r => io.observe(r));
 </script>
 </body>
 </html>
